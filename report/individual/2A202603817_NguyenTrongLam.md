@@ -19,14 +19,15 @@
 | Cải thiện 1 (`configs/improve_query.json`) | Baseline + lần tìm đầu dùng nguyên văn câu hỏi, chặn query trùng, prompt v2 (quy tắc viết query) | Sửa Lỗi 2 (query viết lại kém) | dev | 10/15 (67%) | 15/15 (100%) | 10/15 (67%) | 7,4 s/câu; $0.0060 |
 | Cải thiện 2 (`configs/improve_context.json`) | Baseline + budget 2000 ký tự, xếp context theo score cosine | Sửa Lỗi 1 (budget loại evidence) | dev | 7/15 (47%) | 11/15 (73%) | 12/15 (80%) | 9,2 s/câu; $0.0078 |
 | **Cấu hình đã chọn: `combined`** (`configs/combined.json`) | Rerank dense top-20 + Cải thiện 1 + budget 2000 xếp theo score rerank | Hai lỗi độc lập nên cải thiện cộng dồn | dev | 13/15 (87%) | 15/15 (100%) | 15/15 (100%) | 12,1 s/câu; $0.0057 |
-| Cấu hình đã chọn: `combined` | Như trên, không chỉnh thêm | Đánh giá độc lập | test | chưa chạy | | | |
-| Baseline | Như trên | Đánh giá độc lập | test | chưa chạy | | | |
+| Cấu hình đã chọn: `combined` | Như trên, không chỉnh thêm (sha256 `824470c1`) | Đánh giá độc lập, chạy một lần sau commit `0876960` | test | 5/5 (100%) | 5/5 (100%) | 5/5 (100%) | 9,8 s/câu; $0.0025 / 7 câu |
+| Baseline | Như trên (sha256 `9b5cc833`) | Đánh giá độc lập, chạy một lần sau commit `0876960` | test | 5/5 (100%) | 5/5 (100%) | 5/5 (100%) | 7,1 s/câu; $0.0028 / 7 câu |
+| Dense / Rerank (chỉ đo retrieval) | Nguyên văn câu hỏi, top-3, budget 800 | Báo cáo, không dùng để chọn lại | test | 4/5 · 5/5 | 5/5 · 5/5 | 4/5 · 5/5 | 101 ms · 6,3 s/câu; $0 |
 
 Cách đọc: với dòng agent, Hit@1 và Evidence Hit@3 tính trên kết quả **lần tìm đầu** của agent; Context Evidence Rate tính trên **context cuối** gửi model (có thể gộp nhiều lần tìm). Dòng "chỉ đo retrieval" dùng nguyên văn câu hỏi, không qua agent (`scripts/eval_retrieval.py`, kết quả `starter/results/retrieval-comparison-dev.md`). Cùng corpus 363 chunk, cùng 15 câu dev có đáp án, cùng định nghĩa hit của `starter/baseline.py`. Chi phí $ là tiền API OpenAI cho 17 câu dev; embedding, BM25 và reranker chạy local, $0. Bảng retrieval không dùng filter; agent dùng filter do người hỏi nêu (q11, q12). Mỗi cấu hình agent chỉ đổi một nhóm yếu tố so với baseline, trừ `combined`.
 
 ### Chọn cấu hình
 
-Tiêu chí công bố trước khi chạy cấu hình cải thiện: [configs/selection_criteria.json](../../configs/selection_criteria.json). Quyết định: [configs/selected.json](../../configs/selected.json), chỉ dựa trên dev, chưa chạy test.
+Tiêu chí công bố trước khi chạy cấu hình cải thiện: [configs/selection_criteria.json](../../configs/selection_criteria.json). Quyết định: [configs/selected.json](../../configs/selected.json), chỉ dựa trên dev; commit `0876960` ("Chot cau hinh combined tren dev truoc khi chay test") được tạo trước khi chạy test.
 
 | Cấu hình (dev) | Grounded 0 / 1 / 2 · trung bình | Citation hợp lệ | Từ chối đúng | Từ chối nhầm | Sai có citation |
 |---|---|---|---|---|---|
@@ -79,7 +80,7 @@ Sửa riêng từng lỗi chỉ giải quyết một phần, vì một câu có 
 - **Ranh giới chunk (q14):** `A-p123-001` bắt đầu bằng mẩu câu "thôi học không được đánh giá kết quả rèn luyện", là phần đuôi của "Sinh viên bị kỷ luật mức **buộc** thôi học…" ở chunk trước. Cả 3 cấu hình trả lời được q14 (`improve_context`, `method_rerank`, `combined`) đều thêm ý sai "thôi học/bỏ học thì không được đánh giá". Ý chính vẫn đúng nên chấm 2 thống nhất cho cả ba (quyết định của người chấm); đây là hạn chế của chunk cố định 500 ký tự (strategy A, chọn ở Day 6) mà Day 7 không sửa, vì đổi chunking cần index mới.
 - **Suy diễn từ quy định gần nghĩa (q07):** chỉ hết khi `A-p82-000` vào context; prompt hiện tại không ngăn được model suy diễn khi thiếu đoạn đúng.
 - **Dao động giữa các lần chạy:** cùng cấu hình baseline, hai lần chạy cho 10/15 và 9/15 câu được trả lời, first-search Hit@3 11/15 và 14/15, grounded 0,93 và 0,87. Chênh lệch dưới khoảng 0,1 điểm grounded hoặc 1–2 câu không đủ để kết luận một cấu hình tốt hơn.
-- **Nguy cơ quá khớp dev:** các thay đổi được thiết kế từ chính lỗi dev, và `combined` mới chạy một lần; điểm tuyệt đối trên dev có thể cao hơn thực tế. Bộ test (5 câu có đáp án + 2 câu thiếu bằng chứng, chưa chạy) là phép kiểm tra độc lập.
+- **Nguy cơ quá khớp dev:** các thay đổi được thiết kế từ chính lỗi dev, và `combined` mới chạy một lần; điểm tuyệt đối trên dev có thể cao hơn thực tế. Bộ test (5 câu có đáp án + 2 câu thiếu bằng chứng) đã chạy sau khi chốt: cả baseline và `combined` đều đạt tối đa, nên test không xác nhận được mức cải thiện trên dev (xem phần kết luận).
 - **Nhãn:** Claude đề xuất nhãn nháp kèm lý do; người làm bài đã đọc trace và chunk từng câu của cả 7 lần chạy, xác nhận ngày 2026-11-16 (`labels/dev/*.reviews.json`). Quyết định có tính khẳng định thừa ở q14 hay không do người làm bài chọn: giữ 2 điểm, áp dụng thống nhất cho `improve_context`, `method_rerank`, `combined`.
 
 ## Agent và đánh giá
@@ -131,16 +132,42 @@ Ghi nhận cho phân tích lỗi: ở u02 model lặp lại y nguyên một quer
 | method_hybrid / dev | 17/17 | 10 · 2 · 5 | 5 / 0 / 10 · 1,33 | 10/12 | 12/12 | 2/2 | 3/15 |
 | method_rerank / dev | 17/17 | 8 · 2 · 7 | 4 / 0 / 11 · 1,47 | 12/12 | 12/12 | 2/2 | 3/15 |
 | **combined (đã chọn) / dev** | 17/17 | 11 · 2 · 4 | **0 / 0 / 15 · 2,00** | **16/16** | 15/15 | 2/2 | **0/15** |
-| combined / test | chưa chạy | | | | | | |
-| baseline / test | chưa chạy | | | | | | |
+| **combined / test** | 7/7 | 1 lần: 4 · 2 lần: 1 · 3 lần: 2 (tổng 12) | 0 / 0 / 5 · 2,00 | 5/5 | 5/5 | 2/2 | 0/5 |
+| baseline / test | 7/7 | 1 lần: 2 · 2 lần: 1 · 3 lần: 4 (tổng 16) | 0 / 0 / 5 · 2,00 | 5/5 | 5/5 | 2/2 | 0/5 |
+
+**Context trên test** (chấm tay context cuối gửi model, 5 câu có đáp án, `context_grade` trong `labels/test/*.reviews.json`): baseline 0 câu mức 0 · 0 câu mức 1 · **5 câu mức 2**; `combined` 0 · 0 · **5**. Mọi context cuối đều chứa chunk gold kèm đủ điều kiện/ngoại lệ (q16 "nếu SV không tái phạm…", q18 "trừ các ngày nghỉ lễ") và nguồn/trang. Context của `combined` có thêm chunk không liên quan do budget 2000 (vd. q18: `A-p66-000`, `A-p133-001`) nhưng không ảnh hưởng câu trả lời. Test không có lỗi hệ thống.
 
 Không có lỗi hệ thống (status `error`) ở lần chạy nào trên dev. Lỗi kết nối tạm thời (`APIConnectionError`) đã xảy ra ở smoke test và được xử lý bằng thử lại; vẫn ghi trong trace. Số lượt gọi tính theo số lần `search_documents`; với `improve_query` và `combined`, lần tìm đầu là nguyên văn câu hỏi (không qua model).
 
+Bảng dưới là **toàn bộ 7 câu test** của cấu hình đã chọn `combined`, kèm so sánh baseline ở cột lý do.
+
 | Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
 |---|---|---|---|---|
+| q16 | Có đáp án (filter `section: khen_thuong_ky_luat`) | 1 lần tìm (nguyên văn câu hỏi) → `A-p147-002` hạng 1; context `A-p147-002, A-p147-003, A-p148-000` | "Sau 03 tháng kể từ ngày có quyết định kỷ luật khiển trách, nếu SV không tái phạm… thì đương nhiên được chấm dứt hiệu lực…" [A-p147-002] | Đáp án 2, citation đúng, context 2. Baseline cũng 2 nhưng cần 3 lần tìm, query 2 và 3 trùng y nguyên |
+| q17 | Có đáp án | 2 lần tìm → `A-p158-003`; context `A-p158-003, A-p159-000, A-p158-001` | "Phải báo địa chỉ ngoại trú cho trường trong thời hạn 30 ngày, kể từ ngày nhập học" [A-p158-003] | 2 / citation đúng / context 2. Baseline 2 (3 lần tìm) |
+| q18 | Có đáp án | 1 lần tìm → `A-p164-001`; context thêm `A-p66-000`, `A-p133-001` không liên quan | "Trường hoạt động từ 6g00 đến 21g30 các ngày trong tuần, trừ các ngày nghỉ lễ…" [A-p164-001] | 2 / đúng / context 2 (có nhiễu). Baseline 2, nhưng query đầu chỉ là "Sổ tay sinh viên 2025-2026 Trường ĐH Khoa học tự nhiên ĐHQG-…" |
+| q19 | Có đáp án | 1 lần tìm → `A-p169-000`; context `A-p169-000, A-p168-000, A-p172-001` | "50% học phí" [A-p169-000] | 2 / đúng / context 2. Ngắn, không nhắc lại đối tượng; câu hỏi đã nêu đủ đối tượng nên chấm 2 (cùng chuẩn với baseline) |
+| q20 | Có đáp án | 1 lần tìm → `A-p81-003`; context `A-p81-003, A-p82-001, A-p80-002` | "…được cấp bằng trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ…" [A-p81-003] | 2 / đúng / context 2. Baseline 2 |
+| u03 | Thiếu bằng chứng | 3 lần tìm ("…phí nội trú bao nhiêu tiền", "phí nội trú mỗi tháng khu nội trú phí", "phí nội trú mỗi tháng"); context `A-p161-002, A-p170-000, A-p161-001` | Từ chối: "có thông tin về phí nội trú nhưng không chứa mức phí cụ thể theo tháng, chỉ ghi nhận việc nộp phí theo hợp đồng" | Từ chối đúng. Context có cả bẫy 100.000đ/tháng (trợ cấp, `A-p170-000`) nhưng model không lấy nhầm. Baseline cũng từ chối đúng |
+| u04 | Thiếu bằng chứng | 3 lần tìm về "vay vốn ngân hàng chính sách… hộ nghèo"; context `A-p170-000, A-p173-000, A-p171-000` | Từ chối: "không có thông tin về mức vay vốn… chỉ có thông tin trợ cấp và chính sách cho khuyết tật/dân tộc thiểu số" | Từ chối đúng. Baseline từ chối đúng nhưng lý do lẫn tiếng Indonesia ("CONTEXT tidak mengandung informasi tentang…"); các mức 100.000đ, 140.000đ baseline nhắc tới có thật trong context, được nêu để giải thích không phải vay vốn |
 
-- Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí: trace `starter/results/agent-<cấu hình>-dev/traces.json` và `summary.json` (cấu hình, sha256 file config, token, chi phí, thời gian); nhãn `labels/dev/<cấu hình>.reviews.json`; bảng tổng hợp `starter/results/agent-comparison-dev.md` (`python -m scripts.compare_agent_runs`). Lệnh chạy trong [src/README.md](../../src/README.md). Tổng chi phí API cho 7 lần chạy dev ≈ $0.05.
+**Ví dụ trình bày:** câu trả lời có bằng chứng: **q16** (kèm điều kiện, citation đúng điều khoản). Câu thiếu bằng chứng: **u03** (từ chối dù context có con số gần nghĩa). Lỗi: **q11 dev của baseline** (trả lời bằng quy định khiển trách của cán bộ coi thi, do budget 800 loại mất `A-p98-000`), **q14 dev** (ý thừa do ranh giới chunk) và **u04 test của baseline** (lý do từ chối lẫn tiếng Indonesia).
+
+- Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí: trace `starter/results/agent-<cấu hình>-dev/traces.json` và `summary.json` (cấu hình, sha256 file config, token, chi phí, thời gian); nhãn `labels/dev/<cấu hình>.reviews.json`; bảng tổng hợp `starter/results/agent-comparison-dev.md` (`python -m scripts.compare_agent_runs`). Lệnh chạy trong [src/README.md](../../src/README.md). Tổng chi phí API cho 7 lần chạy dev ≈ $0.05. Test: `starter/results/agent-{baseline,combined}-test/`, nhãn `labels/test/{baseline,combined}.reviews.json`, bảng `starter/results/agent-comparison-test.md`, retrieval `starter/results/retrieval-comparison-test.md`; tổng chi phí test $0.0053.
 - Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn:
+
+### Kết luận dev và test
+
+- **Trên dev**, `combined` tăng grounded từ 0,93 lên 2,00 (/2), Context Evidence Rate từ 7/15 lên 15/15, đưa câu sai có citation từ 3 về 0 và từ chối nhầm từ 5 về 0, với chi phí API thấp hơn 30% và chậm hơn 2,5 s/câu. Cải thiện đến từ việc sửa hai lỗi độc lập: query do model viết lại (Lỗi 2) và context budget quá nhỏ (Lỗi 1); mức chênh lớn hơn nhiều so với dao động giữa hai lần chạy baseline (0,07).
+- **Trên test**, cả baseline và `combined` đều đạt tối đa: 5/5 câu đúng và đủ, 5/5 citation hợp lệ, context mức 2 ở 5/5 câu, từ chối đúng 2/2. Test **không phân biệt được** hai cấu hình về chất lượng, nên không xác nhận được mức cải thiện quan sát trên dev. Lý do: 5 câu test có đáp án đều dễ cho retrieval (dense với câu hỏi gốc có evidence trong top-3 ở 5/5 câu, hạng 1 ở 4/5) và không câu nào rơi vào hai kiểu lỗi đã thấy ở dev (evidence ở hạng 2–3, câu hỏi mà query viết lại làm lệch).
+- **Điều test cho thấy:** `combined` không làm hỏng câu dễ, cần ít lượt tìm hơn (12 so với 16 trên 7 câu) và rẻ hơn ($0.0025 so với $0.0028), đổi lại chậm hơn (9,8 so với 7,1 s/câu) do reranker trên CPU. Lỗi 2 vẫn xuất hiện ở baseline trên test (query trùng y nguyên ở q16, u04; query chỉ gồm tên tài liệu ở q18, u03) nhưng không làm sai câu trả lời vì evidence dễ tìm — đây là bằng chứng độc lập rằng lỗi có thật, không chỉ riêng dev.
+- **Đánh đổi của cấu hình chọn:** reranker `bge-reranker-v2-m3` cần tải ~2,3 GB và ~5,5–6,3 s mỗi lần tìm trên CPU (có GPU sẽ nhanh hơn nhiều); budget 2000 ký tự kéo thêm chunk không liên quan vào context (nhiễu, chưa gây sai trên dev/test).
+- **Giới hạn:**
+  - Benchmark nhỏ (dev 17 câu, test 7 câu, đúng mức tối thiểu) và một tài liệu duy nhất; một câu khác biệt tương ứng 0,13 điểm grounded trên dev và 0,4 trên test.
+  - `combined` được thiết kế từ chính lỗi dev và chỉ chạy một lần trên dev → điểm dev có thể lạc quan; test quá dễ để kiểm tra điều này. Cần thêm câu test khó (evidence ở hạng thấp, nhiều điều kiện, multi-hop) để đánh giá độc lập.
+  - Model `gpt-5-nano` không cố định temperature: cùng cấu hình, kết quả từng câu có thể khác giữa các lần chạy.
+  - Lỗi ranh giới chunk (strategy A, 500 ký tự) vẫn còn (q14 dev); sửa cần chunking theo điều/khoản và index mới.
+  - Nhãn do Claude đề xuất bản nháp kèm lý do, người làm bài đọc trace/chunk và xác nhận từng câu; một người chấm, chưa có đánh giá chéo.
 
 ## Thử thách nâng cao (nếu thực hiện)
 

@@ -1,0 +1,70 @@
+{
+  "status": "REVIEWED — Nguyễn Trọng Lâm, 2026-11-16; đã đối chiếu trace, context cuối và chunk từng câu",
+  "trace_file": "starter/results/agent-combined-test/traces.json",
+  "config": "configs/combined.json (sha256 824470c1...)",
+  "rubric": "BENCHMARK.md: answer_grade 0/1/2; citation_support mỗi citation; context_grade 0/1/2 trên context cuối gửi model (0 = không có evidence, 1 = có nhưng thiếu điều kiện hoặc nguồn, 2 = đủ evidence và nguồn); abstention_correct cho câu thiếu evidence",
+  "reviews": [
+    {
+      "query_id": "q16",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng và đủ: sau 03 tháng, kèm điều kiện không tái phạm/không có vi phạm phải xử lý kỷ luật [A-p147-002]. Chỉ 1 lần tìm (nguyên văn câu hỏi).",
+      "context_reason": "Context cuối có ['A-p147-002', 'A-p147-003', 'A-p148-000']; A-p147-002 chứa nguyên văn quy định (Điều 13 khoản 1, có điều kiện không tái phạm); hai chunk còn lại cùng Điều 13-14, liên quan kèm nguồn/trang."
+    },
+    {
+      "query_id": "q17",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng: trong thời hạn 30 ngày kể từ ngày nhập học [A-p158-003].",
+      "context_reason": "Context cuối có ['A-p158-003', 'A-p159-000', 'A-p158-001']; A-p158-003 chứa nguyên văn quy định (khoản 3) kèm nguồn/trang."
+    },
+    {
+      "query_id": "q18",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng và đủ: 6g00 đến 21g30, trừ ngày nghỉ lễ [A-p164-001]. Chỉ 1 lần tìm.",
+      "context_reason": "Context cuối có ['A-p164-001', 'A-p66-000', 'A-p133-001']; A-p164-001 chứa nguyên văn quy định (kèm ngoại lệ ngày nghỉ lễ); A-p66-000, A-p133-001 không liên quan (nhiễu do budget 2000 lấy thêm chunk) nhưng không ảnh hưởng câu trả lời kèm nguồn/trang."
+    },
+    {
+      "query_id": "q19",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng: '50% học phí' [A-p169-000]. Câu trả lời ngắn, không nhắc lại đối tượng; câu hỏi đã nêu đủ đối tượng nên chấm 2 (người chấm quyết định, cùng chuẩn với baseline).",
+      "context_reason": "Context cuối có ['A-p169-000', 'A-p168-000', 'A-p172-001']; A-p169-000 chứa nguyên văn quy định (mục III) kèm nguồn/trang."
+    },
+    {
+      "query_id": "q20",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng và đủ: 03 tháng tính từ khi đáp ứng đủ điều kiện và hoàn thành nghĩa vụ [A-p81-003].",
+      "context_reason": "Context cuối có ['A-p81-003', 'A-p82-001', 'A-p80-002']; A-p81-003 chứa nguyên văn quy định (Điều 18 khoản 1) kèm nguồn/trang."
+    },
+    {
+      "query_id": "u03",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối đúng; nhận ra A-p161-002 nói 'nộp phí nội trú theo hợp đồng' nhưng không có mức phí, và không lấy nhầm 100.000đ/tháng (A-p170-000, có trong context) — tránh được bẫy."
+    },
+    {
+      "query_id": "u04",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối đúng; nêu context chỉ có trợ cấp và chính sách cho khuyết tật/dân tộc thiểu số, không có vay vốn; không đưa con số nào."
+    }
+  ]
+}

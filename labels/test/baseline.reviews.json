@@ -1,0 +1,70 @@
+{
+  "status": "REVIEWED — Nguyễn Trọng Lâm, 2026-11-16; đã đối chiếu trace và chunk từng câu",
+  "trace_file": "starter/results/agent-baseline-test/traces.json",
+  "config": "configs/baseline.json (sha256 9b5cc833...)",
+  "rubric": "BENCHMARK.md: answer_grade 0/1/2; citation_support mỗi citation; context_grade 0/1/2 trên context cuối gửi model (0 = không có evidence, 1 = có nhưng thiếu điều kiện hoặc nguồn, 2 = đủ evidence và nguồn); abstention_correct cho câu thiếu evidence",
+  "reviews": [
+    {
+      "query_id": "q16",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng và đủ: sau 03 tháng kể từ ngày có quyết định, kèm điều kiện 'nếu SV không tái phạm hoặc không có vi phạm đến mức phải xử lý kỷ luật' [A-p147-002]. Ghi nhận: query 2 và 3 trùng y nguyên (Lỗi 2 của baseline vẫn xuất hiện trên test).",
+      "context_reason": "Context cuối có ['A-p147-002']; A-p147-002 chứa nguyên văn quy định (Điều 13 khoản 1, có điều kiện không tái phạm) kèm nguồn/trang."
+    },
+    {
+      "query_id": "q17",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng: trong vòng 30 ngày kể từ ngày nhập học [A-p158-003].",
+      "context_reason": "Context cuối có ['A-p158-003', 'A-p124-003']; A-p158-003 chứa nguyên văn quy định (khoản 3: đăng ký tạm trú và báo địa chỉ ngoại trú trong 30 ngày) kèm nguồn/trang."
+    },
+    {
+      "query_id": "q18",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng và đủ: 6g00 đến 21g30 các ngày trong tuần, trừ ngày nghỉ lễ [A-p164-001]. Ghi nhận: query đầu chỉ là 'Sổ tay sinh viên 2025-2026 Trường ĐH Khoa học tự nhiên ĐHQG-…' (Lỗi 2), lần tìm 2 mới đúng.",
+      "context_reason": "Context cuối có ['A-p164-001']; A-p164-001 chứa nguyên văn quy định (kèm ngoại lệ ngày nghỉ lễ) kèm nguồn/trang."
+    },
+    {
+      "query_id": "q19",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng: giảm 50% học phí, nêu lại đúng đối tượng [A-p169-000].",
+      "context_reason": "Context cuối có ['A-p169-000']; A-p169-000 chứa nguyên văn quy định (mục III: đối tượng được giảm 50%) kèm nguồn/trang."
+    },
+    {
+      "query_id": "q20",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "context_grade": 2,
+      "reason": "Đúng và đủ: 03 tháng tính từ khi đáp ứng đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ [A-p81-003].",
+      "context_reason": "Context cuối có ['A-p81-003']; A-p81-003 chứa nguyên văn quy định (Điều 18 khoản 1) kèm nguồn/trang."
+    },
+    {
+      "query_id": "u03",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối, nêu context không có mức phí nội trú; không đưa con số nào. Context chỉ có A-p107-001 (công tác nội trú chung). Query cả 3 lần đều chèn 'Sổ tay sinh viên 2025-2026' (Lỗi 2)."
+    },
+    {
+      "query_id": "u04",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối, không đưa mức vay nào. Lý do có nhắc 100.000đ/tháng và 140.000đ/tháng nhưng đó là mức trợ cấp xã hội có thật trong context (A-p170-000), được nêu để giải thích là KHÔNG phải vay vốn — không phải khẳng định sai. Lỗi trình bày: lý do lẫn tiếng Indonesia ('CONTEXT tidak mengandung informasi tentang…'). Query 2 và 3 trùng y nguyên."
+    }
+  ]
+}

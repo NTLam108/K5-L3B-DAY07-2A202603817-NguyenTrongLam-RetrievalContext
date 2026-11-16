@@ -1,0 +1,1218 @@
+[
+  {
+    "query_id": "q16",
+    "split": "test",
+    "question": "Theo Quy định khen thưởng, kỷ luật sinh viên, quyết định kỷ luật khiển trách chấm dứt hiệu lực sau bao lâu?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 147,
+        "evidence": "Đối với SV bị kỷ luật khiển trách: sau 03 tháng kể từ ngày có quyết định kỷ luật, nếu SV không tái phạm hoặc không có những vi phạm đến mức phải xử lý kỷ luật thì đương nhiên được chấm dứt hiệu lực của quyết định kỷ luật"
+      }
+    ],
+    "results": [
+      {
+        "id": "A-p147-002",
+        "text": "m việc (theo Điểm b Khoản 1 Điều này); c) Biên bản họp Hội đồng khen thưởng và kỷ luật sinh viên; d) Các tài liệu có liên quan khác. Điều 13. Chấm dứt hiệu lực của quyết định kỷ luật 1. Đối với SV bị kỷ luật khiển trách: sau 03 tháng kể từ ngày có quyết định kỷ luật, nếu SV không tái phạm hoặc không có những vi phạm đến mức phải xử lý kỷ luật thì đương nhiên được chấm dứt hiệu lực của quyết định kỷ luật và được hưởng quyền lợi của SV kể từ ngày quyết định kỷ luật chấm dứt hiệu lực. 2. Đối với SV",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 147,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 1400,
+          "strategy": "A",
+          "char_start": 900,
+          "chunk_index": 2,
+          "printed_page": 145
+        },
+        "score": 0.7804385554529111,
+        "rank": 1,
+        "retriever": "dense",
+        "hit": true
+      },
+      {
+        "id": "A-p147-003",
+        "text": "uyết định kỷ luật chấm dứt hiệu lực. 2. Đối với SV bị kỷ luật cảnh cáo: sau 06 tháng kể từ ngày có quyết định kỷ luật, nếu SV không tái phạm hoặc không có những vi phạm đến mức phải xử",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 147,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 1534,
+          "strategy": "A",
+          "char_start": 1350,
+          "chunk_index": 3,
+          "printed_page": 145
+        },
+        "score": 0.7157228758500305,
+        "rank": 2,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p145-000",
+        "text": "Tùy tình hình tài chính hàng năm Hiệu trưởng sẽ quyết định các mức khen thưởng SV dựa trên cơ sở tham mưu của Phòng Công tác sinh viên và Phòng Kế hoạch tài chính. Điều 10. Quyền khiếu nại về khen thưởng Tập thể SV và cá nhân SV nếu xét thấy các hình thức khen thưởng không thỏa đáng có quyền khiếu nại tại Phòng Công tác Sinh viên trong vòng 15 ngày kể từ ngày có Quyết định công nhận kết quả khen thưởng. CHƯƠNG III NỘI DUNG CỦA CÔNG TÁC KỶ LUẬT Điều 11. Quy định về hình thức kỷ luật và nội dung v",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 145,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 143
+        },
+        "score": 0.6675920088534362,
+        "rank": 3,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p148-001",
+        "text": "g hình phạt tù nhưng cho hưởng án treo để Nhà trường xem xét, tiếp nhận vào học tiếp nếu đủ điều kiện. 4. Quyết định kỷ luật phải có Điều Khoản ghi rõ thời gian SV bị thi hành kỷ luật, tính từ khi ban hành quyết định kỷ luật đến thời điểm hết thời hạn bị kỷ luật theo quy định. Điều 14. Quyền khiếu nại về kỷ luật Cá nhân và tập thể SV nếu xét thấy các hình thức kỷ luật không thỏa đáng có quyền khiếu nại tại Phòng Công tác Sinh viên trong vòng 15 ngày kể từ ngày có Quyết định kỷ luật.",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 148,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 937,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 146
+        },
+        "score": 0.6646863621847198,
+        "rank": 4,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p151-001",
+        "text": "Quy định gia hạn thời gian nộp học phí đối với sinh viên, học viên sau đại học hiện hành",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 151,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 539,
+          "strategy": "A",
+          "char_start": 451,
+          "chunk_index": 1,
+          "printed_page": 149
+        },
+        "score": 0.6530328806599521,
+        "rank": 5,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p148-000",
+        "text": "lý kỷ luật thì đương nhiên được chấm dứt hiệu lực của quyết định kỷ luật và được hưởng quyền lợi của SV kể từ ngày quyết định kỷ luật chấm dứt hiệu lực. 3. Đối với trường hợp đình chỉ học tập có thời hạn: khi hết thời hạn đình chỉ, SV phải nộp đơn xin học lại kèm theo chứng nhận của địa phương (cấp xã, phường, thị trấn) nơi cư trú về việc chấp hành tốt nghĩa vụ công dân tại địa phương; chứng nhận của cơ quan có thẩm quyền về việc đã chấp hành xong hình phạt tù nhưng cho hưởng án treo để Nhà trườ",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 148,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 146
+        },
+        "score": 0.6443839497108519,
+        "rank": 6,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p98-000",
+        "text": "1. Khiển trách: Áp dụng đối với sinh viên vi phạm một trong các lỗi sau: phạm lỗi lần đầu đối với một trong các hành vi nhìn bài của người khác, trao đổi với người khác, cố tình cho người khác xem bài thi; đã được cán bộ coi thi nhắc nhở sai phạm liên quan đến nội quy phòng thi nhưng vẫn tái phạm. Sinh viên bị kỷ luật khiển trách trong khi thi học phần nào sẽ bị trừ 25% điểm tổng kết của học phần đó. 2. Cảnh cáo: Áp dụng đối với người vi phạm một trong các lỗi sau: đã bị khiển trách trong giờ th",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 98,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khao_thi",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 96
+        },
+        "score": 0.6422923037657375,
+        "rank": 7,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p149-000",
+        "text": "PHỤC LỤC I MỘT SỐ NỘI DUNG VI PHẠM VÀ KHUNG XỬ LÝ KỶ LUẬT SINH VIÊN (Ban hành kèm theo Quyết định số 2738/QĐ-KHTN ngày 12/12/2023 của Hiệu trưởng Trường Đại học Khoa học tự nhiên) TT Nội dung vi phạm Số lần vi phạm và hình thức xử lý (Số lần tính trong cả khóa học) Ghi chú Khiển trách Cảnh cáo Đình chỉ có thời hạn Buộc thôi học 1. Đến muộn giờ học, giờ thực tập; nghỉ học không phép hoặc quá phép Hội đồng Khen thưởng & kỷ luật SV quyết định 2. Mất trật tự, làm việc riêng trong giờ học, giờ thực t",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 149,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 147
+        },
+        "score": 0.6417760466470702,
+        "rank": 8,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p145-001",
+        "text": "ều 11. Quy định về hình thức kỷ luật và nội dung vi phạm 1. Những SV có hành vi vi phạm thì tùy tính chất, mức độ, hậu quả của hành vi vi phạm có thể được nhắc nhở, phê bình hoặc bị xử lý một trong các hình thức kỷ luật sau: a) Khiển trách: áp dụng đối với SV có hành vi vi phạm lần đầu nhưng ở mức độ nhẹ; b) Cảnh cáo: áp dụng đối với SV đã bị khiển trách mà tái phạm; hoặc vi phạm ở mức độ nhẹ nhưng hành vi vi phạm có tính chất thường xuyên; hoặc mới vi phạm lần đầu nhưng mức độ tương đối nghiêm",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 145,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 949,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 143
+        },
+        "score": 0.6417036866126259,
+        "rank": 9,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p123-000",
+        "text": "e) Từ 35 đến 49 điểm: loại Yếu. f) Dưới 35 điểm: loại Kém. Điều 8. Phân loại sinh viên để đánh giá 1. Trong thời gian sinh viên bị kỷ luật mức khiển trách, kết quả rèn luyện không được vượt quá loại Khá. 2. Trong thời gian sinh viên bị kỷ luật mức cảnh cáo, kết quả rèn luyện không được vượt quá loại Trung bình. 3. Sinh viên bị kỷ luật mức đình chỉ học tập không được đánh giá rèn luyện trong thời gian bị đình chỉ. 4. Sinh viên bị kỷ luật mức buộc thôi học không được đánh giá kết quả rèn luyện. 5.",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 123,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ren_luyen",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 121
+        },
+        "score": 0.6404057573788455,
+        "rank": 10,
+        "retriever": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[A-p147-002 | https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf | page 147]\nm việc (theo Điểm b Khoản 1 Điều này); c) Biên bản họp Hội đồng khen thưởng và kỷ luật sinh viên; d) Các tài liệu có liên quan khác. Điều 13. Chấm dứt hiệu lực của quyết định kỷ luật 1. Đối với SV bị kỷ luật khiển trách: sau 03 tháng kể từ ngày có quyết định kỷ luật, nếu SV không tái phạm hoặc không có những vi phạm đến mức phải xử lý kỷ luật thì đương nhiên được chấm dứt hiệu lực của quyết định kỷ luật và được hưởng quyền lợi của SV kể từ ngày quyết định kỷ luật chấm dứt hiệu lực. 2. Đối với SV",
+    "context_ids": [
+      "A-p147-002"
+    ],
+    "context_chars": 594,
+    "elapsed_ms": 223.29849999914586,
+    "timing": {
+      "embed_ms": 200.76809999955003,
+      "db_ms": 22.496999999930267
+    },
+    "error": null,
+    "first_hit_rank": 1,
+    "hit1": true,
+    "hit3": true,
+    "hit10": true,
+    "context_hit": true,
+    "rr10": 1.0,
+    "first_stage_rank_of_gold": null
+  },
+  {
+    "query_id": "q17",
+    "split": "test",
+    "question": "Sinh viên ở trọ bên ngoài phải báo địa chỉ chỗ ở cho trường trong vòng bao lâu sau khi nhập học?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 158,
+        "evidence": "Phải đăng ký tạm trú với công an xã (phường, thị trấn) và báo với nhà trường về địa chỉ ngoại trú của mình trong thời hạn 30 ngày, kể từ ngày nhập học."
+      }
+    ],
+    "results": [
+      {
+        "id": "A-p158-003",
+        "text": "ơi cư trú và các hoạt động khác do địa phương tổ chức. 3. Phải đăng ký tạm trú với công an xã (phường, thị trấn) và báo với nhà trường về địa chỉ ngoại trú của mình trong thời hạn 30 ngày, kể từ ngày nhập học.",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 158,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ngoai_tru_noi_tru",
+          "char_end": 1559,
+          "strategy": "A",
+          "char_start": 1350,
+          "chunk_index": 3,
+          "printed_page": 156
+        },
+        "score": 0.7206599712371826,
+        "rank": 1,
+        "retriever": "dense",
+        "hit": true
+      },
+      {
+        "id": "A-p159-000",
+        "text": "4. Khi có sự thay đổi về nơi cư trú, phải báo địa chỉ cư trú mới của mình với nhà trường trong thời hạn 20 ngày. 5. HSSV ngoại trú có hộ khẩu thường trú và đang cư trú tại nơi có hộ khẩu thực hiện các nghĩa vụ được quy định tại các khoản 1, 2, 4 của Điều này. Điều 12. Kiểm tra, khen thưởng, kỷ luật 1. Bộ Giáo dục và Đào tạo, các sở giáo dục và đào tạo chính quyền địa phương, cơ quan có liên quan và các nhà trường theo thẩm quyền tổ chức kiểm tra, đánh giá việc thực hiện công tác ngoại trú của họ",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 159,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ngoai_tru_noi_tru",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 157
+        },
+        "score": 0.6396758556365967,
+        "rank": 2,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p161-001",
+        "text": "ú và nhà trường các giải pháp để góp phần xây dựng khu nội trú văn minh, sạch đẹp, an toàn; được đề đạt nguyện vọng và khiếu nại lên trưởng ban quản lý khu nội trú của nhà trường giải quyết các vấn đề có l iên quan đến quyền, lợi ích chính đáng của HSSV trong khu nội trú. Điều 6. Nghĩa vụ của học sinh, sinh viên nội trú 1. Thực hiện đăng ký tạm trú theo đúng quy định của Luật Cư trú hiện hành. Nếu vắng mặt tại khu nội trú quá 1 ngày phải báo với Ban quản lý khu nội trú. 2. Chấp hành các quy định",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 161,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ngoai_tru_noi_tru",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 159
+        },
+        "score": 0.5939450263977051,
+        "rank": 3,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p151-001",
+        "text": "Quy định gia hạn thời gian nộp học phí đối với sinh viên, học viên sau đại học hiện hành",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 151,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 539,
+          "strategy": "A",
+          "char_start": 451,
+          "chunk_index": 1,
+          "printed_page": 149
+        },
+        "score": 0.5820117841951986,
+        "rank": 4,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p158-001",
+        "text": "y do Bộ Giáo dục và Đào tạo ban hành. 2. Được hưởng các quyền công dân cư trú trên địa bàn, được chính quyền địa phương, nhà trường tạo điều kiện thuận lợi và giúp đỡ trong việc ngoại trú. 3. Được quyền khiếu nại, đề đạt nguyện vọng của mình đến chính quyền địa phương, Hiệu trưởng nhà trường và các cơ quan hữu quan đối với các vấn đề liên quan đến quyền, lợi ích chính đáng tại nơi cư trú. Điều 6. Nghĩa vụ của học sinh, sinh viên ngoại trú 1. Thực hiện nghĩa vụ theo quy định hiện hành của Quy chế",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 158,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ngoai_tru_noi_tru",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 156
+        },
+        "score": 0.5752623081207275,
+        "rank": 5,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p124-003",
+        "text": "c sự kiện, chương trình, hoạt động do đơn vị chịu trách nhiệm tổ chức theo phương thức đã thống nhất với Phòng Công tác Sinh viên. 4. Phòng Công tác Sinh viên công bố kết quả rèn luyện dự kiến của học kỳ đánh giá qua hộp thư điện tử của sinh viên và tiếp nhận phản hồi, cập nhật minh chứng, đề nghị điều chỉnh trong vòng 15 ngày kể từ thời điểm công bố,",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 124,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ren_luyen",
+          "char_end": 1703,
+          "strategy": "A",
+          "char_start": 1350,
+          "chunk_index": 3,
+          "printed_page": 122
+        },
+        "score": 0.575064684446772,
+        "rank": 6,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p158-000",
+        "text": "TRÍCH LƯỢC QUY CHẾ NGOẠI TRÚ CỦA HỌC SINH, SINH VIÊN CÁC TRƯỜNG ĐẠI HỌC, CAO ĐẲNG, TRUNG CẤP CHUYÊN NGHIỆP HỆ CHÍNH QUY (Ban hành kèm theo Thông tư số 27/2009/TT-BGDĐT ngày 19/10/2009 của Bộ trưởng Bộ Giáo dục và Đào tạo) Điều 5. Quyền của học sinh, sinh viên ngoại trú 1. Học sinh, sinh viên (HSSV) ngoại trú được hưởng các quyền theo quy định hiện hành của Quy chế học sinh, sinh viên trường đại học, cao đẳng và trung cấp chuyên nghiệp hệ chính quy do Bộ Giáo dục và Đào tạo ban hành. 2. Được hưởn",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 158,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ngoai_tru_noi_tru",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 156
+        },
+        "score": 0.5610592030847558,
+        "rank": 7,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p80-001",
+        "text": "theo quy định hiện hành; e) Thời gian học tập vượt quá giới hạn theo quy định tại khoản 7 Điều 2 của Quy chế này. 3. Sinh viên thuộc diện bị buộc thôi học sẽ bị xóa tên khỏi danh sách sinh viên. Trường sẽ thông báo cho sinh viên biết chậm nhất một tháng sau khi có quyết định buộc thôi học. 4. Kết quả học tập đã tích lũy của sinh viên trong trường hợp sinh viên bị buộc thôi học được lưu trữ tại Trường. Điều 17. Xét tốt nghiệp và công nhận tốt nghiệp 1. Sinh viên phải thực hiện quy trình và thủ tụ",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 80,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 78
+        },
+        "score": 0.5589762926101685,
+        "rank": 8,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p94-000",
+        "text": "3. Kết quả thi phải được công bố công khai, rõ ràng đến từng sinh viên sau kỳ thi. Chương IV VỀ TRÁCH NHIỆM CỦA SINH VIÊN TRONG CÔNG TÁC THI Điều 14. Trách nhiệm của sinh viên trong các ca thi 1. Trước giờ thi: - Phải có mặt tại phòng thi trước giờ thi 15 phút để làm thủ tục thi. - Phải mang theo thẻ sinh viên hoặc căn cước công dân để dự thi; nếu không có thẻ sinh viên hoặc căn cước công dân thì phải liên hệ ngay với Phòng Công tác Sinh viên để được xác nhận dự thi và làm giấy cam đoan tại phòn",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 94,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khao_thi",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 92
+        },
+        "score": 0.557563066482544,
+        "rank": 9,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p82-001",
+        "text": "eo bằng tốt nghiệp. 5. Sinh viên đã hết thời gian học tập tối đa theo quy định nhưng chưa đủ điều kiện tốt nghiệp do chưa hoàn thành những học phần Giáo dục quốc phòng- An ninh hoặc Giáo dục thể chất hoặc chưa đạt chuẩn đầu ra về ngoại ngữ, công nghệ thông tin, trong thời hạn 03 năm tính từ khi thôi học được hoàn thiện các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp. 6. Sinh viên không tốt nghiệp được cấp chứng nhận về các học phần đã tích lũy trong chương trình đào tạo của nhà trườn",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 82,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 80
+        },
+        "score": 0.5571562911774949,
+        "rank": 10,
+        "retriever": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[A-p158-003 | https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf | page 158]\nơi cư trú và các hoạt động khác do địa phương tổ chức. 3. Phải đăng ký tạm trú với công an xã (phường, thị trấn) và báo với nhà trường về địa chỉ ngoại trú của mình trong thời hạn 30 ngày, kể từ ngày nhập học.",
+    "context_ids": [
+      "A-p158-003"
+    ],
+    "context_chars": 303,
+    "elapsed_ms": 100.76930000104767,
+    "timing": {
+      "embed_ms": 81.34940000127244,
+      "db_ms": 19.379399998797453
+    },
+    "error": null,
+    "first_hit_rank": 1,
+    "hit1": true,
+    "hit3": true,
+    "hit10": true,
+    "context_hit": true,
+    "rr10": 1.0,
+    "first_stage_rank_of_gold": null
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "question": "Trường hoạt động từ mấy giờ đến mấy giờ trong ngày?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 164,
+        "evidence": "Thời gian hoạt động của Trường Đại học Khoa học tự nhiên từ 6g00 đến 21g30 các ngày trong tuần, trừ các ngày nghỉ lễ theo quy định của Nhà nước."
+      }
+    ],
+    "results": [
+      {
+        "id": "A-p68-000",
+        "text": "Buổi sáng Buổi chiều Buổi tối Tiết 1: 6g40-7g30 Tiết 7: 12g30-13g20 Tiết 13:18g00-18g50 Tiết 2: 7g30-8g20 Tiết 8: 13g20-14g10 Tiết 14: 18g50-19g40 Tiết 3: 8g30-9g20 Tiết 9: 14g20-15g10 Tiết 15: 19g40-20g30 Tiết 4: 9g20-10g10 Tiết 10: 15g10-16g00 Tiết 5: 10g20-11g10 Tiết 11: 16g10-17g00 Tiết 6: 11g10-12g00 Tiết 12: 17g00-17g50 b) Giờ của tiết học tại cơ sở Linh Trung: Buổi sáng Buổi chiều Tiết 1: 7g30-8g20 Tiết 6: 12g30-13g20 Tiết 2: 8g20-9g10 Tiết 7: 13g20-14g10 Tiết 3: 9g20-10g10 Tiết 8: 14g20-",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 68,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 66
+        },
+        "score": 0.6476923227310181,
+        "rank": 1,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p164-001",
+        "text": "đây gọi chung là Người học. 3. Cá nhân, tổ chức khác không thuộc quản lý của Trường ĐH KHTN, sau đây gọi chung là Khách. II. NHỮNG QUY ĐỊNH CHUNG 1. Thời gian hoạt động của Trường Đại học Khoa học tự nhiên từ 6g00 đến 21g30 các ngày trong tuần, trừ các ngày nghỉ lễ theo quy định của Nhà nước. 2. Bộ phận hành chính của nhà trường làm việc từ thứ hai đến thứ sáu hàng tuần theo giờ hành chính. 3. Hoạt động giảng dạy, học tập và nghiên cứu thực hiện theo thời khóa biểu đối với từng hệ đào tạo. 4. N",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 164,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "noi_quy",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 451,
+          "chunk_index": 1,
+          "printed_page": 162
+        },
+        "score": 0.6204079985618591,
+        "rank": 2,
+        "retriever": "dense",
+        "hit": true
+      },
+      {
+        "id": "A-p66-000",
+        "text": "Điều 5. Hình thức đào tạo 1. Đào tạo chính quy a) Các hoạt động giảng dạy được thực hiện tại Trường, riêng những hoạt động thực hành, thực tập, trải nghiệm thực tế và giảng dạy trực tuyến có thể thực hiện ngoài Trường; b) Thời gian tổ chức hoạt động giảng dạy trong khoảng từ 06 giờ đến 20 giờ các ngày trong tuần từ thứ 2 đến thứ 7; thời gian tổ chức những hoạt động đặc thù của chương trình đào tạo được thực hiện theo quy định của cơ sở đào tạo. 2. Đối với các ngành đào tạo ưu tiên phục vụ nguồn",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 66,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 499,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 64
+        },
+        "score": 0.596559369769135,
+        "rank": 3,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p67-003",
+        "text": "học, hình thức và chương trình đào tạo. Thời khóa biểu của các lớp học phần bình thường được bố trí đều trong các tuần của học kỳ. Trong trường hợp cần thiết phải xếp lịch học tập trung thời gian, số giờ giảng đối với một học phần bất kỳ không vượt quá 15 giờ/tuần và 4 giờ/ngày. 7. Phân bố giờ học a) Giờ của tiết học tại cơ sở 227 Nguyễn Văn Cừ:",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 67,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 1697,
+          "strategy": "A",
+          "char_start": 1350,
+          "chunk_index": 3,
+          "printed_page": 65
+        },
+        "score": 0.5721139907836914,
+        "rank": 4,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p133-001",
+        "text": "tình nguyện vì cộng đồng từ cấp lớp trở lên (đối với trong Nhà trường) hoặc tổ chức bởi đơn vị có tư cách pháp nhân và hoạt động trong khuôn khổ pháp luật, có thời gian lao động (là thời gian thực tế làm việc với cộng đồng thụ hưởng): + Dưới 24 giờ (ngắn hạn) + 5 điểm/hoạt động + Từ 24 giờ đến dưới 01 tuần (trung hạn) + 10 điểm/hoạt động + Từ 01 tuần trở lên (dài hạn) + 15 điểm/hoạt động 4.4. Là thành viên Ban tổ chức của các hoạt động tình nguyện: + Ban tổ chức hoạt động cấp trường trở lên + 1",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 133,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ren_luyen",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 451,
+          "chunk_index": 1,
+          "printed_page": 131
+        },
+        "score": 0.5173251032829285,
+        "rank": 5,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p67-000",
+        "text": "3. Tổng số tín chỉ trong một khoá học được ghi rõ trong chương trình đào tạo. Khối lượng và nội dung kiến thức của khoá học được quy định cụ thể cho từng năm học, từng học kỳ trong chương trình. 4. Một năm học của Trường được tổ chức như sau: a) Đối với chương trình đại trà: một năm học có hai học kỳ chính, mỗi học kỳ chính có 15 tuần thực học. Ngoài hai học kỳ chính, Trường có thể tổ chức thêm học kỳ hè để sinh viên có điều kiện được học lại, học cải thiện hoặc học vượt. Mỗi học kỳ hè có ít nhấ",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 67,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 65
+        },
+        "score": 0.5086250608339951,
+        "rank": 6,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p67-001",
+        "text": "c cải thiện hoặc học vượt. Mỗi học kỳ hè có ít nhất 5 tuần thực học. b) Đối với chương trình Tiên tiến, Liên kết, Chất lượng cao: một năm học có 03 học kỳ chính với tổng số tối thiểu 30 tuần lên lớp. c) Kế hoạch năm học thể hiện những mốc thời gian chính của các hoạt động đào tạo trong năm học cho tất cả hình thức, chương trình đào tạo, được công bố kịp thời tới các bên liên quan trước khi bắt đầu năm học. 5. Kế hoạch học kỳ bao gồm: kế hoạch mở lớp, hình thức dạy và học (trực tiếp hoặc trực tuy",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 67,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 65
+        },
+        "score": 0.5063148736953735,
+        "rank": 7,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p167-001",
+        "text": "ớng dẫn khách theo yêu cầu công tác. Khách đến trường làm việc với Ban Giám hiệu, phòng chức năng, các đơn vị chuyên môn trực thuộc phải đăng ký qua bộ phận văn thư thuộc phòng Tổ chức - Hành chính để được hướng dẫn. 2. Các phương tiện (nếu có) như: ô tô, xe máy, xe đạp phải để đúng nơi quy định theo sự hướng dẫn của bảo vệ trực cơ quan. 3. Chấp hành nghiêm túc nội quy cơ quan, trang phục gọn gàng; không gây ồn ào, to tiếng, giữ gìn vệ sinh chung. 4. Nhà trường từ chối phục vụ đối với khách đã s",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 167,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "noi_quy",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 165
+        },
+        "score": 0.5046223697291401,
+        "rank": 8,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p165-002",
+        "text": "g, phòng học, phòng thí nghiệm phải kiểm tra việc tắt máy lạnh, các thiết bị điện, khóa nước an toàn. 13. Trường hợp muốn lưu trú qua đêm trong trường hoặc làm việc vào các ngày nghỉ theo quy định phải được sự phê duyệt bằng văn bản của Phòng Tổ chức - Hành chính. III. ĐỐI VỚI VIÊN CHỨC, NGƯỜI LAO ĐỘNG Ngoài những quy định nêu tại Phần II, viên chức, người lao động phải tuân thủ các quy định sau đây: 1. Chấp hành tốt chủ trương, đường lối của Đảng, chính sách, pháp luật của Nhà nước và nội quy,",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 165,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "noi_quy",
+          "char_end": 1399,
+          "strategy": "A",
+          "char_start": 900,
+          "chunk_index": 2,
+          "printed_page": 163
+        },
+        "score": 0.5037916302680969,
+        "rank": 9,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p63-003",
+        "text": "một tập hợp hoạt động giảng dạy và học tập được thiết kế nhằm thực hiện một số mục tiêu học tập cụ thể, trang bị cho người học những kiến thức, kỹ năng thuộc một phạm vi chuyên môn hẹp trong chương trình đào tạo. Một học phần thông thường được tổ chức giảng dạy, học tập trong một học kỳ. Mỗi học phần được ký hiệu bằng một mã số riêng do trường quy",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 63,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 1700,
+          "strategy": "A",
+          "char_start": 1351,
+          "chunk_index": 3,
+          "printed_page": 61
+        },
+        "score": 0.5031484515413183,
+        "rank": 10,
+        "retriever": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[A-p68-000 | https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf | page 68]\nBuổi sáng Buổi chiều Buổi tối Tiết 1: 6g40-7g30 Tiết 7: 12g30-13g20 Tiết 13:18g00-18g50 Tiết 2: 7g30-8g20 Tiết 8: 13g20-14g10 Tiết 14: 18g50-19g40 Tiết 3: 8g30-9g20 Tiết 9: 14g20-15g10 Tiết 15: 19g40-20g30 Tiết 4: 9g20-10g10 Tiết 10: 15g10-16g00 Tiết 5: 10g20-11g10 Tiết 11: 16g10-17g00 Tiết 6: 11g10-12g00 Tiết 12: 17g00-17g50 b) Giờ của tiết học tại cơ sở Linh Trung: Buổi sáng Buổi chiều Tiết 1: 7g30-8g20 Tiết 6: 12g30-13g20 Tiết 2: 8g20-9g10 Tiết 7: 13g20-14g10 Tiết 3: 9g20-10g10 Tiết 8: 14g20-",
+    "context_ids": [
+      "A-p68-000"
+    ],
+    "context_chars": 592,
+    "elapsed_ms": 92.57139999863284,
+    "timing": {
+      "embed_ms": 73.15349999953469,
+      "db_ms": 19.384000001082313
+    },
+    "error": null,
+    "first_hit_rank": 2,
+    "hit1": false,
+    "hit3": true,
+    "hit10": true,
+    "context_hit": false,
+    "rr10": 0.5,
+    "first_stage_rank_of_gold": null
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "question": "Sinh viên có cha là công nhân bị tai nạn lao động, đang hưởng trợ cấp thường xuyên, thì được giảm bao nhiêu phần trăm học phí?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 169,
+        "evidence": "III. Đối tượng được giảm 50% học phí: Sinh viên là con cán bộ, công chức, viên chức, công nhân mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên."
+      }
+    ],
+    "results": [
+      {
+        "id": "A-p169-000",
+        "text": "II. Đối tượng được giảm 70% học phí: Sinh viên là người dân tộc thiểu số (ngoài đối tượng dân tộc thiểu số rất ít người) ở thôn/bản đặc biệt khó khăn, xã khu vực III vùng dân tộc và miền núi, xã đặc biệt khó khăn vùng bãi ngang ven biển hải đảo theo quy định của cơ quan có thẩm quyền. III. Đối tượng được giảm 50% học phí: Sinh viên là con cán bộ, công chức, viên chức, công nhân mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên. IV. Thủ tục, hồ sơ: Sinh",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 169,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 499,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 167
+        },
+        "score": 0.6633961796760559,
+        "rank": 1,
+        "retriever": "dense",
+        "hit": true
+      },
+      {
+        "id": "A-p170-000",
+        "text": "THÔNG TIN TRỢ CẤP XÃ HỘI 1. Đối tượng được trợ cấp 100.000đ/tháng: a. Sinh viên mồ côi cả cha lẫn mẹ, không nơi nương tựa. b. Sinh viên khuyết tật từ 41% trở lên và có khó khăn về kinh tế. c. Sinh viên thuộc diện hộ nghèo/hộ cận nghèo vượt khó học tập: ● Sinh viên năm 1: ĐTB từ Khá trở lên, không chịu bất kỳ hình thức kỷ luật nào. ● Sinh viên năm 2 trở lên: ĐTB và ĐRL từ Khá trở lên. 2. Đối tượng được trợ cấp 140.000đ/tháng: Sinh viên là người dân tộc ít người thường trú trên 03 năm tại vùng cao",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 170,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 168
+        },
+        "score": 0.611948155644647,
+        "rank": 2,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p169-001",
+        "text": "ng trợ cấp thường xuyên. IV. Thủ tục, hồ sơ: Sinh viên xem thông tin hồ sơ quy định đối với từng đối tượng tại website https://hcmus.edu.vn/phong-cong-tac-sinh-vien/ (Mục Thông báo miễn giảm)",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 169,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 641,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 167
+        },
+        "score": 0.5890116936557486,
+        "rank": 3,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p173-000",
+        "text": "CHÍNH SÁCH SINH VIÊN KHUYẾT TẬT Căn cứ Thông tư liên tịch số 42/2013/TTLT-BGDĐT-BLĐTBXH-BTC ngày 31/12/2013 của Liên Bộ Giáo dục và Đào tạo, Bộ Lao động – Thương Binh và Xã hội, Bộ Tài chính về chính sách giáo dục đối với người khuyết tật (có hiệu lực từ ngày 05/3/2014) 1. Đối tượng: sinh viên hệ chính quy là người khuyết tật thuộc diện hộ nghèo, hộ cận nghèo. 2. Mức hỗ trợ: 2.1. Được hưởng học bổng mỗi tháng bằng 80% mức lương cơ sở theo quy định của chính phủ trong từng học kỳ, cấp 10 tháng/nă",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 173,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 171
+        },
+        "score": 0.5825203657150269,
+        "rank": 4,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p168-000",
+        "text": "THÔNG TIN MIỄN GIẢM HỌC PHÍ Căn cứ Nghị định 81/2021/NĐ-CP ngày 27/8/2021 của Chính phủ quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; giá dịch vụ trong lĩnh vực giáo dục, đào tạo I. Đối tượng được miễn 100% học phí: 1. Các đối tượng theo quy định tại Pháp lệnh Ưu đãi người có công với cách mạng nếu đang theo học tại các cơ sở giáo dục thuộc hệ thống giáo dục quốc dân. 2. Sinh viên khuyết t",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 168,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 166
+        },
+        "score": 0.5808277130126953,
+        "rank": 5,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p172-001",
+        "text": "Mức hỗ trợ: Được hỗ trợ chi phí học tập bằng 100% mức lương cơ sở và được cấp 12 tháng/năm học. 3. Thủ tục hồ sơ: Sinh viên xem thông tin hồ sơ quy định tại https://hcmus.edu.vn/phong-cong-tac-sinh-vien/ (Mục Thông báo miễn giảm).",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 172,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 681,
+          "strategy": "A",
+          "char_start": 451,
+          "chunk_index": 1,
+          "printed_page": 170
+        },
+        "score": 0.5730715990066528,
+        "rank": 6,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p172-000",
+        "text": "CHÍNH SÁCH SINH VIÊN DÂN TỘC THIỂU SỐ RẤT ÍT NGƯỜI Căn cứ Nghị định số 57/2017/NĐ-CP ngày 09/05/2017 của Thủ tướng Chính phủ về việc quy định chính sách ưu tiên tuyển sinh và hỗ trợ học tập đối với trẻ mẫu giáo, học sinh, sinh viên dân tộc thiểu số rất ít người. 1. Đối tượng: Sinh viên hệ chính quy là người dân tộc thiểu số rất ít người (Cống, Mảng, Pu Péo, Si La, Cờ Lao, Bố Y, La Ha, Ngái, Chứt, Ơ Đu, Brâu, Rơ Măm, Lô Lô, Lự, Pà Thẻn, La Hủ). 2. Mức hỗ trợ: Được hỗ trợ chi phí học tập bằng 100%",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 172,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 170
+        },
+        "score": 0.5595431923866272,
+        "rank": 7,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p136-001",
+        "text": "chức có tư cách pháp nhân trao tặng vì tinh thần vượt khó, phấn đấu vươn lên trong học tập và cuộc sống hoặc các trường hợp không được học bổng nhưng được Hội đồng cấp Khoa thống nhất đề xuất + 10 điểm/học kỳ được trao tặng học bổng Tiêu chí 13: Các trường hợp có hoàn cảnh đặc biệt 5.8. - Mồ côi cả cha lẫn mẹ + 20 điểm/học kỳ 5.9. - Sinh viên khuyết tật, khó khăn trong đi lại và sinh hoạt + 10 điểm/học kỳ 5.10. - Hộ nghèo, Hộ cận nghèo được hưởng chính sách theo quy định của Bộ Giáo dục & Đào tạ",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 136,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "ren_luyen",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 134
+        },
+        "score": 0.5565407276153564,
+        "rank": 8,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p173-001",
+        "text": "h của chính phủ trong từng học kỳ, cấp 10 tháng/năm học. 2.2. Được hỗ trợ kinh phí để mua sắm phương tiện, đồ dùng học tập 1.000.000đ/người/năm học. 3. Thủ tục hồ sơ (nộp 01 bộ hồ sơ khác với hồ sơ MGHP và TCXH): Sinh viên xem thông tin hồ sơ quy định tại https://hcmus.edu.vn/phong-cong- tac-sinh-vien/ (Mục Thông báo miễn giảm).",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 173,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 780,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 171
+        },
+        "score": 0.5565366744995117,
+        "rank": 9,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p170-001",
+        "text": "n tộc ít người thường trú trên 03 năm tại vùng cao. 3. Thủ tục, hồ sơ: Sinh viên xem thông tin hồ sơ quy định đối với từng đối tượng tại website https://hcmus.edu.vn/phong-cong-tac-sinh-vien/ (Mục Thông báo miễn giảm)",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 170,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "chinh_sach_ho_tro",
+          "char_end": 667,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 168
+        },
+        "score": 0.5485106110572815,
+        "rank": 10,
+        "retriever": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[A-p169-000 | https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf | page 169]\nII. Đối tượng được giảm 70% học phí: Sinh viên là người dân tộc thiểu số (ngoài đối tượng dân tộc thiểu số rất ít người) ở thôn/bản đặc biệt khó khăn, xã khu vực III vùng dân tộc và miền núi, xã đặc biệt khó khăn vùng bãi ngang ven biển hải đảo theo quy định của cơ quan có thẩm quyền. III. Đối tượng được giảm 50% học phí: Sinh viên là con cán bộ, công chức, viên chức, công nhân mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên. IV. Thủ tục, hồ sơ: Sinh",
+    "context_ids": [
+      "A-p169-000"
+    ],
+    "context_chars": 593,
+    "elapsed_ms": 106.74350000044797,
+    "timing": {
+      "embed_ms": 87.11390000098618,
+      "db_ms": 19.59519999945769
+    },
+    "error": null,
+    "first_hit_rank": 1,
+    "hit1": true,
+    "hit3": true,
+    "hit10": true,
+    "context_hit": true,
+    "rr10": 1.0,
+    "first_stage_rank_of_gold": null
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "question": "Sau khi đủ điều kiện tốt nghiệp, sinh viên được cấp bằng trong thời hạn bao lâu?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 81,
+        "evidence": "được cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ với nhà Trường."
+      }
+    ],
+    "results": [
+      {
+        "id": "A-p81-003",
+        "text": "sinh viên đủ điều kiện theo quy định. Điều 18. Cấp bằng tốt nghiệp 1. Những sinh viên đã nộp hồ sơ tốt nghiệp, nếu đủ điều kiện tốt nghiệp sẽ được Hiệu trưởng ra quyết định công nhận tốt nghiệp được cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ với nhà Trường. 2. Bằng tốt nghiệp đại học được cấp theo ngành đào tạo. Việc cấp bằng",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 81,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 1770,
+          "strategy": "A",
+          "char_start": 1351,
+          "chunk_index": 3,
+          "printed_page": 79
+        },
+        "score": 0.8002098917836029,
+        "rank": 1,
+        "retriever": "dense",
+        "hit": true
+      },
+      {
+        "id": "A-p82-001",
+        "text": "eo bằng tốt nghiệp. 5. Sinh viên đã hết thời gian học tập tối đa theo quy định nhưng chưa đủ điều kiện tốt nghiệp do chưa hoàn thành những học phần Giáo dục quốc phòng- An ninh hoặc Giáo dục thể chất hoặc chưa đạt chuẩn đầu ra về ngoại ngữ, công nghệ thông tin, trong thời hạn 03 năm tính từ khi thôi học được hoàn thiện các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp. 6. Sinh viên không tốt nghiệp được cấp chứng nhận về các học phần đã tích lũy trong chương trình đào tạo của nhà trườn",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 82,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 80
+        },
+        "score": 0.7191264796777691,
+        "rank": 2,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p77-003",
+        "text": "ết quả hoặc điều kiện cấp chứng chỉ đối với học phần",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 77,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 1402,
+          "strategy": "A",
+          "char_start": 1350,
+          "chunk_index": 3,
+          "printed_page": 75
+        },
+        "score": 0.6888246907204807,
+        "rank": 3,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p82-000",
+        "text": "được thực hiện theo quy chế văn bằng, chứng chỉ hiện hành. 3. Hạng tốt nghiệp được xác định căn cứ vào điểm trung bình tích lũy toàn khóa được quy định tại điểm b khoản 2 Điều 15 của Quy chế này. Hạng tốt nghiệp của sinh viên có điểm trung bình tích lũy loại xuất sắc và giỏi sẽ bị giảm đi một mức nếu đã bị kỷ luật từ mức cảnh cáo trở lên trong thời gian học. 4. Kết quả học tập của sinh viên được ghi vào bảng điểm theo từng học phần và phát kèm theo bằng tốt nghiệp. 5. Sinh viên đã hết thời gian",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 82,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 499,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 80
+        },
+        "score": 0.6840353200414598,
+        "rank": 4,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p80-002",
+        "text": "ệp 1. Sinh viên phải thực hiện quy trình và thủ tục xét tốt nghiệp và công nhận tốt nghiệp ngay sau khi đủ điều kiện. 2. Cuối mỗi học kỳ, Trường sẽ thông báo xét tốt nghiệp cho sinh viên. 3. Sinh viên được xét và công nhận tốt nghiệp khi có đủ các điều kiện sau: a) Cho đến thời điểm xét tốt nghiệp không bị truy cứu trách nhiệm hình sự hoặc không đang trong thời gian bị kỷ luật ở mức đình chỉ học tập; b) Tích lũy đủ số học phần và tổng số tín chỉ theo quy định của chương trình đào tạo;",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 80,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 1389,
+          "strategy": "A",
+          "char_start": 900,
+          "chunk_index": 2,
+          "printed_page": 78
+        },
+        "score": 0.6784220529543142,
+        "rank": 5,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p63-001",
+        "text": "quy định trong Kh ung cơ cấu hệ thống giáo dục quốc dân, đồng thời đảm bảo đa số sinh viên hoàn thành chương trình đào tạo. 7. Thời gian tối đa để sinh viên hoàn thành khóa học Tùy theo khả năng học tập, sinh viên được rút ngắn hoặc kéo dài thời gian học như sau: a) Sinh viên được phép rút ngắn tối đa một (01) năm học và kéo dài thêm không vượt quá ba (03) năm học theo kế hoạch học tập. Riêng đối với chương trình liên thông đại học, sinh viên kéo dài thêm không vượt quá hai (02) năm học theo kế",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 63,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 451,
+          "chunk_index": 1,
+          "printed_page": 61
+        },
+        "score": 0.6617603503608507,
+        "rank": 6,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p66-002",
+        "text": "hể. Tuỳ thuộc vào chương trình đào tạo, khoá học được quy định như sau: a) Đào tạo trình độ đại học được thực hiện trong bốn năm học. b) Đào tạo liên thông từ cao đẳng lên đại học thực hiện từ một năm rưỡi đến hai năm học; c) Đào tạo liên thông, văn bằng 2: thời gian được xác định trên cơ sở học phần và khối lượng tích lũy quy định cho từng chương trình;",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 66,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 1256,
+          "strategy": "A",
+          "char_start": 900,
+          "chunk_index": 2,
+          "printed_page": 64
+        },
+        "score": 0.6593785692002142,
+        "rank": 7,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p80-001",
+        "text": "theo quy định hiện hành; e) Thời gian học tập vượt quá giới hạn theo quy định tại khoản 7 Điều 2 của Quy chế này. 3. Sinh viên thuộc diện bị buộc thôi học sẽ bị xóa tên khỏi danh sách sinh viên. Trường sẽ thông báo cho sinh viên biết chậm nhất một tháng sau khi có quyết định buộc thôi học. 4. Kết quả học tập đã tích lũy của sinh viên trong trường hợp sinh viên bị buộc thôi học được lưu trữ tại Trường. Điều 17. Xét tốt nghiệp và công nhận tốt nghiệp 1. Sinh viên phải thực hiện quy trình và thủ tụ",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 80,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 950,
+          "strategy": "A",
+          "char_start": 450,
+          "chunk_index": 1,
+          "printed_page": 78
+        },
+        "score": 0.6390396952629089,
+        "rank": 8,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p151-001",
+        "text": "Quy định gia hạn thời gian nộp học phí đối với sinh viên, học viên sau đại học hiện hành",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 151,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "khen_thuong_ky_luat",
+          "char_end": 539,
+          "strategy": "A",
+          "char_start": 451,
+          "chunk_index": 1,
+          "printed_page": 149
+        },
+        "score": 0.6379227854059478,
+        "rank": 9,
+        "retriever": "dense",
+        "hit": false
+      },
+      {
+        "id": "A-p81-000",
+        "text": "c) Đã hoàn tất đủ các học phần Giáo dục quốc phòng (có chứng chỉ GDQP- An ninh) và Giáo dục thể chất; d) Đạt chuẩn trình độ ngoại ngữ theo quy định của Trường; e) Đạt chuẩn trình độ tin học theo quy định trong các chương trình đào tạo của Trường; f) Sinh viên đã đủ điều kiện tốt nghiệp ở học kỳ nào phải nộp hồ sơ xét tốt nghiệp ở học kỳ đó. Sinh viên được phép xin hủy điểm đối với các học phần tự chọn nếu không ảnh hưởng đến điều kiện được công nhận tốt nghiệp. 4. Hiệu trưởng ban hành quyết định",
+        "source_id": "stsv-hcmus-2025",
+        "source": "https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf",
+        "page": 81,
+        "metadata": {
+          "size": 500,
+          "overlap": 50,
+          "section": "dao_tao",
+          "char_end": 500,
+          "strategy": "A",
+          "char_start": 0,
+          "chunk_index": 0,
+          "printed_page": 79
+        },
+        "score": 0.6317379474639893,
+        "rank": 10,
+        "retriever": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[A-p81-003 | https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf | page 81]\nsinh viên đủ điều kiện theo quy định. Điều 18. Cấp bằng tốt nghiệp 1. Những sinh viên đã nộp hồ sơ tốt nghiệp, nếu đủ điều kiện tốt nghiệp sẽ được Hiệu trưởng ra quyết định công nhận tốt nghiệp được cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ với nhà Trường. 2. Bằng tốt nghiệp đại học được cấp theo ngành đào tạo. Việc cấp bằng\n\n[A-p77-003 | https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf | page 77]\nết quả hoặc điều kiện cấp chứng chỉ đối với học phần",
+    "context_ids": [
+      "A-p81-003",
+      "A-p77-003"
+    ],
+    "context_chars": 657,
+    "elapsed_ms": 97.3902999994607,
+    "timing": {
+      "embed_ms": 77.89500000035332,
+      "db_ms": 19.463399999949615
+    },
+    "error": null,
+    "first_hit_rank": 1,
+    "hit1": true,
+    "hit3": true,
+    "hit10": true,
+    "context_hit": true,
+    "rr10": 1.0,
+    "first_stage_rank_of_gold": null
+  }
+]

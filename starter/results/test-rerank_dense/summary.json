@@ -1,0 +1,53 @@
+{
+  "method": "rerank_dense",
+  "split": "test",
+  "n": 5,
+  "use_filter": false,
+  "query": "nguyên văn question",
+  "depth": 10,
+  "top_k_context": 3,
+  "budget_chars": 800,
+  "retriever": {
+    "retriever": "rerank(dense)",
+    "reranker_model": "BAAI/bge-reranker-v2-m3",
+    "candidates": 20,
+    "first_stage": {
+      "retriever": "dense",
+      "store_strategy": "A",
+      "embedding_model": "BAAI/bge-m3",
+      "dimensions": 1024,
+      "metric": "cosine (exact)",
+      "allowed_filters": [
+        "document_id",
+        "section"
+      ]
+    }
+  },
+  "hit1": {
+    "n": 5,
+    "N": 5,
+    "rate": 1.0
+  },
+  "hit3": {
+    "n": 5,
+    "N": 5,
+    "rate": 1.0
+  },
+  "context_hit": {
+    "n": 5,
+    "N": 5,
+    "rate": 1.0
+  },
+  "hit10": {
+    "n": 5,
+    "N": 5,
+    "rate": 1.0
+  },
+  "mrr10": 1.0,
+  "missed_hit1": [],
+  "missed_hit3": [],
+  "errors": [],
+  "median_ms": 6301.9,
+  "load_seconds": 5.13,
+  "service_cost_usd": 0
+}

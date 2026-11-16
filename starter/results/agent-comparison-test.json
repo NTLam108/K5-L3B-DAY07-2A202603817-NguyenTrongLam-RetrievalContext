@@ -1,0 +1,128 @@
+[
+  {
+    "run": "baseline",
+    "dir": "starter/results/agent-baseline-test",
+    "config_file": "configs/baseline.json",
+    "config_sha256": "9b5cc833",
+    "first_search_hit1": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "first_search_hit3": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "answered": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 5,
+      "rate": 0.0
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 2,
+      "2": 1,
+      "3": 4
+    },
+    "errors": [],
+    "cost_usd": 0.002834,
+    "median_case_ms": 7137.5562000012,
+    "prompt_tokens": 22652,
+    "completion_tokens": 4253,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 0,
+      "1": 0,
+      "2": 5,
+      "N": 5,
+      "mean": 2.0
+    },
+    "citation_validity": {
+      "n": 5,
+      "N": 5
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 0
+  },
+  {
+    "run": "combined",
+    "dir": "starter/results/agent-combined-test",
+    "config_file": "configs/combined.json",
+    "config_sha256": "824470c1",
+    "first_search_hit1": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "first_search_hit3": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "answered": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 5,
+      "rate": 0.0
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 4,
+      "2": 1,
+      "3": 2
+    },
+    "errors": [],
+    "cost_usd": 0.002517,
+    "median_case_ms": 9833.185800000138,
+    "prompt_tokens": 22449,
+    "completion_tokens": 3487,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 0,
+      "1": 0,
+      "2": 5,
+      "N": 5,
+      "mean": 2.0
+    },
+    "citation_validity": {
+      "n": 5,
+      "N": 5
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 0
+  }
+]
