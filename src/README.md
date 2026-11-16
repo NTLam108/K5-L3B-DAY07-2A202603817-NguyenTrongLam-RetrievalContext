@@ -18,18 +18,35 @@ $env:PYTHONUTF8 = "1"                                                         # 
 - `src/day6/` sao chép `embeddings.py`, `store.py`, `models.py` từ repo Day 6 (commit `8094c36`); chỉ đổi đường dẫn `.env` sang thư mục gốc repo này.
 - Embedding `BAAI/bge-m3`, 1024 chiều, chuẩn hóa L2, không tiền tố query/document, chạy CPU, chi phí 0.
 - PostgreSQL 16.16 + pgvector 0.8.7, bảng `chunks`, tìm exact theo cosine (`<=>`). Day 7 dùng strategy **A** (fixed 500 ký tự, overlap 50, 363 chunk) — cấu hình Day 6 chọn trên dev.
-- Container chạy với compose project `day6_student_starter`. Bật lại từ thư mục `starter/` của repo Day 6:
+- Repo Day 6 (công khai): <https://github.com/NTLam108/K5-L3B-DAY06-NguyenTrongLam-2A202603817-DataIngestion>, code pipeline ở commit `8094c36`.
+
+### Dựng lại vector store trên máy mới
+
+Cần Docker và Python 3.12. Làm trong repo Day 6 theo [starter/README.md của Day 6](https://github.com/NTLam108/K5-L3B-DAY06-NguyenTrongLam-2A202603817-DataIngestion/blob/main/starter/README.md); tóm tắt (PowerShell, từ thư mục `starter/` của repo Day 6):
 
 ```powershell
-docker compose -p day6_student_starter up -d
+git clone https://github.com/NTLam108/K5-L3B-DAY06-NguyenTrongLam-2A202603817-DataIngestion.git
+cd K5-L3B-DAY06-NguyenTrongLam-2A202603817-DataIngestion\starter
+py -3.12 -m venv .venv; .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+Copy-Item .env.example .env
+# Tải PDF gốc (không có trong repo): https://hcmus.edu.vn/wp-content/uploads/2025/08/STSV2025_ONLINE.pdf
+# lưu thành data\raw\so-tay-sinh-vien-hcmus-2025-2026.pdf (SHA-256 9481c854…, pipeline tự kiểm tra)
+docker compose -p day6_student_starter up -d --wait
+.\.venv\Scripts\python.exe scripts\check_setup.py
+.\.venv\Scripts\python.exe -m src.run        # nạp strategy A, B, C vào pgvector (~4 phút CPU)
 ```
 
-Chạy `docker compose up -d` không có `-p` sẽ tạo container mới với volume rỗng và trùng cổng 55433.
+Sau đó database ở `127.0.0.1:55433` (giá trị `DATABASE_URL` trong `.env.example` của repo này). Kiểm tra từ repo Day 7: `python -m scripts.check_env` phải báo strategy A có 363 chunk.
+
+Máy đã dựng rồi thì chỉ cần bật lại container từ `starter/` của repo Day 6: `docker compose -p day6_student_starter up -d`. Chạy `docker compose up -d` không có `-p` sẽ tạo container mới với volume rỗng và trùng cổng 55433.
 
 ## Dữ liệu Day 7
 
+`starter/data/day6/` đã được commit (chunk strategy A, câu hỏi, cases, meta) để đọc và chạy lại các script chấm/so sánh mà không cần database. Chạy agent hay retrieval dense/rerank vẫn cần vector store ở trên. Tạo lại các file này từ database:
+
 ```powershell
-.\.venv\Scripts\python.exe -m scripts.prepare_day6    # -> starter/data/day6/{chunks,questions,cases,prepare_meta}.json
+.\.venv\Scripts\python.exe -m scripts.prepare_day6 --day6 <đường dẫn repo Day 6>    # mặc định: thư mục cạnh repo này
+# -> starter/data/day6/{chunks,questions,cases,prepare_meta}.json; sha256 từng file ghi trong prepare_meta.json
 ```
 
 ## Baseline retrieval (dev)

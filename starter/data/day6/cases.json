@@ -1,0 +1,179 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "Sinh viên được kéo dài thời gian học thêm tối đa bao nhiêu năm so với kế hoạch học tập?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Môn mà sinh viên bắt buộc phải học và thi đạt rồi mới được đăng ký một môn khác thì gọi là loại học phần gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "Hội đồng đánh giá khóa luận tốt nghiệp gồm bao nhiêu thành viên?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "Sinh viên đã tích lũy được 80 tín chỉ thì được xếp trình độ năm thứ mấy?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Điểm trung bình học kỳ thấp đến mức nào thì sinh viên bị cảnh báo học tập?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Bị cảnh báo học tập bao nhiêu lần liên tiếp thì sinh viên bị buộc thôi học?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "Sinh viên có điểm tích lũy loại giỏi nhưng từng bị kỷ luật cảnh cáo thì hạng tốt nghiệp bị ảnh hưởng thế nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "Sau khi hết hạn nhận đơn phúc khảo, trong bao lâu thì phải chấm phúc khảo và công bố điểm?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "Khi làm bài thi sinh viên có được dùng bút chì không?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Sinh viên nhờ người khác thi hộ lần đầu bị xử lý như thế nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "Theo Quy định công tác khảo thí, sinh viên bị kỷ luật khiển trách thì chịu hậu quả gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "filter": {
+      "section": "khao_thi"
+    }
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "Theo Quy chế đánh giá kết quả rèn luyện, sinh viên bị kỷ luật khiển trách thì chịu hậu quả gì?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "filter": {
+      "section": "ren_luyen"
+    }
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Điểm rèn luyện bao nhiêu thì được xếp loại Tốt?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "Học kỳ mà sinh viên bảo lưu, không đi học thì điểm rèn luyện được tính ra sao?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Muốn được xét khen thưởng học kỳ thì xếp loại rèn luyện của học kỳ trước phải đạt mức nào?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "question": "Theo Quy định khen thưởng, kỷ luật sinh viên, quyết định kỷ luật khiển trách chấm dứt hiệu lực sau bao lâu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "filter": {
+      "section": "khen_thuong_ky_luat"
+    }
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "question": "Sinh viên ở trọ bên ngoài phải báo địa chỉ chỗ ở cho trường trong vòng bao lâu sau khi nhập học?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "Trường hoạt động từ mấy giờ đến mấy giờ trong ngày?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "Sinh viên có cha là công nhân bị tai nạn lao động, đang hưởng trợ cấp thường xuyên, thì được giảm bao nhiêu phần trăm học phí?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "Sau khi đủ điều kiện tốt nghiệp, sinh viên được cấp bằng trong thời hạn bao lâu?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "u01",
+    "split": "dev",
+    "question": "Học phí của một tín chỉ ở chương trình đại trà năm học 2025-2026 là bao nhiêu tiền?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "u02",
+    "split": "dev",
+    "question": "Sinh viên chương trình đại trà cần đạt tối thiểu bao nhiêu điểm IELTS để đủ chuẩn ngoại ngữ xét tốt nghiệp?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "u03",
+    "split": "test",
+    "question": "Mỗi tháng sinh viên ở khu nội trú phải đóng phí nội trú bao nhiêu tiền?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  },
+  {
+    "id": "u04",
+    "split": "test",
+    "question": "Sinh viên thuộc hộ nghèo được vay vốn ngân hàng chính sách tối đa bao nhiêu tiền mỗi tháng?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain"
+  }
+]

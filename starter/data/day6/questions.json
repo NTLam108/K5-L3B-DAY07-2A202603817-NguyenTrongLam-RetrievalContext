@@ -1,0 +1,298 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "Sinh viên được kéo dài thời gian học thêm tối đa bao nhiêu năm so với kế hoạch học tập?",
+    "expected_answer": "Không vượt quá 3 năm học (chương trình liên thông đại học: không vượt quá 2 năm học).",
+    "type": "truc_tiep",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 63,
+        "evidence": "Sinh viên được phép rút ngắn tối đa một (01) năm học và kéo dài thêm không vượt quá ba (03) năm học theo kế hoạch học tập."
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Môn mà sinh viên bắt buộc phải học và thi đạt rồi mới được đăng ký một môn khác thì gọi là loại học phần gì?",
+    "expected_answer": "Học phần tiên quyết.",
+    "type": "dien_dat_lai",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 64,
+        "evidence": "Học phần tiên quyết: học phần tiên quyết đối với học phần A là học phần mà viên phải học và thi đạt mới được đăng ký và theo học học phần A."
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "Hội đồng đánh giá khóa luận tốt nghiệp gồm bao nhiêu thành viên?",
+    "expected_answer": "05 thành viên (hội đồng đánh giá đồ án tốt nghiệp gồm 03 thành viên).",
+    "type": "truc_tiep",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 73,
+        "evidence": "Hội đồng đánh giá khóa luận tốt nghiệp gồm 05 thành viên, Hội đồng đánh giá đồ án tốt nghiệp gồm 03 thành viên"
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "Sinh viên đã tích lũy được 80 tín chỉ thì được xếp trình độ năm thứ mấy?",
+    "expected_answer": "Trình độ năm thứ ba (từ 76 đến dưới 114 tín chỉ).",
+    "type": "dien_dat_lai",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 79,
+        "evidence": "c) Trình độ năm thứ ba: 76 ≤ N < 114;"
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Điểm trung bình học kỳ thấp đến mức nào thì sinh viên bị cảnh báo học tập?",
+    "expected_answer": "Điểm trung bình chung học kỳ liền kề trước đó dưới 3,0, hoặc điểm trung bình chung của 2 học kỳ liền kề trước đó dưới 4,0.",
+    "type": "dieu_kien_ngoai_le",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 80,
+        "evidence": "b) Điểm trung bình chung học tập học kỳ liền kề trước đó dưới 3,0 hoặc điểm trung bình chung học tập của 2 học kỳ liền kề trước đó dưới 4,0."
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Bị cảnh báo học tập bao nhiêu lần liên tiếp thì sinh viên bị buộc thôi học?",
+    "expected_answer": "Lần thứ ba liên tiếp.",
+    "type": "dieu_kien_ngoai_le",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 80,
+        "evidence": "2. Sinh viên bị buộc thôi học trong các trường hợp sau: a) Không hoàn thành nghĩa vụ học phí đúng thời gian quy định của trường; b) Tự ý bỏ học hoặc bỏ thi từ một học kỳ chính trở lên; c) Được cảnh báo học tập lần thứ ba liên tiếp;"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "Sinh viên có điểm tích lũy loại giỏi nhưng từng bị kỷ luật cảnh cáo thì hạng tốt nghiệp bị ảnh hưởng thế nào?",
+    "expected_answer": "Hạng tốt nghiệp bị giảm đi một mức.",
+    "type": "dieu_kien_ngoai_le",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 82,
+        "evidence": "Hạng tốt nghiệp của sinh viên có điểm trung bình tích lũy loại xuất sắc và giỏi sẽ bị giảm đi một mức nếu đã bị kỷ luật từ mức cảnh cáo trở lên trong thời gian học."
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "Sau khi hết hạn nhận đơn phúc khảo, trong bao lâu thì phải chấm phúc khảo và công bố điểm?",
+    "expected_answer": "Trong 15 ngày kể từ ngày hết hạn nhận đơn phúc khảo.",
+    "type": "truc_tiep",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 96,
+        "evidence": "Trong thời gian 15 ngày kể từ ngày hết hạn nhận đơn phúc khảo, Phòng KT&ĐBCL có trách nhiệm tổ chức chấm phúc khảo và công bố điểm cho sinh viên."
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "Khi làm bài thi sinh viên có được dùng bút chì không?",
+    "expected_answer": "Không được viết bằng bút chì, trừ khi vẽ hình hoặc tô phiếu trả lời trắc nghiệm.",
+    "type": "dieu_kien_ngoai_le",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 95,
+        "evidence": "không được viết bằng bút chì (trừ khi vẽ hình hoặc tô phiếu trả lời trắc nghiệm)"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Sinh viên nhờ người khác thi hộ lần đầu bị xử lý như thế nào?",
+    "expected_answer": "Bị đình chỉ học tập một năm; tái phạm thì buộc thôi học.",
+    "type": "truc_tiep",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 98,
+        "evidence": "Người đi thi hộ hoặc nhờ người khác thi hộ đều bị kỷ luật ở mức đình chỉ học tập một năm đối với trường hợp vi phạm lần đầu và buộc thôi học đối với trường hợp tái phạm."
+      },
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 86,
+        "evidence": "nhờ người thi hộ đều bị kỷ luật ở mức đình chỉ học tập 01 (một) năm đối với trường hợp vi phạm lần thứ nhất và buộc thôi học đối với trường hợp vi phạm lần thứ hai.",
+        "original_evidence": "Sinh viên thi hộ hoặc nhờ người thi hộ đều bị kỷ luật ở mức đình chỉ học tập 01 (một) năm đối với trường hợp vi phạm lần thứ nhất và buộc thôi học đối với trường hợp vi phạm lần thứ hai.",
+        "override_reason": "Quote gốc (alt_evidence p86) bị cắt giữa A-p86-002 và A-p86-003 (overlap 50 ký tự). Đoạn con này nằm trọn trong A-p86-003 và vẫn đủ cho đáp án (đình chỉ 1 năm; tái phạm buộc thôi học). Evidence chính p98 giữ nguyên."
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "Theo Quy định công tác khảo thí, sinh viên bị kỷ luật khiển trách thì chịu hậu quả gì?",
+    "expected_answer": "Bị trừ 25% điểm tổng kết của học phần đang thi.",
+    "type": "metadata_filter",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 98,
+        "evidence": "Sinh viên bị kỷ luật khiển trách trong khi thi học phần nào sẽ bị trừ 25% điểm tổng kết của học phần đó."
+      }
+    ],
+    "filter": {
+      "section": "khao_thi"
+    }
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "Theo Quy chế đánh giá kết quả rèn luyện, sinh viên bị kỷ luật khiển trách thì chịu hậu quả gì?",
+    "expected_answer": "Trong thời gian bị khiển trách, kết quả rèn luyện không được vượt quá loại Khá.",
+    "type": "metadata_filter",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 123,
+        "evidence": "Trong thời gian sinh viên bị kỷ luật mức khiển trách, kết quả rèn luyện không được vượt quá loại Khá."
+      }
+    ],
+    "filter": {
+      "section": "ren_luyen"
+    }
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Điểm rèn luyện bao nhiêu thì được xếp loại Tốt?",
+    "expected_answer": "Từ 80 đến 89 điểm.",
+    "type": "truc_tiep",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 122,
+        "evidence": "b) Từ 80 đến 89 điểm: loại Tốt."
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "Học kỳ mà sinh viên bảo lưu, không đi học thì điểm rèn luyện được tính ra sao?",
+    "expected_answer": "Được xếp loại Trung bình (50 điểm).",
+    "type": "dien_dat_lai",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 123,
+        "evidence": "Sinh viên nghỉ học tạm thời hoặc sinh viên còn đang trong thời gian đào tạo nhưng không đăng ký học phần thì kết quả rèn luyện trong học kỳ đó được xếp loại Trung bình (50 điểm)."
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Muốn được xét khen thưởng học kỳ thì xếp loại rèn luyện của học kỳ trước phải đạt mức nào?",
+    "expected_answer": "Từ loại Khá trở lên.",
+    "type": "dieu_kien_ngoai_le",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 141,
+        "evidence": "b) Có xếp loại rèn luyện của học kỳ trước đó từ loại Khá trở lên;"
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "question": "Theo Quy định khen thưởng, kỷ luật sinh viên, quyết định kỷ luật khiển trách chấm dứt hiệu lực sau bao lâu?",
+    "expected_answer": "Sau 03 tháng kể từ ngày có quyết định kỷ luật, nếu sinh viên không tái phạm hoặc không có vi phạm đến mức phải xử lý kỷ luật.",
+    "type": "metadata_filter",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 147,
+        "evidence": "Đối với SV bị kỷ luật khiển trách: sau 03 tháng kể từ ngày có quyết định kỷ luật, nếu SV không tái phạm hoặc không có những vi phạm đến mức phải xử lý kỷ luật thì đương nhiên được chấm dứt hiệu lực của quyết định kỷ luật"
+      }
+    ],
+    "filter": {
+      "section": "khen_thuong_ky_luat"
+    }
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "question": "Sinh viên ở trọ bên ngoài phải báo địa chỉ chỗ ở cho trường trong vòng bao lâu sau khi nhập học?",
+    "expected_answer": "Trong thời hạn 30 ngày kể từ ngày nhập học.",
+    "type": "dien_dat_lai",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 158,
+        "evidence": "Phải đăng ký tạm trú với công an xã (phường, thị trấn) và báo với nhà trường về địa chỉ ngoại trú của mình trong thời hạn 30 ngày, kể từ ngày nhập học."
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "Trường hoạt động từ mấy giờ đến mấy giờ trong ngày?",
+    "expected_answer": "Từ 6g00 đến 21g30 các ngày trong tuần, trừ các ngày nghỉ lễ.",
+    "type": "truc_tiep",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 164,
+        "evidence": "Thời gian hoạt động của Trường Đại học Khoa học tự nhiên từ 6g00 đến 21g30 các ngày trong tuần, trừ các ngày nghỉ lễ theo quy định của Nhà nước."
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "Sinh viên có cha là công nhân bị tai nạn lao động, đang hưởng trợ cấp thường xuyên, thì được giảm bao nhiêu phần trăm học phí?",
+    "expected_answer": "Giảm 50% học phí.",
+    "type": "dieu_kien_ngoai_le",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 169,
+        "evidence": "III. Đối tượng được giảm 50% học phí: Sinh viên là con cán bộ, công chức, viên chức, công nhân mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên."
+      }
+    ]
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "Sau khi đủ điều kiện tốt nghiệp, sinh viên được cấp bằng trong thời hạn bao lâu?",
+    "expected_answer": "Trong thời hạn 03 tháng tính từ thời điểm đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ với nhà trường.",
+    "type": "truc_tiep",
+    "gold": [
+      {
+        "source_id": "stsv-hcmus-2025",
+        "page": 81,
+        "evidence": "được cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ với nhà Trường."
+      }
+    ]
+  }
+]

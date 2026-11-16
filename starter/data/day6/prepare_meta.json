@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-11-16T09:50:41+0700",
+  "command": "python -m scripts.prepare_day6",
+  "day6_repo": "K5-L3B-DAY06-NguyenTrongLam-2A202603817-DataIngestion",
+  "strategy": "A",
+  "chunks": 363,
+  "pages": [
+    61,
+    173
+  ],
+  "questions": 20,
+  "splits": {
+    "dev": 15,
+    "test": 5
+  },
+  "unanswerable": 4,
+  "unanswerable_splits": {
+    "dev": 2,
+    "test": 2
+  },
+  "cases": 24,
+  "questions_with_alt_evidence": [
+    "q10"
+  ],
+  "questions_with_filter": {
+    "q11": {
+      "section": "khao_thi"
+    },
+    "q12": {
+      "section": "ren_luyen"
+    },
+    "q16": {
+      "section": "khen_thuong_ky_luat"
+    }
+  },
+  "evidence_overrides": [
+    {
+      "id": "q10",
+      "page": 86,
+      "reason": "Quote gốc (alt_evidence p86) bị cắt giữa A-p86-002 và A-p86-003 (overlap 50 ký tự). Đoạn con này nằm trọn trong A-p86-003 và vẫn đủ cho đáp án (đình chỉ 1 năm; tái phạm buộc thôi học). Evidence chính p98 giữ nguyên."
+    }
+  ],
+  "chunks_containing_gold": {
+    "q01": [
+      "A-p63-001"
+    ],
+    "q02": [
+      "A-p64-001"
+    ],
+    "q03": [
+      "A-p73-001"
+    ],
+    "q04": [
+      "A-p79-001"
+    ],
+    "q05": [
+      "A-p80-000"
+    ],
+    "q06": [
+      "A-p80-000"
+    ],
+    "q07": [
+      "A-p82-000"
+    ],
+    "q08": [
+      "A-p96-001"
+    ],
+    "q09": [
+      "A-p95-001"
+    ],
+    "q10": [
+      "A-p86-003",
+      "A-p98-003"
+    ],
+    "q11": [
+      "A-p98-000"
+    ],
+    "q12": [
+      "A-p123-000"
+    ],
+    "q13": [
+      "A-p122-001"
+    ],
+    "q14": [
+      "A-p123-001"
+    ],
+    "q15": [
+      "A-p141-001"
+    ],
+    "q16": [
+      "A-p147-002"
+    ],
+    "q17": [
+      "A-p158-003"
+    ],
+    "q18": [
+      "A-p164-001"
+    ],
+    "q19": [
+      "A-p169-000"
+    ],
+    "q20": [
+      "A-p81-003"
+    ]
+  },
+  "day6_benchmark_rules": {
+    "benchmark_version": 1,
+    "created_at": "2026-11-14",
+    "source_id": "stsv-hcmus-2025",
+    "split_rule": "Chốt trước khi chạy bất kỳ chiến lược nào: q01-q15 là dev, q16-q20 là test. Test lấy từ 5 mục khác nhau và không câu test nào dùng chung trang gold với câu dev; ba mục ngoai_tru_noi_tru, noi_quy, chinh_sach_ho_tro chỉ xuất hiện trong test. Nguy cơ rò rỉ: dev và test cùng thuộc một tài liệu, và mục dao_tao, khen_thuong_ky_luat có câu ở cả hai tập.",
+    "gold_page_rule": "gold_page = page_id trong data/manifest.json (p<số trang PDF>). evidence_quote là chuỗi con nguyên văn của text trang đó sau khi trích bằng pypdf, gộp khoảng trắng và chuẩn hóa Unicode NFC; giữ nguyên cả lỗi đánh máy của nguồn.",
+    "alt_evidence_rule": "alt_evidence liệt kê các trang khác cũng chứa đủ bằng chứng cho expected_answer; một hit ở trang gold hoặc ở bất kỳ alt_evidence nào đều được tính. Bổ sung ngày 2026-11-14, trước khi chạy đánh giá Hit@k, bằng cách quét từ khóa của từng câu trên text toàn corpus (không dùng kết quả truy xuất). Kết quả: chỉ q10 (dev) có bằng chứng thay thế ở p86 (Quy chế đào tạo, Điều 23). Manh mối cho q10 xuất hiện trước đó trong lần thử truy xuất trên câu dev. Hạn chế: quét từ khóa có thể bỏ sót bằng chứng diễn đạt khác.",
+    "filter_rule": "filter chỉ dùng trường section và lấy giá trị từ tên văn bản mà người hỏi nêu trong câu hỏi, không lấy từ gold. Cấu hình C chỉ áp filter cho câu có trường filter; các câu khác chạy không filter."
+  },
+  "sha256": {
+    "chunks.json": "e7696a991c8aba93c7751546a9e3a0c88d68e2fc0db056a6ba1a7a1b32d1859e",
+    "questions.json": "3e2fce01a5d2f413deaa5f83afa229e84a82701ade5fd8a184700bb70ac2880f",
+    "cases.json": "e3ecf5da2389c9424cdf80130659f7bd317b4021370bebdbd0d336464cf6e989"
+  },
+  "note": "Không đưa gold, expected_answer hay chunks_containing_gold vào agent hoặc retrieval tool."
+}

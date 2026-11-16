@@ -154,7 +154,7 @@ Bảng dưới là **toàn bộ 7 câu test** của cấu hình đã chọn `com
 **Ví dụ trình bày:** câu trả lời có bằng chứng: **q16** (kèm điều kiện, citation đúng điều khoản). Câu thiếu bằng chứng: **u03** (từ chối dù context có con số gần nghĩa). Lỗi: **q11 dev của baseline** (trả lời bằng quy định khiển trách của cán bộ coi thi, do budget 800 loại mất `A-p98-000`), **q14 dev** (ý thừa do ranh giới chunk) và **u04 test của baseline** (lý do từ chối lẫn tiếng Indonesia).
 
 - Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí: trace `starter/results/agent-<cấu hình>-dev/traces.json` và `summary.json` (cấu hình, sha256 file config, token, chi phí, thời gian); nhãn `labels/dev/<cấu hình>.reviews.json`; bảng tổng hợp `starter/results/agent-comparison-dev.md` (`python -m scripts.compare_agent_runs`). Lệnh chạy trong [src/README.md](../../src/README.md). Tổng chi phí API cho 7 lần chạy dev ≈ $0.05. Test: `starter/results/agent-{baseline,combined}-test/`, nhãn `labels/test/{baseline,combined}.reviews.json`, bảng `starter/results/agent-comparison-test.md`, retrieval `starter/results/retrieval-comparison-test.md`; tổng chi phí test $0.0053.
-- Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn:
+- Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn: trước/sau theo từng lỗi ở mục "Phân tích lỗi dev"; so sánh dev và test, đánh đổi và giới hạn ở mục "Kết luận dev và test" ngay dưới.
 
 ### Kết luận dev và test
 
@@ -171,19 +171,4 @@ Bảng dưới là **toàn bộ 7 câu test** của cấu hình đã chọn `com
 
 ## Thử thách nâng cao (nếu thực hiện)
 
-- Tài liệu, nguồn, quyền sử dụng, số trang và phiên bản:
-- Cách xử lý text, bảng, ảnh, biểu đồ; phạm vi index và phần chưa xử lý:
-- Cách chia benchmark, schema evidence, model và cấu hình đã chốt trên dev:
-
-| Nhóm test | Đạt / tổng | Tỷ lệ | Lỗi / nhận xét |
-|---|---|---|---|
-| Bảng | | | |
-| Ảnh, sơ đồ | | | |
-| Biểu đồ | | | |
-| Multi-hop | | | |
-| Text | | | |
-| Thiếu bằng chứng | | | |
-| **Toàn bộ** | | | |
-
-- Trace, nhãn và evidence từng câu; thời gian, chi phí, lỗi hệ thống:
-- Giới hạn, cách tái lập và đường dẫn benchmark:
+Không thực hiện. Bài chỉ làm phần cơ bản (tối đa 85 điểm); không có index tài liệu từ 100 trang có bảng, ảnh, biểu đồ và không có benchmark nâng cao.
