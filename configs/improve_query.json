@@ -1,0 +1,82 @@
+{
+  "name": "improve_query",
+  "frozen_at": "2026-11-16",
+  "description": "Cải thiện 1: lần tìm đầu dùng nguyên văn câu hỏi, chặn query trùng, prompt v2 có quy tắc viết query.",
+  "retrieval": {
+    "method": "dense",
+    "store_strategy": "A",
+    "embedding_model": "BAAI/bge-m3",
+    "top_k": 3,
+    "use_question_filter": true
+  },
+  "context": {
+    "budget_chars": 800,
+    "selection": "starter/baseline.pack_context: cộng dồn chunk theo thứ tự tìm được, bỏ trùng ID, bỏ chunk không vừa budget (tính cả dòng [id | source | page])"
+  },
+  "agent": {
+    "max_searches": 3,
+    "first_turn": "bắt buộc search_documents",
+    "when_no_searches_left": "chỉ còn submit_answer hoặc abstain",
+    "citation_repair": "nhắc model sửa định dạng citation tối đa 1 lần; không tự sửa thay model",
+    "first_query": "question",
+    "dedupe_queries": true
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-5-nano",
+    "reasoning_effort": "low",
+    "max_completion_tokens": 4000,
+    "max_retries": 3,
+    "prices_usd_per_1m": {
+      "input": 0.05,
+      "cached_input": 0.005,
+      "output": 0.4
+    },
+    "prices_source": "https://developers.openai.com/api/docs/pricing (tra ngày 2026-11-16, Standard tier)",
+    "prompt": "v2"
+  },
+  "stop_conditions": [
+    {
+      "stop_reason": "answered",
+      "status": "answered",
+      "when": "Model gọi submit_answer; mọi citation có trong context cuối và xuất hiện dạng [id] trong answer."
+    },
+    {
+      "stop_reason": "model_abstain",
+      "status": "abstain",
+      "when": "Model gọi abstain (kèm reason). Trace ghi searched_before_abstain."
+    },
+    {
+      "stop_reason": "invalid_or_missing_citations",
+      "status": "abstain",
+      "when": "Citation vẫn sai sau khi controller đã nhắc sửa 1 lần; câu trả lời bị loại vẫn lưu trong event để phân tích."
+    },
+    {
+      "stop_reason": "search_limit",
+      "status": "abstain",
+      "when": "Model đòi search khi đã dùng hết max_searches. Hiếm xảy ra vì controller gỡ tool search khi searches_left = 0."
+    },
+    {
+      "stop_reason": "error",
+      "status": "error",
+      "when": "Lỗi provider/database sau khi đã thử lại, hoặc model không trả tool call hợp lệ sau 1 lần nhắc. Báo riêng, không tính vào chất lượng."
+    },
+    {
+      "stop_reason": "max_steps",
+      "status": "abstain",
+      "when": "Chốt chặn an toàn của loop (max_searches + 1 lượt); không xảy ra với controller hiện tại."
+    }
+  ],
+  "based_on": "configs/baseline.json",
+  "changes_vs_baseline": [
+    "agent.first_query: model -> question",
+    "agent.dedupe_queries: false -> true",
+    "llm.prompt: v1 -> v2 (thêm quy tắc 8-10 về query)"
+  ],
+  "hypothesis": "Lỗi 2: model viết lại query kèm 'Sổ tay sinh viên 2025-2026 ĐHQG-HCM', ghi sai tên văn bản và lặp query nên không tìm ra evidence (agent first-search Hit@3 11/15, trong khi dense với câu hỏi gốc 15/15). Dùng nguyên văn câu hỏi cho lần đầu sẽ đưa first-search Hit@3 về ~15/15, giảm từ chối nhầm ở q04, q09, q15; chặn trùng giúp lần tìm lại thực sự khác.",
+  "target_errors": [
+    "q04",
+    "q09",
+    "q15"
+  ]
+}

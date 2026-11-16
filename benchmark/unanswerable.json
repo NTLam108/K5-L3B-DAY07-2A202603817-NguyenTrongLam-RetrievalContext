@@ -1,0 +1,69 @@
+{
+  "benchmark_version": 1,
+  "created_at": "2026-11-16",
+  "corpus": "stsv-hcmus-2025, strategy A, 363 chunk, trang PDF 61-173 (starter/data/day6/chunks.json)",
+  "design_rule": "Viết và chia split TRƯỚC khi chạy bất kỳ retrieval/agent Day 7 nào. Câu gần chủ đề, dễ gây bịa số. Dev gần các mục dev (dao_tao); test gần các mục chỉ có trong test (ngoai_tru_noi_tru, chinh_sach_ho_tro), giống quy tắc chia của benchmark Day 6.",
+  "verification_method": "Tìm regex (NFC, casefold, gộp khoảng trắng) trên toàn bộ 363 chunk VÀ text pypdf của cả 179 trang PDF gốc (kể cả trang ngoài corpus); đọc các chunk gần chủ đề. Không dùng kết quả retrieval. Người làm bài cần đối chiếu lại trên PDF trước khi chốt.",
+  "questions": [
+    {
+      "id": "u01",
+      "split": "dev",
+      "question": "Học phí của một tín chỉ ở chương trình đại trà năm học 2025-2026 là bao nhiêu tiền?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "near_topic": "dao_tao",
+      "absence_reason": "Corpus nhắc 'học phí' ở 13 chunk (vd. A-p75-001 hoãn thi phải hoàn tất học phí, A-p76-003 học cải thiện phải nộp học phí theo quy định) nhưng không có mức tiền. Mẫu số tiền \\d{1,3}(\\.\\d{3})+ chỉ khớp A-p170-000 và A-p173-001 (trợ cấp xã hội, hỗ trợ đồ dùng học tập), không phải học phí; '/tín chỉ', 'triệu', 'mức thu' không có trong corpus.",
+      "verification": {
+        "patterns": ["học phí", "đồng/tín chỉ", "\\d[\\d.]* ?(đồng|vnđ|vnd)", "\\d{1,3}(\\.\\d{3})+", "triệu", "mức thu", "/ ?tín chỉ"],
+        "corpus_hits_related": ["A-p75-001", "A-p75-002", "A-p76-003", "A-p80-000", "A-p89-002", "A-p102-002"],
+        "outside_corpus": "Không tìm thấy mức học phí theo tín chỉ ở trang nào của PDF."
+      },
+      "trap": "Agent có thể lấy nhầm số tiền trợ cấp (100.000đ/tháng, 1.000.000đ/năm) hoặc dùng kiến thức ngoài."
+    },
+    {
+      "id": "u02",
+      "split": "dev",
+      "question": "Sinh viên chương trình đại trà cần đạt tối thiểu bao nhiêu điểm IELTS để đủ chuẩn ngoại ngữ xét tốt nghiệp?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "near_topic": "dao_tao",
+      "absence_reason": "Trong corpus, điều kiện tốt nghiệp (A-p81-000, Điều 17) chỉ ghi 'Đạt chuẩn trình độ ngoại ngữ theo quy định của Trường'; A-p82-001 nhắc 'chuẩn đầu ra về ngoại ngữ' không kèm mức điểm. 'IELTS', 'TOEIC', 'TOEFL', 'B1/B2', 'bậc N', 'khung năng lực ngoại ngữ' không xuất hiện trong 363 chunk. Bảng mức điểm chỉ có ở PDF trang 54, ngoài phạm vi corpus (trang 61-173).",
+      "verification": {
+        "patterns": ["ielts", "toeic", "toefl", "\\bb1\\b|\\bb2\\b", "bậc \\d", "khung năng lực ngoại ngữ", "chuẩn ngoại ngữ", "chứng chỉ ngoại ngữ", "trình độ ngoại ngữ"],
+        "corpus_hits_related": ["A-p81-000", "A-p82-001"],
+        "outside_corpus": "PDF trang 54 (ngoài corpus) có bảng chuẩn ngoại ngữ; IELTS đại trà 4.5. Ghi để chấm: agent trả lời 4.5 là dùng nguồn ngoài corpus, KHÔNG có citation hợp lệ -> không đạt abstention."
+      },
+      "trap": "Corpus có đúng chủ đề (điều kiện tốt nghiệp) nhưng thiếu con số; model có thể biết số từ kiến thức ngoài."
+    },
+    {
+      "id": "u03",
+      "split": "test",
+      "question": "Mỗi tháng sinh viên ở khu nội trú phải đóng phí nội trú bao nhiêu tiền?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "near_topic": "ngoai_tru_noi_tru",
+      "absence_reason": "A-p161-002 (Nghĩa vụ của HSSV nội trú) chỉ ghi 'nộp đủ và đúng hạn phí nội trú theo quy định trong hợp đồng'; A-p161-000 nhắc 'hợp đồng nội trú' nhưng không có mức phí. 'tiền phòng', 'giá phòng', 'lệ phí ở', 'kí túc xá' không có; 'ký túc xá' (7 chunk) không kèm số tiền; '/tháng' chỉ khớp A-p129-001 (số lần sinh hoạt) và A-p170-000 (trợ cấp xã hội).",
+      "verification": {
+        "patterns": ["phí nội trú", "ký túc xá", "kí túc xá", "tiền phòng", "giá phòng", "lệ phí ở", "hợp đồng", "/ ?tháng", "mỗi tháng"],
+        "corpus_hits_related": ["A-p161-000", "A-p161-002", "A-p161-003", "A-p101-003"],
+        "outside_corpus": "Không tìm thấy mức phí nội trú/ký túc xá ở trang nào của PDF."
+      },
+      "trap": "Agent có thể lấy nhầm 100.000đ/tháng (trợ cấp xã hội, A-p170-000)."
+    },
+    {
+      "id": "u04",
+      "split": "test",
+      "question": "Sinh viên thuộc hộ nghèo được vay vốn ngân hàng chính sách tối đa bao nhiêu tiền mỗi tháng?",
+      "answerable": false,
+      "expected_behavior": "search_and_abstain",
+      "near_topic": "chinh_sach_ho_tro",
+      "absence_reason": "'vay', 'cho vay', 'khoản vay', 'tín dụng', 'ngân hàng chính sách' không xuất hiện trong 363 chunk. Mục chính sách hỗ trợ (trang 168-173) có trợ cấp xã hội và học bổng cho sinh viên hộ nghèo (A-p170-000, A-p173-000) nhưng không có vay vốn. PDF trang 8 (ngoài corpus) chỉ ghi phòng CTSV 'hỗ trợ thủ tục cho sinh viên vay vốn ngân hàng', không có mức vay.",
+      "verification": {
+        "patterns": ["vay vốn", "cho vay", "khoản vay", "vay\\b", "tín dụng", "ngân hàng chính sách"],
+        "corpus_hits_related": ["A-p170-000", "A-p173-000"],
+        "outside_corpus": "PDF trang 8 nhắc thủ tục vay vốn, không có số tiền."
+      },
+      "trap": "Agent có thể nhầm với trợ cấp xã hội hoặc học bổng 80% mức lương cơ sở cho sinh viên hộ nghèo."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "status": "REVIEWED — Nguyễn Trọng Lâm, 2026-11-16; đã đối chiếu trace và chunk từng câu",
+  "trace_file": "starter/results/agent-improve_context-dev/traces.json",
+  "rubric": "BENCHMARK.md (giống labels/dev/baseline.reviews.draft.json)",
+  "reviews": [
+    {
+      "query_id": "q01",
+      "answer_grade": 2,
+      "citation_support": [
+        true,
+        true
+      ],
+      "reason": "Đúng; A-p63-002 hỗ trợ ý liên thông 2 năm."
+    },
+    {
+      "query_id": "q02",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q03",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q04",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng: năm thứ ba [A-p79-001]."
+    },
+    {
+      "query_id": "q05",
+      "answer_grade": 0,
+      "citation_support": [
+        true
+      ],
+      "reason": "q05 hỏi ngưỡng ĐIỂM TRUNG BÌNH; câu trả lời nêu trường hợp a) 'tổng số tín chỉ đạt < 7' (đúng theo A-p79-001 nên citation hỗ trợ ý đã nêu) nhưng không trả lời câu hỏi."
+    },
+    {
+      "query_id": "q06",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q07",
+      "answer_grade": 2,
+      "citation_support": [
+        true,
+        true
+      ],
+      "reason": "Đúng: giảm đi một mức [A-p82-000]; ý phụ về kết quả rèn luyện đúng theo A-p123-000. Có cụm thừa '(nghiêm cứu: …)' nhưng không sai nội dung."
+    },
+    {
+      "query_id": "q08",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q09",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án."
+    },
+    {
+      "query_id": "q10",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng ý chính (đình chỉ 1 năm) [A-p98-003]."
+    },
+    {
+      "query_id": "q11",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng: trừ 25% [A-p98-000]."
+    },
+    {
+      "query_id": "q12",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q13",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án."
+    },
+    {
+      "query_id": "q14",
+      "answer_grade": 2,
+      "citation_support": [
+        true,
+        true
+      ],
+      "reason": "Ý chính đúng: nghỉ học tạm thời/không đăng ký học phần -> loại Trung bình (50 điểm) [A-p123-001]. Có thêm ý 'thôi học/bỏ học thì không được đánh giá' do đọc mẩu câu ở đầu A-p123-001, vốn là đuôi của 'bị kỷ luật mức BUỘC thôi học…' (lỗi ranh giới chunk) — khẳng định thừa, không đúng nghĩa gốc. Chấm 2 vì câu hỏi được trả lời đúng và đủ; Hạ xuống 1 nếu phạt khẳng định thừa (áp dụng thống nhất cho improve_context, method_rerank, combined). A-p122-000 hỗ trợ ý điểm năm học là trung bình cộng các học kỳ."
+    },
+    {
+      "query_id": "q15",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng: từ loại Khá trở lên [A-p141-001]."
+    },
+    {
+      "query_id": "u01",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối, không đưa mức học phí nào."
+    },
+    {
+      "query_id": "u02",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối, không đưa mức IELTS nào (không dùng 4.5 ngoài corpus)."
+    }
+  ]
+}

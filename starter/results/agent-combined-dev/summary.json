@@ -1,0 +1,115 @@
+{
+  "config": {
+    "name": "combined",
+    "split": "dev",
+    "config_file": "configs/combined.json",
+    "config_sha256": "824470c1f6b5aaabf869ac5b5dc6bf5016486fafd6dadd037cd781e8b10fef38",
+    "cli_overrides": {},
+    "max_searches": 3,
+    "top_k": 3,
+    "budget_chars": 2000,
+    "use_question_filter": true,
+    "selection_mode": "score",
+    "first_query": "question",
+    "dedupe_queries": true,
+    "retriever": {
+      "retriever": "rerank(dense)",
+      "reranker_model": "BAAI/bge-reranker-v2-m3",
+      "candidates": 20,
+      "first_stage": {
+        "retriever": "dense",
+        "store_strategy": "A",
+        "embedding_model": "BAAI/bge-m3",
+        "dimensions": 1024,
+        "metric": "cosine (exact)",
+        "allowed_filters": [
+          "document_id",
+          "section"
+        ]
+      }
+    },
+    "controller": {
+      "provider": "openai",
+      "model": "gpt-5-nano",
+      "reasoning_effort": "low",
+      "prices_usd_per_1m": {
+        "input": 0.05,
+        "cached_input": 0.005,
+        "output": 0.4
+      },
+      "prompt": "v2",
+      "prompt_version": "186b19c34ec3",
+      "max_completion_tokens": 4000,
+      "max_retries": 3
+    }
+  },
+  "load_seconds": 31.5,
+  "cases": 17,
+  "status": {
+    "answered": 15,
+    "abstain": 2
+  },
+  "stop_reason": {
+    "answered": 15,
+    "model_abstain": 2
+  },
+  "errors": [],
+  "tool_use": {
+    "n": 17,
+    "N": 17,
+    "rate": 1.0
+  },
+  "searches_distribution": {
+    "1": 11,
+    "2": 2,
+    "3": 4
+  },
+  "answerable": {
+    "answered": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 15,
+      "rate": 0.0
+    },
+    "first_search_hit1": {
+      "n": 13,
+      "N": 15,
+      "rate": 0.867
+    },
+    "first_search_hit3": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "cited_gold_chunk": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    }
+  },
+  "unanswerable": {
+    "abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    }
+  },
+  "note": "auto_scores chỉ khớp chuỗi evidence trong chunk; KHÔNG thay chấm thủ công câu trả lời/citation.",
+  "llm_calls": 30,
+  "prompt_tokens": 41027,
+  "cached_tokens": 1280,
+  "completion_tokens": 9286,
+  "reasoning_tokens": 7616,
+  "cost_usd": 0.005708,
+  "median_case_ms": 12112.179600000673,
+  "total_seconds": 319.4
+}

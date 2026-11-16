@@ -1,0 +1,52 @@
+{
+  "method": "bm25_bigram",
+  "split": "dev",
+  "n": 15,
+  "use_filter": false,
+  "query": "nguyên văn question",
+  "depth": 10,
+  "top_k_context": 3,
+  "budget_chars": 800,
+  "retriever": {
+    "retriever": "bm25_bigram",
+    "k1": 1.5,
+    "b": 0.75,
+    "tokenization": "âm tiết NFC casefold + bigram âm tiết",
+    "chunks": 363
+  },
+  "hit1": {
+    "n": 11,
+    "N": 15,
+    "rate": 0.733
+  },
+  "hit3": {
+    "n": 13,
+    "N": 15,
+    "rate": 0.867
+  },
+  "context_hit": {
+    "n": 11,
+    "N": 15,
+    "rate": 0.733
+  },
+  "hit10": {
+    "n": 14,
+    "N": 15,
+    "rate": 0.933
+  },
+  "mrr10": 0.817,
+  "missed_hit1": [
+    "q04",
+    "q05",
+    "q11",
+    "q14"
+  ],
+  "missed_hit3": [
+    "q11",
+    "q14"
+  ],
+  "errors": [],
+  "median_ms": 2.0,
+  "load_seconds": 0.04,
+  "service_cost_usd": 0
+}

@@ -1,0 +1,81 @@
+{
+  "name": "improve_context",
+  "frozen_at": "2026-11-16",
+  "description": "Cải thiện 2: tăng context budget lên 2000 ký tự và xếp context theo score cosine thay vì thứ tự tìm.",
+  "retrieval": {
+    "method": "dense",
+    "store_strategy": "A",
+    "embedding_model": "BAAI/bge-m3",
+    "top_k": 3,
+    "use_question_filter": true
+  },
+  "context": {
+    "budget_chars": 2000,
+    "selection": "starter/baseline.pack_context: cộng dồn chunk theo thứ tự tìm được, bỏ trùng ID, bỏ chunk không vừa budget (tính cả dòng [id | source | page])",
+    "selection_mode": "score"
+  },
+  "agent": {
+    "max_searches": 3,
+    "first_turn": "bắt buộc search_documents",
+    "when_no_searches_left": "chỉ còn submit_answer hoặc abstain",
+    "citation_repair": "nhắc model sửa định dạng citation tối đa 1 lần; không tự sửa thay model"
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-5-nano",
+    "reasoning_effort": "low",
+    "max_completion_tokens": 4000,
+    "max_retries": 3,
+    "prices_usd_per_1m": {
+      "input": 0.05,
+      "cached_input": 0.005,
+      "output": 0.4
+    },
+    "prices_source": "https://developers.openai.com/api/docs/pricing (tra ngày 2026-11-16, Standard tier)"
+  },
+  "stop_conditions": [
+    {
+      "stop_reason": "answered",
+      "status": "answered",
+      "when": "Model gọi submit_answer; mọi citation có trong context cuối và xuất hiện dạng [id] trong answer."
+    },
+    {
+      "stop_reason": "model_abstain",
+      "status": "abstain",
+      "when": "Model gọi abstain (kèm reason). Trace ghi searched_before_abstain."
+    },
+    {
+      "stop_reason": "invalid_or_missing_citations",
+      "status": "abstain",
+      "when": "Citation vẫn sai sau khi controller đã nhắc sửa 1 lần; câu trả lời bị loại vẫn lưu trong event để phân tích."
+    },
+    {
+      "stop_reason": "search_limit",
+      "status": "abstain",
+      "when": "Model đòi search khi đã dùng hết max_searches. Hiếm xảy ra vì controller gỡ tool search khi searches_left = 0."
+    },
+    {
+      "stop_reason": "error",
+      "status": "error",
+      "when": "Lỗi provider/database sau khi đã thử lại, hoặc model không trả tool call hợp lệ sau 1 lần nhắc. Báo riêng, không tính vào chất lượng."
+    },
+    {
+      "stop_reason": "max_steps",
+      "status": "abstain",
+      "when": "Chốt chặn an toàn của loop (max_searches + 1 lượt); không xảy ra với controller hiện tại."
+    }
+  ],
+  "based_on": "configs/baseline.json",
+  "changes_vs_baseline": [
+    "context.budget_chars: 800 -> 2000",
+    "context.selection_mode: order -> score"
+  ],
+  "hypothesis": "Lỗi 1: budget 800 chỉ vừa 1 chunk nên evidence hạng 2-3 bị loại (q05, q07, q11, q14), và chunk tìm trước chiếm chỗ chunk tốt hơn tìm sau (q13). Budget 2000 (~3-4 chunk) và xếp theo score sẽ tăng Context Evidence Rate, giảm câu trả lời sai có citation (q05, q07, q11) và từ chối nhầm (q13, q14). Đánh đổi: prompt tokens tăng ~2 lần.",
+  "target_errors": [
+    "q05",
+    "q07",
+    "q11",
+    "q13",
+    "q14"
+  ]
+}

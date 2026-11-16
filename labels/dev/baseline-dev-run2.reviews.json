@@ -1,0 +1,128 @@
+{
+  "status": "REVIEWED — Nguyễn Trọng Lâm, 2026-11-16; đã đối chiếu trace và chunk từng câu",
+  "trace_file": "starter/results/agent-baseline-dev-run2/traces.json",
+  "rubric": "BENCHMARK.md (giống labels/dev/baseline.reviews.draft.json)",
+  "reviews": [
+    {
+      "query_id": "q01",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q02",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q03",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q04",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án. Query viết lại không tìm ra A-p79-001."
+    },
+    {
+      "query_id": "q05",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án."
+    },
+    {
+      "query_id": "q06",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q07",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án."
+    },
+    {
+      "query_id": "q08",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q09",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án."
+    },
+    {
+      "query_id": "q10",
+      "answer_grade": 1,
+      "citation_support": [
+        true
+      ],
+      "reason": "Chỉ nói 'bị kỷ luật ở mức đình chỉ', thiếu 'một năm'; A-p86-002 bị cắt ở '…ở mức đình c' nên chỉ hỗ trợ một phần."
+    },
+    {
+      "query_id": "q11",
+      "answer_grade": 0,
+      "citation_support": [
+        false
+      ],
+      "reason": "Sai đối tượng: liệt kê lỗi khiển trách của CÁN BỘ coi thi (A-p97-001) như của sinh viên; không có 'trừ 25%'."
+    },
+    {
+      "query_id": "q12",
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "reason": "Đúng và đủ; citation chứa nguyên văn quy định."
+    },
+    {
+      "query_id": "q13",
+      "answer_grade": 0,
+      "citation_support": [
+        false,
+        true
+      ],
+      "reason": "Sai: 'từ 80 đến 100 là loại Tốt' (đúng là 80-89; 90-100 là Xuất sắc). A-p119-003 không chứa thang xếp loại (False); A-p122-002 hỗ trợ ý Khá/Trung bình (True)."
+    },
+    {
+      "query_id": "q14",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án."
+    },
+    {
+      "query_id": "q15",
+      "answer_grade": 0,
+      "citation_support": [],
+      "reason": "Từ chối nhầm câu có đáp án."
+    },
+    {
+      "query_id": "u01",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối, không đưa mức học phí nào."
+    },
+    {
+      "query_id": "u02",
+      "abstention_correct": true,
+      "citation_support": [],
+      "reason": "Từ chối, không đưa mức IELTS nào (không dùng 4.5 ngoài corpus)."
+    }
+  ]
+}

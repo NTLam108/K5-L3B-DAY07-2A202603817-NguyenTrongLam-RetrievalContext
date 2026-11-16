@@ -1,0 +1,443 @@
+[
+  {
+    "run": "baseline",
+    "dir": "starter/results/agent-baseline-dev",
+    "config_file": "configs/baseline.json",
+    "config_sha256": "9b5cc833",
+    "first_search_hit1": {
+      "n": 7,
+      "N": 15,
+      "rate": 0.467
+    },
+    "first_search_hit3": {
+      "n": 11,
+      "N": 15,
+      "rate": 0.733
+    },
+    "context_evidence_rate": {
+      "n": 7,
+      "N": 15,
+      "rate": 0.467
+    },
+    "answered": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.667
+    },
+    "false_abstention": {
+      "n": 5,
+      "N": 15,
+      "rate": 0.333
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 4,
+      "2": 4,
+      "3": 9
+    },
+    "errors": [],
+    "cost_usd": 0.008096,
+    "median_case_ms": 9612.441400000534,
+    "prompt_tokens": 58410,
+    "completion_tokens": 12939,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 8,
+      "1": 0,
+      "2": 7,
+      "N": 15,
+      "mean": 0.9333333333333333
+    },
+    "citation_validity": {
+      "n": 8,
+      "N": 10
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 3
+  },
+  {
+    "run": "baseline-dev-run2",
+    "dir": "starter/results/agent-baseline-dev-run2",
+    "config_file": "configs/baseline.json",
+    "config_sha256": "9b5cc833",
+    "first_search_hit1": {
+      "n": 5,
+      "N": 15,
+      "rate": 0.333
+    },
+    "first_search_hit3": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.933
+    },
+    "context_evidence_rate": {
+      "n": 6,
+      "N": 15,
+      "rate": 0.4
+    },
+    "answered": {
+      "n": 9,
+      "N": 15,
+      "rate": 0.6
+    },
+    "false_abstention": {
+      "n": 6,
+      "N": 15,
+      "rate": 0.4
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 4,
+      "2": 2,
+      "3": 11
+    },
+    "errors": [],
+    "cost_usd": 0.008613,
+    "median_case_ms": 12006.566199999725,
+    "prompt_tokens": 59576,
+    "completion_tokens": 14085,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 8,
+      "1": 1,
+      "2": 6,
+      "N": 15,
+      "mean": 0.8666666666666667
+    },
+    "citation_validity": {
+      "n": 8,
+      "N": 10
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 2
+  },
+  {
+    "run": "improve_query",
+    "dir": "starter/results/agent-improve_query-dev",
+    "config_file": "configs/improve_query.json",
+    "config_sha256": "ec361b88",
+    "first_search_hit1": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.667
+    },
+    "first_search_hit3": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.667
+    },
+    "answered": {
+      "n": 12,
+      "N": 15,
+      "rate": 0.8
+    },
+    "false_abstention": {
+      "n": 3,
+      "N": 15,
+      "rate": 0.2
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 9,
+      "2": 3,
+      "3": 5
+    },
+    "errors": [],
+    "cost_usd": 0.006014,
+    "median_case_ms": 7437.484300000506,
+    "prompt_tokens": 42099,
+    "completion_tokens": 9773,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 5,
+      "1": 0,
+      "2": 10,
+      "N": 15,
+      "mean": 1.3333333333333333
+    },
+    "citation_validity": {
+      "n": 11,
+      "N": 12
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 2
+  },
+  {
+    "run": "improve_context",
+    "dir": "starter/results/agent-improve_context-dev",
+    "config_file": "configs/improve_context.json",
+    "config_sha256": "cddfd2c8",
+    "first_search_hit1": {
+      "n": 7,
+      "N": 15,
+      "rate": 0.467
+    },
+    "first_search_hit3": {
+      "n": 11,
+      "N": 15,
+      "rate": 0.733
+    },
+    "context_evidence_rate": {
+      "n": 12,
+      "N": 15,
+      "rate": 0.8
+    },
+    "answered": {
+      "n": 13,
+      "N": 15,
+      "rate": 0.867
+    },
+    "false_abstention": {
+      "n": 2,
+      "N": 15,
+      "rate": 0.133
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 6,
+      "2": 3,
+      "3": 8
+    },
+    "errors": [],
+    "cost_usd": 0.007772,
+    "median_case_ms": 9198.862299999746,
+    "prompt_tokens": 64646,
+    "completion_tokens": 11494,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 3,
+      "1": 0,
+      "2": 12,
+      "N": 15,
+      "mean": 1.6
+    },
+    "citation_validity": {
+      "n": 16,
+      "N": 16
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 1
+  },
+  {
+    "run": "method_hybrid",
+    "dir": "starter/results/agent-method_hybrid-dev",
+    "config_file": "configs/method_hybrid.json",
+    "config_sha256": "5a03d00a",
+    "first_search_hit1": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.667
+    },
+    "first_search_hit3": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.933
+    },
+    "context_evidence_rate": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.667
+    },
+    "answered": {
+      "n": 12,
+      "N": 15,
+      "rate": 0.8
+    },
+    "false_abstention": {
+      "n": 3,
+      "N": 15,
+      "rate": 0.2
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 10,
+      "2": 2,
+      "3": 5
+    },
+    "errors": [],
+    "cost_usd": 0.005746,
+    "median_case_ms": 13018.800600000759,
+    "prompt_tokens": 44366,
+    "completion_tokens": 8818,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 5,
+      "1": 0,
+      "2": 10,
+      "N": 15,
+      "mean": 1.3333333333333333
+    },
+    "citation_validity": {
+      "n": 10,
+      "N": 12
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 2
+  },
+  {
+    "run": "method_rerank",
+    "dir": "starter/results/agent-method_rerank-dev",
+    "config_file": "configs/method_rerank.json",
+    "config_sha256": "eb5e4db0",
+    "first_search_hit1": {
+      "n": 11,
+      "N": 15,
+      "rate": 0.733
+    },
+    "first_search_hit3": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.933
+    },
+    "context_evidence_rate": {
+      "n": 11,
+      "N": 15,
+      "rate": 0.733
+    },
+    "answered": {
+      "n": 12,
+      "N": 15,
+      "rate": 0.8
+    },
+    "false_abstention": {
+      "n": 3,
+      "N": 15,
+      "rate": 0.2
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 8,
+      "2": 2,
+      "3": 7
+    },
+    "errors": [],
+    "cost_usd": 0.007125,
+    "median_case_ms": 27409.63389999888,
+    "prompt_tokens": 48626,
+    "completion_tokens": 11734,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 4,
+      "1": 0,
+      "2": 11,
+      "N": 15,
+      "mean": 1.4666666666666666
+    },
+    "citation_validity": {
+      "n": 12,
+      "N": 12
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 1
+  },
+  {
+    "run": "combined",
+    "dir": "starter/results/agent-combined-dev",
+    "config_file": "configs/combined.json",
+    "config_sha256": "824470c1",
+    "first_search_hit1": {
+      "n": 13,
+      "N": 15,
+      "rate": 0.867
+    },
+    "first_search_hit3": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "answered": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 15,
+      "rate": 0.0
+    },
+    "unanswerable_abstained": {
+      "n": 2,
+      "N": 2,
+      "rate": 1.0
+    },
+    "searches_distribution": {
+      "1": 11,
+      "2": 2,
+      "3": 4
+    },
+    "errors": [],
+    "cost_usd": 0.005708,
+    "median_case_ms": 12112.179600000673,
+    "prompt_tokens": 41027,
+    "completion_tokens": 9286,
+    "review_source": "reviews.json",
+    "grounded": {
+      "0": 0,
+      "1": 0,
+      "2": 15,
+      "N": 15,
+      "mean": 2.0
+    },
+    "citation_validity": {
+      "n": 16,
+      "N": 16
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "answered_wrong_with_citation": 0
+  }
+]

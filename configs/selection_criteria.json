@@ -1,0 +1,23 @@
+{
+  "published_at": "2026-11-16",
+  "published_before": "Mọi cấu hình cải thiện ở checkpoint 3 (chỉ baseline đã chạy trên dev); chưa chạy test.",
+  "split_used_for_selection": "dev (15 câu có đáp án + 2 câu thiếu evidence). Test chỉ chạy sau khi chốt và ghi configs/selected.json + git commit.",
+  "candidates": "Mỗi cấu hình là một file configs/*.json đã chạy đủ 17 câu dev với cùng model, cùng corpus/index, cùng cases.",
+  "hard_constraints": [
+    "Không có lỗi hệ thống chưa giải thích (status error) trên dev.",
+    "Abstention câu thiếu evidence = 2/2 (không bịa số cho u01, u02).",
+    "Tỷ lệ citation hợp lệ (chấm tay) >= baseline."
+  ],
+  "primary_metric": "Grounded answer trung bình /2 trên 15 câu có đáp án (chấm tay theo BENCHMARK.md; từ chối câu có đáp án = 0). Cao hơn tốt hơn.",
+  "variance_rule": "Chỉ coi một cấu hình tốt hơn baseline khi chênh lệch grounded lớn hơn mức dao động đo được giữa hai lần chạy baseline (run1 vs run2, cùng cấu hình). Nếu không vượt mức dao động thì coi là hòa và xét tiêu chí phụ.",
+  "tie_breakers_in_order": [
+    "Số câu trả lời sai có citation (answer_grade 0 khi status answered) — ít hơn tốt hơn, vì sai có citation nguy hiểm hơn từ chối.",
+    "Context Evidence Rate (tự động, khớp evidence trong context cuối) — cao hơn tốt hơn.",
+    "Số câu có đáp án bị từ chối nhầm — ít hơn tốt hơn.",
+    "Chi phí USD trên 17 câu dev — thấp hơn tốt hơn.",
+    "Thời gian trung vị mỗi câu — thấp hơn tốt hơn.",
+    "Cấu hình đơn giản hơn (ít thành phần/ít thay đổi so với baseline)."
+  ],
+  "retrieval_method_comparison": "So sánh phương pháp retrieval (không qua agent) trên 15 câu dev có đáp án bằng Hit@1, Evidence Hit@3, Context Evidence Rate với top-3 và budget 800; phương pháp tốt nhất theo Evidence Hit@3 rồi Hit@1 rồi thời gian được dùng làm ứng viên retriever cho agent.",
+  "reporting": "Báo cáo mọi cấu hình đã thử, kể cả cấu hình không cải thiện, dạng n/N kèm tỷ lệ, thời gian và chi phí."
+}

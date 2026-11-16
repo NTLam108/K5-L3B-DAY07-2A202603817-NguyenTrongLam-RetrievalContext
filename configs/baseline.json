@@ -1,0 +1,49 @@
+{
+  "name": "baseline",
+  "frozen_at": "2026-11-16",
+  "description": "Agent baseline: dense retrieval trên vector store Day 6, tham số mặc định của starter. Mốc để so sánh mọi cấu hình cải thiện ở checkpoint 3.",
+  "retrieval": {
+    "method": "dense",
+    "store_strategy": "A",
+    "embedding_model": "BAAI/bge-m3",
+    "top_k": 3,
+    "use_question_filter": true
+  },
+  "context": {
+    "budget_chars": 800,
+    "selection": "starter/baseline.pack_context: cộng dồn chunk theo thứ tự tìm được, bỏ trùng ID, bỏ chunk không vừa budget (tính cả dòng [id | source | page])"
+  },
+  "agent": {
+    "max_searches": 3,
+    "first_turn": "bắt buộc search_documents",
+    "when_no_searches_left": "chỉ còn submit_answer hoặc abstain",
+    "citation_repair": "nhắc model sửa định dạng citation tối đa 1 lần; không tự sửa thay model"
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-5-nano",
+    "reasoning_effort": "low",
+    "max_completion_tokens": 4000,
+    "max_retries": 3,
+    "prices_usd_per_1m": {"input": 0.05, "cached_input": 0.005, "output": 0.40},
+    "prices_source": "https://developers.openai.com/api/docs/pricing (tra ngày 2026-11-16, Standard tier)"
+  },
+  "stop_conditions": [
+    {"stop_reason": "answered", "status": "answered", "when": "Model gọi submit_answer; mọi citation có trong context cuối và xuất hiện dạng [id] trong answer."},
+    {"stop_reason": "model_abstain", "status": "abstain", "when": "Model gọi abstain (kèm reason). Trace ghi searched_before_abstain."},
+    {"stop_reason": "invalid_or_missing_citations", "status": "abstain", "when": "Citation vẫn sai sau khi controller đã nhắc sửa 1 lần; câu trả lời bị loại vẫn lưu trong event để phân tích."},
+    {"stop_reason": "search_limit", "status": "abstain", "when": "Model đòi search khi đã dùng hết max_searches. Hiếm xảy ra vì controller gỡ tool search khi searches_left = 0."},
+    {"stop_reason": "error", "status": "error", "when": "Lỗi provider/database sau khi đã thử lại, hoặc model không trả tool call hợp lệ sau 1 lần nhắc. Báo riêng, không tính vào chất lượng."},
+    {"stop_reason": "max_steps", "status": "abstain", "when": "Chốt chặn an toàn của loop (max_searches + 1 lượt); không xảy ra với controller hiện tại."}
+  ],
+  "rationale": {
+    "dense_strategy_A": "Phương pháp bắt buộc; strategy A được Day 6 chọn trên dev (Evidence Hit@3 dev 15/15) và Day 7 tái lập top-3 trùng 15/15 câu.",
+    "top_k_3": "Khớp cutoff Evidence Hit@3 của benchmark, nên retrieval metric và context của agent so sánh trực tiếp được.",
+    "budget_800": "Mặc định của starter/baseline.py, giữ nguyên để có mốc trước/sau. Đã biết hạn chế: thường chỉ vừa 1 chunk (Context Evidence Rate dense dev 10/15 so với Hit@3 15/15) — đây là giả thuyết cải thiện cho checkpoint 3, không chỉnh ở baseline.",
+    "max_searches_3": "Đủ cho 1 lần tìm + 2 lần tìm lại với cách diễn đạt khác; giới hạn chi phí/độ trễ (mỗi lượt LLM ~3 giây) và tránh vòng lặp. Đề không bắt buộc mức giới hạn chung.",
+    "question_filter_only": "Filter chỉ lấy từ trường filter người hỏi nêu (q11, q12, q16, theo filter_rule Day 6); không suy ra từ gold.",
+    "gpt_5_nano_low": "Model OpenAI rẻ nhất có tool calling; smoke test q01/q10/u02 đạt hành vi mong đợi. reasoning_effort low để giảm token reasoning. Mọi cấu hình so sánh dùng cùng model.",
+    "force_search_first": "Không cho trả lời/từ chối khi chưa xem tài liệu.",
+    "citation_repair_once": "Smoke test đầu: q10 trả lời đúng nhưng thiếu [id] trong answer nên bị loại; nhắc 1 lần sửa lỗi định dạng mà không che lỗi nội dung."
+  }
+}

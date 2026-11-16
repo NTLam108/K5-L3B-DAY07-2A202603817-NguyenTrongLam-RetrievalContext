@@ -1,0 +1,70 @@
+{
+  "method": "rerank_hybrid",
+  "split": "dev",
+  "n": 15,
+  "use_filter": false,
+  "query": "nguyên văn question",
+  "depth": 10,
+  "top_k_context": 3,
+  "budget_chars": 800,
+  "retriever": {
+    "retriever": "rerank(hybrid_rrf)",
+    "reranker_model": "BAAI/bge-reranker-v2-m3",
+    "candidates": 20,
+    "first_stage": {
+      "retriever": "hybrid_rrf",
+      "rrf_k": 60,
+      "depth_per_retriever": 20,
+      "components": [
+        {
+          "retriever": "dense",
+          "store_strategy": "A",
+          "embedding_model": "BAAI/bge-m3",
+          "dimensions": 1024,
+          "metric": "cosine (exact)",
+          "allowed_filters": [
+            "document_id",
+            "section"
+          ]
+        },
+        {
+          "retriever": "bm25",
+          "k1": 1.5,
+          "b": 0.75,
+          "tokenization": "âm tiết NFC casefold",
+          "chunks": 363
+        }
+      ]
+    }
+  },
+  "hit1": {
+    "n": 13,
+    "N": 15,
+    "rate": 0.867
+  },
+  "hit3": {
+    "n": 15,
+    "N": 15,
+    "rate": 1.0
+  },
+  "context_hit": {
+    "n": 13,
+    "N": 15,
+    "rate": 0.867
+  },
+  "hit10": {
+    "n": 15,
+    "N": 15,
+    "rate": 1.0
+  },
+  "mrr10": 0.933,
+  "missed_hit1": [
+    "q04",
+    "q05"
+  ],
+  "missed_hit3": [],
+  "errors": [],
+  "median_ms": 7066.3,
+  "load_seconds": 0.02,
+  "service_cost_usd": 0
+}
