@@ -1,0 +1,1221 @@
+{
+  "D01": [
+    {
+      "gold": 0,
+      "page": 23,
+      "printed_page": 21,
+      "object": "Table 1.1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p023:table_1.1"
+      ],
+      "evidence_bbox": [
+        70.7,
+        382.5,
+        176.8,
+        392.3
+      ],
+      "object_bbox": [
+        50.0,
+        138.8,
+        545.3,
+        515.6
+      ],
+      "crop_path": "advanced/data/crops/p023_table_1.1.png"
+    },
+    {
+      "gold": 1,
+      "page": 12,
+      "printed_page": 10,
+      "object": "Table 1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p012:table_1"
+      ],
+      "evidence_bbox": [
+        70.7,
+        629.8,
+        190.7,
+        639.5
+      ],
+      "object_bbox": [
+        50.0,
+        504.3,
+        545.3,
+        694.1
+      ],
+      "crop_path": "advanced/data/crops/p012_table_1.png"
+    }
+  ],
+  "D02": [
+    {
+      "gold": 0,
+      "page": 132,
+      "printed_page": 130,
+      "object": "Table 4.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p132:table_4.2"
+      ],
+      "evidence_bbox": [
+        70.7,
+        502.1,
+        256.2,
+        511.8
+      ],
+      "object_bbox": [
+        50.0,
+        394.9,
+        545.3,
+        567.5
+      ],
+      "crop_path": "advanced/data/crops/p132_table_4.2.png"
+    }
+  ],
+  "D03": [
+    {
+      "gold": 0,
+      "page": 12,
+      "printed_page": 10,
+      "object": "Table 1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p012:table_1"
+      ],
+      "evidence_bbox": [
+        106.4,
+        506.3,
+        225.8,
+        518.3
+      ],
+      "object_bbox": [
+        50.0,
+        504.3,
+        545.3,
+        694.1
+      ],
+      "crop_path": "advanced/data/crops/p012_table_1.png"
+    },
+    {
+      "gold": 1,
+      "page": 23,
+      "printed_page": 21,
+      "object": "Table 1.1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p023:table_1.1"
+      ],
+      "evidence_bbox": [
+        115.6,
+        140.8,
+        324.3,
+        152.8
+      ],
+      "object_bbox": [
+        50.0,
+        138.8,
+        545.3,
+        515.6
+      ],
+      "crop_path": "advanced/data/crops/p023_table_1.1.png"
+    }
+  ],
+  "D04": [
+    {
+      "gold": 0,
+      "page": 32,
+      "printed_page": 30,
+      "object": "Figure 1.10",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p032:figure_1.10"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.8,
+        359.0,
+        80.8
+      ],
+      "object_bbox": [
+        50.0,
+        66.8,
+        545.3,
+        285.3
+      ],
+      "crop_path": "advanced/data/crops/p032_figure_1.10.png"
+    }
+  ],
+  "D05": [
+    {
+      "gold": 0,
+      "page": 82,
+      "printed_page": 80,
+      "object": "Figure 3.8",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p082:figure_3.8"
+      ],
+      "evidence_bbox": [
+        65.3,
+        482.8,
+        368.2,
+        494.8
+      ],
+      "object_bbox": [
+        50.0,
+        480.8,
+        545.3,
+        714.4
+      ],
+      "crop_path": "advanced/data/crops/p082_figure_3.8.png"
+    }
+  ],
+  "D06": [
+    {
+      "gold": 0,
+      "page": 40,
+      "printed_page": 38,
+      "object": "Figure 1.19",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p040:figure_1.19"
+      ],
+      "evidence_bbox": [
+        65.3,
+        362.4,
+        363.3,
+        374.4
+      ],
+      "object_bbox": [
+        50.0,
+        360.4,
+        545.3,
+        631.7
+      ],
+      "crop_path": "advanced/data/crops/p040_figure_1.19.png"
+    }
+  ],
+  "D07": [
+    {
+      "gold": 0,
+      "page": 82,
+      "printed_page": 80,
+      "object": "Figure 3.7",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p082:figure_3.7"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.7,
+        362.7,
+        80.7
+      ],
+      "object_bbox": [
+        50.0,
+        66.7,
+        545.3,
+        304.2
+      ],
+      "crop_path": "advanced/data/crops/p082_figure_3.7.png"
+    }
+  ],
+  "D08": [
+    {
+      "gold": 0,
+      "page": 38,
+      "printed_page": 36,
+      "object": "Figure 1.17",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p038:figure_1.17"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.8,
+        376.6,
+        80.8
+      ],
+      "object_bbox": [
+        50.0,
+        66.8,
+        545.3,
+        297.1
+      ],
+      "crop_path": "advanced/data/crops/p038_figure_1.17.png"
+    }
+  ],
+  "D09": [
+    {
+      "gold": 0,
+      "page": 123,
+      "printed_page": 121,
+      "object": "Figure 4.22",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p123:figure_4.22"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.8,
+        371.7,
+        80.8
+      ],
+      "object_bbox": [
+        50.0,
+        66.8,
+        545.3,
+        310.4
+      ],
+      "crop_path": "advanced/data/crops/p123_figure_4.22.png"
+    }
+  ],
+  "D10": [
+    {
+      "gold": 0,
+      "page": 51,
+      "printed_page": 49,
+      "object": "Figure 2.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p051:figure_2.2"
+      ],
+      "evidence_bbox": [
+        338.5,
+        287.0,
+        440.6,
+        296.7
+      ],
+      "object_bbox": [
+        50.0,
+        104.4,
+        545.3,
+        453.0
+      ],
+      "crop_path": "advanced/data/crops/p051_figure_2.2.png"
+    }
+  ],
+  "D11": [
+    {
+      "gold": 0,
+      "page": 23,
+      "printed_page": 21,
+      "object": "Table 1.1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p023:table_1.1"
+      ],
+      "evidence_bbox": [
+        70.7,
+        357.2,
+        145.7,
+        367.0
+      ],
+      "object_bbox": [
+        50.0,
+        138.8,
+        545.3,
+        515.6
+      ],
+      "crop_path": "advanced/data/crops/p023_table_1.1.png"
+    },
+    {
+      "gold": 1,
+      "page": 25,
+      "printed_page": 23,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p025:text03"
+      ],
+      "evidence_bbox": [
+        65.3,
+        684.3,
+        328.8,
+        694.9
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "D12": [
+    {
+      "gold": 0,
+      "page": 77,
+      "printed_page": 75,
+      "object": "Table 3.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p077:table_3.2"
+      ],
+      "evidence_bbox": [
+        70.7,
+        368.6,
+        156.2,
+        378.4
+      ],
+      "object_bbox": [
+        50.0,
+        321.5,
+        545.3,
+        489.1
+      ],
+      "crop_path": "advanced/data/crops/p077_table_3.2.png"
+    },
+    {
+      "gold": 1,
+      "page": 77,
+      "printed_page": 75,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p077:text03"
+      ],
+      "evidence_bbox": [
+        65.3,
+        273.0,
+        306.2,
+        283.6
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "D13": [
+    {
+      "gold": 0,
+      "page": 111,
+      "printed_page": 109,
+      "object": "Figure 4.13",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p111:figure_4.13"
+      ],
+      "evidence_bbox": [
+        65.3,
+        264.5,
+        352.9,
+        276.5
+      ],
+      "object_bbox": [
+        50.0,
+        262.5,
+        545.3,
+        504.9
+      ],
+      "crop_path": "advanced/data/crops/p111_figure_4.13.png"
+    },
+    {
+      "gold": 1,
+      "page": 99,
+      "printed_page": 97,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p099:text01"
+      ],
+      "evidence_bbox": [
+        347.0,
+        209.8,
+        527.8,
+        220.3
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "D14": [
+    {
+      "gold": 0,
+      "page": 133,
+      "printed_page": 131,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p133:text05"
+      ],
+      "evidence_bbox": [
+        65.3,
+        637.1,
+        262.4,
+        647.7
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    },
+    {
+      "gold": 1,
+      "page": 133,
+      "printed_page": 131,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p133:text03"
+      ],
+      "evidence_bbox": [
+        368.0,
+        355.9,
+        532.5,
+        366.5
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "D15": [
+    {
+      "gold": 0,
+      "page": 82,
+      "printed_page": 80,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p082:text01"
+      ],
+      "evidence_bbox": [
+        82.2,
+        374.2,
+        246.0,
+        384.7
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    },
+    {
+      "gold": 1,
+      "page": 82,
+      "printed_page": 80,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p082:text01"
+      ],
+      "evidence_bbox": [
+        166.3,
+        412.6,
+        408.1,
+        423.1
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "D16": [
+    {
+      "gold": 0,
+      "page": 55,
+      "printed_page": 53,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p055:text02"
+      ],
+      "evidence_bbox": [
+        87.3,
+        177.2,
+        358.0,
+        187.8
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "T01": [
+    {
+      "gold": 0,
+      "page": 23,
+      "printed_page": 21,
+      "object": "Table 1.1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p023:table_1.1"
+      ],
+      "evidence_bbox": [
+        86.6,
+        446.4,
+        164.4,
+        456.1
+      ],
+      "object_bbox": [
+        50.0,
+        138.8,
+        545.3,
+        515.6
+      ],
+      "crop_path": "advanced/data/crops/p023_table_1.1.png"
+    },
+    {
+      "gold": 1,
+      "page": 12,
+      "printed_page": 10,
+      "object": "Table 1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p012:table_1"
+      ],
+      "evidence_bbox": [
+        70.7,
+        667.7,
+        186.0,
+        677.5
+      ],
+      "object_bbox": [
+        50.0,
+        504.3,
+        545.3,
+        694.1
+      ],
+      "crop_path": "advanced/data/crops/p012_table_1.png"
+    }
+  ],
+  "T02": [
+    {
+      "gold": 0,
+      "page": 59,
+      "printed_page": 57,
+      "object": "Table 2.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p059:table_2.2"
+      ],
+      "evidence_bbox": [
+        419.1,
+        265.6,
+        530.3,
+        276.1
+      ],
+      "object_bbox": [
+        50.0,
+        365.5,
+        545.3,
+        508.1
+      ],
+      "crop_path": "advanced/data/crops/p059_table_2.2.png"
+    }
+  ],
+  "T03": [
+    {
+      "gold": 0,
+      "page": 77,
+      "printed_page": 75,
+      "object": "Table 3.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p077:table_3.2"
+      ],
+      "evidence_bbox": [
+        323.4,
+        68.7,
+        368.3,
+        79.3
+      ],
+      "object_bbox": [
+        50.0,
+        321.5,
+        545.3,
+        489.1
+      ],
+      "crop_path": "advanced/data/crops/p077_table_3.2.png"
+    }
+  ],
+  "T04": [
+    {
+      "gold": 0,
+      "page": 39,
+      "printed_page": 37,
+      "object": "Table 1.4",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p039:table_1.4"
+      ],
+      "evidence_bbox": [
+        198.3,
+        655.6,
+        353.1,
+        665.3
+      ],
+      "object_bbox": [
+        50.0,
+        555.6,
+        545.3,
+        688.0
+      ],
+      "crop_path": "advanced/data/crops/p039_table_1.4.png"
+    }
+  ],
+  "T05": [
+    {
+      "gold": 0,
+      "page": 38,
+      "printed_page": 36,
+      "object": "Table 1.3",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p038:table_1.3"
+      ],
+      "evidence_bbox": [
+        88.7,
+        492.9,
+        176.6,
+        502.7
+      ],
+      "object_bbox": [
+        50.0,
+        305.1,
+        545.3,
+        556.1
+      ],
+      "crop_path": "advanced/data/crops/p038_table_1.3.png"
+    }
+  ],
+  "T06": [
+    {
+      "gold": 0,
+      "page": 9,
+      "printed_page": 7,
+      "object": "Basic statistics",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p009:basic_statistics:part1"
+      ],
+      "evidence_bbox": [
+        321.7,
+        467.4,
+        418.0,
+        477.1
+      ],
+      "object_bbox": [
+        50.0,
+        58.0,
+        545.3,
+        740.0
+      ],
+      "crop_path": "advanced/data/crops/p009_basic_statistics.png"
+    }
+  ],
+  "T07": [
+    {
+      "gold": 0,
+      "page": 131,
+      "printed_page": 129,
+      "object": "Figure 4.27",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p131:figure_4.27"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.8,
+        350.5,
+        80.8
+      ],
+      "object_bbox": [
+        50.0,
+        66.8,
+        545.3,
+        359.9
+      ],
+      "crop_path": "advanced/data/crops/p131_figure_4.27.png"
+    }
+  ],
+  "T08": [
+    {
+      "gold": 0,
+      "page": 101,
+      "printed_page": 99,
+      "object": "Figure 4.4",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p101:figure_4.4"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.8,
+        374.5,
+        80.8
+      ],
+      "object_bbox": [
+        50.0,
+        66.8,
+        545.3,
+        308.1
+      ],
+      "crop_path": "advanced/data/crops/p101_figure_4.4.png"
+    }
+  ],
+  "T09": [
+    {
+      "gold": 0,
+      "page": 74,
+      "printed_page": 72,
+      "object": "Figure 3.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p074:figure_3.2"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.8,
+        352.3,
+        80.8
+      ],
+      "object_bbox": [
+        50.0,
+        66.8,
+        545.3,
+        319.0
+      ],
+      "crop_path": "advanced/data/crops/p074_figure_3.2.png"
+    }
+  ],
+  "T10": [
+    {
+      "gold": 0,
+      "page": 112,
+      "printed_page": 110,
+      "object": "Figure 4.14",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p112:figure_4.14"
+      ],
+      "evidence_bbox": [
+        65.3,
+        343.6,
+        371.7,
+        355.6
+      ],
+      "object_bbox": [
+        50.0,
+        341.6,
+        545.3,
+        578.8
+      ],
+      "crop_path": "advanced/data/crops/p112_figure_4.14.png"
+    }
+  ],
+  "T11": [
+    {
+      "gold": 0,
+      "page": 50,
+      "printed_page": 48,
+      "object": "Figure 2.1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p050:figure_2.1"
+      ],
+      "evidence_bbox": [
+        65.3,
+        323.2,
+        208.1,
+        335.2
+      ],
+      "object_bbox": [
+        50.0,
+        321.2,
+        545.3,
+        585.6
+      ],
+      "crop_path": "advanced/data/crops/p050_figure_2.1.png"
+    }
+  ],
+  "T12": [
+    {
+      "gold": 0,
+      "page": 51,
+      "printed_page": 49,
+      "object": "Figure 2.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p051:figure_2.2"
+      ],
+      "evidence_bbox": [
+        118.0,
+        124.4,
+        212.2,
+        134.2
+      ],
+      "object_bbox": [
+        50.0,
+        104.4,
+        545.3,
+        453.0
+      ],
+      "crop_path": "advanced/data/crops/p051_figure_2.2.png"
+    }
+  ],
+  "T13": [
+    {
+      "gold": 0,
+      "page": 65,
+      "printed_page": 63,
+      "object": "Figure 2.11",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p065:figure_2.11"
+      ],
+      "evidence_bbox": [
+        65.3,
+        68.7,
+        287.0,
+        80.7
+      ],
+      "object_bbox": [
+        50.0,
+        66.7,
+        545.3,
+        312.8
+      ],
+      "crop_path": "advanced/data/crops/p065_figure_2.11.png"
+    }
+  ],
+  "T14": [
+    {
+      "gold": 0,
+      "page": 128,
+      "printed_page": 126,
+      "object": "Figure 4.25",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p128:figure_4.25"
+      ],
+      "evidence_bbox": [
+        65.3,
+        170.6,
+        352.1,
+        182.6
+      ],
+      "object_bbox": [
+        50.0,
+        168.6,
+        545.3,
+        366.2
+      ],
+      "crop_path": "advanced/data/crops/p128_figure_4.25.png"
+    }
+  ],
+  "T15": [
+    {
+      "gold": 0,
+      "page": 20,
+      "printed_page": 18,
+      "object": "Figure 1.1",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p020:figure_1.1"
+      ],
+      "evidence_bbox": [
+        65.3,
+        209.4,
+        306.4,
+        221.4
+      ],
+      "object_bbox": [
+        50.0,
+        207.4,
+        545.3,
+        709.2
+      ],
+      "crop_path": "advanced/data/crops/p020_figure_1.1.png"
+    }
+  ],
+  "T16": [
+    {
+      "gold": 0,
+      "page": 57,
+      "printed_page": 55,
+      "object": "Figure 2.5",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p057:figure_2.5"
+      ],
+      "evidence_bbox": [
+        65.3,
+        457.7,
+        278.3,
+        469.7
+      ],
+      "object_bbox": [
+        50.0,
+        455.7,
+        545.3,
+        683.1
+      ],
+      "crop_path": "advanced/data/crops/p057_figure_2.5.png"
+    }
+  ],
+  "T17": [
+    {
+      "gold": 0,
+      "page": 55,
+      "printed_page": 53,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p055:text03"
+      ],
+      "evidence_bbox": [
+        159.4,
+        401.2,
+        435.5,
+        411.7
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    },
+    {
+      "gold": 1,
+      "page": 59,
+      "printed_page": 57,
+      "object": "Table 2.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p059:table_2.2"
+      ],
+      "evidence_bbox": [
+        79.4,
+        440.7,
+        146.4,
+        450.5
+      ],
+      "object_bbox": [
+        50.0,
+        365.5,
+        545.3,
+        508.1
+      ],
+      "crop_path": "advanced/data/crops/p059_table_2.2.png"
+    }
+  ],
+  "T18": [
+    {
+      "gold": 0,
+      "page": 99,
+      "printed_page": 97,
+      "object": "Figure 4.2",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p099:figure_4.2"
+      ],
+      "evidence_bbox": [
+        432.4,
+        579.5,
+        532.0,
+        587.5
+      ],
+      "object_bbox": [
+        50.0,
+        376.6,
+        545.3,
+        621.7
+      ],
+      "crop_path": "advanced/data/crops/p099_figure_4.2.png"
+    },
+    {
+      "gold": 1,
+      "page": 99,
+      "printed_page": 97,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p099:text02"
+      ],
+      "evidence_bbox": [
+        65.3,
+        292.6,
+        292.9,
+        303.1
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "T19": [
+    {
+      "gold": 0,
+      "page": 50,
+      "printed_page": 48,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p050:text02"
+      ],
+      "evidence_bbox": [
+        385.8,
+        164.0,
+        509.0,
+        174.6
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    },
+    {
+      "gold": 1,
+      "page": 9,
+      "printed_page": 7,
+      "object": "Basic statistics",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p009:basic_statistics:part1"
+      ],
+      "evidence_bbox": [
+        70.7,
+        108.9,
+        129.9,
+        118.6
+      ],
+      "object_bbox": [
+        50.0,
+        58.0,
+        545.3,
+        740.0
+      ],
+      "crop_path": "advanced/data/crops/p009_basic_statistics.png"
+    }
+  ],
+  "T20": [
+    {
+      "gold": 0,
+      "page": 100,
+      "printed_page": 98,
+      "object": "Figure 4.3",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p100:figure_4.3"
+      ],
+      "evidence_bbox": [
+        65.3,
+        486.5,
+        351.8,
+        498.5
+      ],
+      "object_bbox": [
+        50.0,
+        484.5,
+        545.3,
+        710.1
+      ],
+      "crop_path": "advanced/data/crops/p100_figure_4.3.png"
+    },
+    {
+      "gold": 1,
+      "page": 9,
+      "printed_page": 7,
+      "object": "Basic statistics",
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p009:basic_statistics:part1"
+      ],
+      "evidence_bbox": [
+        70.7,
+        195.7,
+        161.7,
+        205.4
+      ],
+      "object_bbox": [
+        50.0,
+        58.0,
+        545.3,
+        740.0
+      ],
+      "crop_path": "advanced/data/crops/p009_basic_statistics.png"
+    }
+  ],
+  "T21": [
+    {
+      "gold": 0,
+      "page": 99,
+      "printed_page": 97,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p099:text01"
+      ],
+      "evidence_bbox": [
+        281.3,
+        81.5,
+        532.6,
+        92.0
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "T22": [
+    {
+      "gold": 0,
+      "page": 133,
+      "printed_page": 131,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p133:text01"
+      ],
+      "evidence_bbox": [
+        82.1,
+        113.1,
+        245.2,
+        123.7
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "T23": [
+    {
+      "gold": 0,
+      "page": 26,
+      "printed_page": 24,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p026:text04"
+      ],
+      "evidence_bbox": [
+        88.9,
+        648.2,
+        341.2,
+        658.8
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ],
+  "T24": [
+    {
+      "gold": 0,
+      "page": 88,
+      "printed_page": 86,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p088:text05"
+      ],
+      "evidence_bbox": [
+        65.3,
+        652.3,
+        178.2,
+        662.8
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    },
+    {
+      "gold": 1,
+      "page": 88,
+      "printed_page": 86,
+      "object": null,
+      "evidence_found_on_page": true,
+      "chunk_ids": [
+        "oecd-vn-2025:p088:text05"
+      ],
+      "evidence_bbox": [
+        65.3,
+        684.0,
+        344.4,
+        694.5
+      ],
+      "object_bbox": null,
+      "crop_path": null
+    }
+  ]
+}

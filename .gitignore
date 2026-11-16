@@ -9,3 +9,6 @@ __pycache__/
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
 starter/results/
+
+# Tài liệu gốc thử thách nâng cao (tải lại bằng URL + SHA256 trong advanced/README)
+advanced/source/

@@ -1,0 +1,398 @@
+[
+  {
+    "id": "T01", "split": "test", "group": "table", "tags": ["calculation"],
+    "question": "Theo bảng chỉ tiêu kinh tế vĩ mô và dự báo của OECD, nợ chính phủ của Việt Nam được dự báo bằng bao nhiêu % GDP vào năm 2026, và tăng bao nhiêu điểm phần trăm so với năm 2023?",
+    "answerable": true,
+    "expected_answer": "Nợ chính phủ dự báo bằng 38,0% GDP năm 2026, tăng 4,8 điểm phần trăm so với 33,2% GDP năm 2023.",
+    "key_facts": ["38,0% GDP năm 2026", "33,2% GDP năm 2023", "chênh lệch 4,8 điểm phần trăm"],
+    "unit": "% GDP; điểm phần trăm", "calculation": "38,0 − 33,2 = 4,8", "tolerance": "chính xác tới 0,1",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 23, "object": "Table 1.1", "evidence": "Federal government debt",
+       "detail": "Hàng 'Federal government debt' (mục Public finances, % of GDP): cột 2023 = 33.2, cột 2026 = 38.0"},
+      {"source_id": "oecd-vn-2025", "page": 12, "object": "Table 1", "evidence": "Federal government debt (% of GDP)",
+       "detail": "Bằng chứng thay thế: Table 1 (Executive summary) cùng giá trị 33.2 / 38.0"}
+    ],
+    "gold_mode": "any",
+    "rationale": "Tra đúng hàng, đúng hai cột năm và tính hiệu."
+  },
+  {
+    "id": "T02", "split": "test", "group": "table", "tags": ["calculation"],
+    "question": "Ở Việt Nam, người sử dụng lao động và người lao động lần lượt phải đóng tổng cộng bao nhiêu % tiền lương cho bảo hiểm xã hội, bảo hiểm y tế và bảo hiểm thất nghiệp? Cộng lại là bao nhiêu?",
+    "answerable": true,
+    "expected_answer": "Người sử dụng lao động đóng 21,5%, người lao động đóng 10,5%; tổng cộng 32% tiền lương.",
+    "key_facts": ["người sử dụng lao động 21,5%", "người lao động 10,5%", "tổng 32%"],
+    "unit": "% tiền lương", "calculation": "21,5 + 10,5 = 32,0", "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 59, "object": "Table 2.2", "evidence": "Unemployment insurance",
+       "detail": "Hàng 'Total': Employer rate 21.5, Employee rate 10.5"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Đọc hàng tổng của bảng hai cột tỷ lệ và cộng hai cột."
+  },
+  {
+    "id": "T03", "split": "test", "group": "table", "tags": ["unit"],
+    "question": "Thuế bảo vệ môi trường đối với dầu diesel năm 2024/25 là bao nhiêu, so với đầu năm 2023 thay đổi thế nào, và tương đương bao nhiêu USD cho mỗi tấn CO2?",
+    "answerable": true,
+    "expected_answer": "Năm 2024/25 là 1 000 VND/lít (0,039 USD/lít), giảm một nửa so với 2 000 VND/lít (0,079 USD/lít) đầu năm 2023; tương đương 15 USD/tấn CO2.",
+    "key_facts": ["1 000 VND/lít năm 2024/25", "2 000 VND/lít đầu năm 2023 (giảm một nửa)", "15 USD/tCO2"],
+    "unit": "VND/lít; USD/tCO2", "calculation": null, "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 77, "object": "Table 3.2", "evidence": "Diesel fuel",
+       "detail": "Hàng 'Diesel fuel': 2024/25 = 1 000 VND/litre (0.039 USD/litre); early 2023 = 2 000 VND/litre (0.079 USD/litre); 15 USD per tCO2"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Tra hàng, ba cột, giữ đúng đơn vị VND/lít và USD/tCO2."
+  },
+  {
+    "id": "T04", "split": "test", "group": "table", "tags": [],
+    "question": "Theo mô phỏng của OECD, nếu Việt Nam giảm sở hữu nhà nước xuống mức trung bình OECD thì GDP bình quân đầu người tăng tích lũy bao nhiêu sau 5 năm, sau 10 năm và trong dài hạn?",
+    "answerable": true,
+    "expected_answer": "Tăng 1,9% sau 5 năm, 2,5% sau 10 năm và 5,0% trong dài hạn.",
+    "key_facts": ["1,9% sau 5 năm", "2,5% sau 10 năm", "5,0% dài hạn"],
+    "unit": "% GDP bình quân đầu người (tích lũy)", "calculation": null, "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 39, "object": "Table 1.4", "evidence": "Reduce public ownership to the level of the OECD",
+       "detail": "Hàng 'Reduce the role of state-owned enterprises' / 'Reduce public ownership to the level of the OECD average': 1.9% | 2.5% | 5.0%"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Bảng có cột 'Long term' mà find_tables làm mất; kiểm tra pipeline đọc đủ cột."
+  },
+  {
+    "id": "T05", "split": "test", "group": "table", "tags": [],
+    "question": "Trong gói biện pháp tài khoá OECD đề xuất, biện pháp tăng thu nào có tác động lớn nhất (bao nhiêu % GDP), và tổng tác động tài khoá của cả gói là bao nhiêu?",
+    "answerable": true,
+    "expected_answer": "Tăng thuế suất VAT tiêu chuẩn, +2,5% GDP; tổng tác động tài khoá bằng 0,0% GDP (các biện pháp tăng thâm hụt −6,0% bù bằng các biện pháp giảm thâm hụt +6,0%).",
+    "key_facts": ["Raise the standard VAT rate +2,5% GDP", "tổng tác động 0,0% GDP"],
+    "unit": "% GDP", "calculation": "−6,0 + 6,0 = 0,0", "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 38, "object": "Table 1.3", "evidence": "Raise the standard VAT rate",
+       "detail": "Hàng 'Raise the standard VAT rate' = +2.5; 'Total fiscal impact' = 0.0; 'Deficit increasing measures' = -6.0; 'Deficit reducing measures' = +6.0"}
+    ],
+    "gold_mode": "all",
+    "rationale": "So sánh các ô trong nhóm 'Deficit reducing measures' để tìm giá trị lớn nhất."
+  },
+  {
+    "id": "T06", "split": "test", "group": "table", "tags": ["comparison"],
+    "question": "Theo bảng thống kê cơ bản của Việt Nam năm 2023, tỷ lệ người 25–64 tuổi có trình độ đại học là bao nhiêu, và trung bình OECD là bao nhiêu?",
+    "answerable": true,
+    "expected_answer": "Việt Nam 14,7%, trung bình OECD 41,0%.",
+    "key_facts": ["Việt Nam 14,7%", "OECD 41,0%"],
+    "unit": "% dân số 25–64 tuổi", "calculation": null, "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 9, "object": "Basic statistics", "evidence": "Tertiary educational attainment",
+       "detail": "Mục LABOUR MARKET, SKILLS AND INNOVATION: 'Tertiary educational attainment (aged 25-64, %)' = 14.7, OECD (41.0) trong ngoặc"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Bảng không có caption Table; số trong ngoặc là trung bình OECD theo ghi chú đầu bảng."
+  },
+  {
+    "id": "T07", "split": "test", "group": "image", "tags": ["raster", "ranking"],
+    "question": "Trong hình so sánh mức méo mó do sự tham gia của nhà nước (thang 0–6) giữa các nước, Việt Nam đứng ở vị trí nào và có giá trị khoảng bao nhiêu? Cột màu xanh lá thể hiện gì và có giá trị khoảng bao nhiêu?",
+    "answerable": true,
+    "expected_answer": "Việt Nam có giá trị cao nhất trong tất cả các nước (cột đỏ ngoài cùng bên phải), khoảng 4,1; cột xanh lá là trung bình OECD, khoảng 2,2.",
+    "key_facts": ["Việt Nam cao nhất", "≈ 4,1", "cột xanh lá = OECD", "OECD ≈ 2,2"],
+    "unit": "điểm (thang 0–6)", "calculation": null, "tolerance": "±0,1",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 131, "object": "Figure 4.27", "evidence": "Figure 4.27. State-owned enterprises play a large role in Viet Nam",
+       "detail": "Ảnh raster: cột VNM màu đỏ ngoài cùng bên phải (cao nhất); cột OECD màu xanh lá. StatLink 3ofz2k: VNM 4.10, OECD 2.16"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Nhận diện cột được tô màu và vị trí xếp hạng trên hình raster; số liệu kiểm chứng bằng StatLink."
+  },
+  {
+    "id": "T08", "split": "test", "group": "image", "tags": ["raster", "ranking"],
+    "question": "Theo hình về tiền lương công nhân ngành chế tạo, những nước nào có lương tháng bình quân năm 2024 thấp hơn Việt Nam? Về tăng trưởng lương thực tế bình quân năm từ 2006, Việt Nam xếp thứ mấy và sau nước nào?",
+    "answerable": true,
+    "expected_answer": "Lào, Myanmar, Campuchia và Philippines có lương thấp hơn Việt Nam (khoảng 300 USD/tháng). Về tăng trưởng lương thực tế, Việt Nam xếp thứ hai (khoảng 5%/năm), chỉ sau Trung Quốc (khoảng 8%/năm).",
+    "key_facts": ["LAO, MMR, KHM, PHL thấp hơn", "Việt Nam thứ 2 về tăng trưởng lương thực tế", "sau Trung Quốc"],
+    "unit": "USD/tháng; %/năm", "calculation": null, "tolerance": "giá trị là xấp xỉ; thứ hạng phải đúng",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 101, "object": "Figure 4.4", "evidence": "Figure 4.4. Wages remain relatively low compared to ASEAN peers",
+       "detail": "Ảnh raster, panel A: LAO 115, MMR 148, KHM 243, PHL 273 < VNM 302 USD; panel B: CHN 8.06 > VNM 5.0 > IND 3.57 (StatLink wcu0a3)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Đọc thứ tự cột trên hai panel của ảnh; cột Việt Nam tô đỏ."
+  },
+  {
+    "id": "T09", "split": "test", "group": "image", "tags": ["raster", "stacked-area"],
+    "question": "Năm 2023, nguồn phát thải khí nhà kính nào lớn nhất ở Việt Nam và khoảng bao nhiêu triệu tấn CO2 tương đương? Nguồn lớn thứ hai là gì?",
+    "answerable": true,
+    "expected_answer": "Lớn nhất là ngành điện (Power Industry), khoảng 160 triệu tấn CO2e; thứ hai là đốt nhiên liệu trong công nghiệp (Industrial Combustion), khoảng 108 triệu tấn CO2e.",
+    "key_facts": ["Power Industry lớn nhất", "≈ 160 MtCO2e", "Industrial Combustion thứ hai"],
+    "unit": "triệu tấn CO2e", "calculation": null, "tolerance": "±10% cho giá trị",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 74, "object": "Figure 3.2", "evidence": "Figure 3.2. Electricity generation is the main source of GHG emissions",
+       "detail": "Ảnh raster (biểu đồ vùng chồng): năm 2023 Power Industry 159.54, Industrial Combustion 108.25, Agriculture 92.5 (StatLink a05zm1)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Cần đọc độ dày từng lớp của biểu đồ vùng chồng trên ảnh; tiêu đề hình chỉ nói 'electricity generation'."
+  },
+  {
+    "id": "T10", "split": "test", "group": "image", "tags": ["raster", "identification"],
+    "question": "Trong biểu đồ việc làm theo loại hoạt động ở khu vực xuất khẩu của Việt Nam và các nước so sánh, nước nào được khoanh viền đỏ, nước nào có tỷ trọng lao động quản lý & kỹ thuật cao nhất, và lao động sản xuất chiếm khoảng bao nhiêu % việc làm ở Việt Nam?",
+    "answerable": true,
+    "expected_answer": "Việt Nam (VNM) được khoanh đỏ; Philippines (PHL) có tỷ trọng quản lý & kỹ thuật cao nhất (khoảng 18%); lao động sản xuất chiếm khoảng 85% ở Việt Nam.",
+    "key_facts": ["VNM khoanh đỏ", "PHL cao nhất về quản lý & kỹ thuật", "sản xuất ≈ 85%"],
+    "unit": "% việc làm", "calculation": null, "tolerance": "±3 điểm %",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 112, "object": "Figure 4.14", "evidence": "Figure 4.14. Production workers account for about 85% of employees in the export sector",
+       "detail": "Ảnh raster, panel B: khung đỏ quanh nhãn VNM; PHL Managerial & engineering 18; VNM Production 85 (StatLink 7zq9lu)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Nhận diện đánh dấu trực quan (khung đỏ) và phần màu xanh dương trong cột chồng."
+  },
+  {
+    "id": "T11", "split": "test", "group": "image", "tags": ["raster", "ranking"],
+    "question": "Trong so sánh tỷ lệ nghèo theo chuẩn 2,15 USD/ngày giữa các nước, nước nào có tỷ lệ cao nhất (khoảng bao nhiêu %) và cột của Việt Nam (năm 2022) có giá trị khoảng bao nhiêu?",
+    "answerable": true,
+    "expected_answer": "Philippines (năm 2021) cao nhất, khoảng 6,7–6,8%; Việt Nam (2022, cột đỏ) khoảng 1% (dưới 1%).",
+    "key_facts": ["Philippines cao nhất", "≈ 6,8%", "Việt Nam ≈ 1% hoặc dưới 1%"],
+    "unit": "% dân số", "calculation": null, "tolerance": "±0,3 điểm %",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 50, "object": "Figure 2.1", "evidence": "Figure 2.1. Poverty indicators",
+       "detail": "Ảnh raster, panel B (cột ngang): Philippines (2021) 6.75; Viet Nam (2022) 0.96 màu đỏ (StatLink rmiecu)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Đọc thứ hạng trên biểu đồ cột ngang dạng ảnh."
+  },
+  {
+    "id": "T12", "split": "test", "group": "chart", "tags": ["vector", "time-series"],
+    "question": "Theo biểu đồ hệ số Gini toàn quốc của Việt Nam, chỉ số này giảm mạnh nhất giữa hai năm nào, và giảm từ khoảng bao nhiêu xuống bao nhiêu?",
+    "answerable": true,
+    "expected_answer": "Giảm mạnh nhất giữa năm 2019 và 2020, từ khoảng 0,423 xuống khoảng 0,375.",
+    "key_facts": ["giữa 2019 và 2020", "≈ 0,423", "≈ 0,375"],
+    "unit": "hệ số Gini", "calculation": null, "tolerance": "±0,005",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 51, "object": "Figure 2.2", "evidence": "A. Gini index, whole country",
+       "detail": "Panel A, đường xanh: 2019 = 0.423, 2020 = 0.375 (StatLink 9ml0o7)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Đọc vị trí điểm gãy trên trục năm; vision v1 từng đọc sai năm."
+  },
+  {
+    "id": "T13", "split": "test", "group": "chart", "tags": ["vector", "comparison"],
+    "question": "Khoảng cách tiền lương theo giới của Việt Nam (năm 2023 hoặc gần nhất) là bao nhiêu %, cao hơn mức chung ASEAN bao nhiêu điểm phần trăm, và nước nào có giá trị âm sâu nhất?",
+    "answerable": true,
+    "expected_answer": "Việt Nam khoảng 12,1%, cao hơn ASEAN (khoảng 9,7%) khoảng 2,4 điểm phần trăm; Philippines có giá trị âm sâu nhất (khoảng −6,1%).",
+    "key_facts": ["Việt Nam ≈ 12,1%", "ASEAN ≈ 9,7%", "chênh ≈ 2,4 điểm %", "Philippines âm sâu nhất"],
+    "unit": "%", "calculation": "12,1 − 9,7 = 2,4", "tolerance": "±0,3",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 65, "object": "Figure 2.11", "evidence": "Figure 2.11. Viet Nam’s gender pay gap is low",
+       "detail": "Cột: Viet Nam 12.10, ASEAN 9.69, Philippines -6.11 (StatLink 5ei2fx)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Đọc giá trị cột theo trục, so sánh hai cột và tìm cột âm."
+  },
+  {
+    "id": "T14", "split": "test", "group": "chart", "tags": ["vector", "comparison"],
+    "question": "Theo khảo sát doanh nghiệp, trở ngại lớn nhất đối với doanh nghiệp Việt Nam là gì (tỷ lệ bao nhiêu %), và tỷ lệ doanh nghiệp Việt Nam coi tiếp cận tài chính là trở ngại chính cao hơn mức trung bình Đông Á – Thái Bình Dương bao nhiêu điểm phần trăm?",
+    "answerable": true,
+    "expected_answer": "Lớn nhất là các hành vi của khu vực phi chính thức (Informal sector practices), 22%; tiếp cận tài chính ở Việt Nam là 21% so với 12,5% của Đông Á – Thái Bình Dương, cao hơn 8,5 điểm phần trăm.",
+    "key_facts": ["Informal sector practices 22%", "Access to finance 21% vs 12,5%", "chênh 8,5 điểm %"],
+    "unit": "% doanh nghiệp", "calculation": "21 − 12,5 = 8,5", "tolerance": "±0,5",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 128, "object": "Figure 4.25", "evidence": "Figure 4.25. Access to finance is a major concern for Vietnamese firms",
+       "detail": "Viet Nam: Informal sector practices 22, Access to finance 21; East Asia & Pacific: Access to finance 12.5 (StatLink picd0w)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Tiêu đề hình nhấn mạnh 'access to finance' nhưng cột cao nhất là 'informal sector practices': phải đọc biểu đồ chứ không chỉ tiêu đề."
+  },
+  {
+    "id": "T15", "split": "test", "group": "chart", "tags": ["vector", "time-series"],
+    "question": "Năm 2020, trong bốn nước ở biểu đồ tăng trưởng GDP thực (Malaysia, Indonesia, Thái Lan, Việt Nam), nước nào vẫn tăng trưởng dương và nước nào suy giảm sâu nhất? Cho biết giá trị xấp xỉ.",
+    "answerable": true,
+    "expected_answer": "Chỉ Việt Nam tăng trưởng dương (khoảng 2,9%); Thái Lan suy giảm sâu nhất (khoảng −6,1%), tiếp theo là Malaysia (khoảng −5,5%).",
+    "key_facts": ["chỉ Việt Nam dương ≈ 2,9%", "Thái Lan sâu nhất ≈ −6,1%"],
+    "unit": "% tăng trưởng GDP thực", "calculation": null, "tolerance": "±0,2",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 20, "object": "Figure 1.1", "evidence": "Figure 1.1. Recent macroeconomic developments",
+       "detail": "Panel A 'Real GDP growth', năm 2020: Viet Nam 2.87, Malaysia -5.46, Indonesia -2.07, Thailand -6.05 (StatLink jwpegm)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Đọc bốn đường tại cùng một năm; chú giải phải gán đúng màu."
+  },
+  {
+    "id": "T16", "split": "test", "group": "chart", "tags": ["vector", "time-series", "ranking"],
+    "question": "Tỷ lệ lao động phi chính thức chung của Việt Nam giảm từ bao nhiêu % năm 2013 xuống bao nhiêu % năm 2023? Trong các nước Đông Nam Á được so sánh, nước nào có tỷ lệ phi chính thức cao nhất?",
+    "answerable": true,
+    "expected_answer": "Giảm từ khoảng 79,5% (2013) xuống khoảng 67,7% (2023); Campuchia (số liệu 2019) cao nhất, khoảng 87%.",
+    "key_facts": ["≈ 79,5% năm 2013", "≈ 67,7% năm 2023", "Campuchia cao nhất"],
+    "unit": "% việc làm", "calculation": null, "tolerance": "±1 điểm %",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 57, "object": "Figure 2.5", "evidence": "Figure 2.5. Informality is gradually declining",
+       "detail": "Panel A 'Total': 2013 = 79.5, 2023 = 67.7; Panel B: Cambodia (2019) 87.06 (StatLink muadjz)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Kết hợp hai panel của cùng một hình: chuỗi thời gian và so sánh quốc gia."
+  },
+  {
+    "id": "T17", "split": "test", "group": "multihop", "tags": ["table+text", "calculation"],
+    "question": "Sau cải cách Luật Bảo hiểm xã hội, số năm đóng tối thiểu để được hưởng lương hưu là bao nhiêu năm? Và người sử dụng lao động cùng người lao động hiện đóng tổng cộng bao nhiêu % tiền lương cho quỹ hưu trí và tử tuất?",
+    "answerable": true,
+    "expected_answer": "Số năm đóng tối thiểu giảm từ 20 xuống 15 năm; tỷ lệ đóng cho hưu trí và tử tuất là 14% (người sử dụng lao động) + 8% (người lao động) = 22% tiền lương.",
+    "key_facts": ["15 năm (giảm từ 20)", "14% + 8% = 22%"],
+    "unit": "năm; % tiền lương", "calculation": "14,0 + 8,0 = 22,0", "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 55, "object": null, "evidence": "The reduction in the minimum contribution period from 20 to 15 years required for pension eligibility",
+       "detail": "Đoạn văn mục 2.2.1"},
+      {"source_id": "oecd-vn-2025", "page": 59, "object": "Table 2.2", "evidence": "Retirement and death",
+       "detail": "Hàng 'Retirement and death': Employer 14.0, Employee 8.0"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Hai trang khác nhau: một đoạn văn và một bảng."
+  },
+  {
+    "id": "T18", "split": "test", "group": "multihop", "tags": ["figure+text", "calculation"],
+    "question": "Dựa vào ngưỡng thu nhập cao của Ngân hàng Thế giới ghi trong hình về mục tiêu 'thu nhập cao' năm 2045 và tỷ lệ giữa ngưỡng này với thu nhập bình quân đầu người năm 2023 của Việt Nam được nêu trong phần văn bản, hãy ước tính thu nhập bình quân đầu người năm 2023 của Việt Nam.",
+    "answerable": true,
+    "expected_answer": "Ngưỡng thu nhập cao là 13 845 USD (GNI/người, năm 2022) và bằng 3,3 lần thu nhập bình quân đầu người năm 2023 của Việt Nam, nên thu nhập ước tính ≈ 13 845 / 3,3 ≈ 4 200 USD.",
+    "key_facts": ["ngưỡng 13 845 USD", "3,3 lần", "≈ 4 200 USD"],
+    "unit": "USD/người", "calculation": "13 845 / 3,3 ≈ 4 195", "tolerance": "4 100–4 300 USD",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 99, "object": "Figure 4.2", "evidence": "high-income threshold is set at a GNI per capita of USD 13 845",
+       "detail": "Ghi chú dưới Figure 4.2"},
+      {"source_id": "oecd-vn-2025", "page": 99, "object": null, "evidence": "is 3.3 times Viet Nam’s 2023 per capita income level",
+       "detail": "Đoạn văn mục 4.1"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Kết hợp ghi chú của hình với tỷ lệ trong văn bản rồi tính; đường GNI trên hình (≈ 4 175 USD năm 2023) dùng để kiểm tra chéo."
+  },
+  {
+    "id": "T19", "split": "test", "group": "multihop", "tags": ["table+text", "calculation"],
+    "question": "Nếu áp tỷ lệ nghèo theo chuẩn của nhóm nước thu nhập trung bình thấp (3,65 USD/ngày) nêu trong báo cáo vào dân số Việt Nam năm 2023 trong bảng thống kê cơ bản, thì có khoảng bao nhiêu triệu người nghèo theo chuẩn này?",
+    "answerable": true,
+    "expected_answer": "Tỷ lệ nghèo theo chuẩn 3,65 USD/ngày là 4,2%; dân số 2023 là 100,3 triệu người; vậy khoảng 4,2 triệu người.",
+    "key_facts": ["4,2%", "100,3 triệu", "≈ 4,2 triệu người"],
+    "unit": "triệu người", "calculation": "0,042 × 100,3 ≈ 4,21", "tolerance": "4,1–4,3 triệu",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 50, "object": null, "evidence": "poverty has declined to 4.2%",
+       "detail": "Đoạn văn mục 2.1, chuẩn 'lower middle-income countries (income of less than USD 3.65 per day)'"},
+      {"source_id": "oecd-vn-2025", "page": 9, "object": "Basic statistics", "evidence": "Population (million)",
+       "detail": "Population (million) = 100.3"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Hai trang cách xa nhau; phép tính đơn giản. Ghi chú: tỷ lệ nghèo là số liệu gần nhất, dân số là 2023 – câu hỏi đã nêu rõ giả định áp tỷ lệ."
+  },
+  {
+    "id": "T20", "split": "test", "group": "multihop", "tags": ["image+table", "calculation", "raster"],
+    "question": "Vốn FDI tích luỹ (stock of inward FDI) của Việt Nam năm 2023 trên hình so sánh với các nước ASEAN là khoảng bao nhiêu tỷ USD, và bằng khoảng bao nhiêu % GDP danh nghĩa năm 2023 theo bảng thống kê cơ bản?",
+    "answerable": true,
+    "expected_answer": "Khoảng 229 tỷ USD; GDP danh nghĩa 2023 là 433,7 tỷ USD, nên vốn FDI tích luỹ bằng khoảng 53% GDP.",
+    "key_facts": ["≈ 229 tỷ USD (đọc hình: 220–235)", "GDP 433,7 tỷ USD", "≈ 53% GDP (50–55%)"],
+    "unit": "tỷ USD; % GDP", "calculation": "228,97 / 433,7 ≈ 52,8%", "tolerance": "FDI 220–235 tỷ USD; tỷ lệ 50–55%",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 100, "object": "Figure 4.3", "evidence": "Figure 4.3. The stock of inward FDI has increased at a rapid pace since 2007",
+       "detail": "Ảnh raster, đường đỏ Viet Nam năm 2023 = 228.97 tỷ USD (StatLink zuypjq)"},
+      {"source_id": "oecd-vn-2025", "page": 9, "object": "Basic statistics", "evidence": "In current prices (billion USD)",
+       "detail": "GDP In current prices (billion USD) = 433.7"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Kết hợp một hình raster (giá trị không in trên hình) với một bảng ở trang khác."
+  },
+  {
+    "id": "T21", "split": "test", "group": "text", "tags": [],
+    "question": "Theo báo cáo, Việt Nam đã có bao nhiêu hiệp định thương mại tự do song phương và đa phương, bao nhiêu hiệp định đang đàm phán, và các hiệp định này bao phủ bao nhiêu nước, chiếm bao nhiêu % GDP thế giới?",
+    "answerable": true,
+    "expected_answer": "17 FTA song phương và đa phương, thêm 3 hiệp định đang đàm phán; các hiệp định bao phủ 53 nước, chiếm 87% GDP thế giới.",
+    "key_facts": ["17 FTA", "3 đang đàm phán", "53 nước", "87% GDP thế giới"],
+    "unit": null, "calculation": null, "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 99, "object": null, "evidence": "17 bilateral and plurilateral free trade agreements (FTAs), with three more under negotiation. Agreements cover 53 countries that account for 87% of world GDP",
+       "detail": "Đoạn văn đầu trang 97 (in)"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Tổng hợp nhiều con số trong một đoạn văn."
+  },
+  {
+    "id": "T22", "split": "test", "group": "text", "tags": ["conditional"],
+    "question": "Thứ hạng của Việt Nam trong Chỉ số Cảm nhận Tham nhũng thay đổi thế nào từ năm 2015 đến năm 2023, và năm 2023 có bao nhiêu quốc gia được xếp hạng?",
+    "answerable": true,
+    "expected_answer": "Từ hạng 119 năm 2015 lên hạng 83 năm 2023, trên tổng số 180 quốc gia.",
+    "key_facts": ["hạng 119 (2015)", "hạng 83 (2023)", "180 quốc gia"],
+    "unit": "thứ hạng", "calculation": null, "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 133, "object": null, "evidence": "Corruption Perception Index from 119th in 2015 to 83rd out of 180 countries in 2023",
+       "detail": "Đoạn văn mục 4.8"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Câu trả lời nằm trong văn bản, không phải trong hình 4.28."
+  },
+  {
+    "id": "T23", "split": "test", "group": "text", "tags": ["conditional"],
+    "question": "Năm 2024, lương hưu ở Việt Nam được điều chỉnh tăng bao nhiêu % và từ thời điểm nào? Lương tối thiểu tăng bao nhiêu %, và năm 2023 đã tăng bao nhiêu %?",
+    "answerable": true,
+    "expected_answer": "Lương hưu tăng 15% từ tháng 7/2024 (mức tăng lớn nhất từ trước tới nay); lương tối thiểu tăng 6%, sau khi đã tăng 21% năm 2023.",
+    "key_facts": ["lương hưu +15% tháng 7/2024", "lương tối thiểu +6%", "+21% năm 2023"],
+    "unit": "%", "calculation": null, "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 26, "object": null, "evidence": "the 15% hike in pensions, the largest ever, in July 2024. At the same time, the minimum wage rose by 6% on top of a 21% increase in 2023",
+       "detail": "Đoạn văn mục 1.3.1"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Phân biệt hai mức tăng của hai năm trong cùng một câu."
+  },
+  {
+    "id": "T24", "split": "test", "group": "text", "tags": [],
+    "question": "Báo cáo nêu những số liệu nào về ô nhiễm không khí và xe điện: Hà Nội xếp thứ mấy trong các thành phố ô nhiễm nhất thế giới, nồng độ PM2.5 trung bình năm 2023 của Việt Nam gấp khoảng bao nhiêu lần mức khuyến nghị của WHO, và xe hybrid chiếm bao nhiêu % số xe bán ra trong 9 tháng đầu năm 2024?",
+    "answerable": true,
+    "expected_answer": "Hà Nội xếp thứ 8; PM2.5 gần gấp 6 lần mức khuyến nghị của WHO; xe hybrid chiếm 3% số xe bán ra từ tháng 1 đến tháng 9/2024.",
+    "key_facts": ["thứ 8", "gần 6 lần", "3%"],
+    "unit": null, "calculation": null, "tolerance": "chính xác",
+    "gold": [
+      {"source_id": "oecd-vn-2025", "page": 88, "object": null, "evidence": "Hanoi is now ranked the 8th most polluted city in the world",
+       "detail": "Đoạn văn mục 3.5"},
+      {"source_id": "oecd-vn-2025", "page": 88, "object": null, "evidence": "Only 3% of vehicles sold during January-September 2024 were hybrid electric vehicles",
+       "detail": "Câu ngay sau"}
+    ],
+    "gold_mode": "all",
+    "rationale": "Ba điều kiện (thành phố, năm 2023, giai đoạn 9 tháng 2024) trong cùng đoạn văn."
+  },
+  {
+    "id": "T25", "split": "test", "group": "unanswerable", "tags": ["near-topic"],
+    "question": "Mức lương tối thiểu vùng I của Việt Nam áp dụng năm 2024 là bao nhiêu đồng/tháng?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo chỉ nêu lương tối thiểu tăng 6% (và 21% năm 2023), không nêu mức lương tối thiểu tuyệt đối hay theo vùng.",
+    "check_method": "Tìm 'minimum wage' trong toàn văn PDF: 1 kết quả (trang PDF 26) chỉ nêu tỷ lệ tăng; tìm 'region' + 'wage' và 'VND' quanh mục lương: không có mức lương tối thiểu.",
+    "rationale": "Câu gần chủ đề với T23; bẫy trả lời bằng tỷ lệ tăng hoặc kiến thức ngoài."
+  },
+  {
+    "id": "T26", "split": "test", "group": "unanswerable", "tags": ["near-topic", "out-of-range-year"],
+    "question": "Hệ số Gini của Việt Nam năm 2024 là bao nhiêu?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Số liệu Gini trong báo cáo chỉ tới năm 2023 (Figure 2.2, văn bản trang PDF 50: 0,37 năm 2023; bảng thống kê cơ bản: năm 2022).",
+    "check_method": "Tìm 'Gini' trong toàn văn: 4 kết quả (trang PDF 9, 13, 50, 51), không có năm 2024; StatLink 9ml0o7 panel A kết thúc ở 2023.",
+    "rationale": "Bẫy lấy số 2023 trả lời cho 2024."
+  },
+  {
+    "id": "T27", "split": "test", "group": "unanswerable", "tags": ["near-topic"],
+    "question": "Xe điện thuần (BEV) chiếm chính xác bao nhiêu % số xe mới bán ra tại Việt Nam trong 9 tháng đầu năm 2024?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo chỉ nói xe hybrid chiếm 3% và xe điện thuần chiếm 'một tỷ lệ không đáng kể' (marginal proportion), không có con số.",
+    "check_method": "Tìm 'electric vehicles', 'BEV', 'pure electric' trong toàn văn: trang 88 có 'pure electric vehicles (EVs) representing only a marginal proportion of sales'; không có tỷ lệ %.",
+    "rationale": "Bẫy nhầm 3% của xe hybrid thành tỷ lệ xe điện thuần."
+  },
+  {
+    "id": "T28", "split": "test", "group": "unanswerable", "tags": ["near-topic"],
+    "question": "Giá bán lẻ điện bình quân của EVN năm 2024 là bao nhiêu đồng/kWh?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo chỉ nói giá điện do nhà nước điều tiết, có trợ giá chéo, và nêu giá FiT cho điện tái tạo (USD/kWh), không có giá bán lẻ bình quân.",
+    "check_method": "Tìm 'kWh' (5 kết quả: FiT điện mặt trời/gió và mức tiêu thụ kỷ lục), 'electricity price', 'tariff': không có giá bán lẻ bình quân VND/kWh.",
+    "rationale": "Bẫy dùng giá FiT (USD/kWh) để trả lời."
+  },
+  {
+    "id": "T29", "split": "test", "group": "unanswerable", "tags": ["near-topic"],
+    "question": "Năm 2024 Việt Nam xuất khẩu bao nhiêu tấn cà phê?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo chỉ nhắc Tây Nguyên là vùng trồng cà phê bị hạn hán kéo dài, không có số liệu sản lượng hay xuất khẩu cà phê.",
+    "check_method": "Tìm 'coffee' trong toàn văn: 2 kết quả (trang PDF 91) về hạn hán; tìm 'tonnes'/'tons of': chỉ liên quan CO2.",
+    "rationale": "Chủ đề gần (nông nghiệp, khí hậu) nhưng không có dữ kiện."
+  },
+  {
+    "id": "T30", "split": "test", "group": "unanswerable", "tags": ["near-topic", "regional"],
+    "question": "Tỷ lệ thất nghiệp của Thành phố Hồ Chí Minh năm 2024 là bao nhiêu?",
+    "answerable": false, "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo chỉ có tỷ lệ thất nghiệp cấp quốc gia (Table 1.1, Table 1, bảng thống kê cơ bản), không có số liệu theo tỉnh/thành phố.",
+    "check_method": "Tìm 'unemployment rate' (trang PDF 9, 12, 21, 116 - đều cấp quốc gia hoặc nhóm sinh viên mới tốt nghiệp) và 'Ho Chi Minh' (không có câu nào về thất nghiệp).",
+    "rationale": "Bẫy trả lời bằng tỷ lệ cả nước."
+  }
+]
