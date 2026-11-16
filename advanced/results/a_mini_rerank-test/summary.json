@@ -1,0 +1,70 @@
+{
+  "config": {
+    "name": "a_mini_rerank",
+    "frozen_at": "2026-11-16",
+    "selected_on": "dev: 18/20 (90%), cấu hình duy nhất đã thử; xem advanced/results/a_mini_rerank-dev/metrics.json",
+    "description": "Hybrid (bge-m3 + BM25, RRF) + rerank bge-reranker-v2-m3; agent gpt-5-mini; inspect_figure gpt-5-mini.",
+    "retrieval": {
+      "method": "rerank_hybrid",
+      "rrf_k": 60,
+      "depth": 30,
+      "rerank_candidates": 20
+    },
+    "agent": {
+      "top_k": 6,
+      "max_chunk_chars": 4000,
+      "limits": {
+        "max_searches": 4,
+        "max_inspects": 2,
+        "max_steps": 9
+      }
+    },
+    "llm": {
+      "model": "gpt-5-mini",
+      "reasoning_effort": "low",
+      "max_tokens": 6000
+    },
+    "vision": {
+      "model": "gpt-5-mini",
+      "reasoning_effort": "low"
+    }
+  },
+  "split": "test",
+  "retriever": {
+    "retriever": "rerank(hybrid_rrf)",
+    "reranker_model": "BAAI/bge-reranker-v2-m3",
+    "candidates": 20,
+    "first_stage": {
+      "retriever": "hybrid_rrf",
+      "rrf_k": 60,
+      "depth_per_retriever": 30,
+      "components": [
+        {
+          "retriever": "dense",
+          "embedding_model": "BAAI/bge-m3",
+          "max_seq_length": 1024,
+          "cache": "BAAI_bge_m3_1024_cf4bd3323ef91c9a.npy"
+        },
+        {
+          "retriever": "bm25",
+          "k1": 1.5,
+          "b": 0.75,
+          "tokenization": "âm tiết NFC casefold",
+          "chunks": 488
+        }
+      ]
+    }
+  },
+  "run_at": "2026-11-16T14:27:44+00:00",
+  "questions": 30,
+  "status": {
+    "abstained": 6,
+    "answered": 24
+  },
+  "errors": [],
+  "cost_usd_total": 0.0904,
+  "latency_s_total": 1170.5,
+  "latency_s_median": 29.08,
+  "searches_total": 50,
+  "inspects_total": 6
+}

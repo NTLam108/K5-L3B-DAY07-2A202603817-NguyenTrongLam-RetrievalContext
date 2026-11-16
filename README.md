@@ -4,7 +4,9 @@
 
 ## Bài nộp
 
-Học viên: Nguyễn Trọng Lâm · MSSV 2A202603817 · Lớp L3B. Corpus: Sổ tay sinh viên 2025-2026 của Trường ĐH Khoa học tự nhiên, ĐHQG-HCM (trang PDF 61-173), vector store và embedding lấy từ [bài Day 6](https://github.com/NTLam108/K5-L3B-DAY06-NguyenTrongLam-2A202603817-DataIngestion). Thử thách nâng cao: không thực hiện.
+Học viên: Nguyễn Trọng Lâm · MSSV 2A202603817 · Lớp L3B. Corpus: Sổ tay sinh viên 2025-2026 của Trường ĐH Khoa học tự nhiên, ĐHQG-HCM (trang PDF 61-173), vector store và embedding lấy từ [bài Day 6](https://github.com/NTLam108/K5-L3B-DAY06-NguyenTrongLam-2A202603817-DataIngestion).
+
+**Thử thách nâng cao:** đã thực hiện trên *OECD Economic Surveys: Viet Nam 2025* (139 trang, CC BY 4.0). Index đa phương thức gồm 488 chunk (text, bảng, 72 hình). Số liệu biểu đồ vector được đọc từ toạ độ PDF và kiểm chứng với StatLink (99,9% điểm nằm trong độ phân giải). Benchmark gồm dev 20 câu và test 30 câu, được commit trước khi thử nghiệm (`53ebfce`). Kết quả test với cấu hình chốt trên dev: **27/30 (90,0%)**. Chi tiết trong [advanced/README.md](advanced/README.md).
 
 | Thành phần | Vị trí |
 |---|---|
@@ -16,6 +18,7 @@ Học viên: Nguyễn Trọng Lâm · MSSV 2A202603817 · Lớp L3B. Corpus: S�
 | Trace, summary từng lần chạy (dev 7 lần, test 2 lần) và đo retrieval | [starter/results/](starter/results/) |
 | Nhãn chấm tay dev/test | [labels/](labels/) |
 | Test code (mock, không đo chất lượng) | [tests/](tests/) |
+| Thử thách nâng cao: nguồn, index, benchmark, agent, kết quả | [advanced/README.md](advanced/README.md) · [advanced/benchmark/](advanced/benchmark/) · [advanced/results/](advanced/results/) |
 
 Cấu hình được chốt trên dev ở commit `0876960` trước khi chạy test; kết quả test ở commit `50196e6`. Phần dưới đây là đề bài gốc.
 

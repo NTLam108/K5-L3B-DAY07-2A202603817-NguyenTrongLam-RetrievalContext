@@ -1,0 +1,5463 @@
+[
+  {
+    "id": "T01",
+    "question": "Theo bảng chỉ tiêu kinh tế vĩ mô và dự báo của OECD, nợ chính phủ của Việt Nam được dự báo bằng bao nhiêu % GDP vào năm 2026, và tăng bao nhiêu điểm phần trăm so với năm 2023?",
+    "retrieval": [
+      {
+        "query": "general government gross debt % of GDP 2026 forecast Vietnam OECD Economic Surveys 2025 macroeconomic indicators table",
+        "latency_ms": 17340.5,
+        "timing": {
+          "first_stage_ms": 684.9649000000113,
+          "rerank_ms": 16655.494799999986
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p036:text01",
+            "rank": 1,
+            "score": 0.9445,
+            "type": "text",
+            "page": 36
+          },
+          {
+            "id": "oecd-vn-2025:p037:text01",
+            "rank": 2,
+            "score": 0.9311,
+            "type": "text",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p012:table_1",
+            "rank": 3,
+            "score": 0.9242,
+            "type": "table",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p023:table_1.1",
+            "rank": 4,
+            "score": 0.9178,
+            "type": "table",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p022:text02",
+            "rank": 5,
+            "score": 0.8812,
+            "type": "text",
+            "page": 22
+          },
+          {
+            "id": "oecd-vn-2025:p038:text01",
+            "rank": 6,
+            "score": 0.821,
+            "type": "text",
+            "page": 38
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "general government gross debt % of GDP 2026 forecast Vietnam OECD Economic Surveys 2025 macroeconomic indicators table"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "OECD dự báo nợ chính phủ (federal government debt) của Việt Nam ở mức 38.0% GDP vào năm 2026; tăng 4.8 điểm phần trăm so với 33.2% GDP của năm 2023 (38.0 − 33.2 = 4.8 điểm %). [oecd-vn-2025:p012:table_1] [oecd-vn-2025:p023:table_1.1]",
+          "citations": [
+            "oecd-vn-2025:p012:table_1",
+            "oecd-vn-2025:p023:table_1.1"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 817,
+        "cached_tokens": 0,
+        "completion_tokens": 44,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00029225,
+        "latency_ms": 3741.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3052,
+        "cached_tokens": 0,
+        "completion_tokens": 414,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.001591,
+        "latency_ms": 6920.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "OECD dự báo nợ chính phủ (federal government debt) của Việt Nam ở mức 38.0% GDP vào năm 2026; tăng 4.8 điểm phần trăm so với 33.2% GDP của năm 2023 (38.0 − 33.2 = 4.8 điểm %). [oecd-vn-2025:p012:table_1] [oecd-vn-2025:p023:table_1.1]",
+    "citations": [
+      "oecd-vn-2025:p012:table_1",
+      "oecd-vn-2025:p023:table_1.1"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p012:table_1",
+      "oecd-vn-2025:p022:text02",
+      "oecd-vn-2025:p023:table_1.1",
+      "oecd-vn-2025:p036:text01",
+      "oecd-vn-2025:p037:text01",
+      "oecd-vn-2025:p038:text01"
+    ],
+    "latency_s": 28.0,
+    "cost_usd": 0.001883,
+    "tokens": {
+      "prompt_tokens": 3869,
+      "cached_tokens": 0,
+      "completion_tokens": 458,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T02",
+    "question": "Ở Việt Nam, người sử dụng lao động và người lao động lần lượt phải đóng tổng cộng bao nhiêu % tiền lương cho bảo hiểm xã hội, bảo hiểm y tế và bảo hiểm thất nghiệp? Cộng lại là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "social insurance health insurance unemployment employer employee contribution rates Vietnam % salary",
+        "latency_ms": 16593.7,
+        "timing": {
+          "first_stage_ms": 96.20360000002393,
+          "rerank_ms": 16497.467200000017
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p059:text03",
+            "rank": 1,
+            "score": 0.9812,
+            "type": "text",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p056:text04",
+            "rank": 2,
+            "score": 0.9806,
+            "type": "text",
+            "page": 56
+          },
+          {
+            "id": "oecd-vn-2025:p059:table_2.2",
+            "rank": 3,
+            "score": 0.8481,
+            "type": "table",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p053:text02",
+            "rank": 4,
+            "score": 0.4804,
+            "type": "text",
+            "page": 53
+          },
+          {
+            "id": "oecd-vn-2025:p059:text04",
+            "rank": 5,
+            "score": 0.4802,
+            "type": "text",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p054:text02",
+            "rank": 6,
+            "score": 0.1437,
+            "type": "text",
+            "page": 54
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "social insurance health insurance unemployment employer employee contribution rates Vietnam % salary"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Người sử dụng lao động phải nộp tổng cộng 21.5% tiền lương (Social insurance 17.5% ; Health insurance 3.0% ; Unemployment insurance 1.0%). [oecd-vn-2025:p059:table_2.2]\nNgười lao động phải nộp tổng cộng 10.5% tiền lương (Social insurance 8.0% ; Health insurance 1.5% ; Unemployment insurance 1.0%). [oecd-vn-2025:p059:table_2.2]\nCộng lại, tổng đóng góp của cả hai là 32.0% tiền lương (21.5% + 10.5%). [oecd-vn-2025:p059:table_2.2]",
+          "citations": [
+            "oecd-vn-2025:p059:table_2.2"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 815,
+        "cached_tokens": 0,
+        "completion_tokens": 34,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00027175,
+        "latency_ms": 2451.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2600,
+        "cached_tokens": 0,
+        "completion_tokens": 469,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.001588,
+        "latency_ms": 6138.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Người sử dụng lao động phải nộp tổng cộng 21.5% tiền lương (Social insurance 17.5% ; Health insurance 3.0% ; Unemployment insurance 1.0%). [oecd-vn-2025:p059:table_2.2]\nNgười lao động phải nộp tổng cộng 10.5% tiền lương (Social insurance 8.0% ; Health insurance 1.5% ; Unemployment insurance 1.0%). [oecd-vn-2025:p059:table_2.2]\nCộng lại, tổng đóng góp của cả hai là 32.0% tiền lương (21.5% + 10.5%). [oecd-vn-2025:p059:table_2.2]",
+    "citations": [
+      "oecd-vn-2025:p059:table_2.2"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p053:text02",
+      "oecd-vn-2025:p054:text02",
+      "oecd-vn-2025:p056:text04",
+      "oecd-vn-2025:p059:table_2.2",
+      "oecd-vn-2025:p059:text03",
+      "oecd-vn-2025:p059:text04"
+    ],
+    "latency_s": 25.18,
+    "cost_usd": 0.00186,
+    "tokens": {
+      "prompt_tokens": 3415,
+      "cached_tokens": 0,
+      "completion_tokens": 503,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T03",
+    "question": "Thuế bảo vệ môi trường đối với dầu diesel năm 2024/25 là bao nhiêu, so với đầu năm 2023 thay đổi thế nào, và tương đương bao nhiêu USD cho mỗi tấn CO2?",
+    "retrieval": [
+      {
+        "query": "environmental protection tax diesel Vietnam 2024 2025 rate change compared to early 2023 USD per tonne CO2",
+        "latency_ms": 16646.8,
+        "timing": {
+          "first_stage_ms": 81.19049999999106,
+          "rerank_ms": 16565.55320000001
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 1,
+            "score": 0.9952,
+            "type": "table",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p077:text02",
+            "rank": 2,
+            "score": 0.9522,
+            "type": "text",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p042:text04",
+            "rank": 3,
+            "score": 0.5434,
+            "type": "text",
+            "page": 42
+          },
+          {
+            "id": "oecd-vn-2025:p077:text03",
+            "rank": 4,
+            "score": 0.4318,
+            "type": "text",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p027:figure_1.7",
+            "rank": 5,
+            "score": 0.4079,
+            "type": "figure",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p072:text03",
+            "rank": 6,
+            "score": 0.2283,
+            "type": "text",
+            "page": 72
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "environmental protection tax diesel Vietnam 2024 2025 rate change compared to early 2023 USD per tonne CO2"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Thuế bảo vệ môi trường (EPT) đối với dầu diesel năm 2024/25 là 1 000 VND/lít (≈0.039 USD/lít); so với đầu năm 2023 (2 000 VND/lít ≈0.079 USD/lít) mức thuế đã giảm một nửa (giảm 1 000 VND/lít, tức -50%). Tương đương khoảng 15 USD cho mỗi tCO2. [oecd-vn-2025:p077:table_3.2] Ngoài ra, báo cáo ghi rõ EPT trên các sản phẩm xăng dầu đã bị cắt giảm một nửa vào đầu 2023. [oecd-vn-2025:p077:text02]",
+          "citations": [
+            "oecd-vn-2025:p077:table_3.2",
+            "oecd-vn-2025:p077:text02"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 812,
+        "cached_tokens": 0,
+        "completion_tokens": 47,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000297,
+        "latency_ms": 1805.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3643,
+        "cached_tokens": 0,
+        "completion_tokens": 406,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00172275,
+        "latency_ms": 4794.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Thuế bảo vệ môi trường (EPT) đối với dầu diesel năm 2024/25 là 1 000 VND/lít (≈0.039 USD/lít); so với đầu năm 2023 (2 000 VND/lít ≈0.079 USD/lít) mức thuế đã giảm một nửa (giảm 1 000 VND/lít, tức -50%). Tương đương khoảng 15 USD cho mỗi tCO2. [oecd-vn-2025:p077:table_3.2] Ngoài ra, báo cáo ghi rõ EPT trên các sản phẩm xăng dầu đã bị cắt giảm một nửa vào đầu 2023. [oecd-vn-2025:p077:text02]",
+    "citations": [
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p077:text02"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p027:figure_1.7",
+      "oecd-vn-2025:p042:text04",
+      "oecd-vn-2025:p072:text03",
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p077:text02",
+      "oecd-vn-2025:p077:text03"
+    ],
+    "latency_s": 23.25,
+    "cost_usd": 0.00202,
+    "tokens": {
+      "prompt_tokens": 4455,
+      "cached_tokens": 0,
+      "completion_tokens": 453,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "T04",
+    "question": "Theo mô phỏng của OECD, nếu Việt Nam giảm sở hữu nhà nước xuống mức trung bình OECD thì GDP bình quân đầu người tăng tích lũy bao nhiêu sau 5 năm, sau 10 năm và trong dài hạn?",
+    "retrieval": [
+      {
+        "query": "reduce state ownership to OECD average GDP per capita increase after 5 years 10 years long-run simulation Vietnam",
+        "latency_ms": 15272.5,
+        "timing": {
+          "first_stage_ms": 120.16130000000658,
+          "rerank_ms": 15152.358499999991
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p039:table_1.4",
+            "rank": 1,
+            "score": 0.926,
+            "type": "table",
+            "page": 39
+          },
+          {
+            "id": "oecd-vn-2025:p038:text01",
+            "rank": 2,
+            "score": 0.5439,
+            "type": "text",
+            "page": 38
+          },
+          {
+            "id": "oecd-vn-2025:p037:text01",
+            "rank": 3,
+            "score": 0.3796,
+            "type": "text",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p040:text02",
+            "rank": 4,
+            "score": 0.3106,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p130:text02",
+            "rank": 5,
+            "score": 0.296,
+            "type": "text",
+            "page": 130
+          },
+          {
+            "id": "oecd-vn-2025:p131:text01",
+            "rank": 6,
+            "score": 0.1564,
+            "type": "text",
+            "page": 131
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "reduce state ownership to OECD average GDP per capita increase after 5 years 10 years long-run simulation Vietnam"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo mô phỏng của OECD, nếu Việt Nam giảm sở hữu nhà nước xuống mức trung bình OECD thì GDP bình quân đầu người tăng tích lũy khoảng 1.9% sau 5 năm, 2.5% sau 10 năm và 5.0% trong dài hạn. [oecd-vn-2025:p039:table_1.4]",
+          "citations": [
+            "oecd-vn-2025:p039:table_1.4"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 812,
+        "cached_tokens": 0,
+        "completion_tokens": 43,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000289,
+        "latency_ms": 1657.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2748,
+        "cached_tokens": 0,
+        "completion_tokens": 312,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.001311,
+        "latency_ms": 5964.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo mô phỏng của OECD, nếu Việt Nam giảm sở hữu nhà nước xuống mức trung bình OECD thì GDP bình quân đầu người tăng tích lũy khoảng 1.9% sau 5 năm, 2.5% sau 10 năm và 5.0% trong dài hạn. [oecd-vn-2025:p039:table_1.4]",
+    "citations": [
+      "oecd-vn-2025:p039:table_1.4"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p037:text01",
+      "oecd-vn-2025:p038:text01",
+      "oecd-vn-2025:p039:table_1.4",
+      "oecd-vn-2025:p040:text02",
+      "oecd-vn-2025:p130:text02",
+      "oecd-vn-2025:p131:text01"
+    ],
+    "latency_s": 22.89,
+    "cost_usd": 0.0016,
+    "tokens": {
+      "prompt_tokens": 3560,
+      "cached_tokens": 0,
+      "completion_tokens": 355,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "T05",
+    "question": "Trong gói biện pháp tài khoá OECD đề xuất, biện pháp tăng thu nào có tác động lớn nhất (bao nhiêu % GDP), và tổng tác động tài khoá của cả gói là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "fiscal package revenue measures impact percent of GDP proposed revenue measure largest impact percent of GDP OECD Economic Surveys Viet Nam 2025 fiscal package revenue impact",
+        "latency_ms": 15914.6,
+        "timing": {
+          "first_stage_ms": 117.17169999997168,
+          "rerank_ms": 15797.350300000006
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p037:text01",
+            "rank": 1,
+            "score": 0.9861,
+            "type": "text",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p038:text01",
+            "rank": 2,
+            "score": 0.971,
+            "type": "text",
+            "page": 38
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 3,
+            "score": 0.9546,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p040:text02",
+            "rank": 4,
+            "score": 0.9333,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p041:text01",
+            "rank": 5,
+            "score": 0.9326,
+            "type": "text",
+            "page": 41
+          },
+          {
+            "id": "oecd-vn-2025:p040:text03",
+            "rank": 6,
+            "score": 0.8991,
+            "type": "text",
+            "page": 40
+          }
+        ]
+      },
+      {
+        "query": "Table 1.3 fiscal impact selected recommendations total fiscal impact percent of GDP largest revenue measure percent of GDP \"Table 1.3\" Viet Nam 2025 fiscal impact package revenue measures",
+        "latency_ms": 15789.7,
+        "timing": {
+          "first_stage_ms": 148.70000000001937,
+          "rerank_ms": 15640.966599999956
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p037:text01",
+            "rank": 1,
+            "score": 0.997,
+            "type": "text",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p038:text01",
+            "rank": 2,
+            "score": 0.9715,
+            "type": "text",
+            "page": 38
+          },
+          {
+            "id": "oecd-vn-2025:p038:table_1.3",
+            "rank": 3,
+            "score": 0.9467,
+            "type": "table",
+            "page": 38
+          },
+          {
+            "id": "oecd-vn-2025:p040:text04",
+            "rank": 4,
+            "score": 0.9256,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p043:text04",
+            "rank": 5,
+            "score": 0.9193,
+            "type": "text",
+            "page": 43
+          },
+          {
+            "id": "oecd-vn-2025:p040:text03",
+            "rank": 6,
+            "score": 0.909,
+            "type": "text",
+            "page": 40
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "fiscal package revenue measures impact percent of GDP proposed revenue measure largest impact percent of GDP OECD Economic Surveys Viet Nam 2025 fiscal package revenue impact"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Table 1.3 fiscal impact selected recommendations total fiscal impact percent of GDP largest revenue measure percent of GDP \"Table 1.3\" Viet Nam 2025 fiscal impact package revenue measures"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Biện pháp tăng thu có tác động lớn nhất là “Raise the standard VAT rate” (tăng thuế VAT chuẩn) với +2.5 % GDP. Tổng tác động tài khoá của cả gói là 0.0 % GDP (Deficit-reducing measures +6.0 % GDP; deficit-increasing measures −6.0 % GDP; tổng = 0.0 % GDP). [oecd-vn-2025:p038:table_1.3]",
+          "citations": [
+            "oecd-vn-2025:p038:table_1.3"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 811,
+        "cached_tokens": 0,
+        "completion_tokens": 51,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00030475,
+        "latency_ms": 2092.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2424,
+        "cached_tokens": 0,
+        "completion_tokens": 60,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000726,
+        "latency_ms": 2152.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3391,
+        "cached_tokens": 1664,
+        "completion_tokens": 272,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00101735,
+        "latency_ms": 3452.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Biện pháp tăng thu có tác động lớn nhất là “Raise the standard VAT rate” (tăng thuế VAT chuẩn) với +2.5 % GDP. Tổng tác động tài khoá của cả gói là 0.0 % GDP (Deficit-reducing measures +6.0 % GDP; deficit-increasing measures −6.0 % GDP; tổng = 0.0 % GDP). [oecd-vn-2025:p038:table_1.3]",
+    "citations": [
+      "oecd-vn-2025:p038:table_1.3"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p037:text01",
+      "oecd-vn-2025:p038:table_1.3",
+      "oecd-vn-2025:p038:text01",
+      "oecd-vn-2025:p040:text02",
+      "oecd-vn-2025:p040:text03",
+      "oecd-vn-2025:p040:text04",
+      "oecd-vn-2025:p041:text01",
+      "oecd-vn-2025:p043:text04"
+    ],
+    "latency_s": 39.4,
+    "cost_usd": 0.002048,
+    "tokens": {
+      "prompt_tokens": 6626,
+      "cached_tokens": 1664,
+      "completion_tokens": 383,
+      "reasoning_tokens": 128
+    }
+  },
+  {
+    "id": "T06",
+    "question": "Theo bảng thống kê cơ bản của Việt Nam năm 2023, tỷ lệ người 25–64 tuổi có trình độ đại học là bao nhiêu, và trung bình OECD là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "share of 25-64 with tertiary education Vietnam 2023 OECD average basic statistics table",
+        "latency_ms": 15893.6,
+        "timing": {
+          "first_stage_ms": 111.54040000002396,
+          "rerank_ms": 15781.999199999973
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 1,
+            "score": 0.9875,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 2,
+            "score": 0.983,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p115:text01",
+            "rank": 3,
+            "score": 0.873,
+            "type": "text",
+            "page": 115
+          },
+          {
+            "id": "oecd-vn-2025:p114:text03",
+            "rank": 4,
+            "score": 0.7912,
+            "type": "text",
+            "page": 114
+          },
+          {
+            "id": "oecd-vn-2025:p062:figure_2.9",
+            "rank": 5,
+            "score": 0.762,
+            "type": "figure",
+            "page": 62
+          },
+          {
+            "id": "oecd-vn-2025:p117:text03",
+            "rank": 6,
+            "score": 0.6911,
+            "type": "text",
+            "page": 117
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "share of 25-64 with tertiary education Vietnam 2023 OECD average basic statistics table"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo bảng \"Basic statistics\" (Viet Nam, 2023): Tỷ lệ người 25–64 tuổi có trình độ đại học ở Việt Nam là 14.7%; trung bình OECD là 41.0% [oecd-vn-2025:p009:basic_statistics:part1].",
+          "citations": [
+            "oecd-vn-2025:p009:basic_statistics:part1"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 805,
+        "cached_tokens": 0,
+        "completion_tokens": 40,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00028125,
+        "latency_ms": 1707.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4113,
+        "cached_tokens": 0,
+        "completion_tokens": 170,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00136825,
+        "latency_ms": 4520.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo bảng \"Basic statistics\" (Viet Nam, 2023): Tỷ lệ người 25–64 tuổi có trình độ đại học ở Việt Nam là 14.7%; trung bình OECD là 41.0% [oecd-vn-2025:p009:basic_statistics:part1].",
+    "citations": [
+      "oecd-vn-2025:p009:basic_statistics:part1"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p062:figure_2.9",
+      "oecd-vn-2025:p114:text03",
+      "oecd-vn-2025:p115:text01",
+      "oecd-vn-2025:p117:text03"
+    ],
+    "latency_s": 22.12,
+    "cost_usd": 0.001649,
+    "tokens": {
+      "prompt_tokens": 4918,
+      "cached_tokens": 0,
+      "completion_tokens": 210,
+      "reasoning_tokens": 64
+    }
+  },
+  {
+    "id": "T07",
+    "question": "Trong hình so sánh mức méo mó do sự tham gia của nhà nước (thang 0–6) giữa các nước, Việt Nam đứng ở vị trí nào và có giá trị khoảng bao nhiêu? Cột màu xanh lá thể hiện gì và có giá trị khoảng bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "distortions due to state participation scale 0-6 Vietnam figure comparison countries 'state participation' 'distortion' 0-6 OECD Economic Surveys Viet Nam 2025 figure",
+        "latency_ms": 16169.8,
+        "timing": {
+          "first_stage_ms": 126.12680000000864,
+          "rerank_ms": 16043.612100000018
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p131:figure_4.27",
+            "rank": 1,
+            "score": 0.9859,
+            "type": "figure",
+            "page": 131
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.8596,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p037:figure_1.16",
+            "rank": 3,
+            "score": 0.8583,
+            "type": "figure",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p116:figure_4.18",
+            "rank": 4,
+            "score": 0.5175,
+            "type": "figure",
+            "page": 116
+          },
+          {
+            "id": "oecd-vn-2025:p041:figure_1.20",
+            "rank": 5,
+            "score": 0.4513,
+            "type": "figure",
+            "page": 41
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 6,
+            "score": 0.3684,
+            "type": "text",
+            "page": 5
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "distortions due to state participation scale 0-6 Vietnam figure comparison countries 'state participation' 'distortion' 0-6 OECD Economic Surveys Viet Nam 2025 figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p131:figure_4.27",
+          "question": "What are the approximate y-axis values for the VNM bar and the OECD (green) bar in this chart? Also confirm the label or meaning of the green bar (what text is printed for it) and the y-axis scale (min and max). Please give values as approximate if read from the figure."
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo biểu đồ “Distortions from state involvement on a scale of 0 to 6”, Việt Nam (VNM) đứng ở vị trí cao nhất trong các nước so sánh (tay cao nhất) và có giá trị khoảng 4.1 (khoảng 4.0–4.2) trên thang 0–6 [oecd-vn-2025:p131:figure_4.27].\n\nCột màu xanh lá biểu thị giá trị của “OECD” (bar được gắn nhãn OECD) và có giá trị khoảng 2.1–2.2 (khoảng 2.0–2.2) trên cùng thang; trục y chạy từ 0.0 đến 4.5 trên hình [oecd-vn-2025:p131:figure_4.27].",
+          "citations": [
+            "oecd-vn-2025:p131:figure_4.27"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 825,
+        "cached_tokens": 0,
+        "completion_tokens": 59,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00032425,
+        "latency_ms": 1951.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4692,
+        "cached_tokens": 0,
+        "completion_tokens": 360,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.001893,
+        "latency_ms": 4901.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1549,
+        "cached_tokens": 0,
+        "completion_tokens": 234,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00085525,
+        "latency_ms": 3048.7,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p131:figure_4.27",
+        "question": "What are the approximate y-axis values for the VNM bar and the OECD (green) bar in this chart? Also confirm the label or meaning of the green bar (what text is printed for it) and the y-axis scale (min and max). Please give values as approximate if read from the figure.",
+        "answer": "- VNM (red bar): approximately 4.1 (about 4.0–4.2).\n- OECD (green bar): approximately 2.1–2.2 (about 2.0–2.2).\n\n- The green bar is labelled \"OECD\" on the x‑axis.\n- The y‑axis scale runs from 0.0 (min) up to 4.5 (max), with 0.5 increments visible."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4919,
+        "cached_tokens": 3712,
+        "completion_tokens": 349,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.0010925499999999999,
+        "latency_ms": 4320.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo biểu đồ “Distortions from state involvement on a scale of 0 to 6”, Việt Nam (VNM) đứng ở vị trí cao nhất trong các nước so sánh (tay cao nhất) và có giá trị khoảng 4.1 (khoảng 4.0–4.2) trên thang 0–6 [oecd-vn-2025:p131:figure_4.27].\n\nCột màu xanh lá biểu thị giá trị của “OECD” (bar được gắn nhãn OECD) và có giá trị khoảng 2.1–2.2 (khoảng 2.0–2.2) trên cùng thang; trục y chạy từ 0.0 đến 4.5 trên hình [oecd-vn-2025:p131:figure_4.27].",
+    "citations": [
+      "oecd-vn-2025:p131:figure_4.27"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p037:figure_1.16",
+      "oecd-vn-2025:p041:figure_1.20",
+      "oecd-vn-2025:p116:figure_4.18",
+      "oecd-vn-2025:p131:figure_4.27"
+    ],
+    "latency_s": 30.41,
+    "cost_usd": 0.004165,
+    "tokens": {
+      "prompt_tokens": 11985,
+      "cached_tokens": 3712,
+      "completion_tokens": 1002,
+      "reasoning_tokens": 512
+    }
+  },
+  {
+    "id": "T08",
+    "question": "Theo hình về tiền lương công nhân ngành chế tạo, những nước nào có lương tháng bình quân năm 2024 thấp hơn Việt Nam? Về tăng trưởng lương thực tế bình quân năm từ 2006, Việt Nam xếp thứ mấy và sau nước nào?",
+    "retrieval": [
+      {
+        "query": "manufacturing workers average monthly wages 2024 Vietnam figure",
+        "latency_ms": 15122.8,
+        "timing": {
+          "first_stage_ms": 88.4288999999967,
+          "rerank_ms": 15034.347700000013
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p101:figure_4.4",
+            "rank": 1,
+            "score": 0.7969,
+            "type": "figure",
+            "page": 101
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 2,
+            "score": 0.1536,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p112:figure_4.14",
+            "rank": 3,
+            "score": 0.1257,
+            "type": "figure",
+            "page": 112
+          },
+          {
+            "id": "oecd-vn-2025:p053:text01",
+            "rank": 4,
+            "score": 0.1255,
+            "type": "text",
+            "page": 53
+          },
+          {
+            "id": "oecd-vn-2025:p021:text01",
+            "rank": 5,
+            "score": 0.124,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p020:figure_1.1",
+            "rank": 6,
+            "score": 0.1228,
+            "type": "figure",
+            "page": 20
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "manufacturing workers average monthly wages 2024 Vietnam figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo Hình 4.4 (Panel A), những nước có lương tháng bình quân ngành chế tạo năm 2024 thấp hơn Việt Nam là: LAO (Lào), MMR (Myanmar), KHM (Campuchia) và PHL (Philippines) [oecd-vn-2025:p101:figure_4.4].\nVề tăng trưởng lương thực tế bình quân hàng năm từ 2006 (Panel B), Việt Nam xếp thứ 2 trong nhóm được so sánh (thứ tự tăng dần), tức là sau CHN (Trung Quốc) [oecd-vn-2025:p101:figure_4.4].",
+          "citations": [
+            "oecd-vn-2025:p101:figure_4.4"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 822,
+        "cached_tokens": 0,
+        "completion_tokens": 33,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002715,
+        "latency_ms": 1538.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5719,
+        "cached_tokens": 0,
+        "completion_tokens": 570,
+        "reasoning_tokens": 384,
+        "cost_usd": 0.00256975,
+        "latency_ms": 6685.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo Hình 4.4 (Panel A), những nước có lương tháng bình quân ngành chế tạo năm 2024 thấp hơn Việt Nam là: LAO (Lào), MMR (Myanmar), KHM (Campuchia) và PHL (Philippines) [oecd-vn-2025:p101:figure_4.4].\nVề tăng trưởng lương thực tế bình quân hàng năm từ 2006 (Panel B), Việt Nam xếp thứ 2 trong nhóm được so sánh (thứ tự tăng dần), tức là sau CHN (Trung Quốc) [oecd-vn-2025:p101:figure_4.4].",
+    "citations": [
+      "oecd-vn-2025:p101:figure_4.4"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p020:figure_1.1",
+      "oecd-vn-2025:p021:text01",
+      "oecd-vn-2025:p053:text01",
+      "oecd-vn-2025:p101:figure_4.4",
+      "oecd-vn-2025:p112:figure_4.14"
+    ],
+    "latency_s": 23.35,
+    "cost_usd": 0.002841,
+    "tokens": {
+      "prompt_tokens": 6541,
+      "cached_tokens": 0,
+      "completion_tokens": 603,
+      "reasoning_tokens": 384
+    }
+  },
+  {
+    "id": "T09",
+    "question": "Năm 2023, nguồn phát thải khí nhà kính nào lớn nhất ở Việt Nam và khoảng bao nhiêu triệu tấn CO2 tương đương? Nguồn lớn thứ hai là gì?",
+    "retrieval": [
+      {
+        "query": "greenhouse gas emissions by source Vietnam 2023 largest source CO2 equivalent sector energy electricity industry agriculture land use change 2023 OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 15447.7,
+        "timing": {
+          "first_stage_ms": 123.68079999998827,
+          "rerank_ms": 15323.999500000013
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p072:text03",
+            "rank": 1,
+            "score": 0.9639,
+            "type": "text",
+            "page": 72
+          },
+          {
+            "id": "oecd-vn-2025:p074:figure_3.2",
+            "rank": 2,
+            "score": 0.9621,
+            "type": "figure",
+            "page": 74
+          },
+          {
+            "id": "oecd-vn-2025:p083:text01",
+            "rank": 3,
+            "score": 0.9417,
+            "type": "text",
+            "page": 83
+          },
+          {
+            "id": "oecd-vn-2025:p073:table_3.1",
+            "rank": 4,
+            "score": 0.9318,
+            "type": "table",
+            "page": 73
+          },
+          {
+            "id": "oecd-vn-2025:p075:text01",
+            "rank": 5,
+            "score": 0.8912,
+            "type": "text",
+            "page": 75
+          },
+          {
+            "id": "oecd-vn-2025:p074:figure_3.3",
+            "rank": 6,
+            "score": 0.8842,
+            "type": "figure",
+            "page": 74
+          }
+        ]
+      },
+      {
+        "query": "In 2023 million tCO2eq Power Industry 2023 'million tCO2' 'Vietnam' 'power industry' 2023 OECD 'Figure 3.2' data read from PDF vector coordinates Crippa 2024 'In million tCO2eq' 2023 emissions by sector",
+        "latency_ms": 16544.9,
+        "timing": {
+          "first_stage_ms": 195.47529999999824,
+          "rerank_ms": 16349.426900000026
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p074:figure_3.2",
+            "rank": 1,
+            "score": 0.9584,
+            "type": "figure",
+            "page": 74
+          },
+          {
+            "id": "oecd-vn-2025:p081:figure_3.6",
+            "rank": 2,
+            "score": 0.9115,
+            "type": "figure",
+            "page": 81
+          },
+          {
+            "id": "oecd-vn-2025:p015:figure_3",
+            "rank": 3,
+            "score": 0.9082,
+            "type": "figure",
+            "page": 15
+          },
+          {
+            "id": "oecd-vn-2025:p074:figure_3.3",
+            "rank": 4,
+            "score": 0.8126,
+            "type": "figure",
+            "page": 74
+          },
+          {
+            "id": "oecd-vn-2025:p075:figure_3.4",
+            "rank": 5,
+            "score": 0.8056,
+            "type": "figure",
+            "page": 75
+          },
+          {
+            "id": "oecd-vn-2025:p074:text01",
+            "rank": 6,
+            "score": 0.7751,
+            "type": "text",
+            "page": 74
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "greenhouse gas emissions by source Vietnam 2023 largest source CO2 equivalent sector energy electricity industry agriculture land use change 2023 OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "In 2023 million tCO2eq Power Industry 2023 'million tCO2' 'Vietnam' 'power industry' 2023 OECD 'Figure 3.2' data read from PDF vector coordinates Crippa 2024 'In million tCO2eq' 2023 emissions by sector"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo báo cáo, năm 2023 nguồn phát thải lớn nhất là ngành điện (electricity generation / Power Industry); báo cáo nêu rõ “Electricity generation is the main source of GHG emissions” và lớp Power Industry là lớp lớn nhất trên đồ thị phân rã theo nguồn [oecd-vn-2025:p074:figure_3.2]. Tổng phát thải CO2 của Việt Nam năm 2023 được ước tính khoảng 373 million tCO2 (CO2 cho cả nước) [oecd-vn-2025:p074:text01]. Nguồn lớn thứ hai là industrial combustion (đốt cháy công nghiệp), kế tới là nông nghiệp theo biểu đồ phân lớp [oecd-vn-2025:p074:figure_3.2].",
+          "citations": [
+            "oecd-vn-2025:p074:figure_3.2",
+            "oecd-vn-2025:p074:text01"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 806,
+        "cached_tokens": 0,
+        "completion_tokens": 56,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0003135,
+        "latency_ms": 2028.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3824,
+        "cached_tokens": 0,
+        "completion_tokens": 149,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.001254,
+        "latency_ms": 3697.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6901,
+        "cached_tokens": 2688,
+        "completion_tokens": 668,
+        "reasoning_tokens": 448,
+        "cost_usd": 0.0024564499999999998,
+        "latency_ms": 7894.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo báo cáo, năm 2023 nguồn phát thải lớn nhất là ngành điện (electricity generation / Power Industry); báo cáo nêu rõ “Electricity generation is the main source of GHG emissions” và lớp Power Industry là lớp lớn nhất trên đồ thị phân rã theo nguồn [oecd-vn-2025:p074:figure_3.2]. Tổng phát thải CO2 của Việt Nam năm 2023 được ước tính khoảng 373 million tCO2 (CO2 cho cả nước) [oecd-vn-2025:p074:text01]. Nguồn lớn thứ hai là industrial combustion (đốt cháy công nghiệp), kế tới là nông nghiệp theo biểu đồ phân lớp [oecd-vn-2025:p074:figure_3.2].",
+    "citations": [
+      "oecd-vn-2025:p074:figure_3.2",
+      "oecd-vn-2025:p074:text01"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p015:figure_3",
+      "oecd-vn-2025:p072:text03",
+      "oecd-vn-2025:p073:table_3.1",
+      "oecd-vn-2025:p074:figure_3.2",
+      "oecd-vn-2025:p074:figure_3.3",
+      "oecd-vn-2025:p074:text01",
+      "oecd-vn-2025:p075:figure_3.4",
+      "oecd-vn-2025:p075:text01",
+      "oecd-vn-2025:p081:figure_3.6",
+      "oecd-vn-2025:p083:text01"
+    ],
+    "latency_s": 45.61,
+    "cost_usd": 0.004024,
+    "tokens": {
+      "prompt_tokens": 11531,
+      "cached_tokens": 2688,
+      "completion_tokens": 873,
+      "reasoning_tokens": 512
+    }
+  },
+  {
+    "id": "T10",
+    "question": "Trong biểu đồ việc làm theo loại hoạt động ở khu vực xuất khẩu của Việt Nam và các nước so sánh, nước nào được khoanh viền đỏ, nước nào có tỷ trọng lao động quản lý & kỹ thuật cao nhất, và lao động sản xuất chiếm khoảng bao nhiêu % việc làm ở Việt Nam?",
+    "retrieval": [
+      {
+        "query": "employment by activity in export sector Vietnam chart red box management & technical production production share",
+        "latency_ms": 15870.0,
+        "timing": {
+          "first_stage_ms": 103.39669999996204,
+          "rerank_ms": 15766.583099999934
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p112:figure_4.14",
+            "rank": 1,
+            "score": 0.9763,
+            "type": "figure",
+            "page": 112
+          },
+          {
+            "id": "oecd-vn-2025:p112:text02",
+            "rank": 2,
+            "score": 0.3368,
+            "type": "text",
+            "page": 112
+          },
+          {
+            "id": "oecd-vn-2025:p127:figure_4.24",
+            "rank": 3,
+            "score": 0.2852,
+            "type": "figure",
+            "page": 127
+          },
+          {
+            "id": "oecd-vn-2025:p111:figure_4.13",
+            "rank": 4,
+            "score": 0.1027,
+            "type": "figure",
+            "page": 111
+          },
+          {
+            "id": "oecd-vn-2025:p118:text01",
+            "rank": 5,
+            "score": 0.1025,
+            "type": "text",
+            "page": 118
+          },
+          {
+            "id": "oecd-vn-2025:p118:figure_4.19",
+            "rank": 6,
+            "score": 0.0962,
+            "type": "figure",
+            "page": 118
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "employment by activity in export sector Vietnam chart red box management & technical production production share"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "- Trong biểu đồ Panel B, nhãn VNM (Việt Nam) được khoanh viền đỏ (red box) [oecd-vn-2025:p112:figure_4.14].\n- Nước có tỷ trọng lao động quản lý & kỹ thuật (Managerial & engineering) cao nhất là Philippines (PHL) so với các nước trong đồ thị [oecd-vn-2025:p112:figure_4.14].\n- Lao động sản xuất (Production workers) chiếm khoảng 85% việc làm trong khu vực xuất khẩu của Việt Nam (số liệu cho năm 2018, “about 85%”) [oecd-vn-2025:p112:text02] và biểu đồ cũng cho thấy phần Production là thành phần lớn nhất cho VNM (Panel A và B) [oecd-vn-2025:p112:figure_4.14].",
+          "citations": [
+            "oecd-vn-2025:p112:figure_4.14",
+            "oecd-vn-2025:p112:text02"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 830,
+        "cached_tokens": 0,
+        "completion_tokens": 38,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002835,
+        "latency_ms": 1802.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5443,
+        "cached_tokens": 0,
+        "completion_tokens": 373,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00210675,
+        "latency_ms": 4276.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "- Trong biểu đồ Panel B, nhãn VNM (Việt Nam) được khoanh viền đỏ (red box) [oecd-vn-2025:p112:figure_4.14].\n- Nước có tỷ trọng lao động quản lý & kỹ thuật (Managerial & engineering) cao nhất là Philippines (PHL) so với các nước trong đồ thị [oecd-vn-2025:p112:figure_4.14].\n- Lao động sản xuất (Production workers) chiếm khoảng 85% việc làm trong khu vực xuất khẩu của Việt Nam (số liệu cho năm 2018, “about 85%”) [oecd-vn-2025:p112:text02] và biểu đồ cũng cho thấy phần Production là thành phần lớn nhất cho VNM (Panel A và B) [oecd-vn-2025:p112:figure_4.14].",
+    "citations": [
+      "oecd-vn-2025:p112:figure_4.14",
+      "oecd-vn-2025:p112:text02"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p111:figure_4.13",
+      "oecd-vn-2025:p112:figure_4.14",
+      "oecd-vn-2025:p112:text02",
+      "oecd-vn-2025:p118:figure_4.19",
+      "oecd-vn-2025:p118:text01",
+      "oecd-vn-2025:p127:figure_4.24"
+    ],
+    "latency_s": 21.95,
+    "cost_usd": 0.00239,
+    "tokens": {
+      "prompt_tokens": 6273,
+      "cached_tokens": 0,
+      "completion_tokens": 411,
+      "reasoning_tokens": 128
+    }
+  },
+  {
+    "id": "T11",
+    "question": "Trong so sánh tỷ lệ nghèo theo chuẩn 2,15 USD/ngày giữa các nước, nước nào có tỷ lệ cao nhất (khoảng bao nhiêu %) và cột của Việt Nam (năm 2022) có giá trị khoảng bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "poverty rate $2.15 per day by country 2022 Vietnam",
+        "latency_ms": 14998.7,
+        "timing": {
+          "first_stage_ms": 82.2625999999218,
+          "rerank_ms": 14916.402199999993
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p050:text02",
+            "rank": 1,
+            "score": 0.9743,
+            "type": "text",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p050:figure_2.1",
+            "rank": 2,
+            "score": 0.9719,
+            "type": "figure",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 3,
+            "score": 0.8429,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p098:text02",
+            "rank": 4,
+            "score": 0.2188,
+            "type": "text",
+            "page": 98
+          },
+          {
+            "id": "oecd-vn-2025:p052:text02",
+            "rank": 5,
+            "score": 0.1623,
+            "type": "text",
+            "page": 52
+          },
+          {
+            "id": "oecd-vn-2025:p050:text03",
+            "rank": 6,
+            "score": 0.1556,
+            "type": "text",
+            "page": 50
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "poverty rate $2.15 per day by country 2022 Vietnam"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p050:figure_2.1",
+          "question": "In Panel B, what is the approximate poverty rate (%) value for each country bar? Please give approximate numeric values (%) for Philippines (2021), Indonesia (2023), Fiji (2019), Viet Nam (2022), Mongolia (2022), Thailand (2021), Malaysia (2021), and China (2021). Indicate that values are approximate."
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Trong so sánh theo chuẩn USD 2.15/ngày (2017 PPP) ở Hình 2.1, nước có tỷ lệ cao nhất là Philippines (2021) khoảng 7.3% và cột của Việt Nam (2022) có giá trị khoảng 1.8% (giá trị là xấp xỉ, đọc từ Panel B). [oecd-vn-2025:p050:figure_2.1]",
+          "citations": [
+            "oecd-vn-2025:p050:figure_2.1"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 821,
+        "cached_tokens": 0,
+        "completion_tokens": 37,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00027925,
+        "latency_ms": 1761.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3144,
+        "cached_tokens": 0,
+        "completion_tokens": 243,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.001272,
+        "latency_ms": 4119.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1394,
+        "cached_tokens": 0,
+        "completion_tokens": 267,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.0008825,
+        "latency_ms": 4062.9,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p050:figure_2.1",
+        "question": "In Panel B, what is the approximate poverty rate (%) value for each country bar? Please give approximate numeric values (%) for Philippines (2021), Indonesia (2023), Fiji (2019), Viet Nam (2022), Mongolia (2022), Thailand (2021), Malaysia (2021), and China (2021). Indicate that values are approximate.",
+        "answer": "Approximate poverty rates (%) from Panel B (values are approximate):\n\n- Philippines (2021): ~7.3%  \n- Indonesia (2023): ~3.0%  \n- Fiji (2019): ~2.6%  \n- Viet Nam (2022): ~1.8%  \n- Mongolia (2022): ~0.4%  \n- Thailand (2021): ~0.2%  \n- Malaysia (2021): ~0.1%  \n- China (2021): ~0.0% (near zero)\n\nAll values are approximate, read from the bar lengths against the x-axis gridlines."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3415,
+        "cached_tokens": 2688,
+        "completion_tokens": 585,
+        "reasoning_tokens": 448,
+        "cost_usd": 0.00141895,
+        "latency_ms": 6817.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Trong so sánh theo chuẩn USD 2.15/ngày (2017 PPP) ở Hình 2.1, nước có tỷ lệ cao nhất là Philippines (2021) khoảng 7.3% và cột của Việt Nam (2022) có giá trị khoảng 1.8% (giá trị là xấp xỉ, đọc từ Panel B). [oecd-vn-2025:p050:figure_2.1]",
+    "citations": [
+      "oecd-vn-2025:p050:figure_2.1"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p050:figure_2.1",
+      "oecd-vn-2025:p050:text02",
+      "oecd-vn-2025:p050:text03",
+      "oecd-vn-2025:p052:text02",
+      "oecd-vn-2025:p098:text02"
+    ],
+    "latency_s": 31.78,
+    "cost_usd": 0.003853,
+    "tokens": {
+      "prompt_tokens": 8774,
+      "cached_tokens": 2688,
+      "completion_tokens": 1132,
+      "reasoning_tokens": 704
+    }
+  },
+  {
+    "id": "T12",
+    "question": "Theo biểu đồ hệ số Gini toàn quốc của Việt Nam, chỉ số này giảm mạnh nhất giữa hai năm nào, và giảm từ khoảng bao nhiêu xuống bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "Gini coefficient Vietnam national chart Gini time series OECD Economic Surveys Viet Nam 2025 figure",
+        "latency_ms": 15379.3,
+        "timing": {
+          "first_stage_ms": 94.75380000003497,
+          "rerank_ms": 15284.53819999993
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p099:figure_4.2",
+            "rank": 1,
+            "score": 0.9897,
+            "type": "figure",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p050:text04",
+            "rank": 2,
+            "score": 0.9732,
+            "type": "text",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p011:figure_1",
+            "rank": 3,
+            "score": 0.9505,
+            "type": "figure",
+            "page": 11
+          },
+          {
+            "id": "oecd-vn-2025:p028:figure_1.8",
+            "rank": 4,
+            "score": 0.9378,
+            "type": "figure",
+            "page": 28
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 5,
+            "score": 0.9117,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p036:figure_1.14",
+            "rank": 6,
+            "score": 0.8797,
+            "type": "figure",
+            "page": 36
+          }
+        ]
+      },
+      {
+        "query": "Figure 2.2 Gini coefficient Viet Nam time series 2010 2023 Figure 2.2 income inequality OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 15308.0,
+        "timing": {
+          "first_stage_ms": 101.99460000001181,
+          "rerank_ms": 15205.99290000007
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p050:text04",
+            "rank": 1,
+            "score": 0.9987,
+            "type": "text",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p051:figure_2.2",
+            "rank": 2,
+            "score": 0.9631,
+            "type": "figure",
+            "page": 51
+          },
+          {
+            "id": "oecd-vn-2025:p051:text02",
+            "rank": 3,
+            "score": 0.9604,
+            "type": "text",
+            "page": 51
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 4,
+            "score": 0.9575,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p099:figure_4.2",
+            "rank": 5,
+            "score": 0.9535,
+            "type": "figure",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p052:text04",
+            "rank": 6,
+            "score": 0.9517,
+            "type": "text",
+            "page": 52
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Gini coefficient Vietnam national chart Gini time series OECD Economic Surveys Viet Nam 2025 figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Figure 2.2 Gini coefficient Viet Nam time series 2010 2023 Figure 2.2 income inequality OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p051:figure_2.2",
+          "question": "In panel A (Gini index, whole country) please provide the plotted Gini index values for each year from 2018 through 2023 as read from the figure (approximate values are fine). Specify that values are approximate if read from vector coordinates."
+        }
+      },
+      {
+        "step": 3,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo biểu đồ hệ số Gini toàn quốc (Panel A, Figure 2.2), Gini giảm mạnh nhất giữa năm 2019 và 2020, từ khoảng 0.421 xuống khoảng 0.378 (giảm khoảng 0.043). [oecd-vn-2025:p051:figure_2.2]",
+          "citations": [
+            "oecd-vn-2025:p051:figure_2.2"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 800,
+        "cached_tokens": 0,
+        "completion_tokens": 41,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000282,
+        "latency_ms": 1556.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5305,
+        "cached_tokens": 0,
+        "completion_tokens": 183,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00169225,
+        "latency_ms": 3159.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 7081,
+        "cached_tokens": 4736,
+        "completion_tokens": 287,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00127865,
+        "latency_ms": 3557.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1799,
+        "cached_tokens": 0,
+        "completion_tokens": 186,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00082175,
+        "latency_ms": 2936.3,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p051:figure_2.2",
+        "question": "In panel A (Gini index, whole country) please provide the plotted Gini index values for each year from 2018 through 2023 as read from the figure (approximate values are fine). Specify that values are approximate if read from vector coordinates.",
+        "answer": "I read the plotted Gini values in panel A from the figure (values are approximate, read from the chart gridlines):\n\n- 2018: ≈ 0.423  \n- 2019: ≈ 0.421  \n- 2020: ≈ 0.378  \n- 2021: ≈ 0.373  \n- 2022: ≈ 0.374  \n- 2023: ≈ 0.373\n\n(Values are approximate, estimated from the chart's vector coordinates and gridlines.)"
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 7315,
+        "cached_tokens": 6784,
+        "completion_tokens": 306,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00091435,
+        "latency_ms": 3718.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo biểu đồ hệ số Gini toàn quốc (Panel A, Figure 2.2), Gini giảm mạnh nhất giữa năm 2019 và 2020, từ khoảng 0.421 xuống khoảng 0.378 (giảm khoảng 0.043). [oecd-vn-2025:p051:figure_2.2]",
+    "citations": [
+      "oecd-vn-2025:p051:figure_2.2"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p011:figure_1",
+      "oecd-vn-2025:p028:figure_1.8",
+      "oecd-vn-2025:p036:figure_1.14",
+      "oecd-vn-2025:p050:text04",
+      "oecd-vn-2025:p051:figure_2.2",
+      "oecd-vn-2025:p051:text02",
+      "oecd-vn-2025:p052:text04",
+      "oecd-vn-2025:p099:figure_4.2"
+    ],
+    "latency_s": 45.62,
+    "cost_usd": 0.004989,
+    "tokens": {
+      "prompt_tokens": 22300,
+      "cached_tokens": 11520,
+      "completion_tokens": 1003,
+      "reasoning_tokens": 576
+    }
+  },
+  {
+    "id": "T13",
+    "question": "Khoảng cách tiền lương theo giới của Việt Nam (năm 2023 hoặc gần nhất) là bao nhiêu %, cao hơn mức chung ASEAN bao nhiêu điểm phần trăm, và nước nào có giá trị âm sâu nhất?",
+    "retrieval": [
+      {
+        "query": "gender wage gap Vietnam 2023 ASEAN average country with most negative gender pay gap OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 15592.2,
+        "timing": {
+          "first_stage_ms": 94.61550000003172,
+          "rerank_ms": 15497.52680000006
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p065:figure_2.11",
+            "rank": 1,
+            "score": 0.9503,
+            "type": "figure",
+            "page": 65
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.8743,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p064:text03",
+            "rank": 3,
+            "score": 0.8629,
+            "type": "text",
+            "page": 64
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 4,
+            "score": 0.8182,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 5,
+            "score": 0.6832,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.5937,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "gender wage gap Vietnam 2023 ASEAN average country with most negative gender pay gap OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo báo cáo, khoảng cách tiền lương theo giới của Việt Nam được nêu là 11% (gần nhất) [oecd-vn-2025:p064:text03]. Biểu đồ so sánh cho giá trị xấp xỉ 12.1% cho Việt Nam và 9.7% cho trung bình ASEAN, tức Việt Nam cao hơn khoảng 1.3 điểm phần trăm (12.1 − 9.7 ≈ 1.3) (giá trị biểu đồ là xấp xỉ) [oecd-vn-2025:p065:figure_2.11]. Nước có giá trị âm sâu nhất là Philippines (khoảng −6.1%) [oecd-vn-2025:p065:figure_2.11].",
+          "citations": [
+            "oecd-vn-2025:p064:text03",
+            "oecd-vn-2025:p065:figure_2.11"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 813,
+        "cached_tokens": 0,
+        "completion_tokens": 46,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00029525,
+        "latency_ms": 1724.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4036,
+        "cached_tokens": 0,
+        "completion_tokens": 604,
+        "reasoning_tokens": 384,
+        "cost_usd": 0.002217,
+        "latency_ms": 6936.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo báo cáo, khoảng cách tiền lương theo giới của Việt Nam được nêu là 11% (gần nhất) [oecd-vn-2025:p064:text03]. Biểu đồ so sánh cho giá trị xấp xỉ 12.1% cho Việt Nam và 9.7% cho trung bình ASEAN, tức Việt Nam cao hơn khoảng 1.3 điểm phần trăm (12.1 − 9.7 ≈ 1.3) (giá trị biểu đồ là xấp xỉ) [oecd-vn-2025:p065:figure_2.11]. Nước có giá trị âm sâu nhất là Philippines (khoảng −6.1%) [oecd-vn-2025:p065:figure_2.11].",
+    "citations": [
+      "oecd-vn-2025:p064:text03",
+      "oecd-vn-2025:p065:figure_2.11"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p064:text03",
+      "oecd-vn-2025:p065:figure_2.11"
+    ],
+    "latency_s": 24.25,
+    "cost_usd": 0.002512,
+    "tokens": {
+      "prompt_tokens": 4849,
+      "cached_tokens": 0,
+      "completion_tokens": 650,
+      "reasoning_tokens": 384
+    }
+  },
+  {
+    "id": "T14",
+    "question": "Theo khảo sát doanh nghiệp, trở ngại lớn nhất đối với doanh nghiệp Việt Nam là gì (tỷ lệ bao nhiêu %), và tỷ lệ doanh nghiệp Việt Nam coi tiếp cận tài chính là trở ngại chính cao hơn mức trung bình Đông Á – Thái Bình Dương bao nhiêu điểm phần trăm?",
+    "retrieval": [
+      {
+        "query": "main obstacle firms Vietnam enterprise survey biggest obstacle percent 'access to finance' 'East Asia and Pacific' comparison OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 16543.1,
+        "timing": {
+          "first_stage_ms": 115.10709999993196,
+          "rerank_ms": 16427.93670000003
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p127:text02",
+            "rank": 1,
+            "score": 0.9809,
+            "type": "text",
+            "page": 127
+          },
+          {
+            "id": "oecd-vn-2025:p128:figure_4.25",
+            "rank": 2,
+            "score": 0.975,
+            "type": "figure",
+            "page": 128
+          },
+          {
+            "id": "oecd-vn-2025:p110:text02",
+            "rank": 3,
+            "score": 0.8865,
+            "type": "text",
+            "page": 110
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 4,
+            "score": 0.7651,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p130:text02",
+            "rank": 5,
+            "score": 0.7595,
+            "type": "text",
+            "page": 130
+          },
+          {
+            "id": "oecd-vn-2025:p135:table_4.3:part3",
+            "rank": 6,
+            "score": 0.7172,
+            "type": "table",
+            "page": 135
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "main obstacle firms Vietnam enterprise survey biggest obstacle percent 'access to finance' 'East Asia and Pacific' comparison OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo khảo sát (World Bank, 2023), trở ngại lớn nhất của doanh nghiệp Việt Nam là “thực hành khu vực phi chính thức” với khoảng 22% doanh nghiệp; “tiếp cận tài chính” là trở ngại đứng thứ hai, khoảng 21% doanh nghiệp. Tỷ lệ doanh nghiệp Việt Nam cho rằng tiếp cận tài chính là trở ngại chính cao hơn mức trung bình Đông Á – Thái Bình Dương khoảng 8.5 điểm phần trăm (21% − 12.5% ≈ 8.5 điểm). [oecd-vn-2025:p127:text02] [oecd-vn-2025:p128:figure_4.25]",
+          "citations": [
+            "oecd-vn-2025:p127:text02",
+            "oecd-vn-2025:p128:figure_4.25"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 831,
+        "cached_tokens": 0,
+        "completion_tokens": 115,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00043775,
+        "latency_ms": 2641.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3380,
+        "cached_tokens": 0,
+        "completion_tokens": 461,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.001767,
+        "latency_ms": 5708.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo khảo sát (World Bank, 2023), trở ngại lớn nhất của doanh nghiệp Việt Nam là “thực hành khu vực phi chính thức” với khoảng 22% doanh nghiệp; “tiếp cận tài chính” là trở ngại đứng thứ hai, khoảng 21% doanh nghiệp. Tỷ lệ doanh nghiệp Việt Nam cho rằng tiếp cận tài chính là trở ngại chính cao hơn mức trung bình Đông Á – Thái Bình Dương khoảng 8.5 điểm phần trăm (21% − 12.5% ≈ 8.5 điểm). [oecd-vn-2025:p127:text02] [oecd-vn-2025:p128:figure_4.25]",
+    "citations": [
+      "oecd-vn-2025:p127:text02",
+      "oecd-vn-2025:p128:figure_4.25"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p110:text02",
+      "oecd-vn-2025:p127:text02",
+      "oecd-vn-2025:p128:figure_4.25",
+      "oecd-vn-2025:p130:text02",
+      "oecd-vn-2025:p135:table_4.3:part3"
+    ],
+    "latency_s": 24.89,
+    "cost_usd": 0.002205,
+    "tokens": {
+      "prompt_tokens": 4211,
+      "cached_tokens": 0,
+      "completion_tokens": 576,
+      "reasoning_tokens": 320
+    }
+  },
+  {
+    "id": "T15",
+    "question": "Năm 2020, trong bốn nước ở biểu đồ tăng trưởng GDP thực (Malaysia, Indonesia, Thái Lan, Việt Nam), nước nào vẫn tăng trưởng dương và nước nào suy giảm sâu nhất? Cho biết giá trị xấp xỉ.",
+    "retrieval": [
+      {
+        "query": "real GDP growth Malaysia Indonesia Thailand Vietnam 2020 chart OECD Economic Surveys Viet Nam 2025 figure",
+        "latency_ms": 18549.5,
+        "timing": {
+          "first_stage_ms": 91.25670000003083,
+          "rerank_ms": 18458.15219999997
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p020:figure_1.1",
+            "rank": 1,
+            "score": 0.9843,
+            "type": "figure",
+            "page": 20
+          },
+          {
+            "id": "oecd-vn-2025:p011:figure_1",
+            "rank": 2,
+            "score": 0.9779,
+            "type": "figure",
+            "page": 11
+          },
+          {
+            "id": "oecd-vn-2025:p016:figure_4",
+            "rank": 3,
+            "score": 0.9496,
+            "type": "figure",
+            "page": 16
+          },
+          {
+            "id": "oecd-vn-2025:p100:figure_4.3",
+            "rank": 4,
+            "score": 0.9252,
+            "type": "figure",
+            "page": 100
+          },
+          {
+            "id": "oecd-vn-2025:p040:figure_1.19",
+            "rank": 5,
+            "score": 0.9252,
+            "type": "figure",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p116:figure_4.18",
+            "rank": 6,
+            "score": 0.9053,
+            "type": "figure",
+            "page": 116
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "real GDP growth Malaysia Indonesia Thailand Vietnam 2020 chart OECD Economic Surveys Viet Nam 2025 figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p020:figure_1.1",
+          "question": "For Panel A 'Real GDP growth', what are the approximate values (percent) of real GDP growth in 2020 for each series: Malaysia (blue), Indonesia (black), Thailand (green), Viet Nam (red)? Please give approximate numbers and indicate if any value is positive or negative."
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Năm 2020: Việt Nam là nước duy nhất tăng trưởng dương, khoảng +3.0% (khoảng +2.5% đến +3.5%); Malaysia, Indonesia, Thái Lan đều suy giảm; suy giảm sâu nhất là Thái Lan khoảng -6.0% (khoảng -6.5% đến -5.5%). (Malaysia ≈ -5.5%; Indonesia ≈ -2.0%). [oecd-vn-2025:p020:figure_1.1]",
+          "citations": [
+            "oecd-vn-2025:p020:figure_1.1"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 817,
+        "cached_tokens": 0,
+        "completion_tokens": 42,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00028825,
+        "latency_ms": 1615.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5633,
+        "cached_tokens": 0,
+        "completion_tokens": 229,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00186625,
+        "latency_ms": 3187.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2491,
+        "cached_tokens": 0,
+        "completion_tokens": 263,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00114875,
+        "latency_ms": 3772.2,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p020:figure_1.1",
+        "question": "For Panel A 'Real GDP growth', what are the approximate values (percent) of real GDP growth in 2020 for each series: Malaysia (blue), Indonesia (black), Thailand (green), Viet Nam (red)? Please give approximate numbers and indicate if any value is positive or negative.",
+        "answer": "Using only what is visible in Panel A (year 2020):\n\n- Malaysia (blue): about -5.5% (approx range -6.0 to -5.0) — negative.  \n- Indonesia (black): about -2.0% (approx range -2.5 to -1.5) — negative.  \n- Thailand (green): about -6.0% (approx range -6.5 to -5.5) — negative.  \n- Viet Nam (red): about +3.0% (approx range +2.5 to +3.5) — positive."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5886,
+        "cached_tokens": 4736,
+        "completion_tokens": 149,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0007038999999999999,
+        "latency_ms": 1942.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Năm 2020: Việt Nam là nước duy nhất tăng trưởng dương, khoảng +3.0% (khoảng +2.5% đến +3.5%); Malaysia, Indonesia, Thái Lan đều suy giảm; suy giảm sâu nhất là Thái Lan khoảng -6.0% (khoảng -6.5% đến -5.5%). (Malaysia ≈ -5.5%; Indonesia ≈ -2.0%). [oecd-vn-2025:p020:figure_1.1]",
+    "citations": [
+      "oecd-vn-2025:p020:figure_1.1"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p011:figure_1",
+      "oecd-vn-2025:p016:figure_4",
+      "oecd-vn-2025:p020:figure_1.1",
+      "oecd-vn-2025:p040:figure_1.19",
+      "oecd-vn-2025:p100:figure_4.3",
+      "oecd-vn-2025:p116:figure_4.18"
+    ],
+    "latency_s": 29.08,
+    "cost_usd": 0.004007,
+    "tokens": {
+      "prompt_tokens": 14827,
+      "cached_tokens": 4736,
+      "completion_tokens": 683,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T16",
+    "question": "Tỷ lệ lao động phi chính thức chung của Việt Nam giảm từ bao nhiêu % năm 2013 xuống bao nhiêu % năm 2023? Trong các nước Đông Nam Á được so sánh, nước nào có tỷ lệ phi chính thức cao nhất?",
+    "retrieval": [
+      {
+        "query": "informal employment rate Vietnam 2013 2023 Southeast Asia comparison",
+        "latency_ms": 15798.9,
+        "timing": {
+          "first_stage_ms": 82.47740000001613,
+          "rerank_ms": 15716.378299999975
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p057:figure_2.5",
+            "rank": 1,
+            "score": 0.9473,
+            "type": "figure",
+            "page": 57
+          },
+          {
+            "id": "oecd-vn-2025:p057:text01",
+            "rank": 2,
+            "score": 0.9068,
+            "type": "text",
+            "page": 57
+          },
+          {
+            "id": "oecd-vn-2025:p057:text03",
+            "rank": 3,
+            "score": 0.8404,
+            "type": "text",
+            "page": 57
+          },
+          {
+            "id": "oecd-vn-2025:p059:text03",
+            "rank": 4,
+            "score": 0.5477,
+            "type": "text",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p058:text03",
+            "rank": 5,
+            "score": 0.4584,
+            "type": "text",
+            "page": 58
+          },
+          {
+            "id": "oecd-vn-2025:p054:text02",
+            "rank": 6,
+            "score": 0.296,
+            "type": "text",
+            "page": 54
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "informal employment rate Vietnam 2013 2023 Southeast Asia comparison"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p057:figure_2.5",
+          "question": "What is the approximate 'Total' informality rate for Vietnam in 2013 and 2023 (percent) from panel A? And in panel B, which country has the highest informality rate among Malaysia (2022), Thailand (2023), Viet Nam (2023), Myanmar (2020), Cambodia (2019)?"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo hình A trong Figure 2.5, tỷ lệ lao động phi chính thức “Total” của Việt Nam giảm từ khoảng 80% năm 2013 xuống khoảng 68% năm 2023 (giá trị xấp xỉ từ biểu đồ) [oecd-vn-2025:p057:figure_2.5]. Trong so sánh khu vực (Panel B của Figure 2.5), nước có tỷ lệ phi chính thức cao nhất là Campuchia (Cambodia) [oecd-vn-2025:p057:figure_2.5]; báo cáo cũng nêu informality của Việt Nam cao hơn Malaysia và hơi cao hơn Thái Lan trong phần văn bản [oecd-vn-2025:p057:text01].",
+          "citations": [
+            "oecd-vn-2025:p057:figure_2.5",
+            "oecd-vn-2025:p057:text01"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 818,
+        "cached_tokens": 0,
+        "completion_tokens": 36,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002765,
+        "latency_ms": 1409.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3395,
+        "cached_tokens": 0,
+        "completion_tokens": 238,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00132475,
+        "latency_ms": 3400.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1233,
+        "cached_tokens": 0,
+        "completion_tokens": 137,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00058225,
+        "latency_ms": 2089.5,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p057:figure_2.5",
+        "question": "What is the approximate 'Total' informality rate for Vietnam in 2013 and 2023 (percent) from panel A? And in panel B, which country has the highest informality rate among Malaysia (2022), Thailand (2023), Viet Nam (2023), Myanmar (2020), Cambodia (2019)?",
+        "answer": "Panel A (Viet Nam, \"Total\" — blue line)\n- 2013: about 80%\n- 2023: about 68% (roughly 67–69%)\n\nPanel B (highest among listed)\n- Cambodia (2019) has the highest informality rate (about 88%)."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3595,
+        "cached_tokens": 2688,
+        "completion_tokens": 276,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00084595,
+        "latency_ms": 4258.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo hình A trong Figure 2.5, tỷ lệ lao động phi chính thức “Total” của Việt Nam giảm từ khoảng 80% năm 2013 xuống khoảng 68% năm 2023 (giá trị xấp xỉ từ biểu đồ) [oecd-vn-2025:p057:figure_2.5]. Trong so sánh khu vực (Panel B của Figure 2.5), nước có tỷ lệ phi chính thức cao nhất là Campuchia (Cambodia) [oecd-vn-2025:p057:figure_2.5]; báo cáo cũng nêu informality của Việt Nam cao hơn Malaysia và hơi cao hơn Thái Lan trong phần văn bản [oecd-vn-2025:p057:text01].",
+    "citations": [
+      "oecd-vn-2025:p057:figure_2.5",
+      "oecd-vn-2025:p057:text01"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p054:text02",
+      "oecd-vn-2025:p057:figure_2.5",
+      "oecd-vn-2025:p057:text01",
+      "oecd-vn-2025:p057:text03",
+      "oecd-vn-2025:p058:text03",
+      "oecd-vn-2025:p059:text03"
+    ],
+    "latency_s": 26.97,
+    "cost_usd": 0.003029,
+    "tokens": {
+      "prompt_tokens": 9041,
+      "cached_tokens": 2688,
+      "completion_tokens": 687,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T17",
+    "question": "Sau cải cách Luật Bảo hiểm xã hội, số năm đóng tối thiểu để được hưởng lương hưu là bao nhiêu năm? Và người sử dụng lao động cùng người lao động hiện đóng tổng cộng bao nhiêu % tiền lương cho quỹ hưu trí và tử tuất?",
+    "retrieval": [
+      {
+        "query": "minimum contribution years pension Social Insurance Law reform Vietnam minimum years pension contribution employer employee contribution rates pension and survivor employer+employee contribution rate Vietnam Social Insurance Law reform OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 13896.9,
+        "timing": {
+          "first_stage_ms": 124.10189999991417,
+          "rerank_ms": 13772.799600000099
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p055:text03",
+            "rank": 1,
+            "score": 0.9655,
+            "type": "text",
+            "page": 55
+          },
+          {
+            "id": "oecd-vn-2025:p055:text01",
+            "rank": 2,
+            "score": 0.8155,
+            "type": "text",
+            "page": 55
+          },
+          {
+            "id": "oecd-vn-2025:p054:text03",
+            "rank": 3,
+            "score": 0.598,
+            "type": "text",
+            "page": 54
+          },
+          {
+            "id": "oecd-vn-2025:p056:text01",
+            "rank": 4,
+            "score": 0.2921,
+            "type": "text",
+            "page": 56
+          },
+          {
+            "id": "oecd-vn-2025:p054:text02",
+            "rank": 5,
+            "score": 0.1804,
+            "type": "text",
+            "page": 54
+          },
+          {
+            "id": "oecd-vn-2025:p059:text03",
+            "rank": 6,
+            "score": 0.1781,
+            "type": "text",
+            "page": 59
+          }
+        ]
+      },
+      {
+        "query": "Table 2.2 social insurance rates pension survivor pension and survivor contributions employer employee rates Table 2.2 Viet Nam pension and survivorship contributions OECD Economic Surveys Viet Nam 2025 Table 2.2 page",
+        "latency_ms": 16531.7,
+        "timing": {
+          "first_stage_ms": 115.50109999996039,
+          "rerank_ms": 16416.196200000057
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p059:table_2.2",
+            "rank": 1,
+            "score": 0.9359,
+            "type": "table",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p059:text03",
+            "rank": 2,
+            "score": 0.8686,
+            "type": "text",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p054:text02",
+            "rank": 3,
+            "score": 0.7448,
+            "type": "text",
+            "page": 54
+          },
+          {
+            "id": "oecd-vn-2025:p059:text04",
+            "rank": 4,
+            "score": 0.695,
+            "type": "text",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p055:text05",
+            "rank": 5,
+            "score": 0.5324,
+            "type": "text",
+            "page": 55
+          },
+          {
+            "id": "oecd-vn-2025:p053:text02",
+            "rank": 6,
+            "score": 0.5318,
+            "type": "text",
+            "page": 53
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "minimum contribution years pension Social Insurance Law reform Vietnam minimum years pension contribution employer employee contribution rates pension and survivor employer+employee contribution rate Vietnam Social Insurance Law reform OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Table 2.2 social insurance rates pension survivor pension and survivor contributions employer employee rates Table 2.2 Viet Nam pension and survivorship contributions OECD Economic Surveys Viet Nam 2025 Table 2.2 page"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Sau cải cách Luật Bảo hiểm xã hội, số năm đóng tối thiểu để được hưởng lương hưu giảm từ 20 xuống còn 15 năm [oecd-vn-2025:p055:text03][oecd-vn-2025:p055:text01].\n\nNgười sử dụng lao động và người lao động hiện đóng tổng cộng 22.0% tiền lương cho khoản “Retirement and death” (nghĩa là hưu trí và tử tuất): 14.0% do người sử dụng lao động và 8.0% do người lao động [oecd-vn-2025:p059:table_2.2].",
+          "citations": [
+            "oecd-vn-2025:p055:text03",
+            "oecd-vn-2025:p055:text01",
+            "oecd-vn-2025:p059:table_2.2"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 826,
+        "cached_tokens": 0,
+        "completion_tokens": 124,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0004545,
+        "latency_ms": 2283.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2708,
+        "cached_tokens": 0,
+        "completion_tokens": 193,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.001063,
+        "latency_ms": 3393.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3826,
+        "cached_tokens": 1664,
+        "completion_tokens": 465,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.0015121,
+        "latency_ms": 5300.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Sau cải cách Luật Bảo hiểm xã hội, số năm đóng tối thiểu để được hưởng lương hưu giảm từ 20 xuống còn 15 năm [oecd-vn-2025:p055:text03][oecd-vn-2025:p055:text01].\n\nNgười sử dụng lao động và người lao động hiện đóng tổng cộng 22.0% tiền lương cho khoản “Retirement and death” (nghĩa là hưu trí và tử tuất): 14.0% do người sử dụng lao động và 8.0% do người lao động [oecd-vn-2025:p059:table_2.2].",
+    "citations": [
+      "oecd-vn-2025:p055:text03",
+      "oecd-vn-2025:p055:text01",
+      "oecd-vn-2025:p059:table_2.2"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p053:text02",
+      "oecd-vn-2025:p054:text02",
+      "oecd-vn-2025:p054:text03",
+      "oecd-vn-2025:p055:text01",
+      "oecd-vn-2025:p055:text03",
+      "oecd-vn-2025:p055:text05",
+      "oecd-vn-2025:p056:text01",
+      "oecd-vn-2025:p059:table_2.2",
+      "oecd-vn-2025:p059:text03",
+      "oecd-vn-2025:p059:text04"
+    ],
+    "latency_s": 41.41,
+    "cost_usd": 0.00303,
+    "tokens": {
+      "prompt_tokens": 7360,
+      "cached_tokens": 1664,
+      "completion_tokens": 782,
+      "reasoning_tokens": 448
+    }
+  },
+  {
+    "id": "T18",
+    "question": "Dựa vào ngưỡng thu nhập cao của Ngân hàng Thế giới ghi trong hình về mục tiêu 'thu nhập cao' năm 2045 và tỷ lệ giữa ngưỡng này với thu nhập bình quân đầu người năm 2023 của Việt Nam được nêu trong phần văn bản, hãy ước tính thu nhập bình quân đầu người năm 2023 của Việt Nam.",
+    "retrieval": [
+      {
+        "query": "World Bank high-income threshold 2045 figure 'high-income' 2045 Viet Nam OECD Economic Surveys 2025 ratio to 2023 GDP per capita",
+        "latency_ms": 16619.3,
+        "timing": {
+          "first_stage_ms": 135.39029999992636,
+          "rerank_ms": 16483.90500000005
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p099:text02",
+            "rank": 1,
+            "score": 0.9952,
+            "type": "text",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p104:text02",
+            "rank": 2,
+            "score": 0.9823,
+            "type": "text",
+            "page": 104
+          },
+          {
+            "id": "oecd-vn-2025:p099:figure_4.2",
+            "rank": 3,
+            "score": 0.9691,
+            "type": "figure",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p015:text03",
+            "rank": 4,
+            "score": 0.954,
+            "type": "text",
+            "page": 15
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 5,
+            "score": 0.9399,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 6,
+            "score": 0.9299,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "World Bank high-income threshold 2045 figure 'high-income' 2045 Viet Nam OECD Economic Surveys 2025 ratio to 2023 GDP per capita"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Ước tính:\n- Ngưỡng “high-income” (từ hình) ≈ 13 841.4 USD (giá trị đọc từ toạ độ PDF, xấp xỉ) [oecd-vn-2025:p099:figure_4.2].\n- Báo cáo nêu ngưỡng này bằng 3.3 lần thu nhập bình quân đầu người năm 2023 của Việt Nam [oecd-vn-2025:p099:text02].\nTính: 13 841.4 ÷ 3.3 = 4 194.06 USD. \nKết luận: Ước tính thu nhập bình quân đầu người năm 2023 của Việt Nam khoảng 4 194 USD (xấp xỉ) [oecd-vn-2025:p099:figure_4.2] [oecd-vn-2025:p099:text02].",
+          "citations": [
+            "oecd-vn-2025:p099:figure_4.2",
+            "oecd-vn-2025:p099:text02"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 843,
+        "cached_tokens": 0,
+        "completion_tokens": 118,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00044675,
+        "latency_ms": 2520.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4771,
+        "cached_tokens": 0,
+        "completion_tokens": 443,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00207875,
+        "latency_ms": 5752.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Ước tính:\n- Ngưỡng “high-income” (từ hình) ≈ 13 841.4 USD (giá trị đọc từ toạ độ PDF, xấp xỉ) [oecd-vn-2025:p099:figure_4.2].\n- Báo cáo nêu ngưỡng này bằng 3.3 lần thu nhập bình quân đầu người năm 2023 của Việt Nam [oecd-vn-2025:p099:text02].\nTính: 13 841.4 ÷ 3.3 = 4 194.06 USD. \nKết luận: Ước tính thu nhập bình quân đầu người năm 2023 của Việt Nam khoảng 4 194 USD (xấp xỉ) [oecd-vn-2025:p099:figure_4.2] [oecd-vn-2025:p099:text02].",
+    "citations": [
+      "oecd-vn-2025:p099:figure_4.2",
+      "oecd-vn-2025:p099:text02"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p015:text03",
+      "oecd-vn-2025:p099:figure_4.2",
+      "oecd-vn-2025:p099:text02",
+      "oecd-vn-2025:p104:text02"
+    ],
+    "latency_s": 24.89,
+    "cost_usd": 0.002525,
+    "tokens": {
+      "prompt_tokens": 5614,
+      "cached_tokens": 0,
+      "completion_tokens": 561,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T19",
+    "question": "Nếu áp tỷ lệ nghèo theo chuẩn của nhóm nước thu nhập trung bình thấp (3,65 USD/ngày) nêu trong báo cáo vào dân số Việt Nam năm 2023 trong bảng thống kê cơ bản, thì có khoảng bao nhiêu triệu người nghèo theo chuẩn này?",
+    "retrieval": [
+      {
+        "query": "3.65 USD per day poverty line lower-middle-income 3.65 USD/day Viet Nam 2023 population basic statistics table",
+        "latency_ms": 16500.5,
+        "timing": {
+          "first_stage_ms": 137.25929999998243,
+          "rerank_ms": 16363.266000000067
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 1,
+            "score": 0.9954,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 2,
+            "score": 0.9733,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p050:text02",
+            "rank": 3,
+            "score": 0.9688,
+            "type": "text",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p050:figure_2.1",
+            "rank": 4,
+            "score": 0.9575,
+            "type": "figure",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p098:text02",
+            "rank": 5,
+            "score": 0.7354,
+            "type": "text",
+            "page": 98
+          },
+          {
+            "id": "oecd-vn-2025:p050:text04",
+            "rank": 6,
+            "score": 0.7055,
+            "type": "text",
+            "page": 50
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "3.65 USD per day poverty line lower-middle-income 3.65 USD/day Viet Nam 2023 population basic statistics table"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Áp tỷ lệ nghèo USD 3.65/ngày (4.2%) vào dân số Việt Nam 2023 (100.3 triệu) được báo cáo: 100.3 × 4.2% = 4.21326 → khoảng 4.21 triệu người (khoảng 4.2 triệu). [oecd-vn-2025:p009:basic_statistics:part1] [oecd-vn-2025:p050:text02]",
+          "citations": [
+            "oecd-vn-2025:p009:basic_statistics:part1",
+            "oecd-vn-2025:p050:text02"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 823,
+        "cached_tokens": 0,
+        "completion_tokens": 48,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00030175,
+        "latency_ms": 1674.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4250,
+        "cached_tokens": 0,
+        "completion_tokens": 410,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.0018825,
+        "latency_ms": 5540.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Áp tỷ lệ nghèo USD 3.65/ngày (4.2%) vào dân số Việt Nam 2023 (100.3 triệu) được báo cáo: 100.3 × 4.2% = 4.21326 → khoảng 4.21 triệu người (khoảng 4.2 triệu). [oecd-vn-2025:p009:basic_statistics:part1] [oecd-vn-2025:p050:text02]",
+    "citations": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p050:text02"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p050:figure_2.1",
+      "oecd-vn-2025:p050:text02",
+      "oecd-vn-2025:p050:text04",
+      "oecd-vn-2025:p098:text02"
+    ],
+    "latency_s": 23.72,
+    "cost_usd": 0.002184,
+    "tokens": {
+      "prompt_tokens": 5073,
+      "cached_tokens": 0,
+      "completion_tokens": 458,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T20",
+    "question": "Vốn FDI tích luỹ (stock of inward FDI) của Việt Nam năm 2023 trên hình so sánh với các nước ASEAN là khoảng bao nhiêu tỷ USD, và bằng khoảng bao nhiêu % GDP danh nghĩa năm 2023 theo bảng thống kê cơ bản?",
+    "retrieval": [
+      {
+        "query": "stock of inward FDI Vietnam 2023 ASEAN comparison figure",
+        "latency_ms": 16601.4,
+        "timing": {
+          "first_stage_ms": 107.85179999993488,
+          "rerank_ms": 16493.48889999999
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p102:text02",
+            "rank": 1,
+            "score": 0.9585,
+            "type": "text",
+            "page": 102
+          },
+          {
+            "id": "oecd-vn-2025:p108:figure_4.11",
+            "rank": 2,
+            "score": 0.946,
+            "type": "figure",
+            "page": 108
+          },
+          {
+            "id": "oecd-vn-2025:p100:figure_4.3",
+            "rank": 3,
+            "score": 0.7861,
+            "type": "figure",
+            "page": 100
+          },
+          {
+            "id": "oecd-vn-2025:p015:text03",
+            "rank": 4,
+            "score": 0.7685,
+            "type": "text",
+            "page": 15
+          },
+          {
+            "id": "oecd-vn-2025:p021:text03",
+            "rank": 5,
+            "score": 0.6379,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p100:text02",
+            "rank": 6,
+            "score": 0.6276,
+            "type": "text",
+            "page": 100
+          }
+        ]
+      },
+      {
+        "query": "basic statistics table Viet Nam stock of inward FDI 2023 % GDP 2023 table basic statistics OECD Viet Nam 2025",
+        "latency_ms": 18114.9,
+        "timing": {
+          "first_stage_ms": 88.68270000004941,
+          "rerank_ms": 18026.18270000005
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 1,
+            "score": 0.9932,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p021:text03",
+            "rank": 2,
+            "score": 0.9908,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.9896,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p102:text02",
+            "rank": 4,
+            "score": 0.9893,
+            "type": "text",
+            "page": 102
+          },
+          {
+            "id": "oecd-vn-2025:p015:text03",
+            "rank": 5,
+            "score": 0.9788,
+            "type": "text",
+            "page": 15
+          },
+          {
+            "id": "oecd-vn-2025:p100:text02",
+            "rank": 6,
+            "score": 0.9551,
+            "type": "text",
+            "page": 100
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "stock of inward FDI Vietnam 2023 ASEAN comparison figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "basic statistics table Viet Nam stock of inward FDI 2023 % GDP 2023 table basic statistics OECD Viet Nam 2025"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p100:figure_4.3",
+          "question": "What is the approximate value (billion USD) of Vietnam's inward FDI stock in 2023 as shown on this chart? Please give the value and indicate approximate if necessary."
+        }
+      },
+      {
+        "step": 3,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Vốn FDI tích luỹ (stock of inward FDI) của Việt Nam năm 2023 trên hình là khoảng 220–230 tỷ USD (khoảng) [oecd-vn-2025:p100:figure_4.3]. Theo bảng \"Basic statistics\", GDP danh nghĩa 2023 của Việt Nam là 433.7 tỷ USD; vậy cổ phần này tương đương khoảng (220÷433.7)×100 ≈ 50.7% đến (230÷433.7)×100 ≈ 53.0% của GDP danh nghĩa 2023 (tính toán từ các giá trị trên) [oecd-vn-2025:p009:basic_statistics:part1][oecd-vn-2025:p100:figure_4.3].",
+          "citations": [
+            "oecd-vn-2025:p100:figure_4.3",
+            "oecd-vn-2025:p009:basic_statistics:part1"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 823,
+        "cached_tokens": 0,
+        "completion_tokens": 98,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00040175,
+        "latency_ms": 2064.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3572,
+        "cached_tokens": 0,
+        "completion_tokens": 177,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.001247,
+        "latency_ms": 3399.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5264,
+        "cached_tokens": 2688,
+        "completion_tokens": 73,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0008572,
+        "latency_ms": 2023.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1214,
+        "cached_tokens": 0,
+        "completion_tokens": 96,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0004955,
+        "latency_ms": 1942.7,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p100:figure_4.3",
+        "question": "What is the approximate value (billion USD) of Vietnam's inward FDI stock in 2023 as shown on this chart? Please give the value and indicate approximate if necessary.",
+        "answer": "Viet Nam (red line) in 2023 ≈ 220–230 billion USD (approximate)."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5391,
+        "cached_tokens": 4736,
+        "completion_tokens": 417,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00111615,
+        "latency_ms": 4851.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "answered",
+    "answer": "Vốn FDI tích luỹ (stock of inward FDI) của Việt Nam năm 2023 trên hình là khoảng 220–230 tỷ USD (khoảng) [oecd-vn-2025:p100:figure_4.3]. Theo bảng \"Basic statistics\", GDP danh nghĩa 2023 của Việt Nam là 433.7 tỷ USD; vậy cổ phần này tương đương khoảng (220÷433.7)×100 ≈ 50.7% đến (230÷433.7)×100 ≈ 53.0% của GDP danh nghĩa 2023 (tính toán từ các giá trị trên) [oecd-vn-2025:p009:basic_statistics:part1][oecd-vn-2025:p100:figure_4.3].",
+    "citations": [
+      "oecd-vn-2025:p100:figure_4.3",
+      "oecd-vn-2025:p009:basic_statistics:part1"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p015:text03",
+      "oecd-vn-2025:p021:text03",
+      "oecd-vn-2025:p100:figure_4.3",
+      "oecd-vn-2025:p100:text02",
+      "oecd-vn-2025:p102:text02",
+      "oecd-vn-2025:p108:figure_4.11"
+    ],
+    "latency_s": 49.01,
+    "cost_usd": 0.004118,
+    "tokens": {
+      "prompt_tokens": 16264,
+      "cached_tokens": 7424,
+      "completion_tokens": 861,
+      "reasoning_tokens": 448
+    }
+  },
+  {
+    "id": "T21",
+    "question": "Theo báo cáo, Việt Nam đã có bao nhiêu hiệp định thương mại tự do song phương và đa phương, bao nhiêu hiệp định đang đàm phán, và các hiệp định này bao phủ bao nhiêu nước, chiếm bao nhiêu % GDP thế giới?",
+    "retrieval": [
+      {
+        "query": "Vietnam free trade agreements number bilateral multilateral negotiating cover countries percent of world GDP",
+        "latency_ms": 15274.0,
+        "timing": {
+          "first_stage_ms": 103.19679999997788,
+          "rerank_ms": 15170.82849999997
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p099:text01",
+            "rank": 1,
+            "score": 0.9911,
+            "type": "text",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 2,
+            "score": 0.8846,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p098:figure_4.1",
+            "rank": 3,
+            "score": 0.4604,
+            "type": "figure",
+            "page": 98
+          },
+          {
+            "id": "oecd-vn-2025:p015:text03",
+            "rank": 4,
+            "score": 0.2374,
+            "type": "text",
+            "page": 15
+          },
+          {
+            "id": "oecd-vn-2025:p025:figure_1.5",
+            "rank": 5,
+            "score": 0.1273,
+            "type": "figure",
+            "page": 25
+          },
+          {
+            "id": "oecd-vn-2025:p121:text02",
+            "rank": 6,
+            "score": 0.077,
+            "type": "text",
+            "page": 121
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam free trade agreements number bilateral multilateral negotiating cover countries percent of world GDP"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo báo cáo: Việt Nam đã có 17 hiệp định thương mại tự do song phương và plurilateral, và có 3 hiệp định đang đàm phán; các hiệp định này bao phủ 53 nước, chiếm 87% GDP thế giới [oecd-vn-2025:p099:text01]",
+          "citations": [
+            "oecd-vn-2025:p099:text01"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 823,
+        "cached_tokens": 0,
+        "completion_tokens": 37,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00027975,
+        "latency_ms": 1955.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4534,
+        "cached_tokens": 0,
+        "completion_tokens": 170,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0014735,
+        "latency_ms": 3102.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo báo cáo: Việt Nam đã có 17 hiệp định thương mại tự do song phương và plurilateral, và có 3 hiệp định đang đàm phán; các hiệp định này bao phủ 53 nước, chiếm 87% GDP thế giới [oecd-vn-2025:p099:text01]",
+    "citations": [
+      "oecd-vn-2025:p099:text01"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p015:text03",
+      "oecd-vn-2025:p021:text02",
+      "oecd-vn-2025:p025:figure_1.5",
+      "oecd-vn-2025:p098:figure_4.1",
+      "oecd-vn-2025:p099:text01",
+      "oecd-vn-2025:p121:text02"
+    ],
+    "latency_s": 20.33,
+    "cost_usd": 0.001753,
+    "tokens": {
+      "prompt_tokens": 5357,
+      "cached_tokens": 0,
+      "completion_tokens": 207,
+      "reasoning_tokens": 64
+    }
+  },
+  {
+    "id": "T22",
+    "question": "Thứ hạng của Việt Nam trong Chỉ số Cảm nhận Tham nhũng thay đổi thế nào từ năm 2015 đến năm 2023, và năm 2023 có bao nhiêu quốc gia được xếp hạng?",
+    "retrieval": [
+      {
+        "query": "Corruption Perceptions Index Vietnam ranking 2015 2016 2017 2018 2019 2020 2021 2022 2023 number of countries ranked 2023 Transparency International CPI Vietnam OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 16408.8,
+        "timing": {
+          "first_stage_ms": 123.59600000002047,
+          "rerank_ms": 16285.226299999977
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p133:text01",
+            "rank": 1,
+            "score": 0.9979,
+            "type": "text",
+            "page": 133
+          },
+          {
+            "id": "oecd-vn-2025:p134:figure_4.28",
+            "rank": 2,
+            "score": 0.9025,
+            "type": "figure",
+            "page": 134
+          },
+          {
+            "id": "oecd-vn-2025:p036:figure_1.14",
+            "rank": 3,
+            "score": 0.8248,
+            "type": "figure",
+            "page": 36
+          },
+          {
+            "id": "oecd-vn-2025:p132:text03",
+            "rank": 4,
+            "score": 0.8196,
+            "type": "text",
+            "page": 132
+          },
+          {
+            "id": "oecd-vn-2025:p057:figure_2.5",
+            "rank": 5,
+            "score": 0.7735,
+            "type": "figure",
+            "page": 57
+          },
+          {
+            "id": "oecd-vn-2025:p024:figure_1.4",
+            "rank": 6,
+            "score": 0.5603,
+            "type": "figure",
+            "page": 24
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Corruption Perceptions Index Vietnam ranking 2015 2016 2017 2018 2019 2020 2021 2022 2023 number of countries ranked 2023 Transparency International CPI Vietnam OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo báo cáo, thứ hạng của Việt Nam trong Chỉ số Cảm nhận Tham nhũng (Corruption Perceptions Index) đã cải thiện từ thứ 119 vào năm 2015 lên thứ 83 vào năm 2023; năm 2023 có tổng cộng 180 quốc gia được xếp hạng [oecd-vn-2025:p133:text01] [oecd-vn-2025:p134:figure_4.28].",
+          "citations": [
+            "oecd-vn-2025:p133:text01",
+            "oecd-vn-2025:p134:figure_4.28"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 814,
+        "cached_tokens": 0,
+        "completion_tokens": 139,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0004815,
+        "latency_ms": 2546.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5787,
+        "cached_tokens": 0,
+        "completion_tokens": 278,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00200275,
+        "latency_ms": 3848.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo báo cáo, thứ hạng của Việt Nam trong Chỉ số Cảm nhận Tham nhũng (Corruption Perceptions Index) đã cải thiện từ thứ 119 vào năm 2015 lên thứ 83 vào năm 2023; năm 2023 có tổng cộng 180 quốc gia được xếp hạng [oecd-vn-2025:p133:text01] [oecd-vn-2025:p134:figure_4.28].",
+    "citations": [
+      "oecd-vn-2025:p133:text01",
+      "oecd-vn-2025:p134:figure_4.28"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p024:figure_1.4",
+      "oecd-vn-2025:p036:figure_1.14",
+      "oecd-vn-2025:p057:figure_2.5",
+      "oecd-vn-2025:p132:text03",
+      "oecd-vn-2025:p133:text01",
+      "oecd-vn-2025:p134:figure_4.28"
+    ],
+    "latency_s": 22.8,
+    "cost_usd": 0.002484,
+    "tokens": {
+      "prompt_tokens": 6601,
+      "cached_tokens": 0,
+      "completion_tokens": 417,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "T23",
+    "question": "Năm 2024, lương hưu ở Việt Nam được điều chỉnh tăng bao nhiêu % và từ thời điểm nào? Lương tối thiểu tăng bao nhiêu %, và năm 2023 đã tăng bao nhiêu %?",
+    "retrieval": [
+      {
+        "query": "Vietnam pension increase 2024 pension adjustment 2024 effective date Vietnam social insurance pensions 2024 OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 14318.6,
+        "timing": {
+          "first_stage_ms": 104.30459999997765,
+          "rerank_ms": 14214.258299999983
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p054:text03",
+            "rank": 1,
+            "score": 0.9593,
+            "type": "text",
+            "page": 54
+          },
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 2,
+            "score": 0.8482,
+            "type": "text",
+            "page": 26
+          },
+          {
+            "id": "oecd-vn-2025:p053:table_2.1",
+            "rank": 3,
+            "score": 0.7325,
+            "type": "table",
+            "page": 53
+          },
+          {
+            "id": "oecd-vn-2025:p056:text01",
+            "rank": 4,
+            "score": 0.6979,
+            "type": "text",
+            "page": 56
+          },
+          {
+            "id": "oecd-vn-2025:p055:text05",
+            "rank": 5,
+            "score": 0.6709,
+            "type": "text",
+            "page": 55
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 6,
+            "score": 0.6067,
+            "type": "text",
+            "page": 1
+          }
+        ]
+      },
+      {
+        "query": "minimum wage increase 2024 Vietnam minimum wage 2023 2024 OECD Economic Surveys Viet Nam 2025 minimum wage rose 2023 2024 percent",
+        "latency_ms": 18516.8,
+        "timing": {
+          "first_stage_ms": 97.32249999990472,
+          "rerank_ms": 18419.42060000008
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 1,
+            "score": 0.9466,
+            "type": "text",
+            "page": 26
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.6827,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p021:text01",
+            "rank": 3,
+            "score": 0.6169,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 4,
+            "score": 0.458,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p020:figure_1.1",
+            "rank": 5,
+            "score": 0.45,
+            "type": "figure",
+            "page": 20
+          },
+          {
+            "id": "oecd-vn-2025:p022:figure_1.3",
+            "rank": 6,
+            "score": 0.3909,
+            "type": "figure",
+            "page": 22
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam pension increase 2024 pension adjustment 2024 effective date Vietnam social insurance pensions 2024 OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "minimum wage increase 2024 Vietnam minimum wage 2023 2024 OECD Economic Surveys Viet Nam 2025 minimum wage rose 2023 2024 percent"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "- Năm 2024, lương hưu được điều chỉnh tăng 15% và có hiệu lực từ tháng 7/2024. [oecd-vn-2025:p026:text04]\n- Lương tối thiểu tăng 6% (năm 2024); năm 2023 lương tối thiểu đã tăng 21%. [oecd-vn-2025:p026:text04]",
+          "citations": [
+            "oecd-vn-2025:p026:text04"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 813,
+        "cached_tokens": 0,
+        "completion_tokens": 178,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00055925,
+        "latency_ms": 2835.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2453,
+        "cached_tokens": 0,
+        "completion_tokens": 55,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00072325,
+        "latency_ms": 1730.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5036,
+        "cached_tokens": 1664,
+        "completion_tokens": 446,
+        "reasoning_tokens": 320,
+        "cost_usd": 0.0017766,
+        "latency_ms": 5785.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "- Năm 2024, lương hưu được điều chỉnh tăng 15% và có hiệu lực từ tháng 7/2024. [oecd-vn-2025:p026:text04]\n- Lương tối thiểu tăng 6% (năm 2024); năm 2023 lương tối thiểu đã tăng 21%. [oecd-vn-2025:p026:text04]",
+    "citations": [
+      "oecd-vn-2025:p026:text04"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p020:figure_1.1",
+      "oecd-vn-2025:p021:text01",
+      "oecd-vn-2025:p022:figure_1.3",
+      "oecd-vn-2025:p026:text04",
+      "oecd-vn-2025:p053:table_2.1",
+      "oecd-vn-2025:p054:text03",
+      "oecd-vn-2025:p055:text05",
+      "oecd-vn-2025:p056:text01"
+    ],
+    "latency_s": 43.19,
+    "cost_usd": 0.003059,
+    "tokens": {
+      "prompt_tokens": 8302,
+      "cached_tokens": 1664,
+      "completion_tokens": 679,
+      "reasoning_tokens": 448
+    }
+  },
+  {
+    "id": "T24",
+    "question": "Báo cáo nêu những số liệu nào về ô nhiễm không khí và xe điện: Hà Nội xếp thứ mấy trong các thành phố ô nhiễm nhất thế giới, nồng độ PM2.5 trung bình năm 2023 của Việt Nam gấp khoảng bao nhiêu lần mức khuyến nghị của WHO, và xe hybrid chiếm bao nhiêu % số xe bán ra trong 9 tháng đầu năm 2024?",
+    "retrieval": [
+      {
+        "query": "Hanoi ranking most polluted cities world PM2.5 Hanoi rank 'most polluted' 'Hanoi' 'PM2.5' 'cities' site:OECD 'Viet Nam' '2025'",
+        "latency_ms": 17440.8,
+        "timing": {
+          "first_stage_ms": 138.60859999999775,
+          "rerank_ms": 17302.21009999991
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p088:text05",
+            "rank": 1,
+            "score": 0.9643,
+            "type": "text",
+            "page": 88
+          },
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 2,
+            "score": 0.5916,
+            "type": "table",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p131:figure_4.27",
+            "rank": 3,
+            "score": 0.4894,
+            "type": "figure",
+            "page": 131
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 4,
+            "score": 0.4474,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p116:figure_4.18",
+            "rank": 5,
+            "score": 0.3732,
+            "type": "figure",
+            "page": 116
+          },
+          {
+            "id": "oecd-vn-2025:p092:text01",
+            "rank": 6,
+            "score": 0.1771,
+            "type": "text",
+            "page": 92
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Hanoi ranking most polluted cities world PM2.5 Hanoi rank 'most polluted' 'Hanoi' 'PM2.5' 'cities' site:OECD 'Viet Nam' '2025'"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Tóm tắt theo báo cáo OECD:\n- Hà Nội được xếp hạng là thành phố ô nhiễm thứ 8 trên thế giới. [oecd-vn-2025:p088:text05]\n- Trung bình năm 2023, nồng độ PM2.5 của Việt Nam vào khoảng gần 6 lần mức khuyến nghị của WHO. [oecd-vn-2025:p088:text05]\n- Xe hybrid chiếm 3% số xe bán ra trong giai đoạn tháng 1–tháng 9 năm 2024. [oecd-vn-2025:p088:text05]",
+          "citations": [
+            "oecd-vn-2025:p088:text05"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 856,
+        "cached_tokens": 0,
+        "completion_tokens": 193,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.0006,
+        "latency_ms": 3137.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3126,
+        "cached_tokens": 0,
+        "completion_tokens": 299,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.0013795,
+        "latency_ms": 4260.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Tóm tắt theo báo cáo OECD:\n- Hà Nội được xếp hạng là thành phố ô nhiễm thứ 8 trên thế giới. [oecd-vn-2025:p088:text05]\n- Trung bình năm 2023, nồng độ PM2.5 của Việt Nam vào khoảng gần 6 lần mức khuyến nghị của WHO. [oecd-vn-2025:p088:text05]\n- Xe hybrid chiếm 3% số xe bán ra trong giai đoạn tháng 1–tháng 9 năm 2024. [oecd-vn-2025:p088:text05]",
+    "citations": [
+      "oecd-vn-2025:p088:text05"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p088:text05",
+      "oecd-vn-2025:p092:text01",
+      "oecd-vn-2025:p116:figure_4.18",
+      "oecd-vn-2025:p131:figure_4.27"
+    ],
+    "latency_s": 24.84,
+    "cost_usd": 0.001979,
+    "tokens": {
+      "prompt_tokens": 3982,
+      "cached_tokens": 0,
+      "completion_tokens": 492,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T25",
+    "question": "Mức lương tối thiểu vùng I của Việt Nam áp dụng năm 2024 là bao nhiêu đồng/tháng?",
+    "retrieval": [
+      {
+        "query": "minimum wage region I Vietnam 2024 dong per month",
+        "latency_ms": 17031.8,
+        "timing": {
+          "first_stage_ms": 76.04529999991883,
+          "rerank_ms": 16955.70370000007
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p027:text02",
+            "rank": 1,
+            "score": 0.2569,
+            "type": "text",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p027:figure_1.7",
+            "rank": 2,
+            "score": 0.0868,
+            "type": "figure",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 3,
+            "score": 0.0622,
+            "type": "text",
+            "page": 26
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 4,
+            "score": 0.0415,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p101:figure_4.4",
+            "rank": 5,
+            "score": 0.0316,
+            "type": "figure",
+            "page": 101
+          },
+          {
+            "id": "oecd-vn-2025:p054:text03",
+            "rank": 6,
+            "score": 0.0118,
+            "type": "text",
+            "page": 54
+          }
+        ]
+      },
+      {
+        "query": "regional minimum wage 2024 Vietnam minimum wage region I 2024 VND per month statutory minimum wage 2024 Viet Nam region I",
+        "latency_ms": 18429.9,
+        "timing": {
+          "first_stage_ms": 99.55549999995128,
+          "rerank_ms": 18330.336199999918
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p027:text02",
+            "rank": 1,
+            "score": 0.7768,
+            "type": "text",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 2,
+            "score": 0.6548,
+            "type": "text",
+            "page": 26
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.2358,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p027:figure_1.7",
+            "rank": 4,
+            "score": 0.2325,
+            "type": "figure",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p102:text01",
+            "rank": 5,
+            "score": 0.193,
+            "type": "text",
+            "page": 102
+          },
+          {
+            "id": "oecd-vn-2025:p065:figure_2.11",
+            "rank": 6,
+            "score": 0.1789,
+            "type": "figure",
+            "page": 65
+          }
+        ]
+      },
+      {
+        "query": "minimum wage 2024 Vietnam region I 'minimum wage region I' '2024' 'VND' 'regional minimum wage'",
+        "latency_ms": 22876.5,
+        "timing": {
+          "first_stage_ms": 109.5386999998027,
+          "rerank_ms": 22766.908499999998
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 1,
+            "score": 0.5489,
+            "type": "text",
+            "page": 26
+          },
+          {
+            "id": "oecd-vn-2025:p027:text02",
+            "rank": 2,
+            "score": 0.5018,
+            "type": "text",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p027:figure_1.7",
+            "rank": 3,
+            "score": 0.3289,
+            "type": "figure",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p101:figure_4.4",
+            "rank": 4,
+            "score": 0.2367,
+            "type": "figure",
+            "page": 101
+          },
+          {
+            "id": "oecd-vn-2025:p102:text01",
+            "rank": 5,
+            "score": 0.1836,
+            "type": "text",
+            "page": 102
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.1343,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "query": "minimum regional minimum wage 2024 Vietnam 'region I' 'VND' 'minimum wage 2024' 'regional minimum'",
+        "latency_ms": 19228.6,
+        "timing": {
+          "first_stage_ms": 95.82969999996749,
+          "rerank_ms": 19132.71070000019
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p027:text02",
+            "rank": 1,
+            "score": 0.4005,
+            "type": "text",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 2,
+            "score": 0.3966,
+            "type": "text",
+            "page": 26
+          },
+          {
+            "id": "oecd-vn-2025:p027:figure_1.7",
+            "rank": 3,
+            "score": 0.2833,
+            "type": "figure",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p102:text01",
+            "rank": 4,
+            "score": 0.1633,
+            "type": "text",
+            "page": 102
+          },
+          {
+            "id": "oecd-vn-2025:p101:figure_4.4",
+            "rank": 5,
+            "score": 0.1339,
+            "type": "figure",
+            "page": 101
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 6,
+            "score": 0.1186,
+            "type": "text",
+            "page": 1
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "minimum wage region I Vietnam 2024 dong per month"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "regional minimum wage 2024 Vietnam minimum wage region I 2024 VND per month statutory minimum wage 2024 Viet Nam region I"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "minimum wage 2024 Vietnam region I 'minimum wage region I' '2024' 'VND' 'regional minimum wage'"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "minimum regional minimum wage 2024 Vietnam 'region I' 'VND' 'minimum wage 2024' 'regional minimum'"
+        }
+      },
+      {
+        "step": 4,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Searched the report for 'minimum wage' and variants; found mentions of minimum wage increases (6% in 2024) but the report's text does not state the numeric value for regional minimum wage I in 2024. I searched pages: p26-27, p9, p101-102. The document does not contain the specific VND/month amount for region I in 2024."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 790,
+        "cached_tokens": 0,
+        "completion_tokens": 33,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002635,
+        "latency_ms": 1809.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5061,
+        "cached_tokens": 0,
+        "completion_tokens": 114,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00149325,
+        "latency_ms": 2306.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6513,
+        "cached_tokens": 4736,
+        "completion_tokens": 49,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0006606499999999999,
+        "latency_ms": 2268.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6694,
+        "cached_tokens": 5760,
+        "completion_tokens": 113,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0006035,
+        "latency_ms": 2443.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6856,
+        "cached_tokens": 0,
+        "completion_tokens": 100,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.001914,
+        "latency_ms": 2402.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 4
+      }
+    ],
+    "status": "abstained",
+    "reason": "Searched the report for 'minimum wage' and variants; found mentions of minimum wage increases (6% in 2024) but the report's text does not state the numeric value for regional minimum wage I in 2024. I searched pages: p26-27, p9, p101-102. The document does not contain the specific VND/month amount for region I in 2024.",
+    "searches": 4,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p026:text04",
+      "oecd-vn-2025:p027:figure_1.7",
+      "oecd-vn-2025:p027:text02",
+      "oecd-vn-2025:p054:text03",
+      "oecd-vn-2025:p065:figure_2.11",
+      "oecd-vn-2025:p101:figure_4.4",
+      "oecd-vn-2025:p102:text01"
+    ],
+    "latency_s": 88.8,
+    "cost_usd": 0.004935,
+    "tokens": {
+      "prompt_tokens": 25914,
+      "cached_tokens": 10496,
+      "completion_tokens": 409,
+      "reasoning_tokens": 128
+    }
+  },
+  {
+    "id": "T26",
+    "question": "Hệ số Gini của Việt Nam năm 2024 là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "Gini coefficient Vietnam 2024",
+        "latency_ms": 17152.4,
+        "timing": {
+          "first_stage_ms": 73.50180000003093,
+          "rerank_ms": 17078.876000000037
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p050:text04",
+            "rank": 1,
+            "score": 0.9483,
+            "type": "text",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 2,
+            "score": 0.858,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p099:figure_4.2",
+            "rank": 3,
+            "score": 0.4365,
+            "type": "figure",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p072:figure_3.1",
+            "rank": 4,
+            "score": 0.209,
+            "type": "figure",
+            "page": 72
+          },
+          {
+            "id": "oecd-vn-2025:p024:figure_1.4",
+            "rank": 5,
+            "score": 0.1691,
+            "type": "figure",
+            "page": 24
+          },
+          {
+            "id": "oecd-vn-2025:p051:figure_2.2",
+            "rank": 6,
+            "score": 0.1639,
+            "type": "figure",
+            "page": 51
+          }
+        ]
+      },
+      {
+        "query": "Gini 2024 Viet Nam 2024 Gini coefficient 2024 Vietnam OECD 2025 report",
+        "latency_ms": 20601.1,
+        "timing": {
+          "first_stage_ms": 85.15269999998054,
+          "rerank_ms": 20515.897400000085
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 1,
+            "score": 0.9607,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p050:text04",
+            "rank": 2,
+            "score": 0.9528,
+            "type": "text",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 3,
+            "score": 0.8978,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 4,
+            "score": 0.8767,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p023:text02",
+            "rank": 5,
+            "score": 0.8151,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 6,
+            "score": 0.7701,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Gini coefficient Vietnam 2024"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Gini 2024 Viet Nam 2024 Gini coefficient 2024 Vietnam OECD 2025 report"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Tài liệu OECD Economic Surveys: Viet Nam 2025 does not state a Gini coefficient for 2024. I searched for \"Gini coefficient Vietnam 2024\" and \"Gini 2024 Viet Nam 2024 Gini coefficient 2024 Vietnam OECD 2025 report\"; the report provides Gini for 2023 (0.37) [oecd-vn-2025:p050:text04] and Gini for 2022 (0.374) in the Basic statistics table [oecd-vn-2025:p009:basic_statistics:part2], and the figure on income inequality (Figure 2.2) shows data up to 2023 [oecd-vn-2025:p051:figure_2.2]. The report does not contain a 2024 Gini value."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 781,
+        "cached_tokens": 0,
+        "completion_tokens": 29,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00025325,
+        "latency_ms": 1611.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6290,
+        "cached_tokens": 0,
+        "completion_tokens": 108,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0017885,
+        "latency_ms": 2456.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 7100,
+        "cached_tokens": 5760,
+        "completion_tokens": 324,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.001127,
+        "latency_ms": 4878.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "abstained",
+    "reason": "Tài liệu OECD Economic Surveys: Viet Nam 2025 does not state a Gini coefficient for 2024. I searched for \"Gini coefficient Vietnam 2024\" and \"Gini 2024 Viet Nam 2024 Gini coefficient 2024 Vietnam OECD 2025 report\"; the report provides Gini for 2023 (0.37) [oecd-vn-2025:p050:text04] and Gini for 2022 (0.374) in the Basic statistics table [oecd-vn-2025:p009:basic_statistics:part2], and the figure on income inequality (Figure 2.2) shows data up to 2023 [oecd-vn-2025:p051:figure_2.2]. The report does not contain a 2024 Gini value.",
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p023:text02",
+      "oecd-vn-2025:p023:text03",
+      "oecd-vn-2025:p024:figure_1.4",
+      "oecd-vn-2025:p050:text04",
+      "oecd-vn-2025:p051:figure_2.2",
+      "oecd-vn-2025:p072:figure_3.1",
+      "oecd-vn-2025:p099:figure_4.2"
+    ],
+    "latency_s": 46.7,
+    "cost_usd": 0.003169,
+    "tokens": {
+      "prompt_tokens": 14171,
+      "cached_tokens": 5760,
+      "completion_tokens": 461,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "T27",
+    "question": "Xe điện thuần (BEV) chiếm chính xác bao nhiêu % số xe mới bán ra tại Việt Nam trong 9 tháng đầu năm 2024?",
+    "retrieval": [
+      {
+        "query": "battery electric vehicles share new car sales Vietnam Jan-Sep 2024 percentage",
+        "latency_ms": 16409.6,
+        "timing": {
+          "first_stage_ms": 86.27569999998741,
+          "rerank_ms": 16323.308999999881
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p088:text05",
+            "rank": 1,
+            "score": 0.7302,
+            "type": "text",
+            "page": 88
+          },
+          {
+            "id": "oecd-vn-2025:p089:text02",
+            "rank": 2,
+            "score": 0.1917,
+            "type": "text",
+            "page": 89
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.0854,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 4,
+            "score": 0.0364,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text01",
+            "rank": 5,
+            "score": 0.0294,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 6,
+            "score": 0.0167,
+            "type": "text",
+            "page": 21
+          }
+        ]
+      },
+      {
+        "query": "BEV share new vehicle sales Vietnam January-September 2024 'battery electric' 'January-September 2024' '9 months' Vietnam sales",
+        "latency_ms": 18034.4,
+        "timing": {
+          "first_stage_ms": 105.15170000007856,
+          "rerank_ms": 17929.20099999992
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p089:text02",
+            "rank": 1,
+            "score": 0.1376,
+            "type": "text",
+            "page": 89
+          },
+          {
+            "id": "oecd-vn-2025:p088:text05",
+            "rank": 2,
+            "score": 0.0171,
+            "type": "text",
+            "page": 88
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.0144,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p020:figure_1.1",
+            "rank": 4,
+            "score": 0.0115,
+            "type": "figure",
+            "page": 20
+          },
+          {
+            "id": "oecd-vn-2025:p028:figure_1.8",
+            "rank": 5,
+            "score": 0.0114,
+            "type": "figure",
+            "page": 28
+          },
+          {
+            "id": "oecd-vn-2025:p084:figure_3.9",
+            "rank": 6,
+            "score": 0.01,
+            "type": "figure",
+            "page": 84
+          }
+        ]
+      },
+      {
+        "query": "pure electric vehicles share 'January-September 2024' 'Vietnam' 'pure electric' 'share of new vehicles' percent '9 months' 'BEV'",
+        "latency_ms": 23307.4,
+        "timing": {
+          "first_stage_ms": 127.16449999993529,
+          "rerank_ms": 23180.221500000014
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p089:text02",
+            "rank": 1,
+            "score": 0.3129,
+            "type": "text",
+            "page": 89
+          },
+          {
+            "id": "oecd-vn-2025:p088:text05",
+            "rank": 2,
+            "score": 0.3055,
+            "type": "text",
+            "page": 88
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.0788,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p028:figure_1.8",
+            "rank": 4,
+            "score": 0.0685,
+            "type": "figure",
+            "page": 28
+          },
+          {
+            "id": "oecd-vn-2025:p084:figure_3.9",
+            "rank": 5,
+            "score": 0.0456,
+            "type": "figure",
+            "page": 84
+          },
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 6,
+            "score": 0.0259,
+            "type": "table",
+            "page": 77
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "battery electric vehicles share new car sales Vietnam Jan-Sep 2024 percentage"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "BEV share new vehicle sales Vietnam January-September 2024 'battery electric' 'January-September 2024' '9 months' Vietnam sales"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "pure electric vehicles share 'January-September 2024' 'Vietnam' 'pure electric' 'share of new vehicles' percent '9 months' 'BEV'"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Tài liệu đã được tìm kiếm trong báo cáo OECD Economic Surveys: Viet Nam 2025. Tôi đã tìm các đoạn chứa 'pure electric', 'EV', 'battery electric', 'BEV', 'January-September 2024', 'January-September' và 'hybrid'. Kết quả: báo cáo nêu rõ chỉ 3% là hybrid (January-September 2024) và ghi rằng 'pure electric vehicles (EVs) representing only a marginal proportion of sales of new vehicles' nhưng không cho tỉ lệ phần trăm chính xác cho BEV trong 9 tháng đầu năm 2024. Các chunk đã kiểm tra: oecd-vn-2025:p088:text05 và oecd-vn-2025:p089:text02. Do báo cáo không cung cấp giá trị phần trăm chính xác cho BEV trong giai đoạn này, tôi không thể cung cấp con số và không suy đoán."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 798,
+        "cached_tokens": 0,
+        "completion_tokens": 37,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002735,
+        "latency_ms": 1833.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3388,
+        "cached_tokens": 0,
+        "completion_tokens": 181,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.001209,
+        "latency_ms": 2709.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 7268,
+        "cached_tokens": 2688,
+        "completion_tokens": 184,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.0015802000000000001,
+        "latency_ms": 2755.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 7765,
+        "cached_tokens": 6784,
+        "completion_tokens": 408,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00123085,
+        "latency_ms": 6187.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "abstained",
+    "reason": "Tài liệu đã được tìm kiếm trong báo cáo OECD Economic Surveys: Viet Nam 2025. Tôi đã tìm các đoạn chứa 'pure electric', 'EV', 'battery electric', 'BEV', 'January-September 2024', 'January-September' và 'hybrid'. Kết quả: báo cáo nêu rõ chỉ 3% là hybrid (January-September 2024) và ghi rằng 'pure electric vehicles (EVs) representing only a marginal proportion of sales of new vehicles' nhưng không cho tỉ lệ phần trăm chính xác cho BEV trong 9 tháng đầu năm 2024. Các chunk đã kiểm tra: oecd-vn-2025:p088:text05 và oecd-vn-2025:p089:text02. Do báo cáo không cung cấp giá trị phần trăm chính xác cho BEV trong giai đoạn này, tôi không thể cung cấp con số và không suy đoán.",
+    "searches": 3,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p020:figure_1.1",
+      "oecd-vn-2025:p021:text01",
+      "oecd-vn-2025:p021:text04",
+      "oecd-vn-2025:p021:text05",
+      "oecd-vn-2025:p028:figure_1.8",
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p084:figure_3.9",
+      "oecd-vn-2025:p088:text05",
+      "oecd-vn-2025:p089:text02"
+    ],
+    "latency_s": 71.24,
+    "cost_usd": 0.004294,
+    "tokens": {
+      "prompt_tokens": 19219,
+      "cached_tokens": 9472,
+      "completion_tokens": 810,
+      "reasoning_tokens": 448
+    }
+  },
+  {
+    "id": "T28",
+    "question": "Giá bán lẻ điện bình quân của EVN năm 2024 là bao nhiêu đồng/kWh?",
+    "retrieval": [
+      {
+        "query": "EVN retail electricity price 2024 VND/kWh average retail price 2024 Vietnam EVN 2024 electricity tariff",
+        "latency_ms": 15425.8,
+        "timing": {
+          "first_stage_ms": 93.7644000000546,
+          "rerank_ms": 15332.027100000005
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p086:text01",
+            "rank": 1,
+            "score": 0.4612,
+            "type": "text",
+            "page": 86
+          },
+          {
+            "id": "oecd-vn-2025:p065:text03",
+            "rank": 2,
+            "score": 0.4251,
+            "type": "text",
+            "page": 65
+          },
+          {
+            "id": "oecd-vn-2025:p087:text02",
+            "rank": 3,
+            "score": 0.3318,
+            "type": "text",
+            "page": 87
+          },
+          {
+            "id": "oecd-vn-2025:p027:figure_1.7",
+            "rank": 4,
+            "score": 0.3237,
+            "type": "figure",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 5,
+            "score": 0.2961,
+            "type": "table",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p086:text02",
+            "rank": 6,
+            "score": 0.2522,
+            "type": "text",
+            "page": 86
+          }
+        ]
+      },
+      {
+        "query": "average retail electricity price 2024 VND/kWh EVN average retail tariff 2024 Viet Nam Electricity retail price 2024 VND/kWh 'average retail' 'EVN' 2024 site:OECD",
+        "latency_ms": 20347.5,
+        "timing": {
+          "first_stage_ms": 155.33559999994395,
+          "rerank_ms": 20192.149100000053
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p086:text01",
+            "rank": 1,
+            "score": 0.8146,
+            "type": "text",
+            "page": 86
+          },
+          {
+            "id": "oecd-vn-2025:p087:text02",
+            "rank": 2,
+            "score": 0.7708,
+            "type": "text",
+            "page": 87
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.6357,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p065:text03",
+            "rank": 4,
+            "score": 0.6321,
+            "type": "text",
+            "page": 65
+          },
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 5,
+            "score": 0.6041,
+            "type": "table",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p085:text03",
+            "rank": 6,
+            "score": 0.4939,
+            "type": "text",
+            "page": 85
+          }
+        ]
+      },
+      {
+        "query": "average retail electricity price EVN 2024 'VND/kWh' 'retail tariff' 'EVN' 2024 'retail price per kWh' Viet Nam 2024 electricity retail price EVN 'VND/kWh'",
+        "latency_ms": 21858.8,
+        "timing": {
+          "first_stage_ms": 183.68480000003728,
+          "rerank_ms": 21675.143700000037
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p087:text02",
+            "rank": 1,
+            "score": 0.9054,
+            "type": "text",
+            "page": 87
+          },
+          {
+            "id": "oecd-vn-2025:p086:text01",
+            "rank": 2,
+            "score": 0.8339,
+            "type": "text",
+            "page": 86
+          },
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 3,
+            "score": 0.761,
+            "type": "table",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p065:text03",
+            "rank": 4,
+            "score": 0.6685,
+            "type": "text",
+            "page": 65
+          },
+          {
+            "id": "oecd-vn-2025:p085:text03",
+            "rank": 5,
+            "score": 0.5657,
+            "type": "text",
+            "page": 85
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.5629,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "EVN retail electricity price 2024 VND/kWh average retail price 2024 Vietnam EVN 2024 electricity tariff"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "average retail electricity price 2024 VND/kWh EVN average retail tariff 2024 Viet Nam Electricity retail price 2024 VND/kWh 'average retail' 'EVN' 2024 site:OECD"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "average retail electricity price EVN 2024 'VND/kWh' 'retail tariff' 'EVN' 2024 'retail price per kWh' Viet Nam 2024 electricity retail price EVN 'VND/kWh'"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Tài liệu OECD Economic Surveys: Viet Nam 2025 đã được tìm kiếm với các truy vấn sau nhưng không tìm thấy giá bán lẻ điện bình quân của EVN năm 2024 (VND/kWh):\n- \"EVN retail electricity price 2024 VND/kWh average retail price 2024 Vietnam EVN 2024 electricity tariff\"\n- \"average retail electricity price 2024 VND/kWh EVN average retail tariff 2024 Viet Nam Electricity retail price 2024 VND/kWh 'average retail' 'EVN' 2024 site:OECD\"\n- \"average retail electricity price EVN 2024 'VND/kWh' 'retail tariff' 'EVN' 2024 'retail price per kWh' Viet Nam 2024 electricity retail price EVN 'VND/kWh'\"\nCác chunks đã kiểm tra: text trên trang 85-87 về EVN, bảng thống kê cơ bản, và Bảng 3.2; không thấy con số VND/kWh cho giá bán lẻ điện năm 2024."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 786,
+        "cached_tokens": 0,
+        "completion_tokens": 48,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002925,
+        "latency_ms": 1894.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3462,
+        "cached_tokens": 0,
+        "completion_tokens": 132,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0011295,
+        "latency_ms": 2965.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5093,
+        "cached_tokens": 2688,
+        "completion_tokens": 137,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0009424500000000001,
+        "latency_ms": 3108.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5294,
+        "cached_tokens": 4736,
+        "completion_tokens": 319,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0008958999999999999,
+        "latency_ms": 4895.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "abstained",
+    "reason": "Tài liệu OECD Economic Surveys: Viet Nam 2025 đã được tìm kiếm với các truy vấn sau nhưng không tìm thấy giá bán lẻ điện bình quân của EVN năm 2024 (VND/kWh):\n- \"EVN retail electricity price 2024 VND/kWh average retail price 2024 Vietnam EVN 2024 electricity tariff\"\n- \"average retail electricity price 2024 VND/kWh EVN average retail tariff 2024 Viet Nam Electricity retail price 2024 VND/kWh 'average retail' 'EVN' 2024 site:OECD\"\n- \"average retail electricity price EVN 2024 'VND/kWh' 'retail tariff' 'EVN' 2024 'retail price per kWh' Viet Nam 2024 electricity retail price EVN 'VND/kWh'\"\nCác chunks đã kiểm tra: text trên trang 85-87 về EVN, bảng thống kê cơ bản, và Bảng 3.2; không thấy con số VND/kWh cho giá bán lẻ điện năm 2024.",
+    "searches": 3,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p027:figure_1.7",
+      "oecd-vn-2025:p065:text03",
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p085:text03",
+      "oecd-vn-2025:p086:text01",
+      "oecd-vn-2025:p086:text02",
+      "oecd-vn-2025:p087:text02"
+    ],
+    "latency_s": 70.5,
+    "cost_usd": 0.00326,
+    "tokens": {
+      "prompt_tokens": 14635,
+      "cached_tokens": 7424,
+      "completion_tokens": 636,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "T29",
+    "question": "Năm 2024 Việt Nam xuất khẩu bao nhiêu tấn cà phê?",
+    "retrieval": [
+      {
+        "query": "Vietnam coffee exports 2024 tonnes coffee exports 2024 Vietnam OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 16391.0,
+        "timing": {
+          "first_stage_ms": 106.0406999999941,
+          "rerank_ms": 16284.961300000077
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 1,
+            "score": 0.967,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 2,
+            "score": 0.88,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 3,
+            "score": 0.8558,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p012:text02",
+            "rank": 4,
+            "score": 0.8441,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 5,
+            "score": 0.8225,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 6,
+            "score": 0.7794,
+            "type": "text",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "query": "coffee exports 2024 tonnes Vietnam \"coffee\" \"2024\" exports tonnes OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 21089.2,
+        "timing": {
+          "first_stage_ms": 90.48069999994368,
+          "rerank_ms": 20998.730000000025
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 1,
+            "score": 0.9691,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.9493,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 3,
+            "score": 0.8915,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p012:text02",
+            "rank": 4,
+            "score": 0.8375,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 5,
+            "score": 0.8343,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 6,
+            "score": 0.8328,
+            "type": "text",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "query": "Vietnam coffee exports tonnes 2024 'coffee exports' '2024' 'tonnes' site: oecd 'Viet Nam 2025' 'coffee'",
+        "latency_ms": 21974.5,
+        "timing": {
+          "first_stage_ms": 118.56940000006944,
+          "rerank_ms": 21855.88759999996
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 1,
+            "score": 0.8133,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.6665,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 3,
+            "score": 0.624,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 4,
+            "score": 0.5669,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 5,
+            "score": 0.4466,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.4128,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "query": "coffee exports Vietnam 2024 'coffee' 'export' '2024' 'tonnes' 'Viet Nam' 'OECD Economic Surveys'",
+        "latency_ms": 17199.0,
+        "timing": {
+          "first_stage_ms": 111.46740000003774,
+          "rerank_ms": 17087.473300000056
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 1,
+            "score": 0.9049,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 2,
+            "score": 0.8925,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 3,
+            "score": 0.8742,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 4,
+            "score": 0.8331,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 5,
+            "score": 0.8002,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 6,
+            "score": 0.7579,
+            "type": "text",
+            "page": 5
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam coffee exports 2024 tonnes coffee exports 2024 Vietnam OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "coffee exports 2024 tonnes Vietnam \"coffee\" \"2024\" exports tonnes OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam coffee exports tonnes 2024 'coffee exports' '2024' 'tonnes' site: oecd 'Viet Nam 2025' 'coffee'"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "coffee exports Vietnam 2024 'coffee' 'export' '2024' 'tonnes' 'Viet Nam' 'OECD Economic Surveys'"
+        }
+      },
+      {
+        "step": 4,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "I could not find any figure or table specifying Vietnam coffee export quantity in tonnes for 2024 in the OECD Economic Surveys: Viet Nam 2025. I searched the report for terms: \"coffee exports 2024\", \"coffee exports 2024 tonnes\", \"Vietnam coffee 2024\", and inspected chapters on trade and basic statistics; no chunk with coffee export tonnage was present in the search results (checked text chunks p.1, p.9, p.12, p.21-23)."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 782,
+        "cached_tokens": 0,
+        "completion_tokens": 43,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002815,
+        "latency_ms": 1703.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2214,
+        "cached_tokens": 0,
+        "completion_tokens": 110,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0007735,
+        "latency_ms": 2655.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2380,
+        "cached_tokens": 1664,
+        "completion_tokens": 120,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00046060000000000003,
+        "latency_ms": 2167.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4047,
+        "cached_tokens": 1664,
+        "completion_tokens": 117,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00087135,
+        "latency_ms": 2323.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4175,
+        "cached_tokens": 0,
+        "completion_tokens": 191,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00142575,
+        "latency_ms": 3180.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 4
+      }
+    ],
+    "status": "abstained",
+    "reason": "I could not find any figure or table specifying Vietnam coffee export quantity in tonnes for 2024 in the OECD Economic Surveys: Viet Nam 2025. I searched the report for terms: \"coffee exports 2024\", \"coffee exports 2024 tonnes\", \"Vietnam coffee 2024\", and inspected chapters on trade and basic statistics; no chunk with coffee export tonnage was present in the search results (checked text chunks p.1, p.9, p.12, p.21-23).",
+    "searches": 4,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p012:text02",
+      "oecd-vn-2025:p021:text02",
+      "oecd-vn-2025:p021:text04",
+      "oecd-vn-2025:p021:text05",
+      "oecd-vn-2025:p023:text03"
+    ],
+    "latency_s": 88.69,
+    "cost_usd": 0.003813,
+    "tokens": {
+      "prompt_tokens": 13598,
+      "cached_tokens": 3328,
+      "completion_tokens": 581,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "T30",
+    "question": "Tỷ lệ thất nghiệp của Thành phố Hồ Chí Minh năm 2024 là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "Ho Chi Minh City unemployment rate 2024 OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 19948.3,
+        "timing": {
+          "first_stage_ms": 90.71430000017244,
+          "rerank_ms": 19857.52579999985
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 1,
+            "score": 0.7591,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.7334,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 3,
+            "score": 0.7326,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p012:text02",
+            "rank": 4,
+            "score": 0.6397,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p103:text01",
+            "rank": 5,
+            "score": 0.3082,
+            "type": "text",
+            "page": 103
+          },
+          {
+            "id": "oecd-vn-2025:p023:text02",
+            "rank": 6,
+            "score": 0.2937,
+            "type": "text",
+            "page": 23
+          }
+        ]
+      },
+      {
+        "query": "Ho Chi Minh City unemployment rate 2024 Labour Force Survey Ho Chi Minh 2024 'unemployment rate' 'Ho Chi Minh' OECD Vietnam 2025",
+        "latency_ms": 21233.6,
+        "timing": {
+          "first_stage_ms": 116.5889999999763,
+          "rerank_ms": 21116.99980000003
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 1,
+            "score": 0.7176,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p021:text01",
+            "rank": 2,
+            "score": 0.6659,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 3,
+            "score": 0.6234,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p012:table_1",
+            "rank": 4,
+            "score": 0.5681,
+            "type": "table",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p059:table_2.2",
+            "rank": 5,
+            "score": 0.4391,
+            "type": "table",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p023:table_1.1",
+            "rank": 6,
+            "score": 0.3258,
+            "type": "table",
+            "page": 23
+          }
+        ]
+      },
+      {
+        "query": "Ho Chi Minh City unemployment rate 2024 'Ho Chi Minh' 'unemployment rate' '2024' Viet Nam 2025 OECD",
+        "latency_ms": 15211.9,
+        "timing": {
+          "first_stage_ms": 91.59230000000207,
+          "rerank_ms": 15120.33580000002
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 1,
+            "score": 0.719,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 2,
+            "score": 0.6158,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.5877,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p021:text01",
+            "rank": 4,
+            "score": 0.5397,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p056:text04",
+            "rank": 5,
+            "score": 0.5049,
+            "type": "text",
+            "page": 56
+          },
+          {
+            "id": "oecd-vn-2025:p059:table_2.2",
+            "rank": 6,
+            "score": 0.3871,
+            "type": "table",
+            "page": 59
+          }
+        ]
+      },
+      {
+        "query": "\"Ho Chi Minh\" unemployment rate 2024 \"city\" \"unemployment\" Viet Nam 2025 'Ho Chi Minh City' rate 2024 labour force survey 'Ho Chi Minh'",
+        "latency_ms": 18780.6,
+        "timing": {
+          "first_stage_ms": 129.5614000000569,
+          "rerank_ms": 18651.063699999897
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 1,
+            "score": 0.7769,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p059:table_2.2",
+            "rank": 2,
+            "score": 0.4061,
+            "type": "table",
+            "page": 59
+          },
+          {
+            "id": "oecd-vn-2025:p057:text01",
+            "rank": 3,
+            "score": 0.3741,
+            "type": "text",
+            "page": 57
+          },
+          {
+            "id": "oecd-vn-2025:p056:text04",
+            "rank": 4,
+            "score": 0.372,
+            "type": "text",
+            "page": 56
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 5,
+            "score": 0.3445,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p112:text02",
+            "rank": 6,
+            "score": 0.2507,
+            "type": "text",
+            "page": 112
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Ho Chi Minh City unemployment rate 2024 OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Ho Chi Minh City unemployment rate 2024 Labour Force Survey Ho Chi Minh 2024 'unemployment rate' 'Ho Chi Minh' OECD Vietnam 2025"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Ho Chi Minh City unemployment rate 2024 'Ho Chi Minh' 'unemployment rate' '2024' Viet Nam 2025 OECD"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "\"Ho Chi Minh\" unemployment rate 2024 \"city\" \"unemployment\" Viet Nam 2025 'Ho Chi Minh City' rate 2024 labour force survey 'Ho Chi Minh'"
+        }
+      },
+      {
+        "step": 4,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Không tìm thấy trong báo cáo OECD Economic Surveys: Viet Nam 2025 thông tin về tỷ lệ thất nghiệp riêng cho Thành phố Hồ Chí Minh năm 2024. Đã tìm các từ khóa: \"Ho Chi Minh City unemployment rate 2024\", \"Ho Chi Minh\" \"unemployment rate\" \"2024\" trong tài liệu; tìm thấy chỉ số thất nghiệp ở cấp quốc gia (Viet Nam) cho 2024 nhưng không có số cho TP. HCM."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 785,
+        "cached_tokens": 0,
+        "completion_tokens": 39,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00027425,
+        "latency_ms": 1688.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3250,
+        "cached_tokens": 0,
+        "completion_tokens": 55,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0009225,
+        "latency_ms": 1858.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5069,
+        "cached_tokens": 3072,
+        "completion_tokens": 115,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00080605,
+        "latency_ms": 2859.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5551,
+        "cached_tokens": 4736,
+        "completion_tokens": 126,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0005741499999999999,
+        "latency_ms": 3152.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6173,
+        "cached_tokens": 0,
+        "completion_tokens": 315,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00217325,
+        "latency_ms": 4868.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 4
+      }
+    ],
+    "status": "abstained",
+    "reason": "Không tìm thấy trong báo cáo OECD Economic Surveys: Viet Nam 2025 thông tin về tỷ lệ thất nghiệp riêng cho Thành phố Hồ Chí Minh năm 2024. Đã tìm các từ khóa: \"Ho Chi Minh City unemployment rate 2024\", \"Ho Chi Minh\" \"unemployment rate\" \"2024\" trong tài liệu; tìm thấy chỉ số thất nghiệp ở cấp quốc gia (Viet Nam) cho 2024 nhưng không có số cho TP. HCM.",
+    "searches": 4,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p012:table_1",
+      "oecd-vn-2025:p012:text02",
+      "oecd-vn-2025:p021:text01",
+      "oecd-vn-2025:p023:table_1.1",
+      "oecd-vn-2025:p023:text02",
+      "oecd-vn-2025:p056:text04",
+      "oecd-vn-2025:p057:text01",
+      "oecd-vn-2025:p059:table_2.2",
+      "oecd-vn-2025:p103:text01",
+      "oecd-vn-2025:p112:text02"
+    ],
+    "latency_s": 89.6,
+    "cost_usd": 0.00475,
+    "tokens": {
+      "prompt_tokens": 20828,
+      "cached_tokens": 7808,
+      "completion_tokens": 650,
+      "reasoning_tokens": 320
+    }
+  }
+]

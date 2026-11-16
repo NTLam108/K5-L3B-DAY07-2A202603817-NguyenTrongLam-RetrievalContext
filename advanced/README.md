@@ -229,6 +229,125 @@ Câu thiếu bằng chứng có thêm `absence_reason` và `check_method` (từ 
 .venv/Scripts/python.exe advanced/benchmark/check_benchmark.py
 ```
 
-## 5. Kết quả
+## 5. Agent: [agent.py](agent.py)
 
-_(Điền sau: cấu hình đã thử trên dev, trace, nhãn, metrics theo nhóm, lỗi, thời gian, chi phí.)_
+| Thành phần | Cấu hình đã chốt [configs/a_mini_rerank.json](configs/a_mini_rerank.json) |
+|---|---|
+| Retrieval | Dense `BAAI/bge-m3` (1024 chiều, max_seq 1024, exact cosine trong bộ nhớ, embedding cache ở `data/embeddings/`) + BM25 (k1 1,5, b 0,75) → RRF (k 60, top 30 mỗi bên) → rerank cross-encoder `BAAI/bge-reranker-v2-m3` trên 20 ứng viên → top 6 |
+| Context | Mỗi lần tìm thêm 6 chunk vào hội thoại, mỗi chunk tối đa 4 000 ký tự, kèm dòng `[chunk-id \| loại \| đối tượng \| trang PDF, trang in]`. Chunk đã hiện ở lượt trước được thay bằng "(already shown above)" |
+| Model | Agent `gpt-5-mini` (`reasoning_effort=low`), tool calling, `parallel_tool_calls=false`. `inspect_figure` cũng dùng `gpt-5-mini` |
+| Tool | `search_documents(query)`, `inspect_figure(chunk_id, question)`, `submit_answer(answer, citations)`, `abstain(reason)` |
+| Giới hạn | Tối đa 4 lần tìm, 2 lần inspect, 9 bước. Lượt đầu bắt buộc tìm. Hết lượt thì tool tương ứng bị gỡ |
+| Kiểm soát citation | Citation phải là chunk đã được tìm thấy; sai thì nhắc sửa 1 lần. Lỗi API thử lại 3 lần có backoff; vẫn lỗi thì ghi status `error`, không tạo câu trả lời giả |
+| Prompt | Viết query bằng tiếng Anh (tài liệu tiếng Anh); số "đọc từ toạ độ PDF" là xấp xỉ; mô tả vision chỉ đáng tin với số in sẵn; câu hỏi cần số trên hình mà chunk không có thì dùng `inspect_figure`; khác năm/vùng/chỉ tiêu thì không phải đáp án |
+
+`inspect_figure` gửi **ảnh crop gốc** của hình hoặc bảng cho vision model cùng một câu hỏi cụ thể. Ảnh chỉ được gửi nếu chunk của nó đã xuất hiện trong kết quả tìm kiếm. Runner chỉ đọc `id` và `question` từ file benchmark, nên đáp án và gold không đi vào agent. Chạy test bị chặn nếu cấu hình chưa có `frozen_at`.
+
+```powershell
+.venv/Scripts/python.exe advanced/agent.py --config advanced/configs/a_mini_rerank.json --split dev
+.venv/Scripts/python.exe advanced/review.py advanced/results/a_mini_rerank-dev            # review.md + labels.json
+.venv/Scripts/python.exe advanced/review.py advanced/results/a_mini_rerank-dev --metrics  # metrics.json từ nhãn
+.venv/Scripts/python.exe advanced/export_context.py advanced/results/a_mini_rerank-dev    # contexts.json
+```
+
+Cần thêm biến môi trường `OPENAI_API_KEY`, `EMBEDDING_MODEL=BAAI/bge-m3`, `RERANKER_MODEL` (xem `.env.example`). Lần chạy đầu phải embedding 488 chunk trên CPU, mất khoảng 7,5 phút; các lần sau đọc từ cache.
+
+**Mỗi lần chạy lưu trong `results/<cấu hình>-<split>/`:**
+- `traces.json`: mỗi lần tìm có query, top-6 (id, hạng, điểm, loại, trang) và thời gian; mỗi tool call kèm tham số; mỗi lần gọi model có token, token cached/reasoning, chi phí, độ trễ; với `inspect_figure` có thêm câu hỏi và câu trả lời của vision; cuối cùng là câu trả lời, citation, trạng thái và lỗi.
+- `contexts.json`: nội dung chính xác đã gửi model.
+- `summary.json`, `review.md`, `labels.json`, `metrics.json`.
+
+## 6. Kết quả
+
+### Chọn cấu hình trên dev
+
+| Cấu hình | Split | Đạt | Bảng | Ảnh | Biểu đồ | Multi-hop | Text | Thiếu bằng chứng | Lỗi hệ thống | Chi phí | Thời gian (trung vị) |
+|---|---|---:|---|---|---|---|---|---|---:|---:|---:|
+| `a_mini_rerank` | dev | **18/20 (90%)** | 3/3 | 3/3 | 2/4 | 3/3 | 3/3 | 4/4 | 0 | $0,057 | 39 s/câu |
+
+Chỉ chạy một cấu hình trên dev. Cấu hình này được chốt (`frozen_at` 2026-11-16) **trước** khi chạy test. Benchmark đã được commit trước đó, ở commit `53ebfce`.
+
+**Phân tích lỗi trên dev:**
+- **D08:** nợ chính phủ năm 2015 ghi khoảng 45%, StatLink là 46,1 (vượt dung sai ±1).
+- **D10:** câu trả lời kèm các giá trị vùng sai, ví dụ North Central khoảng 1,00 trong khi thực tế 0,86.
+
+Cả hai lỗi có cùng nguyên nhân: chunk của hình đã có bảng số đọc từ toạ độ (đúng tới 0,01), nhưng agent vẫn gọi `inspect_figure` để ước lượng bằng mắt. Mình không chỉnh cấu hình sau lỗi này, vì hai câu này được ghi nhận sau khi đã đạt 90% và người làm bài chọn chạy test ngay.
+
+### Test (cấu hình đã chốt, chạy một lần)
+
+| Chỉ số | Kết quả |
+|---|---|
+| **Tỷ lệ đạt** | **27/30 = 90,0%** (ngưỡng ≥ 27/30) |
+| Theo nhóm | Bảng 6/6 · Ảnh 3/5 · Biểu đồ 4/5 · Multi-hop 4/4 · Text 4/4 · Thiếu bằng chứng 6/6 |
+| Lỗi hệ thống / timeout | 0 |
+| Citation trúng chunk gold (tự động) | 24/24 câu có đáp án (kể cả 3 câu không đạt: lỗi nằm ở nội dung, không ở retrieval) |
+| Số lần tìm | 1 lần: 18 câu · 2 lần: 7 · 3 lần: 2 · 4 lần: 3 (các câu thiếu bằng chứng tìm 2–4 lần trước khi từ chối) |
+| `inspect_figure` | 6 lần ở 6 câu (5 đạt, 1 không đạt) |
+| Token | 294 093 input (84 736 cached), 17 986 output (9 024 reasoning) |
+| Chi phí API | **$0,0904** (agent $0,0856 + vision $0,0048), trung bình $0,003/câu |
+| Thời gian | Tổng 19,5 phút; trung vị 29 s/câu (min 20 s, max 90 s). Phần lớn là rerank trên CPU |
+
+Chi phí ingest một lần: mô tả 72 hình $0,208. Chi phí cả bước dev và test: $0,147.
+
+Kết quả từng câu (nhãn do người làm bài xác nhận sau khi đối chiếu PDF, ảnh crop và StatLink; lý do từng câu nằm trong [labels.json](results/a_mini_rerank-test/labels.json), câu trả lời đầy đủ trong [review.md](results/a_mini_rerank-test/review.md)):
+
+| ID | Nhóm | Trạng thái | Nhãn | Citation trúng gold | Tìm / inspect | Thời gian | Chi phí |
+|---|---|---|---|---|---|---:|---:|
+| T01 | Bảng | answered | đạt | có | 1 / 0 | 28 s | $0.0019 |
+| T02 | Bảng | answered | đạt | có | 1 / 0 | 25 s | $0.0019 |
+| T03 | Bảng | answered | đạt | có | 1 / 0 | 23 s | $0.0020 |
+| T04 | Bảng | answered | đạt | có | 1 / 0 | 23 s | $0.0016 |
+| T05 | Bảng | answered | đạt | có | 2 / 0 | 39 s | $0.0020 |
+| T06 | Bảng | answered | đạt | có | 1 / 0 | 22 s | $0.0016 |
+| T07 | Ảnh | answered | đạt | có | 1 / 1 | 30 s | $0.0042 |
+| T08 | Ảnh | answered | đạt | có | 1 / 0 | 23 s | $0.0028 |
+| T09 | Ảnh | answered | **không đạt** | có | 2 / 0 | 46 s | $0.0040 |
+| T10 | Ảnh | answered | đạt | có | 1 / 0 | 22 s | $0.0024 |
+| T11 | Ảnh | answered | **không đạt** | có | 1 / 1 | 32 s | $0.0039 |
+| T12 | Biểu đồ | answered | đạt | có | 2 / 1 | 46 s | $0.0050 |
+| T13 | Biểu đồ | answered | **không đạt** | có | 1 / 0 | 24 s | $0.0025 |
+| T14 | Biểu đồ | answered | đạt | có | 1 / 0 | 25 s | $0.0022 |
+| T15 | Biểu đồ | answered | đạt | có | 1 / 1 | 29 s | $0.0040 |
+| T16 | Biểu đồ | answered | đạt | có | 1 / 1 | 27 s | $0.0030 |
+| T17 | Multi-hop | answered | đạt | có | 2 / 0 | 41 s | $0.0030 |
+| T18 | Multi-hop | answered | đạt | có | 1 / 0 | 25 s | $0.0025 |
+| T19 | Multi-hop | answered | đạt | có | 1 / 0 | 24 s | $0.0022 |
+| T20 | Multi-hop | answered | đạt | có | 2 / 1 | 49 s | $0.0041 |
+| T21 | Text | answered | đạt | có | 1 / 0 | 20 s | $0.0018 |
+| T22 | Text | answered | đạt | có | 1 / 0 | 23 s | $0.0025 |
+| T23 | Text | answered | đạt | có | 2 / 0 | 43 s | $0.0031 |
+| T24 | Text | answered | đạt | có | 1 / 0 | 25 s | $0.0020 |
+| T25 | Thiếu bằng chứng | abstained | đạt | — | 4 / 0 | 89 s | $0.0049 |
+| T26 | Thiếu bằng chứng | abstained | đạt | — | 2 / 0 | 47 s | $0.0032 |
+| T27 | Thiếu bằng chứng | abstained | đạt | — | 3 / 0 | 71 s | $0.0043 |
+| T28 | Thiếu bằng chứng | abstained | đạt | — | 3 / 0 | 70 s | $0.0033 |
+| T29 | Thiếu bằng chứng | abstained | đạt | — | 4 / 0 | 89 s | $0.0038 |
+| T30 | Thiếu bằng chứng | abstained | đạt | — | 4 / 0 | 90 s | $0.0047 |
+
+### Phân tích lỗi test
+
+| Câu | Hiện tượng | Nguyên nhân |
+|---|---|---|
+| **T09** (Ảnh, Figure 3.2 raster) | Xác định đúng ngành điện lớn nhất và đốt nhiên liệu công nghiệp thứ hai. Nhưng giá trị đưa ra là 373 triệu tấn CO2, tức **tổng** phát thải CO2 (p074:text01), thay cho giá trị của ngành điện (khoảng 160 MtCO2e) | Biểu đồ vùng chồng dạng raster không có số liệu trong chunk. Agent không gọi `inspect_figure`, mà lấy một con số khác chỉ tiêu từ đoạn văn cùng trang. Đây đúng là kiểu lỗi "khác chỉ tiêu" mà prompt đã cảnh báo |
+| **T11** (Ảnh, Figure 2.1 raster) | Philippines cao nhất (đúng), nhưng ghi khoảng 7,3% (StatLink 6,75) và Việt Nam khoảng 1,8% (StatLink 0,96; văn bản ghi "less than 1%") | `inspect_figure` ước lượng sai trên biểu đồ cột ngang raster. Agent cũng không đối chiếu với đoạn văn "less than 1%" ở cùng trang |
+| **T13** (Biểu đồ, Figure 2.11 vector) | Đọc đúng 12,1% và 9,7%, nhưng ghi chênh lệch "≈ 1,3" (đúng là 2,4). Còn dẫn thêm số 11% từ văn bản (p064:text03) gây mâu thuẫn | Lỗi tính toán của model. Số liệu và retrieval đều đúng |
+
+**Ca biên đã được người chấm quyết định:** T18 đạt. Agent dùng ngưỡng 13 841,4 đọc từ toạ độ thay vì số in sẵn 13 845 trong ghi chú, nhưng kết quả 4 194 USD vẫn nằm trong dung sai đã công bố (4 100–4 300). Nếu chấm chặt theo key fact, kết quả sẽ là 26/30 (86,7%).
+
+**Nhận xét:**
+- **Retrieval không phải điểm nghẽn.** Citation trúng chunk gold ở 24/24 câu, và cả 3 câu không đạt đều đã tìm đúng hình.
+- **Lỗi nằm ở khâu đọc nội dung trực quan và suy luận.** Có ba kiểu:
+  - ước lượng bằng mắt trên ảnh raster (T11, và D08, D10 ở dev);
+  - dùng số khác chỉ tiêu (T09);
+  - tính sai (T13).
+- **Bảng và văn bản** đạt 14/14 câu có đáp án.
+- **Câu thiếu bằng chứng** đạt 6/6, gồm cả các bẫy: tỷ lệ 3% của xe hybrid, Gini 2023, giá FiT, tỷ lệ thất nghiệp cả nước.
+
+### Hạn chế và hướng cải thiện (chưa áp dụng; nếu áp dụng phải dùng bộ test mới)
+
+- **Biên an toàn rất mỏng:** 27/30 vừa đúng ngưỡng; một câu khác nhãn (như T18) là thành 86,7%. Model không cố định temperature, nên chạy lại có thể cho kết quả khác.
+- **Ưu tiên số từ toạ độ:** nếu chunk có "Data read from PDF vector coordinates" thì dùng số đó, không gọi `inspect_figure` (sửa D08, D10). Với hình raster, đối chiếu kết quả inspect với văn bản cùng trang (T11).
+- **Tính toán bằng tool:** thêm tool máy tính, hoặc kiểm tra lại phép tính trước khi trả lời (T13).
+- **Mở rộng chartdata:** hỗ trợ biểu đồ vùng, cột chồng, cột ngang. Với hình raster, có thể trích bảng số bằng vision lúc index, kèm kiểm chứng.
+- **Chi phí thời gian:** rerank trên CPU chiếm phần lớn độ trễ (20–90 s/câu); có GPU sẽ nhanh hơn nhiều.
+- **Chấm điểm:** một người chấm (Claude đề xuất nhãn, người làm bài xác nhận); chưa có đánh giá chéo.

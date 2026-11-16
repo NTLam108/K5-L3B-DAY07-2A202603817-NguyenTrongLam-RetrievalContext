@@ -1,0 +1,17 @@
+{
+  "pass": 27,
+  "total": 30,
+  "pass_rate": 0.9,
+  "by_group": {
+    "table": "6/6",
+    "image": "3/5",
+    "chart": "4/5",
+    "multihop": "4/4",
+    "text": "4/4",
+    "unanswerable": "6/6"
+  },
+  "system_errors": [],
+  "cost_usd_total": 0.0904,
+  "latency_s_total": 1170.5,
+  "latency_s_median": 29.08
+}

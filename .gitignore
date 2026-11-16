@@ -12,3 +12,5 @@ starter/results/
 
 # Tài liệu gốc thử thách nâng cao (tải lại bằng URL + SHA256 trong advanced/README)
 advanced/source/
+# Cache embedding của agent nâng cao (tự sinh lại khi chạy advanced/agent.py)
+advanced/data/embeddings/

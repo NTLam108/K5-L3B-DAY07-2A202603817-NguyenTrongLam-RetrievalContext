@@ -1,0 +1,3795 @@
+[
+  {
+    "id": "D01",
+    "question": "OECD dự báo lạm phát giá tiêu dùng và tỷ lệ thất nghiệp của Việt Nam năm 2026 là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "inflation 2026 Vietnam unemployment 2026 forecast OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 24750.1,
+        "timing": {
+          "first_stage_ms": 769.2600999998831,
+          "rerank_ms": 23980.76030000084
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 1,
+            "score": 0.985,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p024:text01",
+            "rank": 2,
+            "score": 0.967,
+            "type": "text",
+            "page": 24
+          },
+          {
+            "id": "oecd-vn-2025:p012:text02",
+            "rank": 3,
+            "score": 0.9523,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 4,
+            "score": 0.9418,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p046:table_1.6:part1",
+            "rank": 5,
+            "score": 0.8952,
+            "type": "table",
+            "page": 46
+          },
+          {
+            "id": "oecd-vn-2025:p022:text02",
+            "rank": 6,
+            "score": 0.8872,
+            "type": "text",
+            "page": 22
+          }
+        ]
+      },
+      {
+        "query": "consumer price inflation 2026 percent unemployment rate 2026 Vietnam projected OECD Economic Survey 2025 unemployment 2026 forecast Viet Nam 2026 inflation rate projected",
+        "latency_ms": 26196.9,
+        "timing": {
+          "first_stage_ms": 342.8022999996756,
+          "rerank_ms": 25852.057699999932
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p046:table_1.6:part1",
+            "rank": 1,
+            "score": 0.9831,
+            "type": "table",
+            "page": 46
+          },
+          {
+            "id": "oecd-vn-2025:p024:text01",
+            "rank": 2,
+            "score": 0.9697,
+            "type": "text",
+            "page": 24
+          },
+          {
+            "id": "oecd-vn-2025:p012:table_1",
+            "rank": 3,
+            "score": 0.921,
+            "type": "table",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p012:text02",
+            "rank": 4,
+            "score": 0.9055,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p021:text06",
+            "rank": 5,
+            "score": 0.8544,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 6,
+            "score": 0.8118,
+            "type": "text",
+            "page": 26
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "inflation 2026 Vietnam unemployment 2026 forecast OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "consumer price inflation 2026 percent unemployment rate 2026 Vietnam projected OECD Economic Survey 2025 unemployment 2026 forecast Viet Nam 2026 inflation rate projected"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "OECD dự báo cho Việt Nam năm 2026: lạm phát giá tiêu dùng (Consumer Price Inflation) khoảng 3.8% và tỷ lệ thất nghiệp (Unemployment rate) khoảng 3.0% [oecd-vn-2025:p012:table_1].",
+          "citations": [
+            "oecd-vn-2025:p012:table_1"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 790,
+        "cached_tokens": 0,
+        "completion_tokens": 41,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002795,
+        "latency_ms": 2118.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2505,
+        "cached_tokens": 0,
+        "completion_tokens": 55,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00073625,
+        "latency_ms": 2013.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3472,
+        "cached_tokens": 1664,
+        "completion_tokens": 164,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0008216,
+        "latency_ms": 3466.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "OECD dự báo cho Việt Nam năm 2026: lạm phát giá tiêu dùng (Consumer Price Inflation) khoảng 3.8% và tỷ lệ thất nghiệp (Unemployment rate) khoảng 3.0% [oecd-vn-2025:p012:table_1].",
+    "citations": [
+      "oecd-vn-2025:p012:table_1"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p012:table_1",
+      "oecd-vn-2025:p012:text02",
+      "oecd-vn-2025:p021:text06",
+      "oecd-vn-2025:p022:text02",
+      "oecd-vn-2025:p024:text01",
+      "oecd-vn-2025:p026:text04",
+      "oecd-vn-2025:p046:table_1.6:part1"
+    ],
+    "latency_s": 58.55,
+    "cost_usd": 0.001837,
+    "tokens": {
+      "prompt_tokens": 6767,
+      "cached_tokens": 1664,
+      "completion_tokens": 260,
+      "reasoning_tokens": 64
+    }
+  },
+  {
+    "id": "D02",
+    "question": "Khuyến nghị trước đây của OECD về việc ban hành luật bảo vệ người tố giác cho người lao động khu vực tư nhân đã được thực hiện đến đâu?",
+    "retrieval": [
+      {
+        "query": "whistleblower protection law private sector employees Viet Nam OECD recommendation implemented",
+        "latency_ms": 23623.0,
+        "timing": {
+          "first_stage_ms": 97.23620000113442,
+          "rerank_ms": 23525.70949999972
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p132:table_4.2",
+            "rank": 1,
+            "score": 0.908,
+            "type": "table",
+            "page": 132
+          },
+          {
+            "id": "oecd-vn-2025:p135:table_4.3:part3",
+            "rank": 2,
+            "score": 0.2414,
+            "type": "table",
+            "page": 135
+          },
+          {
+            "id": "oecd-vn-2025:p109:text05",
+            "rank": 3,
+            "score": 0.1558,
+            "type": "text",
+            "page": 109
+          },
+          {
+            "id": "oecd-vn-2025:p121:text04",
+            "rank": 4,
+            "score": 0.1036,
+            "type": "text",
+            "page": 121
+          },
+          {
+            "id": "oecd-vn-2025:p132:text03",
+            "rank": 5,
+            "score": 0.0931,
+            "type": "text",
+            "page": 132
+          },
+          {
+            "id": "oecd-vn-2025:p107:text05",
+            "rank": 6,
+            "score": 0.0583,
+            "type": "text",
+            "page": 107
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "whistleblower protection law private sector employees Viet Nam OECD recommendation implemented"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Khuyến nghị trước đây về việc ban hành một luật bảo vệ người tố giác cho người lao động khu vực tư nhân chưa được thực hiện: báo cáo ghi “No action taken.” [oecd-vn-2025:p132:table_4.2]",
+          "citations": [
+            "oecd-vn-2025:p132:table_4.2"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 796,
+        "cached_tokens": 0,
+        "completion_tokens": 35,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000269,
+        "latency_ms": 2053.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2936,
+        "cached_tokens": 0,
+        "completion_tokens": 160,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.001054,
+        "latency_ms": 2801.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Khuyến nghị trước đây về việc ban hành một luật bảo vệ người tố giác cho người lao động khu vực tư nhân chưa được thực hiện: báo cáo ghi “No action taken.” [oecd-vn-2025:p132:table_4.2]",
+    "citations": [
+      "oecd-vn-2025:p132:table_4.2"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p107:text05",
+      "oecd-vn-2025:p109:text05",
+      "oecd-vn-2025:p121:text04",
+      "oecd-vn-2025:p132:table_4.2",
+      "oecd-vn-2025:p132:text03",
+      "oecd-vn-2025:p135:table_4.3:part3"
+    ],
+    "latency_s": 28.48,
+    "cost_usd": 0.001323,
+    "tokens": {
+      "prompt_tokens": 3732,
+      "cached_tokens": 0,
+      "completion_tokens": 195,
+      "reasoning_tokens": 64
+    }
+  },
+  {
+    "id": "D03",
+    "question": "OECD dự báo tăng trưởng GDP thực của Việt Nam năm 2025 và 2026 là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "real GDP growth Vietnam 2025 2026 forecast OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 23563.1,
+        "timing": {
+          "first_stage_ms": 83.69180000045162,
+          "rerank_ms": 23479.36649999974
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p022:text02",
+            "rank": 1,
+            "score": 0.9971,
+            "type": "text",
+            "page": 22
+          },
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 2,
+            "score": 0.9911,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p012:text02",
+            "rank": 3,
+            "score": 0.9909,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 4,
+            "score": 0.9888,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p011:text01",
+            "rank": 5,
+            "score": 0.9416,
+            "type": "text",
+            "page": 11
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.9413,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "real GDP growth Vietnam 2025 2026 forecast OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "OECD dự báo tăng trưởng GDP thực của Việt Nam là 6.2% trong năm 2025 và 6.0% trong năm 2026. [oecd-vn-2025:p022:text02]",
+          "citations": [
+            "oecd-vn-2025:p022:text02"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 787,
+        "cached_tokens": 0,
+        "completion_tokens": 41,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00027875,
+        "latency_ms": 1440.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3058,
+        "cached_tokens": 0,
+        "completion_tokens": 149,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0010625,
+        "latency_ms": 2768.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "OECD dự báo tăng trưởng GDP thực của Việt Nam là 6.2% trong năm 2025 và 6.0% trong năm 2026. [oecd-vn-2025:p022:text02]",
+    "citations": [
+      "oecd-vn-2025:p022:text02"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p011:text01",
+      "oecd-vn-2025:p012:text02",
+      "oecd-vn-2025:p022:text02",
+      "oecd-vn-2025:p023:text03"
+    ],
+    "latency_s": 27.77,
+    "cost_usd": 0.001341,
+    "tokens": {
+      "prompt_tokens": 3845,
+      "cached_tokens": 0,
+      "completion_tokens": 190,
+      "reasoning_tokens": 64
+    }
+  },
+  {
+    "id": "D04",
+    "question": "Ngành nào chiếm tỷ trọng lớn nhất trong nợ của khu vực doanh nghiệp Việt Nam và bao nhiêu %? Ngành lớn thứ hai là gì?",
+    "retrieval": [
+      {
+        "query": "distribution of corporate debt by sector Vietnam largest sector share corporate debt sectors Vietnam 2024 2025 OECD Economic Surveys Viet Nam 2025 table",
+        "latency_ms": 23701.7,
+        "timing": {
+          "first_stage_ms": 123.80800000028103,
+          "rerank_ms": 23577.860900000815
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p031:figure_1.9",
+            "rank": 1,
+            "score": 0.924,
+            "type": "figure",
+            "page": 31
+          },
+          {
+            "id": "oecd-vn-2025:p032:figure_1.10",
+            "rank": 2,
+            "score": 0.9068,
+            "type": "figure",
+            "page": 32
+          },
+          {
+            "id": "oecd-vn-2025:p035:figure_1.13",
+            "rank": 3,
+            "score": 0.8388,
+            "type": "figure",
+            "page": 35
+          },
+          {
+            "id": "oecd-vn-2025:p030:text04",
+            "rank": 4,
+            "score": 0.7157,
+            "type": "text",
+            "page": 30
+          },
+          {
+            "id": "oecd-vn-2025:p034:text02",
+            "rank": 5,
+            "score": 0.6568,
+            "type": "text",
+            "page": 34
+          },
+          {
+            "id": "oecd-vn-2025:p025:text01",
+            "rank": 6,
+            "score": 0.5252,
+            "type": "text",
+            "page": 25
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "distribution of corporate debt by sector Vietnam largest sector share corporate debt sectors Vietnam 2024 2025 OECD Economic Surveys Viet Nam 2025 table"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Ngành chiếm tỷ trọng lớn nhất trong nợ khu vực doanh nghiệp là Property & construction (bất động sản và xây dựng) với 32%; ngành lớn thứ hai là Manufacturing (sản xuất) với 14% [oecd-vn-2025:p032:figure_1.10].",
+          "citations": [
+            "oecd-vn-2025:p032:figure_1.10"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 797,
+        "cached_tokens": 0,
+        "completion_tokens": 51,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00030125,
+        "latency_ms": 1854.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4504,
+        "cached_tokens": 0,
+        "completion_tokens": 170,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.001466,
+        "latency_ms": 2544.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Ngành chiếm tỷ trọng lớn nhất trong nợ khu vực doanh nghiệp là Property & construction (bất động sản và xây dựng) với 32%; ngành lớn thứ hai là Manufacturing (sản xuất) với 14% [oecd-vn-2025:p032:figure_1.10].",
+    "citations": [
+      "oecd-vn-2025:p032:figure_1.10"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p025:text01",
+      "oecd-vn-2025:p030:text04",
+      "oecd-vn-2025:p031:figure_1.9",
+      "oecd-vn-2025:p032:figure_1.10",
+      "oecd-vn-2025:p034:text02",
+      "oecd-vn-2025:p035:figure_1.13"
+    ],
+    "latency_s": 28.1,
+    "cost_usd": 0.001767,
+    "tokens": {
+      "prompt_tokens": 5301,
+      "cached_tokens": 0,
+      "completion_tokens": 221,
+      "reasoning_tokens": 64
+    }
+  },
+  {
+    "id": "D05",
+    "question": "Trong hình về tiềm năng năng lượng tái tạo của Việt Nam, hạng mục nào có tiềm năng lớn nhất và bao nhiêu GW? Tiềm năng điện gió trên bờ là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "renewable energy potential Vietnam GW onshore wind solar hydropower geothermal biomass figure",
+        "latency_ms": 23463.6,
+        "timing": {
+          "first_stage_ms": 97.81690000090748,
+          "rerank_ms": 23365.79720000009
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p082:figure_3.8",
+            "rank": 1,
+            "score": 0.9877,
+            "type": "figure",
+            "page": 82
+          },
+          {
+            "id": "oecd-vn-2025:p082:text01",
+            "rank": 2,
+            "score": 0.9798,
+            "type": "text",
+            "page": 82
+          },
+          {
+            "id": "oecd-vn-2025:p083:text01",
+            "rank": 3,
+            "score": 0.9433,
+            "type": "text",
+            "page": 83
+          },
+          {
+            "id": "oecd-vn-2025:p074:figure_3.3",
+            "rank": 4,
+            "score": 0.931,
+            "type": "figure",
+            "page": 74
+          },
+          {
+            "id": "oecd-vn-2025:p084:figure_3.9",
+            "rank": 5,
+            "score": 0.7936,
+            "type": "figure",
+            "page": 84
+          },
+          {
+            "id": "oecd-vn-2025:p085:text07",
+            "rank": 6,
+            "score": 0.7189,
+            "type": "text",
+            "page": 85
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "renewable energy potential Vietnam GW onshore wind solar hydropower geothermal biomass figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo hình Figure 3.8, hạng mục có tiềm năng lớn nhất là “NZ” với 271 GW; tiềm năng điện gió trên bờ (Wind Onshore) là 217 GW [oecd-vn-2025:p082:figure_3.8] (cũng được nêu trong văn bản phụ trợ) [oecd-vn-2025:p082:text01].",
+          "citations": [
+            "oecd-vn-2025:p082:figure_3.8",
+            "oecd-vn-2025:p082:text01"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 809,
+        "cached_tokens": 0,
+        "completion_tokens": 38,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00027825,
+        "latency_ms": 1357.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4405,
+        "cached_tokens": 0,
+        "completion_tokens": 332,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00176525,
+        "latency_ms": 5842.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo hình Figure 3.8, hạng mục có tiềm năng lớn nhất là “NZ” với 271 GW; tiềm năng điện gió trên bờ (Wind Onshore) là 217 GW [oecd-vn-2025:p082:figure_3.8] (cũng được nêu trong văn bản phụ trợ) [oecd-vn-2025:p082:text01].",
+    "citations": [
+      "oecd-vn-2025:p082:figure_3.8",
+      "oecd-vn-2025:p082:text01"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p074:figure_3.3",
+      "oecd-vn-2025:p082:figure_3.8",
+      "oecd-vn-2025:p082:text01",
+      "oecd-vn-2025:p083:text01",
+      "oecd-vn-2025:p084:figure_3.9",
+      "oecd-vn-2025:p085:text07"
+    ],
+    "latency_s": 30.66,
+    "cost_usd": 0.002043,
+    "tokens": {
+      "prompt_tokens": 5214,
+      "cached_tokens": 0,
+      "completion_tokens": 370,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "D06",
+    "question": "Theo hình so sánh tổng thu ngân sách (% GDP) giữa Việt Nam và các nước ASEAN, thu ngân sách của Việt Nam đạt đỉnh vào năm nào (khoảng bao nhiêu % GDP), và nước nào có tỷ lệ thấp nhất trong suốt giai đoạn?",
+    "retrieval": [
+      {
+        "query": "total tax revenue % of GDP Vietnam ASEAN figure",
+        "latency_ms": 22634.2,
+        "timing": {
+          "first_stage_ms": 76.77590000093915,
+          "rerank_ms": 22557.360299999345
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p040:text02",
+            "rank": 1,
+            "score": 0.9928,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p040:text03",
+            "rank": 2,
+            "score": 0.9822,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p041:figure_1.20",
+            "rank": 3,
+            "score": 0.9507,
+            "type": "figure",
+            "page": 41
+          },
+          {
+            "id": "oecd-vn-2025:p040:figure_1.19",
+            "rank": 4,
+            "score": 0.9026,
+            "type": "figure",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p040:text04",
+            "rank": 5,
+            "score": 0.7325,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p041:text01",
+            "rank": 6,
+            "score": 0.5051,
+            "type": "text",
+            "page": 41
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "total tax revenue % of GDP Vietnam ASEAN figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p040:figure_1.19",
+          "question": "What is the approximate value (percent of GDP) of Vietnam's highest point on the red line and in which year does this peak occur? Please give the percent to one decimal if possible, or say 'approximately X%'."
+        }
+      },
+      {
+        "step": 2,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p040:figure_1.19",
+          "question": "Which country’s line remains the lowest for most of the period 2002-2022 (identify the country name shown in the legend) — is it Indonesia, Malaysia or another? Please answer with the country name."
+        }
+      },
+      {
+        "step": 3,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo biểu đồ so sánh (Figure 1.19), thu ngân sách của Việt Nam đạt đỉnh vào khoảng năm 2008, khoảng 21.2% của GDP (khoảng). Trong suốt giai đoạn 2002–2022, nước có tỷ lệ thấp nhất phần lớn là Indonesia.\n",
+          "citations": [
+            "oecd-vn-2025:p040:figure_1.19"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 821,
+        "cached_tokens": 0,
+        "completion_tokens": 31,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00026725,
+        "latency_ms": 2029.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3719,
+        "cached_tokens": 0,
+        "completion_tokens": 215,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00135975,
+        "latency_ms": 3131.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1451,
+        "cached_tokens": 0,
+        "completion_tokens": 109,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00058075,
+        "latency_ms": 2368.1,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p040:figure_1.19",
+        "question": "What is the approximate value (percent of GDP) of Vietnam's highest point on the red line and in which year does this peak occur? Please give the percent to one decimal if possible, or say 'approximately X%'.",
+        "answer": "Vietnam's red line peaks around 2008 at approximately 21.2% of GDP (approximate, read from the plotted peak just above the 21% gridline)."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3868,
+        "cached_tokens": 2688,
+        "completion_tokens": 342,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.0010462,
+        "latency_ms": 3419.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1450,
+        "cached_tokens": 0,
+        "completion_tokens": 74,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0005105,
+        "latency_ms": 2344.8,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p040:figure_1.19",
+        "question": "Which country’s line remains the lowest for most of the period 2002-2022 (identify the country name shown in the legend) — is it Indonesia, Malaysia or another? Please answer with the country name.",
+        "answer": "Indonesia"
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3910,
+        "cached_tokens": 0,
+        "completion_tokens": 301,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.0015795,
+        "latency_ms": 3028.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo biểu đồ so sánh (Figure 1.19), thu ngân sách của Việt Nam đạt đỉnh vào khoảng năm 2008, khoảng 21.2% của GDP (khoảng). Trong suốt giai đoạn 2002–2022, nước có tỷ lệ thấp nhất phần lớn là Indonesia.",
+    "citations": [
+      "oecd-vn-2025:p040:figure_1.19"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 2,
+    "context_ids": [
+      "oecd-vn-2025:p040:figure_1.19",
+      "oecd-vn-2025:p040:text02",
+      "oecd-vn-2025:p040:text03",
+      "oecd-vn-2025:p040:text04",
+      "oecd-vn-2025:p041:figure_1.20",
+      "oecd-vn-2025:p041:text01"
+    ],
+    "latency_s": 38.97,
+    "cost_usd": 0.005344,
+    "tokens": {
+      "prompt_tokens": 15219,
+      "cached_tokens": 2688,
+      "completion_tokens": 1072,
+      "reasoning_tokens": 704
+    }
+  },
+  {
+    "id": "D07",
+    "question": "Từ năm nào tiêu thụ than của Việt Nam bắt đầu vượt sản xuất than trong nước, và năm 2023 tiêu thụ gấp khoảng bao nhiêu lần sản xuất?",
+    "retrieval": [
+      {
+        "query": "Vietnam coal consumption exceed domestic production year 2023 consumption multiple of production",
+        "latency_ms": 23344.3,
+        "timing": {
+          "first_stage_ms": 95.85160000096948,
+          "rerank_ms": 23248.459500000536
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p082:figure_3.7",
+            "rank": 1,
+            "score": 0.9918,
+            "type": "figure",
+            "page": 82
+          },
+          {
+            "id": "oecd-vn-2025:p075:text01",
+            "rank": 2,
+            "score": 0.9282,
+            "type": "text",
+            "page": 75
+          },
+          {
+            "id": "oecd-vn-2025:p074:figure_3.3",
+            "rank": 3,
+            "score": 0.8266,
+            "type": "figure",
+            "page": 74
+          },
+          {
+            "id": "oecd-vn-2025:p081:text02",
+            "rank": 4,
+            "score": 0.8171,
+            "type": "text",
+            "page": 81
+          },
+          {
+            "id": "oecd-vn-2025:p083:text01",
+            "rank": 5,
+            "score": 0.785,
+            "type": "text",
+            "page": 83
+          },
+          {
+            "id": "oecd-vn-2025:p073:text02",
+            "rank": 6,
+            "score": 0.566,
+            "type": "text",
+            "page": 73
+          }
+        ]
+      },
+      {
+        "query": "Figure 3.7 coal consumption 2023 exajoules 'coal consumption' 'Figure 3.7' Energy Institute 2023 consumption value",
+        "latency_ms": 23173.8,
+        "timing": {
+          "first_stage_ms": 124.77639999997336,
+          "rerank_ms": 23049.009499998647
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p082:figure_3.7",
+            "rank": 1,
+            "score": 0.9906,
+            "type": "figure",
+            "page": 82
+          },
+          {
+            "id": "oecd-vn-2025:p074:figure_3.3",
+            "rank": 2,
+            "score": 0.9529,
+            "type": "figure",
+            "page": 74
+          },
+          {
+            "id": "oecd-vn-2025:p015:figure_3",
+            "rank": 3,
+            "score": 0.7619,
+            "type": "figure",
+            "page": 15
+          },
+          {
+            "id": "oecd-vn-2025:p081:figure_3.6",
+            "rank": 4,
+            "score": 0.7086,
+            "type": "figure",
+            "page": 81
+          },
+          {
+            "id": "oecd-vn-2025:p075:text01",
+            "rank": 5,
+            "score": 0.4827,
+            "type": "text",
+            "page": 75
+          },
+          {
+            "id": "oecd-vn-2025:p087:text01",
+            "rank": 6,
+            "score": 0.4609,
+            "type": "text",
+            "page": 87
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam coal consumption exceed domestic production year 2023 consumption multiple of production"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Figure 3.7 coal consumption 2023 exajoules 'coal consumption' 'Figure 3.7' Energy Institute 2023 consumption value"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p082:figure_3.7",
+          "question": "What are the approximate numeric values in exajoules for coal consumption and coal production in 2023 as read from the chart? Please give approximate values for both series for 2023."
+        }
+      },
+      {
+        "step": 3,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Tiêu thụ than bắt đầu vượt sản xuất trong nước khoảng từ năm 2015 (từ khoảng 2015 trở đi tiêu thụ > sản xuất) [oecd-vn-2025:p082:figure_3.7].\n\nNăm 2023, tiêu thụ khoảng 2.2–2.3 exajoules và sản xuất khoảng 1.0–1.1 exajoules (xấp xỉ, đọc từ biểu đồ), suy ra tiêu thụ gấp khoảng 2.0–2.3 lần sản xuất. Ví dụ: lấy giá trị giữa khoảng: 2.25 / 1.07 ≈ 2.1 lần (khoảng) [oecd-vn-2025:p082:figure_3.7].",
+          "citations": [
+            "oecd-vn-2025:p082:figure_3.7"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 802,
+        "cached_tokens": 0,
+        "completion_tokens": 100,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0004005,
+        "latency_ms": 1850.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4153,
+        "cached_tokens": 0,
+        "completion_tokens": 182,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00140225,
+        "latency_ms": 3899.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6185,
+        "cached_tokens": 3712,
+        "completion_tokens": 337,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.0013850499999999999,
+        "latency_ms": 4229.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1261,
+        "cached_tokens": 0,
+        "completion_tokens": 187,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00068925,
+        "latency_ms": 2394.2,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p082:figure_3.7",
+        "question": "What are the approximate numeric values in exajoules for coal consumption and coal production in 2023 as read from the chart? Please give approximate values for both series for 2023.",
+        "answer": "- Coal consumption (orange): ≈ 2.2–2.3 EJ in 2023 (approximate).\n- Coal production (blue): ≈ 1.0–1.1 EJ in 2023 (approximate)."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6342,
+        "cached_tokens": 5760,
+        "completion_tokens": 404,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.0010975,
+        "latency_ms": 6120.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "answered",
+    "answer": "Tiêu thụ than bắt đầu vượt sản xuất trong nước khoảng từ năm 2015 (từ khoảng 2015 trở đi tiêu thụ > sản xuất) [oecd-vn-2025:p082:figure_3.7].\n\nNăm 2023, tiêu thụ khoảng 2.2–2.3 exajoules và sản xuất khoảng 1.0–1.1 exajoules (xấp xỉ, đọc từ biểu đồ), suy ra tiêu thụ gấp khoảng 2.0–2.3 lần sản xuất. Ví dụ: lấy giá trị giữa khoảng: 2.25 / 1.07 ≈ 2.1 lần (khoảng) [oecd-vn-2025:p082:figure_3.7].",
+    "citations": [
+      "oecd-vn-2025:p082:figure_3.7"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p015:figure_3",
+      "oecd-vn-2025:p073:text02",
+      "oecd-vn-2025:p074:figure_3.3",
+      "oecd-vn-2025:p075:text01",
+      "oecd-vn-2025:p081:figure_3.6",
+      "oecd-vn-2025:p081:text02",
+      "oecd-vn-2025:p082:figure_3.7",
+      "oecd-vn-2025:p083:text01",
+      "oecd-vn-2025:p087:text01"
+    ],
+    "latency_s": 65.1,
+    "cost_usd": 0.004975,
+    "tokens": {
+      "prompt_tokens": 18743,
+      "cached_tokens": 9472,
+      "completion_tokens": 1210,
+      "reasoning_tokens": 768
+    }
+  },
+  {
+    "id": "D08",
+    "question": "Nợ chính phủ của Việt Nam (% GDP) thay đổi thế nào từ năm 2015 đến năm 2023 theo hình so sánh với các nước OECD và ASEAN?",
+    "retrieval": [
+      {
+        "query": "government debt % of GDP Vietnam 2015-2023 comparison OECD ASEAN figure",
+        "latency_ms": 21641.0,
+        "timing": {
+          "first_stage_ms": 103.54550000010931,
+          "rerank_ms": 21537.4613999993
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p037:text01",
+            "rank": 1,
+            "score": 0.9981,
+            "type": "text",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p038:figure_1.17",
+            "rank": 2,
+            "score": 0.9774,
+            "type": "figure",
+            "page": 38
+          },
+          {
+            "id": "oecd-vn-2025:p031:figure_1.9",
+            "rank": 3,
+            "score": 0.97,
+            "type": "figure",
+            "page": 31
+          },
+          {
+            "id": "oecd-vn-2025:p040:text02",
+            "rank": 4,
+            "score": 0.9692,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p036:figure_1.14",
+            "rank": 5,
+            "score": 0.9673,
+            "type": "figure",
+            "page": 36
+          },
+          {
+            "id": "oecd-vn-2025:p030:text04",
+            "rank": 6,
+            "score": 0.9635,
+            "type": "text",
+            "page": 30
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "government debt % of GDP Vietnam 2015-2023 comparison OECD ASEAN figure"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p038:figure_1.17",
+          "question": "For the country code VNM (Vietnam) in this figure, what are the 2023 and 2015 government debt values as % of GDP? Provide approximate numbers and indicate if 2015 is higher or lower than 2023."
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Nợ chính phủ của Việt Nam giảm rõ rệt từ giữa thập niên 2010 tới nay: theo hình, nợ khoảng 45% GDP vào năm 2015 và khoảng 34% GDP vào năm 2023 (báo cáo nêu cụ thể nợ giảm xuống 33.5% GDP năm 2023) — tức là 2015 cao hơn 2023 và nợ hiện vẫn thấp so với các nước OECD và các đối tác ASEAN được so sánh trong hình [oecd-vn-2025:p038:figure_1.17] [oecd-vn-2025:p037:text01].",
+          "citations": [
+            "oecd-vn-2025:p038:figure_1.17",
+            "oecd-vn-2025:p037:text01"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 800,
+        "cached_tokens": 0,
+        "completion_tokens": 38,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000276,
+        "latency_ms": 1959.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4727,
+        "cached_tokens": 0,
+        "completion_tokens": 219,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00161975,
+        "latency_ms": 3686.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1275,
+        "cached_tokens": 0,
+        "completion_tokens": 393,
+        "reasoning_tokens": 320,
+        "cost_usd": 0.00110475,
+        "latency_ms": 4596.6,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p038:figure_1.17",
+        "question": "For the country code VNM (Vietnam) in this figure, what are the 2023 and 2015 government debt values as % of GDP? Provide approximate numbers and indicate if 2015 is higher or lower than 2023.",
+        "answer": "For VNM (Vietnam):\n- 2023 government debt ≈ 36% of GDP (about 34–38%).\n- 2015 government debt ≈ 45% of GDP (about 42–48%).\n\n2015 is higher than 2023 (debt declined since 2015)."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4908,
+        "cached_tokens": 3712,
+        "completion_tokens": 382,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.0011558,
+        "latency_ms": 4075.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Nợ chính phủ của Việt Nam giảm rõ rệt từ giữa thập niên 2010 tới nay: theo hình, nợ khoảng 45% GDP vào năm 2015 và khoảng 34% GDP vào năm 2023 (báo cáo nêu cụ thể nợ giảm xuống 33.5% GDP năm 2023) — tức là 2015 cao hơn 2023 và nợ hiện vẫn thấp so với các nước OECD và các đối tác ASEAN được so sánh trong hình [oecd-vn-2025:p038:figure_1.17] [oecd-vn-2025:p037:text01].",
+    "citations": [
+      "oecd-vn-2025:p038:figure_1.17",
+      "oecd-vn-2025:p037:text01"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p030:text04",
+      "oecd-vn-2025:p031:figure_1.9",
+      "oecd-vn-2025:p036:figure_1.14",
+      "oecd-vn-2025:p037:text01",
+      "oecd-vn-2025:p038:figure_1.17",
+      "oecd-vn-2025:p040:text02"
+    ],
+    "latency_s": 35.96,
+    "cost_usd": 0.004156,
+    "tokens": {
+      "prompt_tokens": 11710,
+      "cached_tokens": 3712,
+      "completion_tokens": 1032,
+      "reasoning_tokens": 640
+    }
+  },
+  {
+    "id": "D09",
+    "question": "Tỷ trọng giá trị gia tăng dịch vụ trong nước hàm chứa trong tổng xuất khẩu của Việt Nam là khoảng bao nhiêu %, và Việt Nam đứng ở đâu so với các nước được so sánh?",
+    "retrieval": [
+      {
+        "query": "domestic value added share of gross exports Vietnam compared to peers \"domestic value-added\" \"gross exports\" Vietnam OECD Economic Surveys 2025",
+        "latency_ms": 20505.2,
+        "timing": {
+          "first_stage_ms": 143.37629999863566,
+          "rerank_ms": 20361.818100000164
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p122:text01",
+            "rank": 1,
+            "score": 0.9914,
+            "type": "text",
+            "page": 122
+          },
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 2,
+            "score": 0.9781,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p122:text03",
+            "rank": 3,
+            "score": 0.9421,
+            "type": "text",
+            "page": 122
+          },
+          {
+            "id": "oecd-vn-2025:p111:text02",
+            "rank": 4,
+            "score": 0.9396,
+            "type": "text",
+            "page": 111
+          },
+          {
+            "id": "oecd-vn-2025:p022:text02",
+            "rank": 5,
+            "score": 0.8655,
+            "type": "text",
+            "page": 22
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 6,
+            "score": 0.8562,
+            "type": "text",
+            "page": 1
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "domestic value added share of gross exports Vietnam compared to peers \"domestic value-added\" \"gross exports\" Vietnam OECD Economic Surveys 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Tỷ trọng giá trị gia tăng dịch vụ trong nước (domestic services embedded in total exports) của Việt Nam là khoảng 12% vào năm 2018 (trước đó 17% năm 2005). So với các nước ASEAN được so sánh, con số này thấp hơn rõ: các nước ASEAN có tỷ trọng dịch vụ nội địa trong xuất khẩu khoảng 27%–40% (giai đoạn so sánh) [oecd-vn-2025:p122:text01].",
+          "citations": [
+            "oecd-vn-2025:p122:text01"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 806,
+        "cached_tokens": 0,
+        "completion_tokens": 115,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0004315,
+        "latency_ms": 1732.6,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2214,
+        "cached_tokens": 0,
+        "completion_tokens": 333,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.0012195,
+        "latency_ms": 4603.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Tỷ trọng giá trị gia tăng dịch vụ trong nước (domestic services embedded in total exports) của Việt Nam là khoảng 12% vào năm 2018 (trước đó 17% năm 2005). So với các nước ASEAN được so sánh, con số này thấp hơn rõ: các nước ASEAN có tỷ trọng dịch vụ nội địa trong xuất khẩu khoảng 27%–40% (giai đoạn so sánh) [oecd-vn-2025:p122:text01].",
+    "citations": [
+      "oecd-vn-2025:p122:text01"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p022:text02",
+      "oecd-vn-2025:p023:text03",
+      "oecd-vn-2025:p111:text02",
+      "oecd-vn-2025:p122:text01",
+      "oecd-vn-2025:p122:text03"
+    ],
+    "latency_s": 26.84,
+    "cost_usd": 0.001651,
+    "tokens": {
+      "prompt_tokens": 3020,
+      "cached_tokens": 0,
+      "completion_tokens": 448,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "D10",
+    "question": "Theo tỷ lệ thu nhập bình quân đầu người của từng vùng so với cả nước, vùng nào cao nhất và vùng nào thấp nhất, với giá trị xấp xỉ?",
+    "retrieval": [
+      {
+        "query": "regional income per capita as percent of national average Viet Nam regions 'per cent of national average' 'regions' 'income per capita' 'Viet Nam'",
+        "latency_ms": 22783.4,
+        "timing": {
+          "first_stage_ms": 124.3785000006028,
+          "rerank_ms": 22658.96409999914
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 1,
+            "score": 0.4831,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p011:text02",
+            "rank": 2,
+            "score": 0.4017,
+            "type": "text",
+            "page": 11
+          },
+          {
+            "id": "oecd-vn-2025:p099:figure_4.2",
+            "rank": 3,
+            "score": 0.3723,
+            "type": "figure",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p050:text02",
+            "rank": 4,
+            "score": 0.3568,
+            "type": "text",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p040:text04",
+            "rank": 5,
+            "score": 0.3471,
+            "type": "text",
+            "page": 40
+          },
+          {
+            "id": "oecd-vn-2025:p040:text02",
+            "rank": 6,
+            "score": 0.2672,
+            "type": "text",
+            "page": 40
+          }
+        ]
+      },
+      {
+        "query": "income per capita by region percent of national average Viet Nam regions 'per cent of national average' 'region' 'income per capita' 2023 provinces Mekong Red River Delta 'per cent of national average' OECD report Viet Nam 2025",
+        "latency_ms": 23607.1,
+        "timing": {
+          "first_stage_ms": 215.37400000124762,
+          "rerank_ms": 23391.747799998484
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 1,
+            "score": 0.8867,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 2,
+            "score": 0.8765,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p099:figure_4.2",
+            "rank": 3,
+            "score": 0.8133,
+            "type": "figure",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p051:figure_2.2",
+            "rank": 4,
+            "score": 0.7813,
+            "type": "figure",
+            "page": 51
+          },
+          {
+            "id": "oecd-vn-2025:p104:text02",
+            "rank": 5,
+            "score": 0.7652,
+            "type": "text",
+            "page": 104
+          },
+          {
+            "id": "oecd-vn-2025:p040:text04",
+            "rank": 6,
+            "score": 0.727,
+            "type": "text",
+            "page": 40
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "regional income per capita as percent of national average Viet Nam regions 'per cent of national average' 'regions' 'income per capita' 'Viet Nam'"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "income per capita by region percent of national average Viet Nam regions 'per cent of national average' 'region' 'income per capita' 2023 provinces Mekong Red River Delta 'per cent of national average' OECD report Viet Nam 2025"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "inspect_figure",
+        "arguments": {
+          "chunk_id": "oecd-vn-2025:p051:figure_2.2",
+          "question": "In panel D (Average income per capita Ratio province / whole country), please give the bar values (ratio to national average) for each region label from left to right: South East; Red River Delta; Mekong River Delta; North Central area and Central coastal area; Central Highlands; Northern midlands and mountain areas. Give approximate numeric values (e.g. 1.10) and indicate which is highest and which is lowest."
+        }
+      },
+      {
+        "step": 3,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo tỷ lệ thu nhập bình quân đầu người của vùng so với cả nước (tỷ lệ, xấp xỉ):\n- South East: khoảng 1.32 (cao nhất). [oecd-vn-2025:p051:figure_2.2]\n- Red River Delta: khoảng 1.20. [oecd-vn-2025:p051:figure_2.2]\n- Mekong River Delta: khoảng 0.90. [oecd-vn-2025:p051:figure_2.2]\n- North Central area and Central coastal area: khoảng 1.00. [oecd-vn-2025:p051:figure_2.2]\n- Central Highlands: khoảng 0.78. [oecd-vn-2025:p051:figure_2.2]\n- Northern midlands and mountain areas: khoảng 0.72 (thấp nhất). [oecd-vn-2025:p051:figure_2.2]",
+          "citations": [
+            "oecd-vn-2025:p051:figure_2.2"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 799,
+        "cached_tokens": 0,
+        "completion_tokens": 54,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00030775,
+        "latency_ms": 2011.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4311,
+        "cached_tokens": 0,
+        "completion_tokens": 72,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00122175,
+        "latency_ms": 2283.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6371,
+        "cached_tokens": 3712,
+        "completion_tokens": 193,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00114355,
+        "latency_ms": 4189.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 1833,
+        "cached_tokens": 0,
+        "completion_tokens": 239,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00093625,
+        "latency_ms": 4239.7,
+        "finish_reason": "stop",
+        "kind": "vision",
+        "chunk_id": "oecd-vn-2025:p051:figure_2.2",
+        "question": "In panel D (Average income per capita Ratio province / whole country), please give the bar values (ratio to national average) for each region label from left to right: South East; Red River Delta; Mekong River Delta; North Central area and Central coastal area; Central Highlands; Northern midlands and mountain areas. Give approximate numeric values (e.g. 1.10) and indicate which is highest and which is lowest.",
+        "answer": "Values (province / national average), left to right (approx.):\n\n- South East: 1.32\n- Red River Delta: 1.20\n- Mekong River Delta: 0.90\n- North Central area and Central coastal area: 1.00\n- Central Highlands: 0.78\n- Northern midlands and mountain areas: 0.72\n\nHighest: South East (~1.32). Lowest: Northern midlands and mountain areas (~0.72)."
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6628,
+        "cached_tokens": 5760,
+        "completion_tokens": 319,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.000999,
+        "latency_ms": 4630.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo tỷ lệ thu nhập bình quân đầu người của vùng so với cả nước (tỷ lệ, xấp xỉ):\n- South East: khoảng 1.32 (cao nhất). [oecd-vn-2025:p051:figure_2.2]\n- Red River Delta: khoảng 1.20. [oecd-vn-2025:p051:figure_2.2]\n- Mekong River Delta: khoảng 0.90. [oecd-vn-2025:p051:figure_2.2]\n- North Central area and Central coastal area: khoảng 1.00. [oecd-vn-2025:p051:figure_2.2]\n- Central Highlands: khoảng 0.78. [oecd-vn-2025:p051:figure_2.2]\n- Northern midlands and mountain areas: khoảng 0.72 (thấp nhất). [oecd-vn-2025:p051:figure_2.2]",
+    "citations": [
+      "oecd-vn-2025:p051:figure_2.2"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 1,
+    "context_ids": [
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p011:text02",
+      "oecd-vn-2025:p040:text02",
+      "oecd-vn-2025:p040:text04",
+      "oecd-vn-2025:p050:text02",
+      "oecd-vn-2025:p051:figure_2.2",
+      "oecd-vn-2025:p099:figure_4.2",
+      "oecd-vn-2025:p104:text02"
+    ],
+    "latency_s": 63.76,
+    "cost_usd": 0.004608,
+    "tokens": {
+      "prompt_tokens": 19942,
+      "cached_tokens": 9472,
+      "completion_tokens": 877,
+      "reasoning_tokens": 256
+    }
+  },
+  {
+    "id": "D11",
+    "question": "Dự báo lạm phát CPI năm 2025 của OECD cho Việt Nam thấp hơn cận dưới của mục tiêu lạm phát năm 2025 do Quốc hội đặt ra bao nhiêu điểm phần trăm?",
+    "retrieval": [
+      {
+        "query": "OECD forecast inflation 2025 Vietnam CPI OECD Economic Surveys Viet Nam 2025 CPI 2025 forecast",
+        "latency_ms": 22645.6,
+        "timing": {
+          "first_stage_ms": 99.15520000140532,
+          "rerank_ms": 22546.44879999978
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p012:text03",
+            "rank": 1,
+            "score": 0.9592,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.9586,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p025:text03",
+            "rank": 3,
+            "score": 0.9313,
+            "type": "text",
+            "page": 25
+          },
+          {
+            "id": "oecd-vn-2025:p046:table_1.6:part1",
+            "rank": 4,
+            "score": 0.9309,
+            "type": "table",
+            "page": 46
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 5,
+            "score": 0.9086,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p012:text02",
+            "rank": 6,
+            "score": 0.8907,
+            "type": "text",
+            "page": 12
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "OECD forecast inflation 2025 Vietnam CPI OECD Economic Surveys Viet Nam 2025 CPI 2025 forecast"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "OECD dự báo lạm phát CPI năm 2025 là 3.7%, trong khi Quốc hội đặt mục tiêu năm 2025 ở khoảng 4.5–5.0%. Do đó dự báo của OECD thấp hơn cận dưới của mục tiêu (4.5%) khoảng 0.8 điểm phần trăm (4.5% − 3.7% = 0.8%). [oecd-vn-2025:p012:text03] [oecd-vn-2025:p025:text03]",
+          "citations": [
+            "oecd-vn-2025:p012:text03",
+            "oecd-vn-2025:p025:text03"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 808,
+        "cached_tokens": 0,
+        "completion_tokens": 108,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.000418,
+        "latency_ms": 2630.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2554,
+        "cached_tokens": 0,
+        "completion_tokens": 289,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.0012165,
+        "latency_ms": 3930.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "OECD dự báo lạm phát CPI năm 2025 là 3.7%, trong khi Quốc hội đặt mục tiêu năm 2025 ở khoảng 4.5–5.0%. Do đó dự báo của OECD thấp hơn cận dưới của mục tiêu (4.5%) khoảng 0.8 điểm phần trăm (4.5% − 3.7% = 0.8%). [oecd-vn-2025:p012:text03] [oecd-vn-2025:p025:text03]",
+    "citations": [
+      "oecd-vn-2025:p012:text03",
+      "oecd-vn-2025:p025:text03"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p012:text02",
+      "oecd-vn-2025:p012:text03",
+      "oecd-vn-2025:p025:text03",
+      "oecd-vn-2025:p046:table_1.6:part1"
+    ],
+    "latency_s": 29.21,
+    "cost_usd": 0.001634,
+    "tokens": {
+      "prompt_tokens": 3362,
+      "cached_tokens": 0,
+      "completion_tokens": 397,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "D12",
+    "question": "Thuế bảo vệ môi trường đối với xăng năm 2024/25 (quy ra USD/lít) chiếm khoảng bao nhiêu % giá xăng ở Việt Nam (tính theo giá cuối tháng 3/2025 nêu trong báo cáo)?",
+    "retrieval": [
+      {
+        "query": "environmental protection tax gasoline 2024 2025 Vietnam USD per litre",
+        "latency_ms": 22621.8,
+        "timing": {
+          "first_stage_ms": 84.44520000011835,
+          "rerank_ms": 22537.33690000081
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 1,
+            "score": 0.9963,
+            "type": "table",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p077:text03",
+            "rank": 2,
+            "score": 0.9633,
+            "type": "text",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p077:text02",
+            "rank": 3,
+            "score": 0.9086,
+            "type": "text",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p042:text04",
+            "rank": 4,
+            "score": 0.5658,
+            "type": "text",
+            "page": 42
+          },
+          {
+            "id": "oecd-vn-2025:p027:figure_1.7",
+            "rank": 5,
+            "score": 0.2688,
+            "type": "figure",
+            "page": 27
+          },
+          {
+            "id": "oecd-vn-2025:p077:text04",
+            "rank": 6,
+            "score": 0.2193,
+            "type": "text",
+            "page": 77
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "environmental protection tax gasoline 2024 2025 Vietnam USD per litre"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Thuế bảo vệ môi trường (EPT) đối với xăng năm 2024/25 là 0.079 USD/lít; giá xăng cuối tháng 3/2025 được báo cáo là 0.80 USD/lít. Do đó EPT chiếm khoảng (0.079/0.80)×100 ≈ 9.9% giá xăng. [oecd-vn-2025:p077:table_3.2] [oecd-vn-2025:p077:text03]",
+          "citations": [
+            "oecd-vn-2025:p077:table_3.2",
+            "oecd-vn-2025:p077:text03"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 819,
+        "cached_tokens": 0,
+        "completion_tokens": 101,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00040675,
+        "latency_ms": 2115.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3590,
+        "cached_tokens": 0,
+        "completion_tokens": 291,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.0014795,
+        "latency_ms": 4917.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Thuế bảo vệ môi trường (EPT) đối với xăng năm 2024/25 là 0.079 USD/lít; giá xăng cuối tháng 3/2025 được báo cáo là 0.80 USD/lít. Do đó EPT chiếm khoảng (0.079/0.80)×100 ≈ 9.9% giá xăng. [oecd-vn-2025:p077:table_3.2] [oecd-vn-2025:p077:text03]",
+    "citations": [
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p077:text03"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p027:figure_1.7",
+      "oecd-vn-2025:p042:text04",
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p077:text02",
+      "oecd-vn-2025:p077:text03",
+      "oecd-vn-2025:p077:text04"
+    ],
+    "latency_s": 29.66,
+    "cost_usd": 0.001886,
+    "tokens": {
+      "prompt_tokens": 4409,
+      "cached_tokens": 0,
+      "completion_tokens": 392,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "D13",
+    "question": "Giá trị gia tăng nước ngoài chiếm khoảng bao nhiêu % tổng xuất khẩu của Việt Nam năm 2020, và doanh nghiệp có vốn nước ngoài sản xuất bao nhiêu % kim ngạch xuất khẩu của Việt Nam?",
+    "retrieval": [
+      {
+        "query": "foreign value added share of exports Vietnam 2020 foreign-owned firms share of export value 2020",
+        "latency_ms": 22610.0,
+        "timing": {
+          "first_stage_ms": 148.32169999863254,
+          "rerank_ms": 22461.639200000718
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p111:text02",
+            "rank": 1,
+            "score": 0.9968,
+            "type": "text",
+            "page": 111
+          },
+          {
+            "id": "oecd-vn-2025:p135:table_4.3:part2",
+            "rank": 2,
+            "score": 0.8917,
+            "type": "table",
+            "page": 135
+          },
+          {
+            "id": "oecd-vn-2025:p111:figure_4.13",
+            "rank": 3,
+            "score": 0.8848,
+            "type": "figure",
+            "page": 111
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 4,
+            "score": 0.8692,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p122:text01",
+            "rank": 5,
+            "score": 0.8536,
+            "type": "text",
+            "page": 122
+          },
+          {
+            "id": "oecd-vn-2025:p102:text02",
+            "rank": 6,
+            "score": 0.7997,
+            "type": "text",
+            "page": 102
+          }
+        ]
+      },
+      {
+        "query": "foreign-owned firms account share of exports 2020 Viet Nam 2020 \"foreign-owned firms\" exports 2020 \"share of exports\"",
+        "latency_ms": 21986.3,
+        "timing": {
+          "first_stage_ms": 99.5920000004844,
+          "rerank_ms": 21886.721499999112
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p111:text02",
+            "rank": 1,
+            "score": 0.9903,
+            "type": "text",
+            "page": 111
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 2,
+            "score": 0.9485,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p099:text01",
+            "rank": 3,
+            "score": 0.9428,
+            "type": "text",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p102:text02",
+            "rank": 4,
+            "score": 0.9378,
+            "type": "text",
+            "page": 102
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 5,
+            "score": 0.9274,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p122:text01",
+            "rank": 6,
+            "score": 0.7255,
+            "type": "text",
+            "page": 122
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "foreign value added share of exports Vietnam 2020 foreign-owned firms share of export value 2020"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "foreign-owned firms account share of exports 2020 Viet Nam 2020 \"foreign-owned firms\" exports 2020 \"share of exports\""
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Giá trị gia tăng nước ngoài chiếm khoảng 48% tổng xuất khẩu của Việt Nam năm 2020 [oecd-vn-2025:p111:text02; oecd-vn-2025:p111:figure_4.13]. Doanh nghiệp có vốn nước ngoài sản xuất khoảng 73% (gần ba phần tư) kim ngạch xuất khẩu của Việt Nam (số liệu nêu cho năm 2023/khung thời gian báo cáo) [oecd-vn-2025:p099:text01; oecd-vn-2025:p102:text02].",
+          "citations": [
+            "oecd-vn-2025:p111:text02",
+            "oecd-vn-2025:p111:figure_4.13",
+            "oecd-vn-2025:p099:text01",
+            "oecd-vn-2025:p102:text02"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 810,
+        "cached_tokens": 0,
+        "completion_tokens": 106,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0004145,
+        "latency_ms": 2176.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3713,
+        "cached_tokens": 0,
+        "completion_tokens": 307,
+        "reasoning_tokens": 256,
+        "cost_usd": 0.00154225,
+        "latency_ms": 3263.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4532,
+        "cached_tokens": 2688,
+        "completion_tokens": 266,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0010602,
+        "latency_ms": 4923.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Giá trị gia tăng nước ngoài chiếm khoảng 48% tổng xuất khẩu của Việt Nam năm 2020 [oecd-vn-2025:p111:text02; oecd-vn-2025:p111:figure_4.13]. Doanh nghiệp có vốn nước ngoài sản xuất khoảng 73% (gần ba phần tư) kim ngạch xuất khẩu của Việt Nam (số liệu nêu cho năm 2023/khung thời gian báo cáo) [oecd-vn-2025:p099:text01; oecd-vn-2025:p102:text02].",
+    "citations": [
+      "oecd-vn-2025:p111:text02",
+      "oecd-vn-2025:p111:figure_4.13",
+      "oecd-vn-2025:p099:text01",
+      "oecd-vn-2025:p102:text02"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p021:text04",
+      "oecd-vn-2025:p021:text05",
+      "oecd-vn-2025:p099:text01",
+      "oecd-vn-2025:p102:text02",
+      "oecd-vn-2025:p111:figure_4.13",
+      "oecd-vn-2025:p111:text02",
+      "oecd-vn-2025:p122:text01",
+      "oecd-vn-2025:p135:table_4.3:part2"
+    ],
+    "latency_s": 54.96,
+    "cost_usd": 0.003017,
+    "tokens": {
+      "prompt_tokens": 9055,
+      "cached_tokens": 2688,
+      "completion_tokens": 679,
+      "reasoning_tokens": 384
+    }
+  },
+  {
+    "id": "D14",
+    "question": "Trong đợt sắp xếp bộ máy, số bộ và cơ quan ngang bộ của Việt Nam sẽ giảm từ bao nhiêu xuống bao nhiêu, và tỷ lệ giải ngân đầu tư công năm 2022 đạt bao nhiêu % kế hoạch?",
+    "retrieval": [
+      {
+        "query": "restructuring reduce number of ministries and ministerial-level agencies Vietnam \"ministry\" \"ministerial-level agencies\" OECD Economic Surveys Vietnam 2025",
+        "latency_ms": 20963.1,
+        "timing": {
+          "first_stage_ms": 104.77299999911338,
+          "rerank_ms": 20858.33570000068
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p133:text05",
+            "rank": 1,
+            "score": 0.8309,
+            "type": "text",
+            "page": 133
+          },
+          {
+            "id": "oecd-vn-2025:p130:table_4.1",
+            "rank": 2,
+            "score": 0.4048,
+            "type": "table",
+            "page": 130
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 3,
+            "score": 0.3627,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 4,
+            "score": 0.3362,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p135:table_4.3:part3",
+            "rank": 5,
+            "score": 0.1491,
+            "type": "table",
+            "page": 135
+          },
+          {
+            "id": "oecd-vn-2025:p122:text03",
+            "rank": 6,
+            "score": 0.0426,
+            "type": "text",
+            "page": 122
+          }
+        ]
+      },
+      {
+        "query": "public investment disbursement 2022 percent of plan disbursement rate 2022 Viet Nam 'disbursement' '2022' OECD Economic Surveys Viet Nam 2025",
+        "latency_ms": 23073.2,
+        "timing": {
+          "first_stage_ms": 108.32670000127109,
+          "rerank_ms": 22964.8191999986
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p133:text03",
+            "rank": 1,
+            "score": 0.94,
+            "type": "text",
+            "page": 133
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 2,
+            "score": 0.8559,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p104:text01",
+            "rank": 3,
+            "score": 0.7601,
+            "type": "text",
+            "page": 104
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 4,
+            "score": 0.6612,
+            "type": "text",
+            "page": 5
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 5,
+            "score": 0.619,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.6173,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "restructuring reduce number of ministries and ministerial-level agencies Vietnam \"ministry\" \"ministerial-level agencies\" OECD Economic Surveys Vietnam 2025"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "public investment disbursement 2022 percent of plan disbursement rate 2022 Viet Nam 'disbursement' '2022' OECD Economic Surveys Viet Nam 2025"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Theo báo cáo, số bộ và cơ quan ngang bộ sẽ giảm từ 20 xuống còn 15 (thông qua sáp nhập) [oecd-vn-2025:p133:text05]. Tỷ lệ giải ngân đầu tư công năm 2022 đạt 68% so với kế hoạch [oecd-vn-2025:p133:text03].",
+          "citations": [
+            "oecd-vn-2025:p133:text05",
+            "oecd-vn-2025:p133:text03"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 816,
+        "cached_tokens": 0,
+        "completion_tokens": 116,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.000436,
+        "latency_ms": 2693.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2538,
+        "cached_tokens": 0,
+        "completion_tokens": 59,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0007525,
+        "latency_ms": 1739.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4712,
+        "cached_tokens": 1664,
+        "completion_tokens": 188,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0011795999999999998,
+        "latency_ms": 3110.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      }
+    ],
+    "status": "answered",
+    "answer": "Theo báo cáo, số bộ và cơ quan ngang bộ sẽ giảm từ 20 xuống còn 15 (thông qua sáp nhập) [oecd-vn-2025:p133:text05]. Tỷ lệ giải ngân đầu tư công năm 2022 đạt 68% so với kế hoạch [oecd-vn-2025:p133:text03].",
+    "citations": [
+      "oecd-vn-2025:p133:text05",
+      "oecd-vn-2025:p133:text03"
+    ],
+    "invalid_citations": [],
+    "searches": 2,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p104:text01",
+      "oecd-vn-2025:p122:text03",
+      "oecd-vn-2025:p130:table_4.1",
+      "oecd-vn-2025:p133:text03",
+      "oecd-vn-2025:p133:text05",
+      "oecd-vn-2025:p135:table_4.3:part3"
+    ],
+    "latency_s": 51.58,
+    "cost_usd": 0.002368,
+    "tokens": {
+      "prompt_tokens": 8066,
+      "cached_tokens": 1664,
+      "completion_tokens": 363,
+      "reasoning_tokens": 128
+    }
+  },
+  {
+    "id": "D15",
+    "question": "Tiềm năng điện mặt trời của Việt Nam ước tính tới bao nhiêu GW? Vùng nào có nguồn bức xạ tốt nhất, và khi tính tới việc lấy đất nông nghiệp thì tiềm năng khả dụng lớn nhất nằm ở đâu?",
+    "retrieval": [
+      {
+        "query": "solar PV potential GW Vietnam available land agricultural best solar radiation regions",
+        "latency_ms": 19498.6,
+        "timing": {
+          "first_stage_ms": 79.07939999859082,
+          "rerank_ms": 19419.475700000476
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p082:text01",
+            "rank": 1,
+            "score": 0.9658,
+            "type": "text",
+            "page": 82
+          },
+          {
+            "id": "oecd-vn-2025:p082:figure_3.8",
+            "rank": 2,
+            "score": 0.4519,
+            "type": "figure",
+            "page": 82
+          },
+          {
+            "id": "oecd-vn-2025:p083:text01",
+            "rank": 3,
+            "score": 0.3463,
+            "type": "text",
+            "page": 83
+          },
+          {
+            "id": "oecd-vn-2025:p085:text07",
+            "rank": 4,
+            "score": 0.0736,
+            "type": "text",
+            "page": 85
+          },
+          {
+            "id": "oecd-vn-2025:p084:figure_3.9",
+            "rank": 5,
+            "score": 0.0315,
+            "type": "figure",
+            "page": 84
+          },
+          {
+            "id": "oecd-vn-2025:p086:text02",
+            "rank": 6,
+            "score": 0.0105,
+            "type": "text",
+            "page": 86
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "solar PV potential GW Vietnam available land agricultural best solar radiation regions"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Tổng tiềm năng điện mặt trời của Việt Nam ước tính lên tới khoảng 500 GW (kết hợp utility PV, floating PV và rooftop) [oecd-vn-2025:p082:text01; oecd-vn-2025:p082:figure_3.8].\n\nVùng có nguồn bức xạ tốt nhất: khu vực phía Nam và Nam Trung Bộ được ghi nhận là có tài nguyên bức xạ tốt nhất trong cả nước [oecd-vn-2025:p082:text01].\n\nKhi tính tới việc sử dụng đất (loại trừ/đếm đến đất nông nghiệp), tiềm năng khả dụng lớn nhất nằm ở vùng phía Bắc của quốc gia (largest available potential in the North) [oecd-vn-2025:p082:text01].",
+          "citations": [
+            "oecd-vn-2025:p082:text01",
+            "oecd-vn-2025:p082:figure_3.8"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 816,
+        "cached_tokens": 0,
+        "completion_tokens": 34,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000272,
+        "latency_ms": 1741.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3983,
+        "cached_tokens": 0,
+        "completion_tokens": 355,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00170575,
+        "latency_ms": 4970.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Tổng tiềm năng điện mặt trời của Việt Nam ước tính lên tới khoảng 500 GW (kết hợp utility PV, floating PV và rooftop) [oecd-vn-2025:p082:text01; oecd-vn-2025:p082:figure_3.8].\n\nVùng có nguồn bức xạ tốt nhất: khu vực phía Nam và Nam Trung Bộ được ghi nhận là có tài nguyên bức xạ tốt nhất trong cả nước [oecd-vn-2025:p082:text01].\n\nKhi tính tới việc sử dụng đất (loại trừ/đếm đến đất nông nghiệp), tiềm năng khả dụng lớn nhất nằm ở vùng phía Bắc của quốc gia (largest available potential in the North) [oecd-vn-2025:p082:text01].",
+    "citations": [
+      "oecd-vn-2025:p082:text01",
+      "oecd-vn-2025:p082:figure_3.8"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p082:figure_3.8",
+      "oecd-vn-2025:p082:text01",
+      "oecd-vn-2025:p083:text01",
+      "oecd-vn-2025:p084:figure_3.9",
+      "oecd-vn-2025:p085:text07",
+      "oecd-vn-2025:p086:text02"
+    ],
+    "latency_s": 26.21,
+    "cost_usd": 0.001978,
+    "tokens": {
+      "prompt_tokens": 4799,
+      "cached_tokens": 0,
+      "completion_tokens": 389,
+      "reasoning_tokens": 128
+    }
+  },
+  {
+    "id": "D16",
+    "question": "Chính phủ ước tính cải cách mở rộng diện tham gia bảo hiểm xã hội (hộ kinh doanh, lao động bán thời gian...) sẽ bao phủ thêm khoảng bao nhiêu người lao động?",
+    "retrieval": [
+      {
+        "query": "government estimates expanding social insurance coverage additional workers household businesses part-time workers Vietnam estimate",
+        "latency_ms": 14980.5,
+        "timing": {
+          "first_stage_ms": 97.58900000088033,
+          "rerank_ms": 14882.920599999125
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p055:text02",
+            "rank": 1,
+            "score": 0.8983,
+            "type": "text",
+            "page": 55
+          },
+          {
+            "id": "oecd-vn-2025:p054:text02",
+            "rank": 2,
+            "score": 0.3509,
+            "type": "text",
+            "page": 54
+          },
+          {
+            "id": "oecd-vn-2025:p053:text02",
+            "rank": 3,
+            "score": 0.2853,
+            "type": "text",
+            "page": 53
+          },
+          {
+            "id": "oecd-vn-2025:p056:text04",
+            "rank": 4,
+            "score": 0.2513,
+            "type": "text",
+            "page": 56
+          },
+          {
+            "id": "oecd-vn-2025:p052:text03",
+            "rank": 5,
+            "score": 0.131,
+            "type": "text",
+            "page": 52
+          },
+          {
+            "id": "oecd-vn-2025:p057:text01",
+            "rank": 6,
+            "score": 0.0893,
+            "type": "text",
+            "page": 57
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "government estimates expanding social insurance coverage additional workers household businesses part-time workers Vietnam estimate"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "submit_answer",
+        "arguments": {
+          "answer": "Chính phủ ước tính sẽ có khoảng 3 triệu người lao động được bao phủ thêm do mở rộng diện tham gia bảo hiểm xã hội (bao gồm chủ hộ kinh doanh nhỏ, lao động bán thời gian, quản lý không hưởng lương của doanh nghiệp/hợp tác xã) [oecd-vn-2025:p055:text02].",
+          "citations": [
+            "oecd-vn-2025:p055:text02"
+          ]
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 804,
+        "cached_tokens": 0,
+        "completion_tokens": 37,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000275,
+        "latency_ms": 1921.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 2576,
+        "cached_tokens": 0,
+        "completion_tokens": 173,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00099,
+        "latency_ms": 2437.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      }
+    ],
+    "status": "answered",
+    "answer": "Chính phủ ước tính sẽ có khoảng 3 triệu người lao động được bao phủ thêm do mở rộng diện tham gia bảo hiểm xã hội (bao gồm chủ hộ kinh doanh nhỏ, lao động bán thời gian, quản lý không hưởng lương của doanh nghiệp/hợp tác xã) [oecd-vn-2025:p055:text02].",
+    "citations": [
+      "oecd-vn-2025:p055:text02"
+    ],
+    "invalid_citations": [],
+    "searches": 1,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p052:text03",
+      "oecd-vn-2025:p053:text02",
+      "oecd-vn-2025:p054:text02",
+      "oecd-vn-2025:p055:text02",
+      "oecd-vn-2025:p056:text04",
+      "oecd-vn-2025:p057:text01"
+    ],
+    "latency_s": 19.34,
+    "cost_usd": 0.001265,
+    "tokens": {
+      "prompt_tokens": 3380,
+      "cached_tokens": 0,
+      "completion_tokens": 210,
+      "reasoning_tokens": 64
+    }
+  },
+  {
+    "id": "D17",
+    "question": "Việt Nam có bao nhiêu bác sĩ trên 1 000 dân?",
+    "retrieval": [
+      {
+        "query": "physicians per 1 000 population Viet Nam",
+        "latency_ms": 23856.4,
+        "timing": {
+          "first_stage_ms": 79.12450000003446,
+          "rerank_ms": 23777.278899999146
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p063:text03",
+            "rank": 1,
+            "score": 0.0325,
+            "type": "text",
+            "page": 63
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 2,
+            "score": 0.0249,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 3,
+            "score": 0.0239,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p050:figure_2.1",
+            "rank": 4,
+            "score": 0.014,
+            "type": "figure",
+            "page": 50
+          },
+          {
+            "id": "oecd-vn-2025:p104:text02",
+            "rank": 5,
+            "score": 0.0119,
+            "type": "text",
+            "page": 104
+          },
+          {
+            "id": "oecd-vn-2025:p052:text02",
+            "rank": 6,
+            "score": 0.0091,
+            "type": "text",
+            "page": 52
+          }
+        ]
+      },
+      {
+        "query": "doctors per 1 000 population Vietnam physicians per 1 000 population 2023 health workforce OECD report",
+        "latency_ms": 23936.0,
+        "timing": {
+          "first_stage_ms": 90.04810000078578,
+          "rerank_ms": 23845.956999999544
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 1,
+            "score": 0.362,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 2,
+            "score": 0.2166,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p037:figure_1.15",
+            "rank": 3,
+            "score": 0.17,
+            "type": "figure",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p104:text02",
+            "rank": 4,
+            "score": 0.0992,
+            "type": "text",
+            "page": 104
+          },
+          {
+            "id": "oecd-vn-2025:p063:text03",
+            "rank": 5,
+            "score": 0.0695,
+            "type": "text",
+            "page": 63
+          },
+          {
+            "id": "oecd-vn-2025:p024:figure_1.4",
+            "rank": 6,
+            "score": 0.0241,
+            "type": "figure",
+            "page": 24
+          }
+        ]
+      },
+      {
+        "query": "physicians per 1 000 people Viet Nam 'per 1 000' 'physicians' 'Viet Nam' OECD survey",
+        "latency_ms": 24533.1,
+        "timing": {
+          "first_stage_ms": 124.24809999902209,
+          "rerank_ms": 24408.802800000558
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 1,
+            "score": 0.1705,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 2,
+            "score": 0.0899,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p037:text01",
+            "rank": 3,
+            "score": 0.0604,
+            "type": "text",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p024:figure_1.4",
+            "rank": 4,
+            "score": 0.0431,
+            "type": "figure",
+            "page": 24
+          },
+          {
+            "id": "oecd-vn-2025:p052:text02",
+            "rank": 5,
+            "score": 0.031,
+            "type": "text",
+            "page": 52
+          },
+          {
+            "id": "oecd-vn-2025:p005:text01",
+            "rank": 6,
+            "score": 0.0257,
+            "type": "text",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "query": "doctors per 1 000 population 'doctors per 1 000' 'Viet Nam' 'health care' 'per 1 000'",
+        "latency_ms": 24725.4,
+        "timing": {
+          "first_stage_ms": 109.10519999924873,
+          "rerank_ms": 24616.29820000053
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p063:text03",
+            "rank": 1,
+            "score": 0.2662,
+            "type": "text",
+            "page": 63
+          },
+          {
+            "id": "oecd-vn-2025:p104:text02",
+            "rank": 2,
+            "score": 0.1453,
+            "type": "text",
+            "page": 104
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part2",
+            "rank": 3,
+            "score": 0.0757,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 4,
+            "score": 0.0351,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p052:text02",
+            "rank": 5,
+            "score": 0.0347,
+            "type": "text",
+            "page": 52
+          },
+          {
+            "id": "oecd-vn-2025:p064:text01",
+            "rank": 6,
+            "score": 0.0234,
+            "type": "text",
+            "page": 64
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "physicians per 1 000 population Viet Nam"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "doctors per 1 000 population Vietnam physicians per 1 000 population 2023 health workforce OECD report"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "physicians per 1 000 people Viet Nam 'per 1 000' 'physicians' 'Viet Nam' OECD survey"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "doctors per 1 000 population 'doctors per 1 000' 'Viet Nam' 'health care' 'per 1 000'"
+        }
+      },
+      {
+        "step": 4,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Không tìm thấy số bác sĩ trên 1 000 dân trong báo cáo OECD Economic Surveys: Viet Nam 2025 sau các tìm kiếm sau trong tài liệu: queries searched: 'physicians per 1 000 population Viet Nam', 'doctors per 1 000 population Vietnam physicians per 1 000 population 2023 health workforce OECD report', 'physicians per 1 000 people Viet Nam \"per 1 000\" \"physicians\" \"Viet Nam\" OECD survey', 'doctors per 1 000 population \"doctors per 1 000\" \"Viet Nam\" \"health care\"'. Tài liệu được kiểm tra các phần: Basic statistics (p.9), Chương 2 phần 2.4 (p.63-64), các biểu đồ liên quan tới dân số/khách du lịch, nhưng không thấy chỉ số số bác sĩ trên 1 000 dân. Không suy đoán số liệu."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 779,
+        "cached_tokens": 0,
+        "completion_tokens": 32,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00025875,
+        "latency_ms": 1484.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4363,
+        "cached_tokens": 0,
+        "completion_tokens": 109,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00130875,
+        "latency_ms": 2743.8,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6547,
+        "cached_tokens": 3712,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00090155,
+        "latency_ms": 1763.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 7216,
+        "cached_tokens": 5760,
+        "completion_tokens": 55,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.000618,
+        "latency_ms": 2538.7,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 7640,
+        "cached_tokens": 0,
+        "completion_tokens": 286,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.002482,
+        "latency_ms": 3590.1,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 4
+      }
+    ],
+    "status": "abstained",
+    "reason": "Không tìm thấy số bác sĩ trên 1 000 dân trong báo cáo OECD Economic Surveys: Viet Nam 2025 sau các tìm kiếm sau trong tài liệu: queries searched: 'physicians per 1 000 population Viet Nam', 'doctors per 1 000 population Vietnam physicians per 1 000 population 2023 health workforce OECD report', 'physicians per 1 000 people Viet Nam \"per 1 000\" \"physicians\" \"Viet Nam\" OECD survey', 'doctors per 1 000 population \"doctors per 1 000\" \"Viet Nam\" \"health care\"'. Tài liệu được kiểm tra các phần: Basic statistics (p.9), Chương 2 phần 2.4 (p.63-64), các biểu đồ liên quan tới dân số/khách du lịch, nhưng không thấy chỉ số số bác sĩ trên 1 000 dân. Không suy đoán số liệu.",
+    "searches": 4,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p005:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p009:basic_statistics:part2",
+      "oecd-vn-2025:p024:figure_1.4",
+      "oecd-vn-2025:p037:figure_1.15",
+      "oecd-vn-2025:p037:text01",
+      "oecd-vn-2025:p050:figure_2.1",
+      "oecd-vn-2025:p052:text02",
+      "oecd-vn-2025:p063:text03",
+      "oecd-vn-2025:p064:text01",
+      "oecd-vn-2025:p104:text02"
+    ],
+    "latency_s": 109.17,
+    "cost_usd": 0.005569,
+    "tokens": {
+      "prompt_tokens": 26545,
+      "cached_tokens": 9472,
+      "completion_tokens": 532,
+      "reasoning_tokens": 128
+    }
+  },
+  {
+    "id": "D18",
+    "question": "Năm 2024 Việt Nam xuất khẩu bao nhiêu triệu tấn gạo?",
+    "retrieval": [
+      {
+        "query": "Vietnam rice exports 2024 million tonnes",
+        "latency_ms": 23414.7,
+        "timing": {
+          "first_stage_ms": 87.66230000037467,
+          "rerank_ms": 23327.02579999932
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 1,
+            "score": 0.4484,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 2,
+            "score": 0.2424,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 3,
+            "score": 0.2284,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 4,
+            "score": 0.1695,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p099:text01",
+            "rank": 5,
+            "score": 0.142,
+            "type": "text",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.1269,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "query": "Vietnam rice exports 2024 million tonnes rice exports volume 2024 'million tonnes' Viet Nam 2024 rice shipments",
+        "latency_ms": 23902.3,
+        "timing": {
+          "first_stage_ms": 134.213199999067,
+          "rerank_ms": 23768.03380000092
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 1,
+            "score": 0.8634,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 2,
+            "score": 0.8326,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 3,
+            "score": 0.7799,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 4,
+            "score": 0.5545,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p099:text01",
+            "rank": 5,
+            "score": 0.448,
+            "type": "text",
+            "page": 99
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 6,
+            "score": 0.4283,
+            "type": "text",
+            "page": 1
+          }
+        ]
+      },
+      {
+        "query": "rice exports 2024 Viet Nam 'rice' '2024' 'million tonnes' export volume rice 2024 Viet Nam OECD report",
+        "latency_ms": 23817.3,
+        "timing": {
+          "first_stage_ms": 124.21449999965262,
+          "rerank_ms": 23693.071199999395
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 1,
+            "score": 0.9475,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 2,
+            "score": 0.9338,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 3,
+            "score": 0.9141,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 4,
+            "score": 0.8184,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text05",
+            "rank": 5,
+            "score": 0.7368,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.7249,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "query": "Vietnam 'rice exports' '2024' 'tonnes' 'milled' 'paddy' 'export volume' '2024' site:OECD 'Viet Nam' 'rice'",
+        "latency_ms": 23955.5,
+        "timing": {
+          "first_stage_ms": 157.84979999989446,
+          "rerank_ms": 23797.618099999454
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 1,
+            "score": 0.8259,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p023:text03",
+            "rank": 2,
+            "score": 0.6542,
+            "type": "text",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p021:text04",
+            "rank": 3,
+            "score": 0.6323,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p021:text02",
+            "rank": 4,
+            "score": 0.5674,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 5,
+            "score": 0.507,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p099:text01",
+            "rank": 6,
+            "score": 0.3371,
+            "type": "text",
+            "page": 99
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam rice exports 2024 million tonnes"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam rice exports 2024 million tonnes rice exports volume 2024 'million tonnes' Viet Nam 2024 rice shipments"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "rice exports 2024 Viet Nam 'rice' '2024' 'million tonnes' export volume rice 2024 Viet Nam OECD report"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Vietnam 'rice exports' '2024' 'tonnes' 'milled' 'paddy' 'export volume' '2024' site:OECD 'Viet Nam' 'rice'"
+        }
+      },
+      {
+        "step": 4,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Searched the report for 'rice' and 'exports 2024' (queries: 'Vietnam rice exports 2024 million tonnes', 'Vietnam rice exports 2024 million tonnes rice exports volume 2024', 'rice exports 2024 Viet Nam \"million tonnes\"') but the OECD report 'OECD Economic Surveys: Viet Nam 2025' contains no figure giving the volume of rice exports in 2024 in million tonnes. I found general sections on exports and a 'Basic statistics' table for 2023, but no rice export volume for 2024. Therefore cannot answer from this report."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 782,
+        "cached_tokens": 0,
+        "completion_tokens": 30,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.0002555,
+        "latency_ms": 1675.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3583,
+        "cached_tokens": 0,
+        "completion_tokens": 47,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00098975,
+        "latency_ms": 2002.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3780,
+        "cached_tokens": 2688,
+        "completion_tokens": 114,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0005682,
+        "latency_ms": 2408.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3954,
+        "cached_tokens": 2688,
+        "completion_tokens": 127,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0006377,
+        "latency_ms": 2531.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4096,
+        "cached_tokens": 0,
+        "completion_tokens": 142,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.001308,
+        "latency_ms": 3265.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 4
+      }
+    ],
+    "status": "abstained",
+    "reason": "Searched the report for 'rice' and 'exports 2024' (queries: 'Vietnam rice exports 2024 million tonnes', 'Vietnam rice exports 2024 million tonnes rice exports volume 2024', 'rice exports 2024 Viet Nam \"million tonnes\"') but the OECD report 'OECD Economic Surveys: Viet Nam 2025' contains no figure giving the volume of rice exports in 2024 in million tonnes. I found general sections on exports and a 'Basic statistics' table for 2023, but no rice export volume for 2024. Therefore cannot answer from this report.",
+    "searches": 4,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p021:text02",
+      "oecd-vn-2025:p021:text04",
+      "oecd-vn-2025:p021:text05",
+      "oecd-vn-2025:p023:text03",
+      "oecd-vn-2025:p099:text01"
+    ],
+    "latency_s": 106.97,
+    "cost_usd": 0.003759,
+    "tokens": {
+      "prompt_tokens": 16195,
+      "cached_tokens": 5376,
+      "completion_tokens": 460,
+      "reasoning_tokens": 128
+    }
+  },
+  {
+    "id": "D19",
+    "question": "Mỗi năm ô nhiễm không khí gây ra bao nhiêu ca tử vong riêng tại Hà Nội?",
+    "retrieval": [
+      {
+        "query": "deaths attributable to air pollution Hanoi deaths per year",
+        "latency_ms": 23025.4,
+        "timing": {
+          "first_stage_ms": 95.50789999957487,
+          "rerank_ms": 22929.88200000036
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p091:text06",
+            "rank": 1,
+            "score": 0.7193,
+            "type": "text",
+            "page": 91
+          },
+          {
+            "id": "oecd-vn-2025:p092:text01",
+            "rank": 2,
+            "score": 0.0073,
+            "type": "text",
+            "page": 92
+          },
+          {
+            "id": "oecd-vn-2025:p077:text03",
+            "rank": 3,
+            "score": 0.0067,
+            "type": "text",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p014:text03",
+            "rank": 4,
+            "score": 0.0053,
+            "type": "text",
+            "page": 14
+          },
+          {
+            "id": "oecd-vn-2025:p088:text04",
+            "rank": 5,
+            "score": 0.0031,
+            "type": "text",
+            "page": 88
+          },
+          {
+            "id": "oecd-vn-2025:p072:figure_3.1",
+            "rank": 6,
+            "score": 0.0022,
+            "type": "figure",
+            "page": 72
+          }
+        ]
+      },
+      {
+        "query": "Hanoi deaths air pollution Hanoi annual deaths city Hanoi air pollution 'Hanoi' 'deaths' 'air pollution' 'per year'",
+        "latency_ms": 21817.7,
+        "timing": {
+          "first_stage_ms": 113.15930000091612,
+          "rerank_ms": 21704.496700000163
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p091:text06",
+            "rank": 1,
+            "score": 0.6403,
+            "type": "text",
+            "page": 91
+          },
+          {
+            "id": "oecd-vn-2025:p088:text05",
+            "rank": 2,
+            "score": 0.0926,
+            "type": "text",
+            "page": 88
+          },
+          {
+            "id": "oecd-vn-2025:p092:text01",
+            "rank": 3,
+            "score": 0.0759,
+            "type": "text",
+            "page": 92
+          },
+          {
+            "id": "oecd-vn-2025:p088:text04",
+            "rank": 4,
+            "score": 0.0142,
+            "type": "text",
+            "page": 88
+          },
+          {
+            "id": "oecd-vn-2025:p077:text03",
+            "rank": 5,
+            "score": 0.0124,
+            "type": "text",
+            "page": 77
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 6,
+            "score": 0.006,
+            "type": "table",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "query": "Hanoi deaths attributable to air pollution number Hanoi annual deaths attributable to air pollution 'Hanoi' 'deaths' 'air pollution' OECD Viet Nam 2025 Hanoi deaths per year",
+        "latency_ms": 21918.6,
+        "timing": {
+          "first_stage_ms": 128.52030000067316,
+          "rerank_ms": 21790.039699999397
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p091:text06",
+            "rank": 1,
+            "score": 0.938,
+            "type": "text",
+            "page": 91
+          },
+          {
+            "id": "oecd-vn-2025:p072:figure_3.1",
+            "rank": 2,
+            "score": 0.0652,
+            "type": "figure",
+            "page": 72
+          },
+          {
+            "id": "oecd-vn-2025:p001:text01",
+            "rank": 3,
+            "score": 0.0523,
+            "type": "text",
+            "page": 1
+          },
+          {
+            "id": "oecd-vn-2025:p092:text01",
+            "rank": 4,
+            "score": 0.0484,
+            "type": "text",
+            "page": 92
+          },
+          {
+            "id": "oecd-vn-2025:p009:basic_statistics:part1",
+            "rank": 5,
+            "score": 0.0379,
+            "type": "table",
+            "page": 9
+          },
+          {
+            "id": "oecd-vn-2025:p077:table_3.2",
+            "rank": 6,
+            "score": 0.0263,
+            "type": "table",
+            "page": 77
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "deaths attributable to air pollution Hanoi deaths per year"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Hanoi deaths air pollution Hanoi annual deaths city Hanoi air pollution 'Hanoi' 'deaths' 'air pollution' 'per year'"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Hanoi deaths attributable to air pollution number Hanoi annual deaths attributable to air pollution 'Hanoi' 'deaths' 'air pollution' OECD Viet Nam 2025 Hanoi deaths per year"
+        }
+      },
+      {
+        "step": 3,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "Tài liệu không nêu số ca tử vong hàng năm riêng cho Hà Nội. Tôi đã tìm các mục liên quan đến ô nhiễm không khí và sức khoẻ trong báo cáo OECD (queries: \"deaths attributable to air pollution Hanoi deaths per year\", \"Hanoi deaths air pollution number\", \"Hanoi deaths attributable to air pollution number Hanoi annual deaths attributable to air pollution 'Hanoi' 'deaths' 'air pollution' OECD Viet Nam 2025\"). Tài liệu chỉ có số ước tính cho toàn Việt Nam (ít nhất 70,000 deaths each year) và xếp hạng ô nhiễm từng thành phố, nhưng không có con số tử vong riêng cho Hà Nội trong các đoạn/tables/figures đã kiểm tra: [oecd-vn-2025:p091:text06], [oecd-vn-2025:p088:text05], [oecd-vn-2025:p009:basic_statistics:part1]."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 787,
+        "cached_tokens": 0,
+        "completion_tokens": 32,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00026075,
+        "latency_ms": 1624.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3259,
+        "cached_tokens": 0,
+        "completion_tokens": 50,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00091475,
+        "latency_ms": 2174.4,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 4805,
+        "cached_tokens": 2688,
+        "completion_tokens": 123,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.00084245,
+        "latency_ms": 2692.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5331,
+        "cached_tokens": 3712,
+        "completion_tokens": 354,
+        "reasoning_tokens": 128,
+        "cost_usd": 0.00120555,
+        "latency_ms": 3881.5,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "abstained",
+    "reason": "Tài liệu không nêu số ca tử vong hàng năm riêng cho Hà Nội. Tôi đã tìm các mục liên quan đến ô nhiễm không khí và sức khoẻ trong báo cáo OECD (queries: \"deaths attributable to air pollution Hanoi deaths per year\", \"Hanoi deaths air pollution number\", \"Hanoi deaths attributable to air pollution number Hanoi annual deaths attributable to air pollution 'Hanoi' 'deaths' 'air pollution' OECD Viet Nam 2025\"). Tài liệu chỉ có số ước tính cho toàn Việt Nam (ít nhất 70,000 deaths each year) và xếp hạng ô nhiễm từng thành phố, nhưng không có con số tử vong riêng cho Hà Nội trong các đoạn/tables/figures đã kiểm tra: [oecd-vn-2025:p091:text06], [oecd-vn-2025:p088:text05], [oecd-vn-2025:p009:basic_statistics:part1].",
+    "searches": 3,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p001:text01",
+      "oecd-vn-2025:p009:basic_statistics:part1",
+      "oecd-vn-2025:p014:text03",
+      "oecd-vn-2025:p072:figure_3.1",
+      "oecd-vn-2025:p077:table_3.2",
+      "oecd-vn-2025:p077:text03",
+      "oecd-vn-2025:p088:text04",
+      "oecd-vn-2025:p088:text05",
+      "oecd-vn-2025:p091:text06",
+      "oecd-vn-2025:p092:text01"
+    ],
+    "latency_s": 77.13,
+    "cost_usd": 0.003223,
+    "tokens": {
+      "prompt_tokens": 14182,
+      "cached_tokens": 6400,
+      "completion_tokens": 559,
+      "reasoning_tokens": 192
+    }
+  },
+  {
+    "id": "D20",
+    "question": "OECD dự báo lạm phát của Thái Lan năm 2025 là bao nhiêu?",
+    "retrieval": [
+      {
+        "query": "Thailand inflation 2025 OECD forecast",
+        "latency_ms": 24269.2,
+        "timing": {
+          "first_stage_ms": 91.48820000154956,
+          "rerank_ms": 24177.63930000001
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p021:text06",
+            "rank": 1,
+            "score": 0.3763,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p024:text01",
+            "rank": 2,
+            "score": 0.2033,
+            "type": "text",
+            "page": 24
+          },
+          {
+            "id": "oecd-vn-2025:p022:figure_1.3",
+            "rank": 3,
+            "score": 0.1921,
+            "type": "figure",
+            "page": 22
+          },
+          {
+            "id": "oecd-vn-2025:p037:figure_1.15",
+            "rank": 4,
+            "score": 0.1864,
+            "type": "figure",
+            "page": 37
+          },
+          {
+            "id": "oecd-vn-2025:p023:table_1.1",
+            "rank": 5,
+            "score": 0.1615,
+            "type": "table",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 6,
+            "score": 0.1438,
+            "type": "text",
+            "page": 26
+          }
+        ]
+      },
+      {
+        "query": "Thailand consumer price inflation 2025 forecast Thailand 2025 inflation OECD Economic Surveys",
+        "latency_ms": 22965.9,
+        "timing": {
+          "first_stage_ms": 79.2105000000447,
+          "rerank_ms": 22886.651299999357
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p021:text06",
+            "rank": 1,
+            "score": 0.726,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p012:table_1",
+            "rank": 2,
+            "score": 0.45,
+            "type": "table",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p023:table_1.1",
+            "rank": 3,
+            "score": 0.1999,
+            "type": "table",
+            "page": 23
+          },
+          {
+            "id": "oecd-vn-2025:p022:figure_1.3",
+            "rank": 4,
+            "score": 0.1647,
+            "type": "figure",
+            "page": 22
+          },
+          {
+            "id": "oecd-vn-2025:p012:text03",
+            "rank": 5,
+            "score": 0.1214,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p020:figure_1.1",
+            "rank": 6,
+            "score": 0.1187,
+            "type": "figure",
+            "page": 20
+          }
+        ]
+      },
+      {
+        "query": "Thailand inflation 2025 forecast \"Thailand\" \"inflation\" 2025 \"OECD\" \"survey\"",
+        "latency_ms": 23606.1,
+        "timing": {
+          "first_stage_ms": 87.32380000037665,
+          "rerank_ms": 23518.715500000326
+        },
+        "results": [
+          {
+            "id": "oecd-vn-2025:p021:text06",
+            "rank": 1,
+            "score": 0.5835,
+            "type": "text",
+            "page": 21
+          },
+          {
+            "id": "oecd-vn-2025:p022:figure_1.3",
+            "rank": 2,
+            "score": 0.4996,
+            "type": "figure",
+            "page": 22
+          },
+          {
+            "id": "oecd-vn-2025:p012:table_1",
+            "rank": 3,
+            "score": 0.4544,
+            "type": "table",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p012:text03",
+            "rank": 4,
+            "score": 0.402,
+            "type": "text",
+            "page": 12
+          },
+          {
+            "id": "oecd-vn-2025:p024:text01",
+            "rank": 5,
+            "score": 0.4008,
+            "type": "text",
+            "page": 24
+          },
+          {
+            "id": "oecd-vn-2025:p026:text04",
+            "rank": 6,
+            "score": 0.3682,
+            "type": "text",
+            "page": 26
+          }
+        ]
+      }
+    ],
+    "tool_calls": [
+      {
+        "step": 0,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Thailand inflation 2025 OECD forecast"
+        }
+      },
+      {
+        "step": 1,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Thailand consumer price inflation 2025 forecast Thailand 2025 inflation OECD Economic Surveys"
+        }
+      },
+      {
+        "step": 2,
+        "tool": "search_documents",
+        "arguments": {
+          "query": "Thailand inflation 2025 forecast \"Thailand\" \"inflation\" 2025 \"OECD\" \"survey\""
+        }
+      },
+      {
+        "step": 3,
+        "tool": "abstain",
+        "arguments": {
+          "reason": "The OECD report 'OECD Economic Surveys: Viet Nam 2025' does not contain a forecast for Thailand's 2025 inflation. I searched for Thailand inflation and reviewed relevant tables and figures in the report (Table 1 and Table 1.1 with projections for Viet Nam; Figure 1.1 and Figure 1.3), but found only Viet Nam inflation projections and multi-country GDP charts; no Thailand-specific 2025 inflation forecast is provided in the document."
+        }
+      }
+    ],
+    "llm_calls": [
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 783,
+        "cached_tokens": 0,
+        "completion_tokens": 29,
+        "reasoning_tokens": 0,
+        "cost_usd": 0.00025375,
+        "latency_ms": 1409.9,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 0
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 3970,
+        "cached_tokens": 0,
+        "completion_tokens": 102,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0011965,
+        "latency_ms": 2894.0,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 1
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 5860,
+        "cached_tokens": 3712,
+        "completion_tokens": 109,
+        "reasoning_tokens": 64,
+        "cost_usd": 0.0008478,
+        "latency_ms": 2777.3,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 2
+      },
+      {
+        "model": "gpt-5-mini-2025-08-07",
+        "prompt_tokens": 6031,
+        "cached_tokens": 4736,
+        "completion_tokens": 312,
+        "reasoning_tokens": 192,
+        "cost_usd": 0.00106615,
+        "latency_ms": 4551.2,
+        "finish_reason": "tool_calls",
+        "kind": "agent",
+        "step": 3
+      }
+    ],
+    "status": "abstained",
+    "reason": "The OECD report 'OECD Economic Surveys: Viet Nam 2025' does not contain a forecast for Thailand's 2025 inflation. I searched for Thailand inflation and reviewed relevant tables and figures in the report (Table 1 and Table 1.1 with projections for Viet Nam; Figure 1.1 and Figure 1.3), but found only Viet Nam inflation projections and multi-country GDP charts; no Thailand-specific 2025 inflation forecast is provided in the document.",
+    "searches": 3,
+    "inspects": 0,
+    "context_ids": [
+      "oecd-vn-2025:p012:table_1",
+      "oecd-vn-2025:p012:text03",
+      "oecd-vn-2025:p020:figure_1.1",
+      "oecd-vn-2025:p021:text06",
+      "oecd-vn-2025:p022:figure_1.3",
+      "oecd-vn-2025:p023:table_1.1",
+      "oecd-vn-2025:p024:text01",
+      "oecd-vn-2025:p026:text04",
+      "oecd-vn-2025:p037:figure_1.15"
+    ],
+    "latency_s": 82.47,
+    "cost_usd": 0.003364,
+    "tokens": {
+      "prompt_tokens": 16644,
+      "cached_tokens": 8448,
+      "completion_tokens": 552,
+      "reasoning_tokens": 320
+    }
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "D01": {
+    "label": "pass",
+    "reason": "3,8% và 3,0% khớp Table 1 (trang PDF 12) và Table 1.1; citation Table 1 là evidence thay thế hợp lệ.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D02": {
+    "label": "pass",
+    "reason": "Khớp hàng thứ 3 Table 4.2 (trang PDF 132): 'No action taken'.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D03": {
+    "label": "pass",
+    "reason": "6,2% / 6,0% đúng; citation p022:text02 có câu 'GDP is projected to increase by 6.2 percent in 2025 and by 6.0% 2026' - hỗ trợ đủ dù không phải chunk gold.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": false
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D04": {
+    "label": "pass",
+    "reason": "32% và 14% đúng nhãn in trên ảnh Figure 1.10 (trang PDF 32).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D05": {
+    "label": "pass",
+    "reason": "NZ 271 GW, Wind Onshore 217 GW đúng nhãn in trên ảnh Figure 3.8 và văn bản trang PDF 82.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D06": {
+    "label": "pass",
+    "reason": "Đỉnh 2008, ~21,2% (StatLink 20,86; trong dung sai ±0,5); Indonesia thấp nhất (đúng mọi năm theo StatLink). Lưu ý: answer không viết [chunk-id] trong câu, citation chỉ nằm ở trường citations (Figure 1.19).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D07": {
+    "label": "pass",
+    "reason": "Năm 2015 đúng (StatLink 1,10 > 0,98); tỷ lệ 2023 ~2,1 lần nằm trong 1,9–2,2 (StatLink 2,32/1,13 = 2,05).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D08": {
+    "label": "fail",
+    "reason": "2023 ~34% đúng, nhưng 2015 ghi ~45% trong khi StatLink 46,12 (lệch 1,1 > dung sai ±1). Agent dùng inspect_figure (ước lượng bằng mắt) thay vì số liệu đọc từ toạ độ có sẵn trong chunk.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D09": {
+    "label": "pass",
+    "reason": "12% đúng (StatLink 12,32; văn bản trang PDF 122: 'fell from 17% in 2005 to 12% in 2018, compared to 27% to 40% in its ASEAN peers'); thấp hơn mọi nước so sánh. Citation là văn bản thay vì hình nhưng hỗ trợ đủ.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": false
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D10": {
+    "label": "fail",
+    "reason": "Cao nhất South East ~1,32 (đúng) và thấp nhất Northern midlands ~0,72 (StatLink 0,69, sát biên dung sai), nhưng câu trả lời kèm giá trị sai: North Central ~1,00 (thực 0,86), Central Highlands ~0,78 (thực 0,72). Evidence không hỗ trợ toàn bộ câu trả lời. Nguyên nhân: dùng inspect_figure thay vì số đọc từ toạ độ (1,31 / 0,69 có sẵn trong chunk).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D11": {
+    "label": "pass",
+    "reason": "3,7% và 4,5–5,0% đúng, tính 0,8 điểm %; citation trang PDF 12 và 25 hỗ trợ.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": false
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D12": {
+    "label": "pass",
+    "reason": "0,079/0,80 ≈ 9,9% đúng; citation Table 3.2 và đoạn văn trang PDF 77.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D13": {
+    "label": "pass",
+    "reason": "~48% (StatLink 48,0) và 73% đúng; ghi chú năm 2023 có căn cứ ở p102:text02 ('nearly three-quarters of the country's exports in 2023').",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D14": {
+    "label": "pass",
+    "reason": "20 -> 15 và 68% đúng, trang PDF 133.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D15": {
+    "label": "pass",
+    "reason": "500 GW; Nam và Nam Trung Bộ; miền Bắc - đúng đoạn văn trang PDF 82.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D16": {
+    "label": "pass",
+    "reason": "3 triệu người đúng đoạn văn trang PDF 55.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D17": {
+    "label": "pass",
+    "reason": "Từ chối sau 4 lần tìm, không đưa số.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D18": {
+    "label": "pass",
+    "reason": "Từ chối, không dùng số 'một triệu ha'.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D19": {
+    "label": "pass",
+    "reason": "Từ chối; nêu đúng chỉ có số toàn quốc 70 000, không suy ra số cho Hà Nội.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "D20": {
+    "label": "pass",
+    "reason": "Từ chối; xác nhận bảng dự báo chỉ dành cho Việt Nam.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  }
+}

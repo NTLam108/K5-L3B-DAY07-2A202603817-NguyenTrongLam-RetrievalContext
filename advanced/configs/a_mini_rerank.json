@@ -1,0 +1,10 @@
+{
+  "name": "a_mini_rerank",
+  "frozen_at": "2026-11-16",
+  "selected_on": "dev: 18/20 (90%), cấu hình duy nhất đã thử; xem advanced/results/a_mini_rerank-dev/metrics.json",
+  "description": "Hybrid (bge-m3 + BM25, RRF) + rerank bge-reranker-v2-m3; agent gpt-5-mini; inspect_figure gpt-5-mini.",
+  "retrieval": {"method": "rerank_hybrid", "rrf_k": 60, "depth": 30, "rerank_candidates": 20},
+  "agent": {"top_k": 6, "max_chunk_chars": 4000, "limits": {"max_searches": 4, "max_inspects": 2, "max_steps": 9}},
+  "llm": {"model": "gpt-5-mini", "reasoning_effort": "low", "max_tokens": 6000},
+  "vision": {"model": "gpt-5-mini", "reasoning_effort": "low"}
+}

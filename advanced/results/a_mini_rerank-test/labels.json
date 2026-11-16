@@ -1,0 +1,272 @@
+{
+  "T01": {
+    "label": "pass",
+    "reason": "38,0% (2026), 33,2% (2023), +4,8 điểm % đúng Table 1.1 (PDF 23) và Table 1 (PDF 12).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T02": {
+    "label": "pass",
+    "reason": "21,5% / 10,5% / tổng 32% đúng hàng Total của Table 2.2 (PDF 59).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T03": {
+    "label": "pass",
+    "reason": "1 000 VND/lít (0,039 USD), 2 000 VND/lít đầu 2023, 15 USD/tCO2 đúng Table 3.2 (PDF 77). Câu bổ sung 'cắt giảm một nửa vào đầu 2023' có căn cứ ở p077:text02 ('reduce taxes on fuels in early 2023 ... halved in April 2023').",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T04": {
+    "label": "pass",
+    "reason": "1,9% / 2,5% / 5,0% đúng hàng 'Reduce public ownership...' của Table 1.4 (PDF 39), gồm cả cột Long term.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T05": {
+    "label": "pass",
+    "reason": "Raise the standard VAT rate +2,5% GDP; tổng 0,0% (−6,0 / +6,0) đúng Table 1.3 (PDF 38).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T06": {
+    "label": "pass",
+    "reason": "14,7% và OECD 41,0% đúng bảng Basic statistics (PDF 9).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T07": {
+    "label": "pass",
+    "reason": "Việt Nam cao nhất ~4,1 (StatLink 4,10); cột xanh lá = OECD ~2,1–2,2 (StatLink 2,16, trong dung sai ±0,1). Đúng ảnh Figure 4.27 (PDF 131).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T08": {
+    "label": "pass",
+    "reason": "LAO, MMR, KHM, PHL thấp hơn Việt Nam; Việt Nam thứ 2 sau Trung Quốc về tăng trưởng lương thực tế - đúng ảnh Figure 4.4 (PDF 101) và StatLink wcu0a3.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T09": {
+    "label": "fail",
+    "reason": "Xác định đúng Power Industry lớn nhất và Industrial Combustion thứ hai, nhưng KHÔNG nêu giá trị của nguồn lớn nhất (~160 MtCO2e, StatLink 159,54) mà thay bằng 373 triệu tấn CO2 - là tổng phát thải CO2 (p074:text01), không phải giá trị của ngành điện. Thiếu key fact.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T10": {
+    "label": "pass",
+    "reason": "VNM khoanh đỏ, PHL cao nhất về Managerial & engineering, sản xuất ~85% - đúng ảnh Figure 4.14 (PDF 112) và StatLink 7zq9lu.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T11": {
+    "label": "fail",
+    "reason": "Philippines cao nhất đúng, nhưng giá trị sai: ~7,3% (StatLink 6,75, lệch 0,55 > ±0,3) và Việt Nam ~1,8% (StatLink 0,96; văn bản PDF 50 ghi 'less than 1%'). Lỗi đọc ước lượng của inspect_figure trên ảnh raster.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T12": {
+    "label": "pass",
+    "reason": "Giữa 2019 và 2020, ~0,421 -> ~0,378 (StatLink 0,423 -> 0,375; trong dung sai ±0,005).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T13": {
+    "label": "fail",
+    "reason": "Việt Nam ~12,1%, ASEAN ~9,7%, Philippines âm sâu nhất đều đúng, nhưng phép trừ sai: ghi chênh 1,3 điểm % (đúng là 2,4). Còn dẫn thêm số 11% từ văn bản (p064:text03) gây mâu thuẫn. Sai phép tính -> không đạt.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T14": {
+    "label": "pass",
+    "reason": "Informal sector practices 22%; access to finance 21% so với 12,5% -> 8,5 điểm % đúng Figure 4.25 (PDF 128) và StatLink picd0w.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T15": {
+    "label": "pass",
+    "reason": "Chỉ Việt Nam dương ~3,0% (StatLink 2,87, trong ±0,2); Thái Lan sâu nhất ~−6,0% (StatLink −6,05). Đúng Figure 1.1 panel A (PDF 20).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T16": {
+    "label": "pass",
+    "reason": "~80% (2013) -> ~68% (2023) (StatLink 79,5 / 67,7, trong ±1); Campuchia cao nhất. Đúng Figure 2.5 (PDF 57).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T17": {
+    "label": "pass",
+    "reason": "20 -> 15 năm (PDF 55) và 14% + 8% = 22% (Table 2.2, PDF 59).",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T18": {
+    "label": "pass",
+    "reason": "Kết quả ~4 194 USD nằm trong dung sai 4 100–4 300. Lưu ý (ca biên): agent dùng ngưỡng 13 841,4 đọc từ toạ độ thay vì số in 13 845 trong ghi chú cùng hình; tỷ lệ 3,3 lần đúng văn bản PDF 99. Nếu chấm chặt key fact '13 845' thì câu này không đạt.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T19": {
+    "label": "pass",
+    "reason": "4,2% (PDF 50) × 100,3 triệu (PDF 9) ≈ 4,2 triệu người.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T20": {
+    "label": "pass",
+    "reason": "FDI tích luỹ ~220–230 tỷ USD (StatLink 228,97; trong 220–235) và ~50,7–53,0% GDP với GDP 433,7 tỷ USD (PDF 9); khoảng nằm trong dung sai 50–55%.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T21": {
+    "label": "pass",
+    "reason": "17 FTA, 3 đang đàm phán, 53 nước, 87% GDP thế giới đúng văn bản PDF 99.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T22": {
+    "label": "pass",
+    "reason": "119 (2015) -> 83 (2023) trên 180 nước đúng văn bản PDF 133.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T23": {
+    "label": "pass",
+    "reason": "Lương hưu +15% từ 7/2024; lương tối thiểu +6%, năm 2023 +21% đúng văn bản PDF 26.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T24": {
+    "label": "pass",
+    "reason": "Hà Nội thứ 8; PM2.5 gần 6 lần WHO; hybrid 3% (1–9/2024) đúng văn bản PDF 88.",
+    "auto": {
+      "status": "answered",
+      "gold_citation_hit": true
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T25": {
+    "label": "pass",
+    "reason": "Từ chối; chỉ nêu tỷ lệ tăng 6%, không đưa mức lương tuyệt đối.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T26": {
+    "label": "pass",
+    "reason": "Từ chối; dẫn đúng Gini 0,37 (2023, PDF 50) và 0,374 (2022, bảng Basic statistics PDF 9) làm căn cứ cho việc không có số 2024.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T27": {
+    "label": "pass",
+    "reason": "Từ chối; không nhầm 3% hybrid thành tỷ lệ BEV.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T28": {
+    "label": "pass",
+    "reason": "Từ chối; không dùng giá FiT.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T29": {
+    "label": "pass",
+    "reason": "Từ chối; không đưa số liệu cà phê.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  },
+  "T30": {
+    "label": "pass",
+    "reason": "Từ chối; không dùng tỷ lệ thất nghiệp cả nước.",
+    "auto": {
+      "status": "abstained",
+      "gold_citation_hit": null
+    },
+    "reviewer": "Nguyen Trong Lam đã đối chiếu và xác nhận với bản gốc"
+  }
+}

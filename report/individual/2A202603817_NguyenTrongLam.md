@@ -9,19 +9,19 @@
 
 ## Retrieval và thử nghiệm
 
-| Cấu hình | Phương pháp, top-k, filter, rerank, context budget | Giả thuyết / thay đổi | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate | Thời gian / chi phí |
-|---|---|---|---|---|---|---|---|
-| Baseline (`configs/baseline.json`) | Dense bge-m3 + pgvector strategy A, top-3, filter chỉ khi người hỏi nêu, không rerank, budget 800 ký tự; agent gpt-5-nano, tối đa 3 lần tìm | Mốc so sánh | dev | 7/15 (47%) | 11/15 (73%) | 7/15 (47%) | 9,6 s/câu (trung vị); $0.0081 / 17 câu |
-| Baseline, chạy lại | Như trên, cùng file cấu hình | Đo dao động giữa các lần chạy | dev | 5/15 (33%) | 14/15 (93%) | 6/15 (40%) | 12,0 s/câu; $0.0086 |
-| Phương pháp 2: lexical (chỉ đo retrieval) | BM25 tự cài (k1 = 1,5, b = 0,75), tách âm tiết / thêm bigram âm tiết; TF-IDF của starter để đối chiếu | Kiểm tra ảnh hưởng tách từ tiếng Việt | dev | âm tiết 9/15 · bigram 11/15 · TF-IDF 10/15 | 13/15 · 13/15 · 13/15 | 9/15 · 11/15 · 10/15 | ~2 ms/câu; $0 |
-| Phương pháp 3: Hybrid RRF (`configs/method_hybrid.json`) | Dense + BM25 bigram, RRF k = 60, top-20 mỗi bên; agent như baseline | Hit@1 retrieval cao hơn → evidence vào được budget 800 | dev | retrieval 13/15 · agent 10/15 | 14/15 · 14/15 | 13/15 · 10/15 | retrieval 99 ms/câu; agent 13,0 s/câu, $0.0057 |
-| Phương pháp 4: Rerank (`configs/method_rerank.json`) | Dense top-20 → cross-encoder `BAAI/bge-reranker-v2-m3` (CPU); agent như baseline | Đưa evidence lên hạng 1 | dev | retrieval 13/15 · agent 11/15 | 15/15 · 14/15 | 13/15 · 11/15 | retrieval 5,5 s/câu; agent 27,4 s/câu, $0.0071 |
-| Cải thiện 1 (`configs/improve_query.json`) | Baseline + lần tìm đầu dùng nguyên văn câu hỏi, chặn query trùng, prompt v2 (quy tắc viết query) | Sửa Lỗi 2 (query viết lại kém) | dev | 10/15 (67%) | 15/15 (100%) | 10/15 (67%) | 7,4 s/câu; $0.0060 |
-| Cải thiện 2 (`configs/improve_context.json`) | Baseline + budget 2000 ký tự, xếp context theo score cosine | Sửa Lỗi 1 (budget loại evidence) | dev | 7/15 (47%) | 11/15 (73%) | 12/15 (80%) | 9,2 s/câu; $0.0078 |
-| **Cấu hình đã chọn: `combined`** (`configs/combined.json`) | Rerank dense top-20 + Cải thiện 1 + budget 2000 xếp theo score rerank | Hai lỗi độc lập nên cải thiện cộng dồn | dev | 13/15 (87%) | 15/15 (100%) | 15/15 (100%) | 12,1 s/câu; $0.0057 |
-| Cấu hình đã chọn: `combined` | Như trên, không chỉnh thêm (sha256 `824470c1`) | Đánh giá độc lập, chạy một lần sau commit `0876960` | test | 5/5 (100%) | 5/5 (100%) | 5/5 (100%) | 9,8 s/câu; $0.0025 / 7 câu |
-| Baseline | Như trên (sha256 `9b5cc833`) | Đánh giá độc lập, chạy một lần sau commit `0876960` | test | 5/5 (100%) | 5/5 (100%) | 5/5 (100%) | 7,1 s/câu; $0.0028 / 7 câu |
-| Dense / Rerank (chỉ đo retrieval) | Nguyên văn câu hỏi, top-3, budget 800 | Báo cáo, không dùng để chọn lại | test | 4/5 · 5/5 | 5/5 · 5/5 | 4/5 · 5/5 | 101 ms · 6,3 s/câu; $0 |
+| Cấu hình                                                   | Phương pháp, top-k, filter, rerank, context budget                                                                                          | Giả thuyết / thay đổi                                  | Split | Hit@1                                      | Evidence Hit@3        | Context Evidence Rate | Thời gian / chi phí                            |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ----- | ------------------------------------------ | --------------------- | --------------------- | ---------------------------------------------- |
+| Baseline (`configs/baseline.json`)                         | Dense bge-m3 + pgvector strategy A, top-3, filter chỉ khi người hỏi nêu, không rerank, budget 800 ký tự; agent gpt-5-nano, tối đa 3 lần tìm | Mốc so sánh                                            | dev   | 7/15 (47%)                                 | 11/15 (73%)           | 7/15 (47%)            | 9,6 s/câu (trung vị); $0.0081 / 17 câu         |
+| Baseline, chạy lại                                         | Như trên, cùng file cấu hình                                                                                                                | Đo dao động giữa các lần chạy                          | dev   | 5/15 (33%)                                 | 14/15 (93%)           | 6/15 (40%)            | 12,0 s/câu; $0.0086                            |
+| Phương pháp 2: lexical (chỉ đo retrieval)                  | BM25 tự cài (k1 = 1,5, b = 0,75), tách âm tiết / thêm bigram âm tiết; TF-IDF của starter để đối chiếu                                       | Kiểm tra ảnh hưởng tách từ tiếng Việt                  | dev   | âm tiết 9/15 · bigram 11/15 · TF-IDF 10/15 | 13/15 · 13/15 · 13/15 | 9/15 · 11/15 · 10/15  | ~2 ms/câu; $0                                  |
+| Phương pháp 3: Hybrid RRF (`configs/method_hybrid.json`)   | Dense + BM25 bigram, RRF k = 60, top-20 mỗi bên; agent như baseline                                                                         | Hit@1 retrieval cao hơn → evidence vào được budget 800 | dev   | retrieval 13/15 · agent 10/15              | 14/15 · 14/15         | 13/15 · 10/15         | retrieval 99 ms/câu; agent 13,0 s/câu, $0.0057 |
+| Phương pháp 4: Rerank (`configs/method_rerank.json`)       | Dense top-20 → cross-encoder `BAAI/bge-reranker-v2-m3` (CPU); agent như baseline                                                            | Đưa evidence lên hạng 1                                | dev   | retrieval 13/15 · agent 11/15              | 15/15 · 14/15         | 13/15 · 11/15         | retrieval 5,5 s/câu; agent 27,4 s/câu, $0.0071 |
+| Cải thiện 1 (`configs/improve_query.json`)                 | Baseline + lần tìm đầu dùng nguyên văn câu hỏi, chặn query trùng, prompt v2 (quy tắc viết query)                                            | Sửa Lỗi 2 (query viết lại kém)                         | dev   | 10/15 (67%)                                | 15/15 (100%)          | 10/15 (67%)           | 7,4 s/câu; $0.0060                             |
+| Cải thiện 2 (`configs/improve_context.json`)               | Baseline + budget 2000 ký tự, xếp context theo score cosine                                                                                 | Sửa Lỗi 1 (budget loại evidence)                       | dev   | 7/15 (47%)                                 | 11/15 (73%)           | 12/15 (80%)           | 9,2 s/câu; $0.0078                             |
+| **Cấu hình đã chọn: `combined`** (`configs/combined.json`) | Rerank dense top-20 + Cải thiện 1 + budget 2000 xếp theo score rerank                                                                       | Hai lỗi độc lập nên cải thiện cộng dồn                 | dev   | 13/15 (87%)                                | 15/15 (100%)          | 15/15 (100%)          | 12,1 s/câu; $0.0057                            |
+| Cấu hình đã chọn: `combined`                               | Như trên, không chỉnh thêm (sha256 `824470c1`)                                                                                              | Đánh giá độc lập, chạy một lần sau commit `0876960`    | test  | 5/5 (100%)                                 | 5/5 (100%)            | 5/5 (100%)            | 9,8 s/câu; $0.0025 / 7 câu                     |
+| Baseline                                                   | Như trên (sha256 `9b5cc833`)                                                                                                                | Đánh giá độc lập, chạy một lần sau commit `0876960`    | test  | 5/5 (100%)                                 | 5/5 (100%)            | 5/5 (100%)            | 7,1 s/câu; $0.0028 / 7 câu                     |
+| Dense / Rerank (chỉ đo retrieval)                          | Nguyên văn câu hỏi, top-3, budget 800                                                                                                       | Báo cáo, không dùng để chọn lại                        | test  | 4/5 · 5/5                                  | 5/5 · 5/5             | 4/5 · 5/5             | 101 ms · 6,3 s/câu; $0                         |
 
 Cách đọc: với dòng agent, Hit@1 và Evidence Hit@3 tính trên kết quả **lần tìm đầu** của agent; Context Evidence Rate tính trên **context cuối** gửi model (có thể gộp nhiều lần tìm). Dòng "chỉ đo retrieval" dùng nguyên văn câu hỏi, không qua agent (`scripts/eval_retrieval.py`, kết quả `starter/results/retrieval-comparison-dev.md`). Cùng corpus 363 chunk, cùng 15 câu dev có đáp án, cùng định nghĩa hit của `starter/baseline.py`. Chi phí $ là tiền API OpenAI cho 17 câu dev; embedding, BM25 và reranker chạy local, $0. Bảng retrieval không dùng filter; agent dùng filter do người hỏi nêu (q11, q12). Mỗi cấu hình agent chỉ đổi một nhóm yếu tố so với baseline, trừ `combined`.
 
@@ -29,15 +29,15 @@ Cách đọc: với dòng agent, Hit@1 và Evidence Hit@3 tính trên kết qu�
 
 Tiêu chí công bố trước khi chạy cấu hình cải thiện: [configs/selection_criteria.json](../../configs/selection_criteria.json). Quyết định: [configs/selected.json](../../configs/selected.json), chỉ dựa trên dev; commit `0876960` ("Chot cau hinh combined tren dev truoc khi chay test") được tạo trước khi chạy test.
 
-| Cấu hình (dev) | Grounded 0 / 1 / 2 · trung bình | Citation hợp lệ | Từ chối đúng | Từ chối nhầm | Sai có citation |
-|---|---|---|---|---|---|
-| baseline | 8 / 0 / 7 · 0,93 | 8/10 | 2/2 | 5/15 | 3 |
-| baseline (chạy lại) | 8 / 1 / 6 · 0,87 | 8/10 | 2/2 | 6/15 | 2 |
-| improve_query | 5 / 0 / 10 · 1,33 | 11/12 | 2/2 | 3/15 | 2 |
-| improve_context | 3 / 0 / 12 · 1,60 | 16/16 | 2/2 | 2/15 | 1 |
-| method_hybrid | 5 / 0 / 10 · 1,33 | 10/12 | 2/2 | 3/15 | 2 |
-| method_rerank | 4 / 0 / 11 · 1,47 | 12/12 | 2/2 | 3/15 | 1 |
-| **combined** | **0 / 0 / 15 · 2,00** | **16/16** | **2/2** | **0/15** | **0** |
+| Cấu hình (dev)      | Grounded 0 / 1 / 2 · trung bình | Citation hợp lệ | Từ chối đúng | Từ chối nhầm | Sai có citation |
+| ------------------- | ------------------------------- | --------------- | ------------ | ------------ | --------------- |
+| baseline            | 8 / 0 / 7 · 0,93                | 8/10            | 2/2          | 5/15         | 3               |
+| baseline (chạy lại) | 8 / 1 / 6 · 0,87                | 8/10            | 2/2          | 6/15         | 2               |
+| improve_query       | 5 / 0 / 10 · 1,33               | 11/12           | 2/2          | 3/15         | 2               |
+| improve_context     | 3 / 0 / 12 · 1,60               | 16/16           | 2/2          | 2/15         | 1               |
+| method_hybrid       | 5 / 0 / 10 · 1,33               | 10/12           | 2/2          | 3/15         | 2               |
+| method_rerank       | 4 / 0 / 11 · 1,47               | 12/12           | 2/2          | 3/15         | 1               |
+| **combined**        | **0 / 0 / 15 · 2,00**           | **16/16**       | **2/2**      | **0/15**     | **0**           |
 
 1. **Ràng buộc bắt buộc:** mọi ứng viên đều đạt — không có lỗi hệ thống, từ chối đúng 2/2, tỷ lệ citation hợp lệ không thấp hơn baseline (0,80).
 2. **Chỉ số chính (grounded trung bình):** `combined` 2,00, xếp sau là `improve_context` 1,60.
@@ -55,21 +55,21 @@ Ký hiệu trong bảng trước/sau: điểm câu trả lời · `A` = trả l�
 
 #### Lỗi 1 — Context budget 800 ký tự loại mất evidence hạng 2–3
 
-| Mục | Nội dung |
-|---|---|
-| Hiện tượng | **q11** ("Theo Quy định công tác khảo thí, sinh viên bị kỷ luật khiển trách thì chịu hậu quả gì?"): lần tìm đầu trả `A-p97-001, A-p98-000, A-p98-001` nhưng context chỉ có `A-p97-001` (592 ký tự). Agent trả lời bằng danh sách lỗi khiển trách của **cán bộ coi thi** (đi trễ, không đeo thẻ…) [A-p97-001] — sai đối tượng. Đáp án "trừ 25% điểm tổng kết học phần" nằm ở `A-p98-000`, hạng 2. **q07**: context chỉ có `A-p123-000` (kết quả rèn luyện không vượt quá Trung bình khi bị cảnh cáo); agent suy diễn thành "hạng tốt nghiệp bị giới hạn ở Trung bình", trong khi đáp án "giảm đi một mức" ở `A-p82-000`, hạng 2. **q05**: ngưỡng điểm trung bình ở `A-p80-000`, hạng 3; agent trả lời bằng điều kiện khác (< 7 tín chỉ) [A-p79-001]. |
-| Nguyên nhân | `pack_context` của starter tính cả dòng `[id \| nguồn \| page]`; với chunk 500 ký tự, budget 800 thường chỉ vừa **1 chunk**. Retrieval không phải vấn đề: dense với câu hỏi gốc có evidence trong top-3 ở 15/15 câu dev, nhưng Context Evidence Rate chỉ 10/15. Ngoài ra loop giữ chunk của lần tìm trước, nên chunk tốt hơn tìm được sau không vào được (q13: lần tìm 3 trả `A-p122-001` ở hạng 2 nhưng context đã đầy bằng `A-p119-001`). Prompt cảnh báo "thông tin khác đối tượng không phải là câu trả lời" không đủ để model nhận ra, vì trong context không có đoạn đúng để so sánh. |
-| Giả thuyết (ghi trước khi chạy) | Đưa được evidence hạng 2–3 vào context sẽ tăng Context Evidence Rate, giảm câu trả lời sai có citation và từ chối nhầm. Hai cách: (a) budget 2000 ký tự + xếp context theo score cosine (`configs/improve_context.json`); (b) rerank cross-encoder để evidence lên hạng 1 trong budget cũ (`configs/method_rerank.json`). |
-| Kết quả trước → sau | **q11**: 0 A, ctx 0 → 2 A, ctx 1 ở cả `improve_context` và `method_rerank`. **q07**: 0 A, ctx 0 → 2 A, ctx 1 ở cả hai. **q14**: 0 X → 2 A ở cả hai. **q05**: vẫn 0 ở cả hai — `improve_context` có context lớn hơn nhưng các query model viết lại kéo về `A-p78-000`, `A-p77-001` thay vì `A-p80-000`; ở `method_rerank` agent trích `A-p79-001` (hạng 1) vì budget 800 chỉ chứa một chunk — trong bài đo retrieval với nguyên văn câu hỏi, rerank cũng chỉ đưa `A-p80-000` từ hạng 3 lên hạng 2. Toàn dev: Context Evidence Rate 7/15 → 12/15 (`improve_context`), 11/15 (`method_rerank`); câu sai có citation 3 → 1 → 1; grounded 0,93 → 1,60 → 1,47. |
+| Mục                             | Nội dung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hiện tượng                      | **q11** ("Theo Quy định công tác khảo thí, sinh viên bị kỷ luật khiển trách thì chịu hậu quả gì?"): lần tìm đầu trả `A-p97-001, A-p98-000, A-p98-001` nhưng context chỉ có `A-p97-001` (592 ký tự). Agent trả lời bằng danh sách lỗi khiển trách của **cán bộ coi thi** (đi trễ, không đeo thẻ…) [A-p97-001] — sai đối tượng. Đáp án "trừ 25% điểm tổng kết học phần" nằm ở `A-p98-000`, hạng 2. **q07**: context chỉ có `A-p123-000` (kết quả rèn luyện không vượt quá Trung bình khi bị cảnh cáo); agent suy diễn thành "hạng tốt nghiệp bị giới hạn ở Trung bình", trong khi đáp án "giảm đi một mức" ở `A-p82-000`, hạng 2. **q05**: ngưỡng điểm trung bình ở `A-p80-000`, hạng 3; agent trả lời bằng điều kiện khác (< 7 tín chỉ) [A-p79-001]. |
+| Nguyên nhân                     | `pack_context` của starter tính cả dòng `[id \| nguồn \| page]`; với chunk 500 ký tự, budget 800 thường chỉ vừa **1 chunk**. Retrieval không phải vấn đề: dense với câu hỏi gốc có evidence trong top-3 ở 15/15 câu dev, nhưng Context Evidence Rate chỉ 10/15. Ngoài ra loop giữ chunk của lần tìm trước, nên chunk tốt hơn tìm được sau không vào được (q13: lần tìm 3 trả `A-p122-001` ở hạng 2 nhưng context đã đầy bằng `A-p119-001`). Prompt cảnh báo "thông tin khác đối tượng không phải là câu trả lời" không đủ để model nhận ra, vì trong context không có đoạn đúng để so sánh.                                                                                                                                                         |
+| Giả thuyết (ghi trước khi chạy) | Đưa được evidence hạng 2–3 vào context sẽ tăng Context Evidence Rate, giảm câu trả lời sai có citation và từ chối nhầm. Hai cách: (a) budget 2000 ký tự + xếp context theo score cosine (`configs/improve_context.json`); (b) rerank cross-encoder để evidence lên hạng 1 trong budget cũ (`configs/method_rerank.json`).                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Kết quả trước → sau             | **q11**: 0 A, ctx 0 → 2 A, ctx 1 ở cả `improve_context` và `method_rerank`. **q07**: 0 A, ctx 0 → 2 A, ctx 1 ở cả hai. **q14**: 0 X → 2 A ở cả hai. **q05**: vẫn 0 ở cả hai — `improve_context` có context lớn hơn nhưng các query model viết lại kéo về `A-p78-000`, `A-p77-001` thay vì `A-p80-000`; ở `method_rerank` agent trích `A-p79-001` (hạng 1) vì budget 800 chỉ chứa một chunk — trong bài đo retrieval với nguyên văn câu hỏi, rerank cũng chỉ đưa `A-p80-000` từ hạng 3 lên hạng 2. Toàn dev: Context Evidence Rate 7/15 → 12/15 (`improve_context`), 11/15 (`method_rerank`); câu sai có citation 3 → 1 → 1; grounded 0,93 → 1,60 → 1,47.                                                                                            |
 
 #### Lỗi 2 — Model viết lại query làm retrieval kém hơn câu hỏi gốc
 
-| Mục | Nội dung |
-|---|---|
-| Hiện tượng | **q04** ("Sinh viên đã tích lũy được 80 tín chỉ thì được xếp trình độ năm thứ mấy?"): cả 3 query của model đều có dạng "80 tín chỉ xếp trình độ năm thứ mấy sinh viên **Sổ tay sinh viên 2025-2026 ĐHQG-HCM**", chỉ đảo vị trí cụm từ; không lần nào tìm ra `A-p79-001` (76 ≤ N < 114: năm thứ ba). Agent từ chối. **q09**: query 2 và 3 trùng y nguyên ("quy định bài thi được dùng bút chì hay không sinh viên Sổ tay sinh viên 2025-2026 ĐHQG-HCM"). **q15**: query ghi sai tên văn bản ("theo **quy chế đào tạo**") cho câu hỏi về khen thưởng. |
-| Nguyên nhân | Model tự viết lại câu hỏi ngay ở lần tìm đầu và chèn tên tài liệu, năm học, tên trường — các từ có trong rất nhiều chunk nên làm loãng query (với dense, embedding bị kéo về các đoạn giới thiệu chung như `A-p102-000`, `A-p113-002`). Lần tìm đầu của agent chỉ có evidence trong top-3 ở 11/15 câu, trong khi dùng nguyên văn câu hỏi được 15/15. Model không đổi cách diễn đạt khi tìm lại: 9 lượt tìm của baseline nằm trong các cặp query trùng y nguyên. |
-| Giả thuyết (ghi trước khi chạy) | Lần tìm đầu dùng nguyên văn câu hỏi, chặn query trùng và thêm quy tắc viết query (không chèn tên tài liệu/năm học, chỉ nêu tên văn bản khi câu hỏi nêu) sẽ đưa first-search Hit@3 về khoảng 15/15 và giảm từ chối nhầm ở q04, q09, q15 (`configs/improve_query.json`, prompt v2). |
-| Kết quả trước → sau | **q04**: fs3 0 → 1, 0 X → 2 A (lần tìm đầu trả `A-p79-001` ở hạng 1). **q09**: fs3 0 → 1, 0 X → 2 A. **q15**: fs3 0 → 1 nhưng vẫn 0 X — `A-p141-001` ở hạng 2, bị budget 800 loại (Lỗi 1). Toàn dev: first-search Hit@3 11/15 → 15/15, từ chối nhầm 5 → 3, grounded 0,93 → 1,33, chi phí $0.0081 → $0.0060, trung vị 9,6 s → 7,4 s/câu (ít lượt tìm hơn: 9/17 câu chỉ cần 1 lần tìm). Chặn trùng kích hoạt 2 lần. |
+| Mục                             | Nội dung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hiện tượng                      | **q04** ("Sinh viên đã tích lũy được 80 tín chỉ thì được xếp trình độ năm thứ mấy?"): cả 3 query của model đều có dạng "80 tín chỉ xếp trình độ năm thứ mấy sinh viên **Sổ tay sinh viên 2025-2026 ĐHQG-HCM**", chỉ đảo vị trí cụm từ; không lần nào tìm ra `A-p79-001` (76 ≤ N < 114: năm thứ ba). Agent từ chối. **q09**: query 2 và 3 trùng y nguyên ("quy định bài thi được dùng bút chì hay không sinh viên Sổ tay sinh viên 2025-2026 ĐHQG-HCM"). **q15**: query ghi sai tên văn bản ("theo **quy chế đào tạo**") cho câu hỏi về khen thưởng. |
+| Nguyên nhân                     | Model tự viết lại câu hỏi ngay ở lần tìm đầu và chèn tên tài liệu, năm học, tên trường — các từ có trong rất nhiều chunk nên làm loãng query (với dense, embedding bị kéo về các đoạn giới thiệu chung như `A-p102-000`, `A-p113-002`). Lần tìm đầu của agent chỉ có evidence trong top-3 ở 11/15 câu, trong khi dùng nguyên văn câu hỏi được 15/15. Model không đổi cách diễn đạt khi tìm lại: 9 lượt tìm của baseline nằm trong các cặp query trùng y nguyên.                                                                                     |
+| Giả thuyết (ghi trước khi chạy) | Lần tìm đầu dùng nguyên văn câu hỏi, chặn query trùng và thêm quy tắc viết query (không chèn tên tài liệu/năm học, chỉ nêu tên văn bản khi câu hỏi nêu) sẽ đưa first-search Hit@3 về khoảng 15/15 và giảm từ chối nhầm ở q04, q09, q15 (`configs/improve_query.json`, prompt v2).                                                                                                                                                                                                                                                                   |
+| Kết quả trước → sau             | **q04**: fs3 0 → 1, 0 X → 2 A (lần tìm đầu trả `A-p79-001` ở hạng 1). **q09**: fs3 0 → 1, 0 X → 2 A. **q15**: fs3 0 → 1 nhưng vẫn 0 X — `A-p141-001` ở hạng 2, bị budget 800 loại (Lỗi 1). Toàn dev: first-search Hit@3 11/15 → 15/15, từ chối nhầm 5 → 3, grounded 0,93 → 1,33, chi phí $0.0081 → $0.0060, trung vị 9,6 s → 7,4 s/câu (ít lượt tìm hơn: 9/17 câu chỉ cần 1 lần tìm). Chặn trùng kích hoạt 2 lần.                                                                                                                                   |
 
 #### Hai lỗi chồng lên nhau
 
@@ -91,16 +91,17 @@ Sửa riêng từng lỗi chỉ giải quyết một phần, vì một câu có 
 
 Cấu hình chốt ngày 2026-11-16 trong [configs/baseline.json](../../configs/baseline.json). Mỗi lần chạy ghi đường dẫn và sha256 của file vào `summary.json`; ghi đè bằng CLI bắt buộc đặt tên cấu hình mới.
 
-| Thành phần | Baseline | Lý do |
-|---|---|---|
-| Retrieval | Dense, bge-m3 + pgvector strategy A, `top_k = 3` | Phương pháp bắt buộc; strategy A được Day 6 chọn trên dev và Day 7 tái lập top-3 trùng 15/15 câu dev. `top_k = 3` khớp cutoff Evidence Hit@3 |
-| Filter | Chỉ trường `filter` người hỏi nêu (q11, q12, q16), key `section` | Không suy ra filter từ gold |
-| Context | `pack_context` của starter, budget 800 ký tự (tính cả dòng nguồn), cộng dồn qua các lần tìm, bỏ trùng | Mặc định starter, giữ làm mốc trước/sau. Hạn chế đã biết: thường chỉ vừa 1 chunk (dense dev: Context Evidence Rate 10/15 so với Hit@3 15/15) |
-| Số lượt tìm | `max_searches = 3` | 1 lần tìm + 2 lần tìm lại; giới hạn độ trễ (~3 giây mỗi lượt LLM) và tránh vòng lặp |
-| Model | `gpt-5-nano`, `reasoning_effort = low`, `max_completion_tokens = 4000`, prompt `895e9fceb1f4` | Model OpenAI rẻ nhất có tool calling ($0.05 / $0.40 mỗi 1M token input/output); mọi cấu hình so sánh dùng cùng model |
-| Tool | `search_documents(query)`, `submit_answer(answer, citations)`, `abstain(reason)` | Tách rõ trả lời và chủ động từ chối |
+| Thành phần  | Baseline                                                                                              | Lý do                                                                                                                                        |
+| ----------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Retrieval   | Dense, bge-m3 + pgvector strategy A, `top_k = 3`                                                      | Phương pháp bắt buộc; strategy A được Day 6 chọn trên dev và Day 7 tái lập top-3 trùng 15/15 câu dev. `top_k = 3` khớp cutoff Evidence Hit@3 |
+| Filter      | Chỉ trường `filter` người hỏi nêu (q11, q12, q16), key `section`                                      | Không suy ra filter từ gold                                                                                                                  |
+| Context     | `pack_context` của starter, budget 800 ký tự (tính cả dòng nguồn), cộng dồn qua các lần tìm, bỏ trùng | Mặc định starter, giữ làm mốc trước/sau. Hạn chế đã biết: thường chỉ vừa 1 chunk (dense dev: Context Evidence Rate 10/15 so với Hit@3 15/15) |
+| Số lượt tìm | `max_searches = 3`                                                                                    | 1 lần tìm + 2 lần tìm lại; giới hạn độ trễ (~3 giây mỗi lượt LLM) và tránh vòng lặp                                                          |
+| Model       | `gpt-5-nano`, `reasoning_effort = low`, `max_completion_tokens = 4000`, prompt `895e9fceb1f4`         | Model OpenAI rẻ nhất có tool calling ($0.05 / $0.40 mỗi 1M token input/output); mọi cấu hình so sánh dùng cùng model                         |
+| Tool        | `search_documents(query)`, `submit_answer(answer, citations)`, `abstain(reason)`                      | Tách rõ trả lời và chủ động từ chối                                                                                                          |
 
 Quy tắc điều khiển:
+
 - Lượt đầu bắt buộc gọi `search_documents`: không trả lời hay từ chối khi chưa xem tài liệu.
 - Khi hết lượt tìm, tool tìm kiếm bị gỡ; model chỉ còn trả lời hoặc từ chối.
 - Context gửi model được đánh dấu là dữ liệu, không phải chỉ dẫn. Prompt cấm dùng kiến thức ngoài và cảnh báo thông tin gần đúng (khác đối tượng, khác loại phí).
@@ -108,32 +109,33 @@ Quy tắc điều khiển:
 
 Điều kiện dừng (trường `stop_reason` trong trace):
 
-| `stop_reason` | Status | Khi nào |
-|---|---|---|
-| `answered` | answered | `submit_answer` có mọi citation nằm trong context cuối và xuất hiện dạng `[id]` trong answer |
-| `model_abstain` | abstain | Model gọi `abstain`; trace ghi lý do và `searched_before_abstain` |
-| `invalid_or_missing_citations` | abstain | Citation vẫn sai sau 1 lần nhắc; câu trả lời bị loại vẫn lưu để phân tích |
-| `search_limit` | abstain | Model đòi tìm khi đã hết lượt. Hiếm xảy ra vì tool tìm kiếm bị gỡ khi `searches_left = 0` |
-| `error` | error | Lỗi provider/database sau 3 lần thử lại có backoff, hoặc model không trả tool call hợp lệ sau 1 lần nhắc. Báo riêng, không tính vào chất lượng, không thay bằng kết quả giả |
-| `max_steps` | abstain | Chốt chặn an toàn của loop; không xảy ra với controller hiện tại |
+| `stop_reason`                  | Status   | Khi nào                                                                                                                                                                     |
+| ------------------------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `answered`                     | answered | `submit_answer` có mọi citation nằm trong context cuối và xuất hiện dạng `[id]` trong answer                                                                                |
+| `model_abstain`                | abstain  | Model gọi `abstain`; trace ghi lý do và `searched_before_abstain`                                                                                                           |
+| `invalid_or_missing_citations` | abstain  | Citation vẫn sai sau 1 lần nhắc; câu trả lời bị loại vẫn lưu để phân tích                                                                                                   |
+| `search_limit`                 | abstain  | Model đòi tìm khi đã hết lượt. Hiếm xảy ra vì tool tìm kiếm bị gỡ khi `searches_left = 0`                                                                                   |
+| `error`                        | error    | Lỗi provider/database sau 3 lần thử lại có backoff, hoặc model không trả tool call hợp lệ sau 1 lần nhắc. Báo riêng, không tính vào chất lượng, không thay bằng kết quả giả |
+| `max_steps`                    | abstain  | Chốt chặn an toàn của loop; không xảy ra với controller hiện tại                                                                                                            |
 
 Thay đổi trước khi chốt (phát hiện khi smoke test q01, q10, u02 trên dev):
+
 1. q10 trả lời đúng nhưng không viết `[A-p98-003]` trong answer nên bị loại → sửa prompt và thêm nhắc sửa citation 1 lần.
 2. q01 dùng hết 3 lần tìm dù lần đầu đã có evidence → thêm quy tắc "context đã có đoạn trả lời trực tiếp thì trả lời ngay"; sau sửa q01 chỉ cần 1 lần tìm.
 
 Ghi nhận cho phân tích lỗi: ở u02 model lặp lại y nguyên một query ở lần tìm 2 và 3. Mạng đôi khi gặp `APIConnectionError`; cơ chế thử lại xử lý được và lỗi được ghi trong trace.
 
-| Cấu hình / split | Tool use | Số lượt gọi | Grounded answer 0/1/2 và trung bình | Citation hợp lệ | Câu có citation | Abstention đúng | Từ chối nhầm |
-|---|---|---|---|---|---|---|---|
-| baseline / dev | 17/17 | 1 lần: 4 · 2 lần: 4 · 3 lần: 9 | 8 / 0 / 7 · 0,93 | 8/10 | 10/10 câu trả lời | 2/2 | 5/15 |
-| baseline (chạy lại) / dev | 17/17 | 4 · 2 · 11 | 8 / 1 / 6 · 0,87 | 8/10 | 9/9 | 2/2 | 6/15 |
-| improve_query / dev | 17/17 | 9 · 3 · 5 | 5 / 0 / 10 · 1,33 | 11/12 | 12/12 | 2/2 | 3/15 |
-| improve_context / dev | 17/17 | 6 · 3 · 8 | 3 / 0 / 12 · 1,60 | 16/16 | 13/13 | 2/2 | 2/15 |
-| method_hybrid / dev | 17/17 | 10 · 2 · 5 | 5 / 0 / 10 · 1,33 | 10/12 | 12/12 | 2/2 | 3/15 |
-| method_rerank / dev | 17/17 | 8 · 2 · 7 | 4 / 0 / 11 · 1,47 | 12/12 | 12/12 | 2/2 | 3/15 |
-| **combined (đã chọn) / dev** | 17/17 | 11 · 2 · 4 | **0 / 0 / 15 · 2,00** | **16/16** | 15/15 | 2/2 | **0/15** |
-| **combined / test** | 7/7 | 1 lần: 4 · 2 lần: 1 · 3 lần: 2 (tổng 12) | 0 / 0 / 5 · 2,00 | 5/5 | 5/5 | 2/2 | 0/5 |
-| baseline / test | 7/7 | 1 lần: 2 · 2 lần: 1 · 3 lần: 4 (tổng 16) | 0 / 0 / 5 · 2,00 | 5/5 | 5/5 | 2/2 | 0/5 |
+| Cấu hình / split             | Tool use | Số lượt gọi                              | Grounded answer 0/1/2 và trung bình | Citation hợp lệ | Câu có citation   | Abstention đúng | Từ chối nhầm |
+| ---------------------------- | -------- | ---------------------------------------- | ----------------------------------- | --------------- | ----------------- | --------------- | ------------ |
+| baseline / dev               | 17/17    | 1 lần: 4 · 2 lần: 4 · 3 lần: 9           | 8 / 0 / 7 · 0,93                    | 8/10            | 10/10 câu trả lời | 2/2             | 5/15         |
+| baseline (chạy lại) / dev    | 17/17    | 4 · 2 · 11                               | 8 / 1 / 6 · 0,87                    | 8/10            | 9/9               | 2/2             | 6/15         |
+| improve_query / dev          | 17/17    | 9 · 3 · 5                                | 5 / 0 / 10 · 1,33                   | 11/12           | 12/12             | 2/2             | 3/15         |
+| improve_context / dev        | 17/17    | 6 · 3 · 8                                | 3 / 0 / 12 · 1,60                   | 16/16           | 13/13             | 2/2             | 2/15         |
+| method_hybrid / dev          | 17/17    | 10 · 2 · 5                               | 5 / 0 / 10 · 1,33                   | 10/12           | 12/12             | 2/2             | 3/15         |
+| method_rerank / dev          | 17/17    | 8 · 2 · 7                                | 4 / 0 / 11 · 1,47                   | 12/12           | 12/12             | 2/2             | 3/15         |
+| **combined (đã chọn) / dev** | 17/17    | 11 · 2 · 4                               | **0 / 0 / 15 · 2,00**               | **16/16**       | 15/15             | 2/2             | **0/15**     |
+| **combined / test**          | 7/7      | 1 lần: 4 · 2 lần: 1 · 3 lần: 2 (tổng 12) | 0 / 0 / 5 · 2,00                    | 5/5             | 5/5               | 2/2             | 0/5          |
+| baseline / test              | 7/7      | 1 lần: 2 · 2 lần: 1 · 3 lần: 4 (tổng 16) | 0 / 0 / 5 · 2,00                    | 5/5             | 5/5               | 2/2             | 0/5          |
 
 **Context trên test** (chấm tay context cuối gửi model, 5 câu có đáp án, `context_grade` trong `labels/test/*.reviews.json`): baseline 0 câu mức 0 · 0 câu mức 1 · **5 câu mức 2**; `combined` 0 · 0 · **5**. Mọi context cuối đều chứa chunk gold kèm đủ điều kiện/ngoại lệ (q16 "nếu SV không tái phạm…", q18 "trừ các ngày nghỉ lễ") và nguồn/trang. Context của `combined` có thêm chunk không liên quan do budget 2000 (vd. q18: `A-p66-000`, `A-p133-001`) nhưng không ảnh hưởng câu trả lời. Test không có lỗi hệ thống.
 
@@ -141,15 +143,15 @@ Không có lỗi hệ thống (status `error`) ở lần chạy nào trên dev. 
 
 Bảng dưới là **toàn bộ 7 câu test** của cấu hình đã chọn `combined`, kèm so sánh baseline ở cột lý do.
 
-| Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
-|---|---|---|---|---|
-| q16 | Có đáp án (filter `section: khen_thuong_ky_luat`) | 1 lần tìm (nguyên văn câu hỏi) → `A-p147-002` hạng 1; context `A-p147-002, A-p147-003, A-p148-000` | "Sau 03 tháng kể từ ngày có quyết định kỷ luật khiển trách, nếu SV không tái phạm… thì đương nhiên được chấm dứt hiệu lực…" [A-p147-002] | Đáp án 2, citation đúng, context 2. Baseline cũng 2 nhưng cần 3 lần tìm, query 2 và 3 trùng y nguyên |
-| q17 | Có đáp án | 2 lần tìm → `A-p158-003`; context `A-p158-003, A-p159-000, A-p158-001` | "Phải báo địa chỉ ngoại trú cho trường trong thời hạn 30 ngày, kể từ ngày nhập học" [A-p158-003] | 2 / citation đúng / context 2. Baseline 2 (3 lần tìm) |
-| q18 | Có đáp án | 1 lần tìm → `A-p164-001`; context thêm `A-p66-000`, `A-p133-001` không liên quan | "Trường hoạt động từ 6g00 đến 21g30 các ngày trong tuần, trừ các ngày nghỉ lễ…" [A-p164-001] | 2 / đúng / context 2 (có nhiễu). Baseline 2, nhưng query đầu chỉ là "Sổ tay sinh viên 2025-2026 Trường ĐH Khoa học tự nhiên ĐHQG-…" |
-| q19 | Có đáp án | 1 lần tìm → `A-p169-000`; context `A-p169-000, A-p168-000, A-p172-001` | "50% học phí" [A-p169-000] | 2 / đúng / context 2. Ngắn, không nhắc lại đối tượng; câu hỏi đã nêu đủ đối tượng nên chấm 2 (cùng chuẩn với baseline) |
-| q20 | Có đáp án | 1 lần tìm → `A-p81-003`; context `A-p81-003, A-p82-001, A-p80-002` | "…được cấp bằng trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ…" [A-p81-003] | 2 / đúng / context 2. Baseline 2 |
-| u03 | Thiếu bằng chứng | 3 lần tìm ("…phí nội trú bao nhiêu tiền", "phí nội trú mỗi tháng khu nội trú phí", "phí nội trú mỗi tháng"); context `A-p161-002, A-p170-000, A-p161-001` | Từ chối: "có thông tin về phí nội trú nhưng không chứa mức phí cụ thể theo tháng, chỉ ghi nhận việc nộp phí theo hợp đồng" | Từ chối đúng. Context có cả bẫy 100.000đ/tháng (trợ cấp, `A-p170-000`) nhưng model không lấy nhầm. Baseline cũng từ chối đúng |
-| u04 | Thiếu bằng chứng | 3 lần tìm về "vay vốn ngân hàng chính sách… hộ nghèo"; context `A-p170-000, A-p173-000, A-p171-000` | Từ chối: "không có thông tin về mức vay vốn… chỉ có thông tin trợ cấp và chính sách cho khuyết tật/dân tộc thiểu số" | Từ chối đúng. Baseline từ chối đúng nhưng lý do lẫn tiếng Indonesia ("CONTEXT tidak mengandung informasi tentang…"); các mức 100.000đ, 140.000đ baseline nhắc tới có thật trong context, được nêu để giải thích không phải vay vốn |
+| Query ID | Loại câu                                          | Tool call và kết quả                                                                                                                                      | Câu trả lời và citation                                                                                                                          | Nhãn, lý do                                                                                                                                                                                                                        |
+| -------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| q16      | Có đáp án (filter `section: khen_thuong_ky_luat`) | 1 lần tìm (nguyên văn câu hỏi) → `A-p147-002` hạng 1; context `A-p147-002, A-p147-003, A-p148-000`                                                        | "Sau 03 tháng kể từ ngày có quyết định kỷ luật khiển trách, nếu SV không tái phạm… thì đương nhiên được chấm dứt hiệu lực…" [A-p147-002]         | Đáp án 2, citation đúng, context 2. Baseline cũng 2 nhưng cần 3 lần tìm, query 2 và 3 trùng y nguyên                                                                                                                               |
+| q17      | Có đáp án                                         | 2 lần tìm → `A-p158-003`; context `A-p158-003, A-p159-000, A-p158-001`                                                                                    | "Phải báo địa chỉ ngoại trú cho trường trong thời hạn 30 ngày, kể từ ngày nhập học" [A-p158-003]                                                 | 2 / citation đúng / context 2. Baseline 2 (3 lần tìm)                                                                                                                                                                              |
+| q18      | Có đáp án                                         | 1 lần tìm → `A-p164-001`; context thêm `A-p66-000`, `A-p133-001` không liên quan                                                                          | "Trường hoạt động từ 6g00 đến 21g30 các ngày trong tuần, trừ các ngày nghỉ lễ…" [A-p164-001]                                                     | 2 / đúng / context 2 (có nhiễu). Baseline 2, nhưng query đầu chỉ là "Sổ tay sinh viên 2025-2026 Trường ĐH Khoa học tự nhiên ĐHQG-…"                                                                                                |
+| q19      | Có đáp án                                         | 1 lần tìm → `A-p169-000`; context `A-p169-000, A-p168-000, A-p172-001`                                                                                    | "50% học phí" [A-p169-000]                                                                                                                       | 2 / đúng / context 2. Ngắn, không nhắc lại đối tượng; câu hỏi đã nêu đủ đối tượng nên chấm 2 (cùng chuẩn với baseline)                                                                                                             |
+| q20      | Có đáp án                                         | 1 lần tìm → `A-p81-003`; context `A-p81-003, A-p82-001, A-p80-002`                                                                                        | "…được cấp bằng trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ…" [A-p81-003] | 2 / đúng / context 2. Baseline 2                                                                                                                                                                                                   |
+| u03      | Thiếu bằng chứng                                  | 3 lần tìm ("…phí nội trú bao nhiêu tiền", "phí nội trú mỗi tháng khu nội trú phí", "phí nội trú mỗi tháng"); context `A-p161-002, A-p170-000, A-p161-001` | Từ chối: "có thông tin về phí nội trú nhưng không chứa mức phí cụ thể theo tháng, chỉ ghi nhận việc nộp phí theo hợp đồng"                       | Từ chối đúng. Context có cả bẫy 100.000đ/tháng (trợ cấp, `A-p170-000`) nhưng model không lấy nhầm. Baseline cũng từ chối đúng                                                                                                      |
+| u04      | Thiếu bằng chứng                                  | 3 lần tìm về "vay vốn ngân hàng chính sách… hộ nghèo"; context `A-p170-000, A-p173-000, A-p171-000`                                                       | Từ chối: "không có thông tin về mức vay vốn… chỉ có thông tin trợ cấp và chính sách cho khuyết tật/dân tộc thiểu số"                             | Từ chối đúng. Baseline từ chối đúng nhưng lý do lẫn tiếng Indonesia ("CONTEXT tidak mengandung informasi tentang…"); các mức 100.000đ, 140.000đ baseline nhắc tới có thật trong context, được nêu để giải thích không phải vay vốn |
 
 **Ví dụ trình bày:** câu trả lời có bằng chứng: **q16** (kèm điều kiện, citation đúng điều khoản). Câu thiếu bằng chứng: **u03** (từ chối dù context có con số gần nghĩa). Lỗi: **q11 dev của baseline** (trả lời bằng quy định khiển trách của cán bộ coi thi, do budget 800 loại mất `A-p98-000`), **q14 dev** (ý thừa do ranh giới chunk) và **u04 test của baseline** (lý do từ chối lẫn tiếng Indonesia).
 
@@ -171,4 +173,35 @@ Bảng dưới là **toàn bộ 7 câu test** của cấu hình đã chọn `com
 
 ## Thử thách nâng cao (nếu thực hiện)
 
-Không thực hiện. Bài chỉ làm phần cơ bản (tối đa 85 điểm); không có index tài liệu từ 100 trang có bảng, ảnh, biểu đồ và không có benchmark nâng cao.
+Đã thực hiện. Mô tả đầy đủ, cách chạy và bằng chứng tái lập nằm trong [advanced/README.md](../../advanced/README.md). Phần dưới là tóm tắt.
+
+- **Tài liệu:** *OECD Economic Surveys: Viet Nam 2025* (OECD, 06/2025, 139 trang, CC BY 4.0). Người chấm tải lại PDF theo URL và đối chiếu SHA256 ghi trong README.
+- **Index:**
+  - 120/139 trang được index, tạo 488 chunk: 390 text, 26 phần bảng (17 bảng), 72 hình (16 raster).
+  - Mỗi chunk giữ liên kết tới trang PDF, trang in, bbox và ảnh crop.
+  - 19 trang bị bỏ qua đều có ghi lý do: mục lục, tài liệu tham khảo, ảnh trang trí.
+  - Bảng: markdown được kiểm tra đủ số liệu; nếu thiếu số thì chuyển sang text theo hàng.
+  - Hình vector: số liệu đọc từ toạ độ PDF (40/56 hình), đối chiếu StatLink được 1 105/1 106 điểm trong độ phân giải.
+  - Mô tả vision (`gpt-5-mini`, $0,208) chỉ được tin với số in sẵn trên hình.
+  - Nhóm "Ảnh" dùng 16 hình raster; lý do phân loại ghi trong README.
+- **Benchmark:**
+  - Test 30 câu: bảng 6, ảnh 5, biểu đồ 5, multi-hop 4, text 4, thiếu bằng chứng 6. Dev 20 câu: 16 có đáp án, 4 thiếu bằng chứng.
+  - Đáp án lấy từ PDF, ảnh crop và StatLink. Script xác nhận mọi chuỗi evidence có mặt đúng trang.
+  - Benchmark được commit (`53ebfce`) trước mọi thử nghiệm.
+- **Agent:**
+  - Retrieval: hybrid bge-m3 + BM25 (RRF), rerank bằng bge-reranker-v2-m3.
+  - Model: `gpt-5-mini` với 4 tool: tìm kiếm, `inspect_figure` (gửi ảnh crop gốc cho vision), trả lời, từ chối.
+  - Cấu hình `a_mini_rerank` được chốt trên dev (18/20) trước khi chạy test.
+- **Kết quả test (chạy một lần):** **27/30 = 90,0%**.
+  - Theo nhóm: bảng 6/6, ảnh 3/5, biểu đồ 4/5, multi-hop 4/4, text 4/4, thiếu bằng chứng 6/6.
+  - 0 lỗi hệ thống, chi phí $0,090, trung vị 29 s/câu.
+  - Nhãn: Claude đề xuất, người làm bài đọc và xác nhận từng câu sau khi đối chiếu bản gốc.
+- **Lỗi:**
+  - T09: dùng tổng phát thải CO2 thay cho giá trị của ngành điện.
+  - T11: `inspect_figure` ước lượng sai trên ảnh raster.
+  - T13: tính sai hiệu 12,1 − 9,7.
+  - Retrieval không phải điểm nghẽn: citation trúng chunk gold ở 24/24 câu có đáp án.
+  - Ca biên T18 được chấm đạt (trong dung sai). Nếu chấm chặt theo key fact, kết quả là 26/30.
+- **Giới hạn:**
+  - Kết quả vừa đúng ngưỡng, biên an toàn mỏng.
+  - Các cải thiện (ưu tiên số đọc từ toạ độ, kiểm tra phép tính) chưa áp dụng; nếu áp dụng phải soạn bộ test mới.
